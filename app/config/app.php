@@ -121,11 +121,15 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider'
+
+        'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider',
+        'Laracasts\Validation\ValidationServiceProvider',
+        'Intervention\Image\ImageServiceProvider'
 
 
 
-	),
+
+    ),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -191,7 +195,11 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'LaravelLocalization'   => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization'
+
+        'LaravelLocalization'   => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization',
+        'Image'                 => 'Intervention\Image\Facades\Image'
+
+
 	),
 
 );

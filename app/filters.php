@@ -48,6 +48,66 @@ Route::filter('auth', function()
 	}
 });
 
+Route::filter('administrator', function()
+{
+    if (Auth::user()->userable_id != 'Administrator')
+    {
+        if (Request::ajax())
+        {
+            return Response::make('You are not a Administrator', 401);
+        }
+        else
+        {
+            return 'You are not a Administrator';
+        }
+    }
+});
+
+Route::filter('ambassador', function()
+{
+    if (Auth::user()->userable_id != 'Ambassador')
+    {
+        if (Request::ajax())
+        {
+            return Response::make('You are not a Ambassador', 401);
+        }
+        else
+        {
+            return 'You are not a Ambassador';
+        }
+    }
+});
+
+Route::filter('student', function()
+{
+    if (Auth::user()->userable_id != 'Student')
+    {
+        if (Request::ajax())
+        {
+            return Response::make('You are not a Student', 401);
+        }
+        else
+        {
+            return Redirect::back('/')->withDangerMessage('You are not a Student');
+        }
+    }
+});
+
+Route::filter('representative', function()
+{
+    if (Auth::user()->userable_id != 'Representative')
+    {
+        if (Request::ajax())
+        {
+            return Response::make('You are not a Representative', 401);
+        }
+        else
+        {
+            return 'You are not a Representative';
+        }
+    }
+});
+
 
 Route::filter('auth.basic', function()
 {

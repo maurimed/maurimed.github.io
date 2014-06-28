@@ -23,12 +23,21 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
+$current_url = parse_url($app['request']->url());
 
-$env = $app->detectEnvironment(function()
+if ($current_url['host'] == 'epro.test')
 {
-    return getenv('APP_ENV')?: 'local';
-});
-
+    $env = $app->detectEnvironment(function(){
+        return "acceptance";
+    });
+}
+else
+{
+    $env = $app->detectEnvironment(function()
+    {
+        return getenv('APP_ENV')?: 'local';
+    });
+}
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

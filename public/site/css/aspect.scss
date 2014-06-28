@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700|Open+Sans:400italic,400,300,600);
 
-$mainColor: #216b2c;
+$mainColor: #47784a;
 $mainColorDark: darken($mainColor, 10%);
 $mainColorLight:  lighten($mainColor, 10%);
 
@@ -11,7 +11,6 @@ $mainColorLight:  lighten($mainColor, 10%);
 #main {
   background-color: #fafafa;
 }
-
 /* ============= Theme Colors ============== */
 
 .main-text-color {
@@ -613,14 +612,14 @@ p {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: Daniel;
-    src: url('../resources/fonts/daniel.svg') format("svg");
+//    font-family: Daniel;
+//    src: url('../resources/fonts/daniel.svg') format("svg");
   }
 }
 
 @font-face {
-  font-family: Daniel;
-  src: url(../resources/fonts/daniel.ttf);
+//  font-family: Daniel;
+//  src: url(../resources/fonts/daniel.ttf);
 }
 
 
@@ -788,7 +787,7 @@ a.list-group-item {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7);
   .name {
-    font-family: 'Daniel', sans-serif;
+//    font-family: 'Daniel', sans-serif;
   }
   .counters {
     .value, .unit {
@@ -1265,7 +1264,7 @@ header {
 
 .form {
   .head {
-    font-family: 'Daniel',sans-serif;
+//    font-family: 'Daniel',sans-serif;
   }
   .form-control {
     border: 1px solid #e4e4e4;
@@ -1958,7 +1957,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 .testimonials-1 {
   .top {
     .head {
-      font-family: 'Daniel',sans-serif;
+//      font-family: 'Daniel',sans-serif;
     }
     .bg-overlay {
       background-color: rgba($mainColorLight, 0.75);
@@ -1992,7 +1991,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 
 .feature-box {
   .head {
-    font-family: 'Daniel';
+//    font-family: 'Daniel';
   }
   .body {
     border-radius: 0 0 5px 5px;
@@ -2300,4 +2299,230 @@ header.custom-5 .navbar-nav li a .over:hover {
   .mejs-time-total {
     background: #333333;
   }
+}
+
+
+// Custom styles
+
+.side-menu .active {
+  color: white;
+  background-color: $mainColor !important;
+}
+
+.side-menu .active:hover {
+  color: whitesmoke;
+  background-color: $mainColor !important;
+}
+
+.pagecrumbs h5 {
+  font-size: 2em;
+}
+
+.landing-form-container{
+  // display: none;
+  // position:absolute;
+  margin-left: 50px;
+  
+  margin-top: 0;
+  padding-top: 0 !important;
+}
+.absolute{
+  position: absolute;
+  z-index: 999;
+}
+
+.fixed{
+  position: fixed;
+  z-index: 999;
+}
+.landing-form{
+  background-color: rgba(white, .8);
+  border: none;
+  border-radius: 0 !important
+}
+.landing-form .form-control{
+  height: 44px !important;
+}
+
+.landing-form .input-group{
+  margin-bottom: 15px
+}
+
+.landing-form .input-group input{
+  padding-left: 13px
+}
+
+.form-2 .btns {
+  padding-bottom: 25px !important ;
+}
+
+.left-menu{
+  div{
+    width: auto !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+    font-weight: 900;
+    font-size: 1.1em !important;
+    
+  }
+}
+
+.dropdown-menu{
+  // z-index: 99999;
+}
+
+.text-shadow{
+  text-shadow: 2px 2px 1px rgba(0,0,0, .5);
+}
+
+.container > .row{
+  padding-top: 0;
+}
+
+.tp-dottedoverlay.twoxtwo {
+  background: none !important;
+}
+
+.text-color{
+  color: $mainColor !important;
+}
+
+.text-bg-color{
+  background-color: rgba($mainColor, .8) !important ;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+.home-advantages{
+  // background-color: black !important;
+  ul{
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    list-style-type: none;
+    padding: 15px 10px !important;
+    border-radius: 0 !important; 
+    width: auto !important;
+    background-color: transparent !important;
+    li{
+      // width: 20%;
+      background-color: transparent !important;
+      padding: 0px 20px !important;
+
+      a{
+        h6{
+          font-size:  1.6em !important
+          
+        }
+      }
+    }
+  }
+  div{
+    background-color: transparent !important;
+    border: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home-advantages{
+    ul{
+      padding: 15px 10px !important;
+      li{padding: 0px 15px !important;
+        a{h6{
+            font-size:  1.2em !important            
+          }}
+      }
+    }
+    div {}
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .home-advantages{
+    ul{
+      padding: 15px 10px !important;
+      li{padding: 0px 15px !important;
+        a{h6{
+            font-size:  1em !important            
+          }}
+      }
+    }
+    div {}
+  }
+}
+
+@media screen and (max-width: 530px) {
+  
+  .home-advantages{
+    ul{
+      padding: 15px 10px !important;
+      li{
+        padding: 0px 15px !important;
+        border:none;        
+        width: 100%;
+        a{h6{
+            font-size:  1em !important            
+          }}
+      }
+    }
+    div {}
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .home-advantages{
+    ul{
+      padding: 15px 10px !important;
+      li{
+          border:none;
+          // border-bottom: 1px solid #e1e1e1;
+        width: 100%;
+        display:block;
+        padding: 10px 15px !important;
+        a{h6{
+            font-size:  1.3em !important            
+          }}
+      }
+    }
+    div {}
+  }
+}
+.tab .ui-tabs-panel {
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 20px 20px 10px 20px;
+  margin-top: -5px;
+}
+.ui-tabs-panel{
+  background: none !important;
+  border: none !important;
+}
+
+.blog-wrapper p.text a {
+  margin-left: 0 !important;
+}
+
+.testimonials-1 .top{
+  min-height: 390px !important;
+}
+
+.disabled{
+  background-color: #bdbdbd !important;
+  cursor: not-allowed !important;
+  .over{
+    &:hover{
+      background: #bdbdbd !important;
+    }
+  }
+}
+.epro-at-glance{
+  font-size: 1.4em; 
+  line-height:1.5em;
 }

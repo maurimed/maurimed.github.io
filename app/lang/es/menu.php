@@ -9,7 +9,7 @@ return array(
 		"message_from_co_founders" => "Mensaje de los Co-Fundadores",
 		"mission_and_vision" => "Misión & Visión",
 		"epro_360_at_a_glance"=>"Epro 360 de un vistazo",
-		"what_set_us_appart"=>"Lo que nos distingue",
+		"what_set_us_apart"=>"Lo que nos distingue",
 		"epro_360_team"=>"Equipo Epro 360"
 	),
 	"epro_360_network" => array(
@@ -18,7 +18,7 @@ return array(
 		"science" => "Ciencia",
 		"engineering" => "Ingeniería",
 		"art" => "Arte",
-		"comunication" => "Comunicación",
+		"communication" => "Comunicación",
 		"education" => "Educación",
 	),
 	"services" => array(
@@ -34,7 +34,7 @@ return array(
 	'testimonials' => 'Testimonios',
 	'news' => 'Noticias',
 	'store' => 'Tienda',
-	'social_responsability' => 'Responsabilidad Social',
+	'social_responsibility' => 'Responsabilidad Social',
 	'sign_in' => 'Ingresar',
 
 

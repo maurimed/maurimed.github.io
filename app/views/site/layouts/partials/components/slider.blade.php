@@ -1,52 +1,67 @@
-            <div class="bannercontainer">
-                <div class="banner">
-                    <ul>
-                        <li id="slide1" data-transition="fade" data-slotamount="1">
-                            <img src="/site/images/rev-slider-1.jpg" alt="">
-                            <div class="tp-caption caption1 title skewfromleft" data-x="center" data-voffset="-100" data-y="center"
-                                data-speed="500" data-start="1200">
-                                <div class="container text-center">
-                                    <div class="light">
-                                        Gen Y is called the lost generation
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption caption1 text skewfromleft" data-x="center" data-y="center" data-speed="500"
-                                data-start="1200">
-                                <div class="container text-center">
-<!--                                    <div class="light faded">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Accusantium consequatur consequuntur earum explicabo harum in provident recusandae ullam voluptatibus.-->
-<!--                                    </div>-->
-                                </div>
-                            </div>
-<!--                            <div class="tp-caption caption1 lfb" data-x="center" data-voffset="90" data-y="center" data-speed="500"-->
-<!--                                data-start="1200">-->
-<!--                                <div class="btns">-->
-<!--                                    <a>-->
-<!--                                    <img src="/site/images/slider-btn-1.png" class="img-responsive" alt="">-->
-<!--                                    </a>-->
-<!--                                    <a href="http://themeforest.net/item/corex-endless-possibilities-html5-template/7742086">-->
-<!--                                    <img src="/site/images/slider-btn-2.png" class="img-responsive" alt="">-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                        </li>
-                        <li id="slide1" data-transition="fade" data-slotamount="1">
-                            <img src="/site/images/rev-slider-2.jpg" alt="">
-                            <div class="tp-caption caption1 title skewfromleft" data-x="center" data-voffset="-100" data-y="center"
-                                 data-speed="500" data-start="1200">
-                                <div class="container text-center">
-                                    <div class="light">
-                                        Epro 360 is called the global roadmap for Gen Y
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption caption1 text skewfromleft" data-x="center" data-y="center" data-speed="500"
-                                 data-start="1200">
-                                <div class="container text-center">
-                                </div>
-                            </div>
-                        </li>
 
-                    </ul>
+@include('site.layouts.partials.landing-form')
+
+<div class="bannercontainer">
+    <div class="banner">
+    
+        <ul>
+            <li id="slide1" data-transition="fade" data-slotamount="1">
+                <img src="/site/img/sliders/slider-1.jpg" alt="">
+                <div class="tp-caption caption1 title skewfromleft" data-x="center" data-voffset="-100" data-y="-20"data-speed="800" data-start="800">
+                    <div class="container text-center">
+                        <div class="bold text-shadow ">
+                           <span class="text-bg-color"> We make your DREAM </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="tp-caption caption1 title skewfromright" data-x="center" data-y="50" data-speed="800"data-start="1800">
+                    <div class="container text-center" >
+                        <div class="bold text-shadow">
+                             <span class="text-bg-color">to study in the U.S </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tp-caption caption1 title lfb" data-x="center" data-voffset="90" data-y="120" data-speed="800" data-start="2800" >
+                    <div class="container text-center" >
+                        <div class="bold text-shadow">
+                            <span class="text-bg-color"> A REALITY! </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tp-caption caption1 title lfb" data-x="center" data-voffset="90" data-y="440" data-speed="800" data-start="3200" >
+                    <div class="container text-center" >
+                        <div class="bold ">
+                            <a href="#" title="Apply Now !" class="button md solid blue"><div class="over" style="font-size:1.8em" >Apply Now !</div></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="slide1" data-transition="fade" data-slotamount="1">
+                <img src="/site/img/sliders/slider-2.jpg" alt="">
+                <div class="tp-caption caption1 title skewfromleft" data-x="center" data-voffset="-100" data-y="280"data-speed="800" data-start="800">
+                    <div class="container text-center">
+                        <div class="bold text-shadow ">
+                           <span class="text-bg-color"> Academic and Athletic   </span>                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="tp-caption caption1 title skewfromright" data-x="center" data-y="350" data-speed="800"data-start="1800">
+                    <div class="container text-center" >
+                        <div class="bold text-shadow">
+                            <span class="text-bg-color">Scholarships to study in the US </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tp-caption caption1 title lfb" data-x="center" data-voffset="90" data-y="440" data-speed="800" data-start="2800" >
+                    <div class="container text-center" >
+                        <div class="bold ">
+                            <a href="#" title="Apply Now !" class="button md solid blue"><div class="over" style="font-size:1.8em" >Apply Now !</div></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

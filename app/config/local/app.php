@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,9 +15,9 @@ return array(
 
 	'debug' => true,
 
-    'providers' => array(
+    'providers' => append_config([
 
         'Way\Generators\GeneratorsServiceProvider'
-    ),
+    ]),
 
-);
+];

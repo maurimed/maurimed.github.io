@@ -1,0 +1,9 @@
+default:
+  paths:
+    features: app/tests/acceptance
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      base_url: http://localhost:8080
+      javascript_session: selenium2
+      selenium2: ~

@@ -832,6 +832,21 @@
         $('.testimonials-1.carousel-indicators li').removeClass('active');
         $(this).addClass('active');
     });
+    // testimonials 2 carousel indicators handle
+    $('.testimonials-2.carousel-indicators li').click(function () {
+        $('.testimonials-2.carousel-indicators li').removeClass('active');
+        $(this).addClass('active');
+    });
+    // testimonials 3 carousel indicators handle
+    $('.testimonials-3.carousel-indicators li').click(function () {
+        $('.testimonials-3.carousel-indicators li').removeClass('active');
+        $(this).addClass('active');
+    });
+    // testimonials 4 carousel indicators handle
+    $('.testimonials-4.carousel-indicators li').click(function () {
+        $('.testimonials-4.carousel-indicators li').removeClass('active');
+        $(this).addClass('active');
+    });
 
     // calendar hover
     $(".calendar .day")

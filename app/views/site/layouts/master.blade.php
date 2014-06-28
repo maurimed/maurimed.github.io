@@ -21,7 +21,7 @@
         <script type="text/javascript" src="/site/includes/html5shiv/html5shiv.js"></script>
         <script type="text/javascript" src="/site/includes/respond/respond.min.js"></script>
         <![endif]-->
-        <link rel="icon" type="image/png" href="/site/favicon.png">
+        <link rel="icon" type="image/png" href="/site/favicon.ico">
     </head>
     <body data-spy="scroll" data-target="#section-nav">
         <div id="main">
@@ -31,25 +31,11 @@
                 @include('site.layouts.partials.header.nav-bar')    
                 
             </header>
+            @if( ! Request::is('login'))
+                @include('site.layouts.partials.components.login')
+            @endif
+            @yield('content')
 
-<!--            @include('site.layouts.partials.components.nav-shop')    -->
-
-            @include('site.layouts.partials.components.search')    
-
-            @include('site.layouts.partials.components.slider')    
-
-            @include('site.layouts.partials.components.description')  
-
-            @include('site.layouts.partials.components.work')    
-
-            @include('site.layouts.partials.components.features')    
-
-<!--            @include('site.layouts.partials.components.testimonials-3')  -->
-
-            @include('site.layouts.partials.components.feature-cards')    
-
-            @include('site.layouts.partials.components.partners')    
-  
             <footer>
                 @include('site.layouts.partials.footer.content')    
                 @include('site.layouts.partials.footer.bottom')    
@@ -83,6 +69,16 @@
             <!--[if gte IE 9]>
             <script type="text/javascript" src="/site/js/ie9.js"></script>
             <![endif]-->
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-52370723-1', 'auto');
+                ga('send', 'pageview');
+
+            </script>
         </div>
     </body>
 </html>

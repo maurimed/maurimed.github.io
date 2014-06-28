@@ -12,6 +12,8 @@
 */
 
 use Illuminate\Support\Facades\Redirect;
+use Intervention\Image\Exception\InvalidImageTypeException;
+use Laracasts\Validation\FormValidationException;
 
 ClassLoader::addDirectories(array(
 
@@ -55,13 +57,34 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 //    return Redirect::to('/');
 //});
 
+//InvalidImageTypeException
+//Wrong image type () only use JPG, PNG or GIF images.
 
+App::error(function(InvalidImageTypeException $exception)
+{
+    return Redirect::back()->withDangerMessage('Wrong image type, please only use JPG, PNG or GIF images.');
+});
+
+App::error(function(FormValidationException $exception)
+{
+    return Redirect::back()->withInput()->withDangerMessage('There where some validation errors.');
+});
+
+App::error(function(InvalidArgumentException $exception, $code)
+{
+    Log::error($exception);
+    return Redirect::home()->withInfoMessage('Page not found');
+});
 
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
-//    return Redirect::to('/en');
 });
+
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -91,3 +114,4 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+//require app_path().'/macros.php';

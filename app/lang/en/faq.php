@@ -1,0 +1,26 @@
+<?php
+
+return array(
+
+	"title" => "Frequently Asked Questions",
+	"q1" => "Are you not sure when to apply?",
+	"a1" => "You can always apply. Just keep in mind that the application process may take up to six months. The semesters start in August and January. The earlier you apply the better. You can always contact the Epro 360 representative via <a href='mailto:info@epro360.com?subject=faq' 'email me'>info@epro360.com</a> to receive further instructions.",
+	"q2" => "Do you wonder what type of visa you need as a foreign student in the USA?",
+	"a2" => "You will need to obtain the F-1 student visa. The Epro 360 staff will assist you in the process of getting your paperwork ready. Epro 360 will guide you through ALL steps that are necessary to arrive at your admitted university and begin your studies.",
+	"q3" => "You have heard about the benefits that the Epro 360 network has to offer and you are not sure what those are?",
+	"a3" => "Epro 360’s approach to help international students become a success in the US, is a menu of valuable extracurricular development services. These  include, but are not limited to, resume revising, personalized online marketing, internship offerings, and coaching services, which include career and personal development services. Students who join the Epro 360 network will have access to working professionals from various industries, who can share their personal career advice and connections. This is an addition to simply “dropping international students off” at their chosen university, an outdated approach used by the competition. Epro 360 is more than a placement service. You can find out more information at Epro360.com.",
+	"q4" => "Not sure whether your English is good enough to attend a University in the USA?",
+	"a4" => "It is! The ESL (English as a second language) program, that you can enroll in, helps you to get to the level you need to be at, to start studying in the USA. Once your English has reached an acceptable level you can enroll in your university’s classes.",
+	"q5" => "What is the earliest possible date you can begin attending a university in the USA?",
+	"a5" => "As soon as you receive the list with scholarship-offers, you can start making a decision where you want to end up studying. As soon as you have made your decision, the Epro 360 team will immediately start to finalize your placement for either fall (August) or spring (January) semesters.",
+	"q6" => "Where does the scholarship money come from?",
+	"a6" => "American universities love diversity. Part of the reason they do, is because the state in which they are located gives them financial benefits for being diverse. Many universities and colleges are willing to invest in scholarships for international students to attract diversity. That’s why, in many cases, international students receive financial aid easier than American students.",
+	"q7" => "Are you interested in transferring your previous university work to the USA institution?",
+	"a7" => "Yes. Your previous academic work will be evaluated by the university, or a partner evaluation-organization of that university. This step is necessary for your university to determine the equivalency of your academic achievements within the American system.",
+	"q8" => "Are you worried about finding a job after graduation, because more and more highly qualified professionals do not find one?",
+	"a8" => "Epro 360 students will have a competitive advantage compared to college graduates who did not invest in themselves. Students, who want to use their US degree to get a job in their home country are likely to have another advantage. Statistically, a college degree, especially one from the US, is an extremely scarce commodity outside of the US. According to Tom Jelke, former Executive Dean at Semester At Sea, says that only 1% of the people on this planet get a college level degree. Taking everything together, the Epro 360 educational services, the English language proficiency, the US college degree, and the college-life-experience that comes with it; it has the potential to give foreign students unprecedented opportunities.",
+	"q9" => "Do you want to work in the US?",
+	"a9" => "Your student F1 student visa will allow you to work on campus. It is also a way to make your education more affordable, because many universities have a work study program, which allow you to deduct your tuition. Keep in mind that each university operates differently. Therefore, Epro 360 cannot promise work opportunities for ALL participants, because each university has its own rules regarding campus employment. Some Epro 360 scholarship packages will include work opportunities that we have pre-arranged for our students and these opportunities will be noted in your Scholarship Report. You may work in the US as long as you follow the regulations imposed by the US government with regards to international students. Currently, international students may legally work up to 20 hours per week on campus. There are some other ways to receive a legal income as an international student, and Epro 360 offers consulting regarding these services. ",
+	
+
+);

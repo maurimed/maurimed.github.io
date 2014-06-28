@@ -159,7 +159,7 @@ h6 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 p i {
@@ -528,8 +528,8 @@ h4.sep .line {
 .features-image-wrap {
     position: relative;
     display: inline-block;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    /*margin-top: 40px;*/
+    margin-bottom: 20px;
     padding: 5px;
     border-radius: 5px;
 }
@@ -6397,11 +6397,6 @@ input.form-control.main-form:focus {
     opacity: 1;
 }
 
-
-
-
-
-
 .testimonials-1 {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
@@ -6410,10 +6405,10 @@ input.form-control.main-form:focus {
 .testimonials-1 .top {
     position: relative;
     border-radius: 5px 5px 0 0;
-    background-image: url(../images/testimonials-1-bg.png);
+    background-image: url(../images/test-1-bg.png);
     padding: 15px;
     text-align: center;
-    min-height: 260px;
+    min-height: 380px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding-bottom: 30px;
@@ -6421,7 +6416,7 @@ input.form-control.main-form:focus {
 
 .testimonials-1 .top .head {
     font-size: 19px;
-    line-height: 17px;
+    line-height: 26px;
     padding: 10px 0 30px;
 }
 
@@ -8320,3 +8315,4 @@ button.mfp-arrow-right:hover {
     display: block;
     margin: 8px auto;
 }
+

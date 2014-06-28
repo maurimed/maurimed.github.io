@@ -9,12 +9,17 @@
         "laracasts/presenter": "0.1.*",
         "laracasts/validation": "~1.0",
         "intervention/image": "1.6.3",
-        "laravelbook/ardent": "dev-master",
-        "zizaco/confide": "3.2.*",
-        "zizaco/entrust": "1.2.1"
+        "guzzlehttp/guzzle": "~4.0"
 	},
     "require-dev": {
-        "way/generators": "2.6.*"
+        "way/generators": "2.6.*",
+        "fzaninotto/faker": "v1.3.0",
+        "behat/behat": "2.5.*@stable",
+        "behat/mink": "1.5.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-browserkit-driver": "*"
     },
 	"autoload": {
 		"classmap": [
@@ -24,7 +29,13 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+		 "psr-4": {
+		 	"Epro360\\": "app/Epro360"
+		 },
+        "files": [
+            "app/Epro360/helpers.php"
+        ]
 	},
 	"scripts": {
 		"post-install-cmd": [
