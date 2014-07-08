@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 	"title" => "Epro 360 Backgrounder",
 	"subtitle" => "Epro 360 boosts the value of international college education by taking a unique approach different from any other competitor.",
 	
@@ -14,4 +14,4 @@ return array(
 	"p5" => "Epro 360 students will have a competitive advantage compared to college graduates who did not invest in themselves. Students, who want to use their US degree to get a job in their home country are likely to have another advantage. Statistically, a college degree, especially one from the US, is an extremely scarce commodity outside of the US. According to Tom Jelke, former Executive Dean at <a href='/services/bonus-semester-at-sea' >Semester at Sea</a> says that only 1% of the people on this planet get a college level degree. Evan M. Ryan, U.S. Assistant Secretary of State for Educational and Cultural Affairs stated that, “International education promotes the relationship building and knowledge exchange between people and communities in the United States and around the world that are necessary to solve global challenges,” Taking everything together, the Epro 360 educational services, the English language proficiency, the US college degree, and the college life experience, that comes with it; it has the potential to give foreign students unprecedented opportunities.",
 	"p6" => "Epro 360 factors all the prior components into its educational program and social network, because it wants to give their students more than an international degree, to be competitive either in their home country or in the US.  Utilizing all these services intelligently, Epro 360’s students can gain a better picture of themselves, which helps them tremendously to respond to our world more effectively and authentically.",
 	
-);
+];

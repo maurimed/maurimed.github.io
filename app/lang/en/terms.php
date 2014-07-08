@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 	"title" => "Terms & Conditions",
 	"modified" => "Last modified: May 1, 2014.",
 	"subtitle" => "Overview",
@@ -57,4 +57,4 @@ return array(
 
 
 
-);
+];

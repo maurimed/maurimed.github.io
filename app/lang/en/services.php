@@ -1,9 +1,9 @@
 <?php
 
-return array(
+return [
 
 
-    "index" => array(
+    "index" => [
         "title" => "Why obtaining an international degree and why in the US?",
 
         "p1" => "<strong> Become fluent in the world language</strong> will help the student open endless personal and professional opportunities.  According to the British Council,",
@@ -28,9 +28,22 @@ return array(
         "li11" => "Only 1% of the world’s population gets a college degree (Tom Jelke, former Executive Dean at Semester at Sea).",
         "li12" => "Students, who want to use their US degree to get a job in their home country are likely to have another advantage. Statistically, a college degree, especially one from the US, is an extremely scarce commodity outside of the US.",
         "li13" => "According to different researches, a person with a US undergraduate college degree has an average minimum income of $871 per week.",
-    ),
 
-    "academic_scholarships" => array (
+        "title2" => "Why you need \"More Than an International Degree\" in today’s world?",
+        "p6" => "Epro 360 is seeded into a rapidly growing market. In 2013 alone, approximately 800.000 new international undergraduates came to study in the U.S., a 40% increase 10 years ago.",
+        "p7" => "We believe that we can help students reach their highest potential by offering a menu of valuable customized services, versus simply “dropping international students” off at their chosen university.",
+
+        "subtitle" => "What to consider?",
+        "p8" => "There are two facts to consider that are almost the opposite, and yet they are both true.",
+        "fact1" => "<strong>Fact 1: </strong> We, in the US and in the rest of the world, live in a world of academic inflation. Academic inflation is a term that describes the decreasing value of a college degree over time, because more people receive one.",
+        "fact2" => "<strong>Fact 2: </strong> Only 1% of the people on this planet get a college level degree.",
+        "p9" => "Our goal is to help develop the whole person, and telling you the truth is part of the process. Many college graduates in the U.S. and the rest of the world do not find a job in their chosen field of study after graduation. This might be caused by the fact that the educational system creates more graduates than the economic system wants to receive. ",
+        "p10" => "However, we believe that the problem is not the degree itself, but the lack of personal investment into oneself. Research has shown that those college graduates who have gained significant extracurricular experience, and those who have actively invested into their personal development, get hired a lot more frequently than those who did not. Having good connections also helps.",
+        "p11" => "Because we want to give our students \"More Than an International Degree\" to be competitive in this world, Epro 360 has factored the previous components into its educational program and services offered to its customers. Utilizing all these services intelligently, our students can gain a better picture of themselves, which will help them tremendously to respond to our world more effectively and authentically. By using all, or some of our services, we trust that Epro 360 students will have a competitive advantage compared to college graduates who did not invest in themselves.",
+        "p12" => "Students, who want to use their U.S. education to get a job in their home country are likely to have another advantage. Fact 2 already says it. Statistically, a college degree, especially one from the US, is extremely rare outside of the U.S. Taking everything together, these services have the potential to give foreign students unprecedented opportunities.",
+    ],
+
+    "academic_scholarships" => [
         "title" => "Academic Scholarship Program",
 
         "subtitle1" => "Introduction:",
@@ -54,13 +67,13 @@ return array(
         "subtitle5" => "What to else to consider?::",
         "p7" => "Note that the University may increase the tuitions, due to inflation. The College Board® and other researchs indicate that “the average 2013-2014 tuition increase was 3.8 percent at private colleges, and 2.9 percent at public universities.” Please take a look at the following table elaborated by CollegeBoard® to see the increase in fees from 2012 to 2013. “Public Four-Year Out-of State” and “Private NonProfit Four-Year” are the most common universities within the Epro 360 network. The majority of Epro 360’s partner universities are private.",
         "p8" => "The university cost, according to the scholarship granted, will include room and board (housing and food) provided by the academic institution. It is important that students who are interested in the program start the application as early as possible. The entire process of application and admission lasts approximately two months.",
-    ),
+    ],
 
-    "athletic_scholarships" => array (
+    "athletic_scholarships" => [
         "title" => "Athletic Scholarship Program",
 
         "subtitle1" => "Benefits:",
-        "p1" => "Being an athlete in one of your university’s sports teams will allow you to become integrated to a group of friends faster, feel proud to represent your University, receive recognition throughout the campus from other students (i.e. playing for the University is a big thing in the US), receive a higher scholarship amount, and travel around the country on your University’s expenses. US Universities offer a variety of different professional and non-professional sports. Scholarships are available for all applicants that meet the requirements listed for the academic scholarships and are able to prove a high level of performance in an specific sport.",
+        "p1" => "Being an athlete in one of your university’s sports teams will allow you to become integrated to a group of friends faster, feel proud to represent your University, receive recognition throughout the campus from other students (i.e. playing for the University is a big thing in the U], receive a higher scholarship amount, and travel around the country on your University’s expenses. US Universities offer a variety of different professional and non-professional sports. Scholarships are available for all applicants that meet the requirements listed for the academic scholarships and are able to prove a high level of performance in an specific sport.",
 
         "subtitle2" => "Requirements:",
 
@@ -72,10 +85,9 @@ return array(
 
         "subtitle3" => "Deadlines:",
         "p3" => "For the spring semester, applications will be open from August to December. For the fall semester, applications will be open from January to May. If interested, we suggest you contact us, or any of our ambassadors in your home country now. Remember, the earlier you apply, the greater the chances to get a scholarship at the university you want.",
-        "note2" => "Note: <br> High school grades are not necessary to start the application. If you are still pursuing your high school diploma, you need to indicate your current GPA",
-    ),
+        "note2" => "Note: <br> High school grades are not necessary to start the application. If you are still pursuing your high school diploma, you need to indicate your current GPA",],
 
-    "english_courses_esl" => array (
+    "english_courses_esl" => [
         "title" => "English Course (ESL or English as a Second Language)",
 
         "subtitle1" => "Intro to the Epro 360 ESL progam:",
@@ -101,9 +113,9 @@ return array(
         "subtitle4" => "Deadlines:",
         "p7" => "For the fall semester, applications will be open from January to May. For the spring semester, applications will be open from August to December. If interested, we suggest you contact us, or any of our ambassadors in your home country now. Remember, the earlier you apply, the greater the chances to get a scholarship at the university you want.",
 
-    ),
+ ],
 
-    "educational_mentors" => array (
+    "educational_mentors" => [
         "title" => "Educational Mentors ",
 
         "subtitle1" => "Intro to the Epro 360 Educational Mentorship",
@@ -126,10 +138,14 @@ return array(
 
         "subtitle3" => "Requirements:",
         "p4" => "Full access to our mentors is restricted to our Epro 360 students who participate in at least one of Epro 360’s Study Abroad Program (Academic Scholarships, Athletic Scholarships, and ESL Program).",
-     
-    ),
+        "p5" => "",
+        "p6" => "",
+        "subtitle4" => "",
+        "p7" => "",
 
-    "career_coaching" => array (
+ ],
+
+    "career_coaching" => [
         "title" => "Career Coaching",
 
         "subtitle1" => "Intro to the Epro 360 Career Coaching:",
@@ -157,9 +173,9 @@ return array(
         "subtitle3" => "Requirements:",
         "p6" => "Full access to our mentors is restricted to our Epro 360 students who participate at least in one of our Study Abroad Program (Academic Scholarships, Athletic Scholarships, and ESL Program).",
 
-    ),
+ ],
 
-    "internships" => array (
+    "internships" => [
         "title" => "Internship Program",
 
         "subtitle1" => "Intro to the Epro 360 Internship Program",
@@ -174,9 +190,9 @@ return array(
         "note1" => "Note that this service is offered in addition to the Epro 360 Study Abroad Program."
 
 
-    ),
+ ],
 
-    "bonus_semester_at_sea" => array (
+    "bonus_semester_at_sea" => [
         "title" => "Semester at Sea",
 
         "subtitle1" => "Intro to Semester at Sea",
@@ -210,6 +226,6 @@ return array(
         "li14" => "Students must be in good academic and judicial standing at time of application",
         "li15" => "Students must demonstrate their writing skills in a 300-500 word essay as indicated on the application - See more at:",
 
-    ),
+ ],
 
-);
+];

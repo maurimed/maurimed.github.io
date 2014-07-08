@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 	"title" => "Privacy Policy",
 	"modified" => "Last modified: May 1, 2014.",
 	"p1"  => "This Privacy Policy applies to the websites owned and operated by Epro 360 Global Education S.L. and to all the other products and services that we offer, such us Epro 360 scholarships, Epro 360 Network, Epro 360 Gives, etc. (collectively referred to as \"Epro 360\").",
@@ -42,4 +42,4 @@ return array(
 	"p19" => "If you have any questions about this Privacy Policy, please feel free to contact us or write to us at:",
 	"p20" => "Legal Department <br> Avenida Buhaira 18, 3, 2-B, Sevilla (41018), España. <br> <a href='mailto:info@epro360.com?subject=feedback' 'Privacy Policy'>info@epro360.com</a> "
 
-);
+];

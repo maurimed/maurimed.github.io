@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     "title" => "Education - A Fundamental Human Right!",
 
@@ -15,4 +15,4 @@ return array(
     "p4" => "Collaboration has become increasingly more important over the past years, because people have realized that one can accomplish more, when working together and building on one’s strengths. This is why Epro 360 believes in “giving an education for receiving an education.”",
     "p5" => "With the establishment of the Epro 360 Gives program, your study abroad experience with Epro 360 automatically contributes to another person’s education. This is exactly what today’s world needs: better education for more people. The belief that one has to outperform others, in order to step ahead, is toxic for the development of any society. Much human potential is lost in the midst of “getting better than everyone else,” that people lose track of what they actually want to accomplish.",
 
-);
+];

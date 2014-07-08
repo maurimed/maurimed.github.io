@@ -1,26 +1,26 @@
 <?php
 
-return array(
+return [
 
 	"email" => "info@epro360.com",
 	"phone" => "+1 (314) 269-0457",
 	
 	"home" => "Home",
-	"about" => array(
+	"about" => [
 		"index" => "About Us",
 		"message_from_co_founders" => "A Message from Co-Founders",
 		"mission_and_vision" => "Mission & Vision",
 		"epro_360_at_a_glance"=>"Epro 360 at a Glance",
 		"what_set_us_apart"=>"What set us apart",
-		"epro_360_team"=>"Ambassadors Team"
-	),
-	"epro_360_network" => array(
+		"epro_360_team"=>"Ambassador Team"
+	],
+	"epro_360_network" => [
 		"index" => "Epro 360 Network",
         "what_is" => "Overview",
         "mentorship" => "Educational Mentorship",
         "coaching" => "Career Coaching",
-	),
-	"services" => array(
+	],
+	"services" => [
 		"index" => "Epro 360 Services",
 		"academic_scholarships" => "Academic Scholarships",
 		"athletic_scholarships" => "Athletic Scholarships",
@@ -29,7 +29,7 @@ return array(
 		"career_coaching" => "Career Coaching",
 		"internships" => "Internships",
 		"bonus_semester_at_sea" => "Bonus: Semester at Sea"
-	),
+	],
 	"testimonials" => "Testimonials",
 	"news" => "News",
 	"store" => "Store",
@@ -37,4 +37,4 @@ return array(
 	"sign_in" => "Sign In",
 
 
-);
+];

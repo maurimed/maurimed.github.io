@@ -30,7 +30,16 @@ return array(
     "epro_360_at_a_glance"     => array(
         "title" => "Epro 360 at a glance ",
         "p1" => "These attributes, together with our drive to improve the lives of the international students, will make the Epro 360 timeline an endless timeline of success.  Epro 360 is excited and look forward to adding bullet points to the following list!",
-        "subtitle" => "A timeline of Epro 360 milestones"
+        "subtitle" => "A timeline of Epro 360 milestones",
+        "timeline" => [
+            "1" => ["month" => "Feb", "year" => "2013", "title" => "Foundation", "text" => "In Portoviejo, Ecuador by Oswaldo and Christian Chavez."  ],
+            "2" => ["month" => "Jul", "year" => "2013", "title" => "First presentations", "text" => "Provided to high schools students in the Portoviejo area, Ecuador."  ],
+            "3" => ["month" => "Nov", "year" => "2013", "title" => "Expanded ", "text" => "Expanded from sheer study abroad services to career and personal development services."  ],
+            "4" => ["month" => "Dic", "year" => "2013", "title" => "First international presentations", "text" => "Proporcionadas a estudiantes de instituto en Alemania."  ],
+            "5" => ["month" => "Jan", "year" => "2014", "title" => "Incorporation", "text" => "In Germany."  ],
+            "6" => ["month" => "Mar", "year" => "2014", "title" => "New member", "text" => "Francisco Galvez joined as an angel investor."  ],
+            "7" => ["month" => "Apr", "year" => "2014", "title" => "Incorporation", "text" => "In Spain."  ],
+        ]
     ),
     "what_set_us_apart"        => array(
         "title" => "The Epro 360 Advantage",
