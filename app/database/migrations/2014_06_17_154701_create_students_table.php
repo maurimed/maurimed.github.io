@@ -18,8 +18,13 @@ class CreateStudentsTable extends Migration {
 			$table->string('firstname');
             $table->string('lastname');
             $table->string('phone');
+            $table->integer('city_id');
+            $table->integer('ambassador_id');
+            $table->integer('university_id');
+            $table->integer('created_by');
             $table->text('about_me');
-			$table->timestamps();
+            $table->softDeletes();
+            $table->timestamps();
 		});
 	}
 

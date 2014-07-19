@@ -38,7 +38,7 @@
     <h3>{{ $post->title }}</h3>
     <p class="post-links italic">{{ Lang::get('blog.posted_by') }}<a>{{ $post->owner->username }}</a> </p>
 
-    <p>{{ $post->body }}</p>
+    <p class="text">{{ $post->body }}</p>
 
     <div class="author-box main-bg-color alt-text-color clearfix">
         <div class="img-wrap">

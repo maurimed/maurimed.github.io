@@ -57,7 +57,7 @@
     <th>ID</th>
 <!--    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Continent</th>-->
 <!--    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>-->
-<!--    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> State</th>-->
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> State</th>
     <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Name</th>
     <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Zip</th>
 <!--    <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Actions</th>-->
@@ -101,7 +101,7 @@
         $('#cities-table').dataTable({
             "processing": true,
             "serverSide": true,
-            "ajax": "/api/cities"
+            "ajax": "/api/cities/tables"
 
         } );
     } );

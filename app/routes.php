@@ -1,23 +1,19 @@
 <?php
 
+
 Event::listen('illuminate.query', function($sql)
 {
 //    Log::error($sql);
 //    var_dump($sql);
 });
 
-
 Route::get('test',function(){
 
-        return Country::with('continent')->get();
-//        return City::groupBy('name')->with('state')->get()->take(100);
-//    return LaravelLocalization::getSupportedLocales();
-//    return University::with(['zip', 'zip.city', 'zip.city.state', 'zip.city.state.country', 'zip.city.state.country.continent'])->first();
-
+return View::make('emails.subscribers.thanks')->withName('Jorge');
 
 });
 
-Route::when('dashboard*', 'csrf', ['post', 'put', 'patch']);
+Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
@@ -77,6 +73,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     // Blog
     Route::get('blog', ['as' => 'posts.index', 'uses' => 'PostsController@index']);
     Route::get('blog/{slug}', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
+
+    // Files
+    Route::get('downloads/{file}', function($file)
+    {
+        $path = public_path() . 'site/docs/';
+
+        return Response::download($path . $file .'.pdf');
+    });
 });
 
 
@@ -85,33 +89,42 @@ Route::group(['prefix' => 'dashboard', 'before' => 'auth', 'namespace' => 'Epro3
 
     Route::get('/', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 
-    Route::resource('administrators', 'AdministratorsController');
-    Route::resource('students', 'StudentsController');
-    Route::resource('representatives', 'RepresentativesController');
-    Route::resource('ambassadors', 'AmbassadorsController');
-    Route::resource('directors', 'DirectorsController');
+    Route::get('users/{username}/profile', ['as' => 'dashboard.users.profile', 'uses' => 'ProfilesController@show']);
+    Route::get('users/{username}/profile/edit', ['as' => 'dashboard.users.profile.edit', 'uses' => 'ProfilesController@edit']);
+    Route::put('users/{username}/profile', ['as' => 'dashboard.users.profile.update', 'uses' => 'ProfilesController@update']);
 
-    Route::get('users/{username}/profile', ['as' => 'dashboard.administrators.profile', 'uses' => 'ProfilesController@show']);
-    Route::get('users/{username}/profile/edit', ['as' => 'dashboard.administrators.profile.edit', 'uses' => 'ProfilesController@edit']);
-    Route::put('users/{username}/profile', ['as' => 'dashboard.administrators.profile.update', 'uses' => 'ProfilesController@update']);
+    Route::group(['before' => 'administrator'], function() {
+        Route::resource('administrators', 'AdministratorsController');
+        Route::resource('students', 'StudentsController');
+        Route::resource('ambassadors', 'AmbassadorsController');
+        Route::resource('directors', 'DirectorsController');
+        Route::resource('parents', 'RepresentativesController');
+        Route::resource('managers', 'ManagersController');
+        Route::resource('posts', 'PostsController');
+        Route::resource('countries', 'CountriesController');
+        Route::resource('states', 'StatesController');
+        Route::resource('cities', 'CitiesController');
+        Route::resource('universities', 'UniversitiesController');
+        Route::resource('subscribers', 'SubscribersController', ['only' => ['index', 'update', 'destroy'] ]);
+    });
 
-    Route::resource('posts', 'PostsController');
-    Route::resource('countries', 'CountriesController');
-    Route::resource('states', 'StatesController');
-    Route::resource('cities', 'CitiesController');
-    Route::resource('universities', 'UniversitiesController');
 
     Route::resource('requirements', 'RequirementsController');
 
+    Route::resource('students.requirements', 'StudentsRequirementsController');
 
-
+    Route::resource('directors.ambassadors', 'DirectorsAmbassadorsController');
+    Route::resource('directors.students', 'DirectorsStudentsController');
 
 //    Route::get('checkUsername', 'Epro360\Admin\Controllers\ProfilesController@checkUsername');
 
 });
 Route::group(['prefix' => 'api', 'before' => 'auth', 'namespace' => 'Epro360\Admin\Controllers'], function()
 {
-    Route::get('cities', 'CitiesController@ajax');
+    Route::get('cities/tables', 'CitiesController@ajax');
+    Route::get('states', 'StatesController@lists');
+    Route::get('cities', 'CitiesController@lists');
+    Route::get('zips', 'CitiesController@zipLists');
 
 });
 

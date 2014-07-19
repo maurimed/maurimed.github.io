@@ -38,12 +38,11 @@
                     </div>
                     @endif
                     <div class="body">
-                        <h3><a>{{ $post->title }}</a></h3>
+                        <h3><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h3>
                          <p class="italic post-links">{{ Lang::get('blog.posted_by') }} {{ $post->owner->username }}</p>
                         <p class="text">
-                            {{ $post->body }}
+                            {{ Str::words( $post->body , 100, '...' ) }}
                         <span class="read-link main-text-color"><a href="/blog/{{ $post->slug }}">{{ Lang::get('blog.read_more') }} </a><i class="fa fa-play-circle-o"></i></span>
-
                         </p>
                     </div>
                 </div>
@@ -59,4 +58,6 @@
         </div>
     </div>
 </div>
+
+
 @stop

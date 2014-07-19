@@ -176,7 +176,7 @@
                     </div>
                     <div class="bot">
                         <h5 class="main-text-color medium">Emanuel Molinar</h5>
-                        <p>from Ecuador</p>
+                        <p>from Panamá</p>
                         <div class="avatar">
                             <img src="/site/img/testimonials/Emanuel-Molinar.png" alt="">
                         </div>

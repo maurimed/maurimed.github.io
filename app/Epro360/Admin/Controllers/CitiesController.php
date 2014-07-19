@@ -1,15 +1,21 @@
 <?php namespace Epro360\Admin\Controllers;
 
 use Epro360\Repos\Locations\CitiesRepository;
+use Epro360\Repos\Locations\CountriesRepository;
+use Input;
 use View;
 use Redirect;
 
 class CitiesController extends \BaseController {
 
+    private $countriesRepo;
+
     private $citiesRepo;
 
-    function __construct(CitiesRepository $citiesRepo)
+    function __construct(CitiesRepository $citiesRepo, CountriesRepository $countriesRepo)
     {
+        $this->countriesRepo = $countriesRepo;
+
         $this->citiesRepo = $citiesRepo;
     }
 
@@ -21,20 +27,10 @@ class CitiesController extends \BaseController {
 	 */
     public function index()
     {
-
         return View::make('admin.locations.cities.index');
     }
 
-    /**
-     *@return Response
-     */
-    public function ajax()
-    {
 
-        return $this->citiesRepo->makeDatatable('cities', 'id', $_GET);
-
-
-    }
 
 	/**
 	 * Show the form for creating a new resource.
@@ -44,8 +40,10 @@ class CitiesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
-	}
+        $countries = $this->countriesRepo->countriesList();
+
+        return View::make('admin.locations.cities.create', compact('countries'));
+    }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -55,7 +53,9 @@ class CitiesController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $this->citiesRepo->create(Input::all());
+
+        return Redirect::route('dashboard.cities.create')->withSuccessMessage('City was added to the list!');
 	}
 
 	/**
@@ -106,4 +106,28 @@ class CitiesController extends \BaseController {
 		//
 	}
 
+    /**
+     *@return Response
+     */
+    public function ajax()
+    {
+        return $this->citiesRepo->makeDatatable('cities', 'id', $_GET);
+
+    }
+
+
+
+    public function lists()
+    {
+        $cities = $this->citiesRepo->getListByStateAb(Input::get('state_ab'));
+
+        return View::make('admin.locations.cities.lists', compact('cities'));
+    }
+
+    public function zipLists()
+    {
+        $zips = $this->citiesRepo->getZipListByCity(Input::get('city'));
+
+        return View::make('admin.locations.zips.lists', compact('zips'));
+    }
 }

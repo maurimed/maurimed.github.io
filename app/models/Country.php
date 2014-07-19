@@ -3,6 +3,8 @@
 class Country extends \Eloquent {
 	protected $fillable = [];
 
+    public $timestamps = false;
+
     public function continent()
     {
         return $this->belongsTo('Continent');

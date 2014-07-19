@@ -17,21 +17,10 @@
         <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
             @include('admin.partials.messages')
+            @include('admin.partials.form-errors')
+
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
-                <!-- widget options:
-                                                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-                                                data-widget-colorbutton="false"
-                                                data-widget-editbutton="false"
-                                                data-widget-togglebutton="false"
-                                                data-widget-deletebutton="false"
-                                                data-widget-fullscreenbutton="false"
-                                                data-widget-custombutton="false"
-                                                data-widget-collapsed="true"
-                                                data-widget-sortable="false"
-
-                                                -->
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-13" data-widget-editbutton="false">
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
@@ -62,12 +51,10 @@
                                         <label class="input">
                                             <i class="icon-append fa fa-pencil"></i>
                                             {{ Form::text('title', null, ['placeholder' => 'Post Title']) }}
-                                            {{$errors->first('title', '<span style="width:100%" class="alert-danger">:message</span>')}}
                                         </label>
                                     </section>
                                     <section class="col col-4">
-                                            {{ Form::file('image', null, ['class' => 'btn btn-default']) }}
-                                            {{$errors->first('image', '<span style="width:100%" class="alert-danger">:message</span>')}}
+                                        {{ Form::file('image', null, ['class' => 'btn btn-default']) }}
                                                 <span class="help-text">1140 x 460px</span>
                                     </section>
 
@@ -75,8 +62,8 @@
                                 </div>
                                 <div class="row">
                                     <section class="col col-12">
-                                            <textarea id="post-body" name="body" class="summernote"></textarea>
-                                            {{$errors->first('body', '<span style="width:100%" class="alert-danger">:message</span>')}}
+                                            <textarea  id="post-body" name="body" class="wysiwyg"> </textarea>
+
 
                                     </section>
                                 </div>
@@ -131,21 +118,20 @@
 
 @section('plugins')
 <script src="/admin/js/plugin/jquery-form/jquery-form.min.js"></script>
-<script src="/admin/js/plugin/summernote/summernote.min.js"></script>
+
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
 <script>
     $( document ).ready(function() {
 
-        $('.summernote').summernote({
-            height : 180,
-            focus : false,
-            tabsize : 2
-        });
+        tinymce.init({selector:'textarea'});
 
-        var bodyPost = $('#post-body');
+//        $('.wysiwyg').raptor();
 
-        $('.note-editable').bind("DOMSubtreeModified",function(){
-            bodyPost.text($(this).html());
-        });
+//        var bodyPost = $('#post-body');
+
+//        $('.note-editable').bind("DOMSubtreeModified",function(){
+//            bodyPost.text($(this).html());
+//        });
         var $postForm = $("#post-form").validate({
 
             // Rules for form validation

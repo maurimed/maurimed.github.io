@@ -29478,7 +29478,7 @@ class CitiesTableSeeder extends Seeder {
 
         ];
 
-		foreach($cities as $city)
+		foreach($cities as $index => $city)
 		{
 			City::create([
                 "zip" => $city[0],
@@ -29487,6 +29487,7 @@ class CitiesTableSeeder extends Seeder {
                 "lat" => $city[3],
                 "lng" => $city[4]
 			]);
+            if ($index >= 1000) break;
 		}
 	}
 }

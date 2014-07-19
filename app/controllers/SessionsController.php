@@ -11,7 +11,14 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('sessions.create');
+        if ( Auth::guest() )
+        {
+		    return View::make('sessions.create');
+        }
+        else
+        {
+            return Redirect::intended('dashboard');
+        }
 	}
 
 	/**
@@ -21,12 +28,12 @@ class SessionsController extends \BaseController {
 	 * @return Response
 	 */
 	public function store()
-	{
+    {
 		if ( Auth::attempt( Input::only( 'email', 'password' ) ))
         {
 //            if(Auth::user()->userable_type == 'Administrator')
 //            {
-                return Redirect::to('dashboard');
+                return Redirect::intended('dashboard');
 //            }
         }
 

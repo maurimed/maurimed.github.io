@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 class PagesController extends BaseController {
 
 
@@ -44,19 +46,19 @@ class PagesController extends BaseController {
     }
 
     // Move to ambassadors Controller
-    public function ambassadors($country)
+    public function ambassadors($countryName)
     {
-        $ambassadors =  Country::where('name', 'like', $country.'%')
-            ->with([
-                'ambassadors' => function($query){
-                    $query->get(['id','country_id', 'firstname', 'lastname', 'phone']);
-                },
-                'ambassadors.profile' => function($query){
-                    $query->get(['email', 'userable_id', 'image']);
-                }
-            ])->firstOrFail(['name', 'id']);
+        try
+        {
+           $country = Country::whereName($countryName)->with(['states.cities.ambassadors.profile'])->firstOrFail();
+        }
+        catch (ModelNotFoundException $e)
+        {
+            return Redirect::to('/')->withDangerMessage('Sorry, the Country you\'ve selected doesn\'t exist, or is not yet in our database');
+        }
 
-        return View::make('site.pages.ambassadors', compact('ambassadors'));
+
+        return View::make('site.pages.ambassadors', compact('country'));
     }
 
 
@@ -74,7 +76,7 @@ class PagesController extends BaseController {
 
     public function networkCoaching()
     {
-        $tags = AcademicSchool::get(['name', 'slug']);
+        $tags = AcademicSchool::orderBy('name')->get(['name', 'slug']);
         $majors = Major::all();
         return View::make('site.pages.network.coaching', compact('tags', 'majors'));
     }

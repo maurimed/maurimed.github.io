@@ -5,10 +5,12 @@
                 <img class="img-responsive" alt="Epro 360" src="/site/images/logo.png">
             </a>
         </div>
+        @if( Auth::guest() )
         <div class="utilities-buttons">
             <a data-toggle="collapse" href="#login" class="collapsed"> <i class="fa fa-lg fa-lock"></i> </a>
 <!--            <a data-toggle="collapse" href="#search" class="collapsed"> <i class="fa fa-lg fa-search"></i> </a>-->
         </div>
+        @endif
         <ul class="nav navbar-nav">
 
             <li class="{{ setActive( 'home' ) }}" > {{  link_to_route('home', Lang::get('menu.home')) }} </li>
@@ -48,15 +50,16 @@
             <li class="{{ setActive( 'news' ) }}"> {{ link_to_route('news', Lang::get('menu.news') ) }} </a> </li>
             <li class="{{ setActive( 'blog' ) }}"> {{ link_to_route('posts.index', 'Blog' ) }} </a> </li>
             <li class="{{ setActive( 'social-responsibility' ) }}"> {{ link_to_route('social-responsibility', Lang::get('menu.social_responsibility') ) }} </a> </li>
-
+            @if(Auth::check())
+            <li><a  href="/dashboard">Dashboard </a> </li>
+            @endif
         </ul>
     </div>
 
     <div class="mobile-header">
         <ul class="collapse main-menu" id="navbar-collapse-1">
             <li class="main alt-bg-color">
-                <button type="button" class="collapsed fa fa-times" data-toggle="collapse"
-                        data-target="#navbar-collapse-1"></button>
+                <button type="button" class="collapsed fa fa-times" data-toggle="collapse" data-target="#navbar-collapse-1"></button>
             </li>
             <li class="{{ setActive( 'home' ) }}"> {{  link_to_route('home', Lang::get('menu.home')) }} </li>
             <li class="{{ setActive( 'about' ) }}">
@@ -105,9 +108,11 @@
             <span class="icon-bar main-bg-color"></span>
             <span class="icon-bar main-bg-color"></span>
         </button>
+        @if( Auth::guest() )
         <div class="utilities-buttons">
             <a data-toggle="collapse" href="#login" class="collapsed"> <i class="fa fa-lg fa-lock"></i> </a>
 <!--            <a data-toggle="collapse" href="#search" class="collapsed"> <i class="fa fa-lg fa-search"></i> </a>-->
         </div>
+        @endif
     </div>
 </div>

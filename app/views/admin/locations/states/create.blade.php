@@ -15,23 +15,13 @@
     <div class="row">
 
         <!-- NEW WIDGET START -->
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+
             @include('admin.partials.messages')
+            @include('admin.partials.form-errors')
+
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-11" data-widget-editbutton="false">
-                <!-- widget options:
-                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-                data-widget-colorbutton="false"
-                data-widget-editbutton="false"
-                data-widget-togglebutton="false"
-                data-widget-deletebutton="false"
-                data-widget-fullscreenbutton="false"
-                data-widget-custombutton="false"
-                data-widget-collapsed="true"
-                data-widget-sortable="false"
-
-                -->
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-110" data-widget-editbutton="false">
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
@@ -52,24 +42,35 @@
                     <!-- widget content -->
                     <div class="widget-body no-padding">
                         {{ Form::open(['route' => 'dashboard.states.store' ,'id' => 'states-form', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
-<!--                            <header>-->
-<!--                                Order services-->
-<!--                            </header>-->
 
                             <fieldset>
                                 <div class="row">
-                                    <section class="col col-6">
+
+                                    <!-- State form select -->
+                                    <section class="col col-4">
+                                        {{ Form::label('country_id', 'Country', ['class' => 'label']) }}
                                         <label class="select">
-                                            {{ Form::select('country_id', $countries, 168,['class' => 'select2', 'style' => 'width:100%'] ) }}
+                                            {{ Form::select('country_id', $countries, null,['class' => 'select2', 'style' => 'width:100%'] ) }}
                                         </label>
                                     </section>
-                                    <section class="col col-6">
+
+                                    <!-- State form input -->
+                                    <section class="col col-4">
+                                        {{ Form::label('name', 'State', ['class' => 'label']) }}
                                         <label class="input">
                                             <i class="icon-append fa fa-map-marker"></i>
                                             {{ Form::text('name', null, ['placeholder' => 'State']) }}
                                         </label>
                                     </section>
 
+                                    <!-- Abbreviation form input -->
+                                    <section class="col col-8">
+                                        {{ Form::label('abbreviation', 'Abbreviation', ['class' => 'label']) }}
+                                        <label class="input">
+                                            <i class="icon-append fa fa-map-marker"></i>
+                                            {{ Form::text('abbreviation', null, ['placeholder' => 'Abbreviation']) }}
+                                        </label>
+                                    </section>
                                 </div>
 
                             </fieldset>
@@ -80,7 +81,7 @@
                                     Save
                                 </button>
                             </footer>
-                        </form>
+                        {{ Form::close() }}
 
                     </div>
                     <!-- end widget content -->

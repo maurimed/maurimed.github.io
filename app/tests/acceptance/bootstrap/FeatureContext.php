@@ -73,7 +73,16 @@ class FeatureContext extends MinkContext{
      */
     public function iLoginWithAmbassadorCredentials()
     {
-        $this->login('ambassador@email.com');
+        $this->login('ochavez@epro360.com');
+    }
+
+
+    /**
+     * @Given /^I login with University credentials$/
+     */
+    public function iLoginWithManagerCredentials()
+    {
+        $this->login('manager@email.com');
     }
 
 
@@ -83,6 +92,15 @@ class FeatureContext extends MinkContext{
     public function iLoginWithParentCredentials()
     {
         $this->login('parent@email.com');
+    }
+
+
+    /**
+     * @Given /^I login with Director credentials$/
+     */
+    public function iLoginWithDirectorCredentials()
+    {
+        $this->login('director@email.com');
     }
 
     public function login($email, $password = "123456")
@@ -101,12 +119,12 @@ class FeatureContext extends MinkContext{
         $this->fillField('firstname','New First Name');
         $this->fillField('lastname','New Last Name');
         $this->fillField('username','NewUserName');
-        $this->fillField('personal_email', 'personal@email.com');
+//        $this->fillField('personal_email', 'personal@email.com');
         $this->fillField('password', 'secret');
         $this->fillField('passwordConfirm', 'secret');
-        $this->fillField('phone', '052638570');
-        $this->fillField('personal_phone', '099856234');
-        $this->fillField('about_me', 'About me dummy text');
+//        $this->fillField('phone', '052638570');
+//        $this->fillField('personal_phone', '099856234');
+//        $this->fillField('about_me', 'About me dummy text');
         $this->pressButton('Update');
     }
 
@@ -170,6 +188,46 @@ HEREDOC;
         $this->getSession()->executeScript($js);
         $this->fillField('body', $content);
     }
+
+
+    /**
+     * @Then /^I create a new Administrator$/
+     */
+    public function iCreateANewAdministrator()
+    {
+        $this->fillField('firstname','New Admin');
+        $this->fillField('lastname','New lastname');
+        $this->fillField('email','newadmin@email.com');
+
+
+        $this->pressButton('Save');
+    }
+
+
+    /**
+     * @Then /^I create a new Ambassador$/
+     */
+    public function iCreateANewAmbassador()
+    {
+        $this->fillField('firstname','New Ambassador');
+        $this->fillField('lastname','New lastname');
+        $this->fillField('email','newambassador@email.com');
+
+
+        $this->pressButton('Save');
+    }
+
+
+    /**
+     * @Then /^I create a new Student$/
+     */
+    public function iCreateANewStudent()
+    {
+        $this->fillField('firstname','New Student');
+        $this->fillField('lastname','New lastname');
+        $this->fillField('email','newstudent@email.com');
+
+        $this->pressButton('Save');    }
 
 
 }

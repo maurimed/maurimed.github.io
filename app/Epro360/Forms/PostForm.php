@@ -4,8 +4,6 @@ use Laracasts\Validation\FormValidator;
 
 class PostForm extends FormValidator {
 
-
-
     /**
      * Validation rules for create a post
      *
@@ -14,7 +12,7 @@ class PostForm extends FormValidator {
     protected $rules = [
         "title" => "required",
         "body" => "required",
-        "image" => "image|mimes:jpg,jpeg,png"
+        "image" => "image|mimes:jpg,jpeg,png|max:2000"
     ];
 
 }

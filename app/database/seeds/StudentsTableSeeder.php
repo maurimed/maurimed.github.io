@@ -13,8 +13,10 @@ class StudentsTableSeeder extends Seeder {
                 "lastname" => "User",
                 "image" => "default",
                 "email" => "student@email.com",
-//                "country_id" => 174,
+                "city_id" => 1,
                 "phone" => "(+593) 985 176 257",
+                "ambassador_id" => 1,
+                "university_id" => 1
 //                "personal_phone" => "(+593) 428 230 24"
             ],
             [
@@ -22,8 +24,11 @@ class StudentsTableSeeder extends Seeder {
                 "lastname" => "User",
                 "image" => "default",
                 "email" => "student2@email.com",
-//                "country_id" => 174,
+                "city_id" => 1,
                 "phone" => "(+593) 994 055 115",
+                "ambassador_id" => 6,
+                "university_id" => 1
+
 //                "personal_phone" => "(+593) 428 230 24"
 
             ]
@@ -36,8 +41,10 @@ class StudentsTableSeeder extends Seeder {
             Student::create([
                 "firstname" => $student['firstname'],
                 "lastname" => $student['lastname'],
-//                "country_id" => $student['country_id'],
+                "city_id" => $student['city_id'],
                 "phone" => $student['phone'],
+                "university_id" => $student['university_id'],
+                "ambassador_id" => $student['ambassador_id'],
             ]);
 
             User::create([

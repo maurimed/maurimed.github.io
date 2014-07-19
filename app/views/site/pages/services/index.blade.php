@@ -45,17 +45,17 @@
 
                 <div class="dividing sep-line"></div>
                 <div class="row">
+                    <div class="col-md-8 pull-right">
+                        <h4>{{ Lang::get('services.index.p2') }} </h4>
+                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li4') }}</p>
+                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li5') }}</p>
+                    </div>
                     <div class="col-md-4">
                         <div class="features-image-wrap full">
                             <div class="features-image">
                                 <img src="/site/img/services/open_door.jpg" class="center-block img-responsive" alt="">
                             </div>
-                        </div>      
-                    </div>                        
-                    <div class="col-md-8">
-                        <h4>{{ Lang::get('services.index.p2') }} </h4>
-                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li4') }}</p>
-                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li5') }}</p>
+                        </div>
                     </div>
 
                 </div>
@@ -82,18 +82,18 @@
 
                 <div class="dividing sep-line"></div>
                 <div class="row">
+                    <div class="col-md-6 pull-right">
+                        <h4>{{ Lang::get('services.index.p4') }} </h4>
+                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li8') }}</p>
+                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li9') }}</p>
+                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li10') }}</p>
+                    </div>
                     <div class="col-md-6">
                         <div class="features-image-wrap full">
                             <div class="features-image">
                                 <img src="/site/img/services/one_to_one.jpg" class="center-block img-responsive" alt="">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>{{ Lang::get('services.index.p4') }} </h4>
-                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li8') }}</p>
-                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li9') }}</p>
-                        <p class="list "><i class="fa fa-check"></i>{{ Lang::get('services.index.li10') }}</p>
                     </div>
                 </div>
 
@@ -110,6 +110,50 @@
                         <div class="features-image-wrap full">
                             <div class="features-image">
                                 <img src="/site/img/services/graduated_studets.jpg" class="center-block img-responsive" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dividing sep-line"></div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>{{ Lang::get('services.index.title2') }} </h4>
+                        <p>{{ Lang::get('services.index.p6') }}</p>
+                        <p>{{ Lang::get('services.index.p7') }}</p>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="features-image-wrap full">
+                            <div class="features-image">
+                                <img src="/site/img/services/marketability_uniqueness.jpg" class="center-block img-responsive" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+
+
+                        <h4>{{ Lang::get('services.index.subtitle') }} </h4>
+                        <p>{{ Lang::get('services.index.p8') }}</p>
+                        <p>{{ Lang::get('services.index.fact1') }}</p>
+                        <p>{{ Lang::get('services.index.fact2') }}</p>
+                        <p>{{ Lang::get('services.index.p9') }}</p>
+                        <p>{{ Lang::get('services.index.p10') }}</p>
+                        <p>{{ Lang::get('services.index.p11') }}</p>
+                        <p>{{ Lang::get('services.index.p12') }}</p>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="features-image-wrap full">
+                            <div class="features-image">
+                                <img src="/site/img/services/leadership_concept.jpg" class="center-block img-responsive hidden-md  hidden-xl" alt="">
+                                <img src="/site/img/services/leadership_concept_wide.jpg" class="center-block img-responsive hidden-xs hidden-sm  hidden-lg" alt="">
                             </div>
                         </div>
                     </div>

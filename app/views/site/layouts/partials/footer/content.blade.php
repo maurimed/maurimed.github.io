@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-6 col-md-4 main-el">
                 <div class="sep-heading-container shc4 clearfix dark">
-                    <h4> {{ Lang::get('footer.interes_links') }} </h4>
+                    <h4> {{ Lang::get('footer.interest_links') }} </h4>
                     <div class="sep-container">
                         <div class="the-sep"></div>
                     </div>

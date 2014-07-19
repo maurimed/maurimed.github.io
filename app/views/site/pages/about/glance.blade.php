@@ -64,12 +64,12 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Feb</div>
-                                <div class="month main-bg-color alt-text-color">2013</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.1.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.1.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">Foundation</h5>
-                                <p >In Portoviejo, Ecuador by Oswaldo and Christian Chavez.</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.1.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.1.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>
@@ -77,12 +77,26 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Jul</div>
-                                <div class="month main-bg-color alt-text-color">2013</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.2.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.2.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">First Presentation</h5>
-                                <p >Provided to high schools students in the Portoviejo area, Ecuador.</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.2.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.2.text') }}</p>
+                                <div class="time main-text-color"> &nbsp; </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="details">
+                            <div class="date bold pull-left">
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.3.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.3.year') }}</div>
+                            </div>
+                            <div class="text">
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.3.title') }} </h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.3.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>
@@ -90,12 +104,12 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Nov</div>
-                                <div class="month main-bg-color alt-text-color">2013</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.4.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.4.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">Expansion </h5>
-                                <p >Expanded from sheer study abroad services to career and personal development services.</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.4.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.4.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>
@@ -103,12 +117,12 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Dec</div>
-                                <div class="month main-bg-color alt-text-color">2013</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.5.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.5.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">First International Presentation </h5>
-                                <p >Performed first high school presentations in Germany.</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.5.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.5.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>
@@ -116,12 +130,12 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Jan</div>
-                                <div class="month main-bg-color alt-text-color">2014</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.6.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.6.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">Incorporated</h5>
-                                <p >In Germany.</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.6.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.6.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>
@@ -129,25 +143,12 @@
                     <div class="event">
                         <div class="details">
                             <div class="date bold pull-left">
-                                <div class="day main-text-color">Mar</div>
-                                <div class="month main-bg-color alt-text-color">2014</div>
+                                <div class="day main-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.7.month') }}</div>
+                                <div class="month main-bg-color alt-text-color">{{ Lang::get('about.epro_360_at_a_glance.timeline.7.year') }}</div>
                             </div>
                             <div class="text">
-                                <h5 class="title medium">Investor</h5>
-                                <p >Francisco Galvez joined as an angel investor.</p>
-                                <div class="time main-text-color"> &nbsp; </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="details">
-                            <div class="date bold pull-left">
-                                <div class="day main-text-color">Apr</div>
-                                <div class="month main-bg-color alt-text-color">2014</div>
-                            </div>
-                            <div class="text">
-                                <h5 class="title medium">Incorporated</h5>
-                                <p >In Spain</p>
+                                <h5 class="title medium">{{ Lang::get('about.epro_360_at_a_glance.timeline.7.title') }}</h5>
+                                <p >{{ Lang::get('about.epro_360_at_a_glance.timeline.7.text') }}</p>
                                 <div class="time main-text-color"> &nbsp; </div>
                             </div>
                         </div>

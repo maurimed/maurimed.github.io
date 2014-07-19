@@ -16,6 +16,14 @@ class DirectorsTableSeeder extends Seeder {
                 "phone" => "(+593) 985 176 257",
                 "personal_phone" => "(+593) 428 230 24"
             ],
+            [
+                "firstname" => "Director 2",
+                "lastname" => "user2",
+                "email" => "director2@email.com",
+                "country_id" => 174,
+                "phone" => "(+593) 985 176 257",
+                "personal_phone" => "(+593) 428 230 24"
+            ],
 
 
         ];

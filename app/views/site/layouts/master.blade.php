@@ -13,9 +13,11 @@
         <link rel="stylesheet" type="text/css" href="/site/vendors/rs-plugin/css/settings.css" media="screen"/>
         <link href="/site/vendors/smoothdivscroll/smoothDivScroll.css" rel="stylesheet">
         <link rel="stylesheet" href="/site/vendors/magnific-popup/magnific-popup.css">
+
         <link rel="stylesheet" href="/site/css/aspect.css">
         <link rel="stylesheet" href="/site/css/style.css">
         <link rel="stylesheet" href="/site/css/responsive.css">
+        <link rel="stylesheet" href="/site/css/flags.css">
         <script type="text/javascript" src="/site/includes/modernizr/modernizr.custom.27667.js"></script>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="/site/includes/html5shiv/html5shiv.js"></script>
@@ -27,11 +29,12 @@
         <div id="main">
                 <!-- Include advertising -->
             <header class="head-1">
-                @include('site.layouts.partials.header.top-bar')    
-                @include('site.layouts.partials.header.nav-bar')    
-                
+                @include('admin.partials.messages')
+                @include('site.layouts.partials.header.top-bar')
+                @include('site.layouts.partials.header.nav-bar')
+
             </header>
-            @if( ! Request::is('login'))
+            @if( ! Request::is('login') or Auth::guest() )
                 @include('site.layouts.partials.components.login')
             @endif
             @yield('content')

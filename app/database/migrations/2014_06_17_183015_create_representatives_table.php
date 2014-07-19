@@ -16,7 +16,9 @@ class CreateRepresentativesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('firstname');
-			$table->string('lastname');
+            $table->string('lastname');
+            $table->integer('city_id');
+            $table->string('phone');
 			$table->timestamps();
 		});
 	}

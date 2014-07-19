@@ -50,7 +50,7 @@ Route::filter('auth', function()
 
 Route::filter('administrator', function()
 {
-    if (Auth::user()->userable_id != 'Administrator')
+    if (Auth::user()->userable_type != 'Administrator')
     {
         if (Request::ajax())
         {
@@ -58,14 +58,14 @@ Route::filter('administrator', function()
         }
         else
         {
-            return 'You are not a Administrator';
+            return Redirect::to('dashboard')->withInfoMessage('Sorry, we don\'t find what you are looking for' );
         }
     }
 });
 
 Route::filter('ambassador', function()
 {
-    if (Auth::user()->userable_id != 'Ambassador')
+    if (Auth::user()->userable_type != 'Ambassador')
     {
         if (Request::ajax())
         {
@@ -80,7 +80,7 @@ Route::filter('ambassador', function()
 
 Route::filter('student', function()
 {
-    if (Auth::user()->userable_id != 'Student')
+    if (Auth::user()->userable_type != 'Student')
     {
         if (Request::ajax())
         {
@@ -95,7 +95,7 @@ Route::filter('student', function()
 
 Route::filter('representative', function()
 {
-    if (Auth::user()->userable_id != 'Representative')
+    if (Auth::user()->userable_type != 'Representative')
     {
         if (Request::ajax())
         {

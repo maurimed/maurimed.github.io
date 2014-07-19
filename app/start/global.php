@@ -11,9 +11,13 @@
 |
 */
 
+use Illuminate\Database\QueryException;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Facades\Redirect;
+use Intervention\Image\Exception\ImageNotWritableException;
 use Intervention\Image\Exception\InvalidImageTypeException;
 use Laracasts\Validation\FormValidationException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 ClassLoader::addDirectories(array(
 
@@ -50,12 +54,17 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
-//App::error(function(NotFoundHttpException $exception)
-//{
+App::error(function(QueryException $exception)
+{
 //    Log::error($exception);
-//
-//    return Redirect::to('/');
-//});
+
+    return Redirect::to('/')->withDangerMessage('Sorry, there was an error, please try again later');
+});
+
+App::error(function(NotFoundHttpException $exception)
+{
+    return Redirect::to('/')->withInfoMessage('That page doesn\'t exist');
+});
 
 //InvalidImageTypeException
 //Wrong image type () only use JPG, PNG or GIF images.
@@ -65,16 +74,31 @@ App::error(function(InvalidImageTypeException $exception)
     return Redirect::back()->withDangerMessage('Wrong image type, please only use JPG, PNG or GIF images.');
 });
 
+App::error(function(ImageNotWritableException $exception)
+{
+    return Redirect::back()->withDangerMessage('The folder you want to store your image is not writable, please contact the Administrator');
+});
+
+
 App::error(function(FormValidationException $exception)
 {
-    return Redirect::back()->withInput()->withDangerMessage('There where some validation errors.');
+    return Redirect::back()->withErrors($exception->getErrors())->withInput()->withDangerMessage('There where some validation errors.');
 });
 
 App::error(function(InvalidArgumentException $exception, $code)
 {
-    Log::error($exception);
-    return Redirect::home()->withInfoMessage('Page not found');
+//    Log::error($exception);
+    return Redirect::home()->withInfoMessage('Sorry, that page doesn\'t exist');
 });
+
+
+App::error(function(TokenMismatchException $exception, $code)
+{
+//    Log::error($exception);
+    return Redirect::to('/login')->withWarningMessage('Expired session, please login');
+});
+
+
 
 App::error(function(Exception $exception, $code)
 {
@@ -114,4 +138,4 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
-//require app_path().'/macros.php';
+require app_path().'/macros.php';

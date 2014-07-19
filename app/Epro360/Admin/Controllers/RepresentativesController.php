@@ -11,7 +11,7 @@ class RepresentativesController extends \BaseController {
 	public function index()
 	{
         $representatives = \Representative::with('profile')->get();
-        return \View::make('admin.representatives.index', compact('representatives'));
+        return \View::make('admin.users.representatives.parents.index', compact('representatives'));
 
     }
 

@@ -4,6 +4,7 @@ use Auth;
 use DateTime;
 use Epro360\Forms\PostForm;
 use Epro360\Services\ImageService;
+use Input;
 use Lang;
 use Laracasts\Validation\FormValidationException;
 use Post;
@@ -50,6 +51,16 @@ class PostRepository {
 
 
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function findById($id)
+    {
+        return Post::findOrFail($id);
+    }
+
+
 
     public function create($input)
     {
@@ -61,6 +72,26 @@ class PostRepository {
         $post->body = $input['body'];
         $post->lang = $input['lang'];
 
+        if(Input::hasFile('image'))
+            $this->imageService->postImage($input, $post);
+
+        $this->makePublished($input, $post);
+
+        $post->user_id = Auth::user()->id;
+
+        return $post->save();
+    }
+
+
+
+    public function update($input, $id)
+    {
+
+        $post = $this->findById($id);
+        $post->title = $input['title'];
+        $post->body = $input['body'];
+        $post->lang = $input['lang'];
+
         $this->imageService->postImage($input, $post);
 
         $this->makePublished($input, $post);
@@ -68,6 +99,14 @@ class PostRepository {
         $post->user_id = Auth::user()->id;
 
         return $post->save();
+    }
+
+    public  function destroy($id)
+    {
+        $post = $this->findById($id);
+
+        return $post->delete();
+
     }
 
     /**

@@ -16,7 +16,7 @@ class CreateUniversitiesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('zip_id');
+			$table->integer('city_id');
 			$table->text('address');
 			$table->string('website');
 			$table->string('phone');

@@ -16,12 +16,11 @@
             </div>
         </div>
 
-        <div style="text-align: justify"  class="col-md-9 main-el">
+        <div style="text-align: justify" class="col-md-9 main-el">
             <div class="row">
                 <div class="col-md-7">
 
                     <h3>{{ Lang::get('menu.epro_360_network.index')  }}</h3>
-
                     <p> {{ Lang::get('network.what_is.p1') }} </p>
                     <p> {{ Lang::get('network.what_is.p2') }} </p>
                     <p> {{ Lang::get('network.what_is.p3') }} </p>
@@ -29,9 +28,12 @@
                 <div class="col-md-5">
                     <div class="features-image-wrap full">
                         <div class="features-image">
-                            <img src="/site/img/network/network.jpg" class="img-responsive" alt="">
+                            <img src="/site/img/network/network.jpg" class="img-responsive" alt="{{ Lang::get('menu.epro_360_network.index') }}">
                         </div>
                     </div>
+                    <blockquote> {{ Lang::get('network.what_is.blockquote') }}
+                       <cite class="note"> {{ Lang::get('network.what_is.author') }}  </cite>
+                    </blockquote>
                 </div>
             </div>
 

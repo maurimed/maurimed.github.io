@@ -1,5 +1,7 @@
 <?php namespace Epro360\Admin\Controllers;
 
+use Country;
+use Epro360\Repos\Locations\ContinentsRepository;
 use Epro360\Repos\Locations\CountriesRepository;
 use Input;
 use Redirect;
@@ -7,10 +9,12 @@ use View;
 
 class CountriesController extends \BaseController {
 
+    private $continentsRepo;
     private $countriesRepo;
 
-    function __construct(CountriesRepository $countriesRepo)
+    function __construct(ContinentsRepository $continentsRepo, CountriesRepository $countriesRepo)
     {
+        $this->continentsRepo = $continentsRepo;
         $this->countriesRepo = $countriesRepo;
     }
 
@@ -36,7 +40,7 @@ class CountriesController extends \BaseController {
 	 */
 	public function create()
 	{
-        $continents = $this->countriesRepo->continentsList();
+        $continents = $this->continentsRepo->continentsList();
 
         return View::make('admin.locations.countries.create', compact('continents'));
     }
@@ -76,7 +80,9 @@ class CountriesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+        $continents = $this->continentsRepo->continentsList();
+        $country = $this->countriesRepo->findById($id);
+		return View::make('admin.locations.countries.edit', compact('continents', 'country'));
 	}
 
 	/**
@@ -88,8 +94,10 @@ class CountriesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
-	}
+        $this->countriesRepo->update(Input::all(), $id);
+
+        return Redirect::back()->withSuccessMessage('Country was updated!');
+    }
 
 	/**
 	 * Remove the specified resource from storage.
@@ -100,7 +108,14 @@ class CountriesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->countriesRepo->destroy($id);
+
+        return Redirect::back()->withSuccessMessage('The country was removed');
 	}
+
+//    public function ajax($id)
+//    {
+//        return Country::find($id);
+//    }
 
 }

@@ -1,7 +1,6 @@
 <?php  namespace Epro360\Repos\Locations;
 
 
-use Continent;
 use Country;
 
 class CountriesRepository {
@@ -13,9 +12,9 @@ class CountriesRepository {
         }])->get(['id', 'name', 'continent_id']);
     }
 
-    public function continentsList()
+    public function countriesList()
     {
-        return Continent::lists('name', 'id');
+        return Country::orderBy('name', 'ASC')->lists('name', 'id');
     }
 
     public function create($input)
@@ -23,13 +22,28 @@ class CountriesRepository {
         $country = new Country;
         $country->name = $input['name'];
         $country->continent_id = $input['continent_id'];
-        $country->save();
+        return $country->save();
+
+    }
+
+    public function update($input,$id)
+    {
+
+        $country =$this->findById($id);
+        $country->name = $input['name'];
+        $country->continent_id = $input['continent_id'];
+        return $country->save();
 
     }
 
     public function findById($id)
     {
-//        return  Administrator::with('profile')->findOrFail($id);
+        return  Country::findOrFail($id);
+    }
+
+    public function destroy($id)
+    {
+        return Country::destroy($id);
     }
 
 

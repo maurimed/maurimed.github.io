@@ -1,22 +1,28 @@
 <?php namespace Epro360\Admin\Controllers;
 
-use Administrator;
-use Epro360\Repos\UserRepository;
-use Illuminate\Support\Facades\Hash;
+use Epro360\Forms\Administrator\AdminCreateForm;
+use Epro360\Repos\Users\Administrators\AdministratorRepository;
+use Epro360\Repos\Users\UserRepository;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
-use Str;
 use View;
 
 class AdministratorsController extends \BaseController {
 
 
-    private $userRepo;
+    protected  $userRepo;
 
-    function __construct(UserRepository $userRepo)
+    protected  $adminRepo;
+
+    protected  $adminCreateForm;
+
+    function __construct(UserRepository $userRepo, AdministratorRepository $adminRepo, AdminCreateForm $adminCreateForm)
     {
         $this->userRepo = $userRepo;
+
+        $this->adminRepo = $adminRepo;
+
+        $this->adminCreateForm = $adminCreateForm;
     }
 
     /**
@@ -28,7 +34,7 @@ class AdministratorsController extends \BaseController {
 	public function index()
 	{
         $administrators = $this->userRepo->getAdmins();
-        return View::make('admin.administrators.index', compact('administrators'));
+        return View::make('admin.users.administrators.index', compact('administrators'));
 	}
 
 	/**
@@ -39,7 +45,7 @@ class AdministratorsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('admin.administrators.create');
+		return View::make('admin.users.administrators.create');
 	}
 
 	/**
@@ -51,50 +57,13 @@ class AdministratorsController extends \BaseController {
 	public function store()
 	{
 
-        // AdministratorCreator::create(Input::all());
-        $password = str_random(15);
+        $this->adminCreateForm->validate(Input::all());
 
-        // Grab data
-        $userInfo = Input::only(['email']);
-        $adminInfo = Input::only(['firstname', 'lastname']);
+        $user = $this->userRepo->create(Input::only(['email']));
 
-        // Create user
-        $user = \User::create($userInfo);
+        $admin = $this->adminRepo->create(Input::only(['firstname', 'lastname']));
 
-        // Create admin
-        $admin = new Administrator;
-        $admin->firstname = $adminInfo['firstname'];
-        $admin->lastname = $adminInfo['lastname'];
-        $admin->created_by = \Auth::user()->id;
-        $admin->save();
-
-        // Link the admin to an user profile
-        $user->userable_id = $admin->id;
-        $user->userable_type = 'Administrator';
-        $user->email =  $userInfo['email'];
-        $user->username = Str::slug( $userInfo['email'] );
-        $user->password = Hash::make($password);
-
-        // Save the user profile
-        $user->save();
-
-
-        // Send email with password
-        $subject = "";
-
-        $data = [
-            'title'    => $subject,
-            'password' => $password,
-            'username' => $user->username,
-            'lastname' => $user->lastname
-        ];
-
-
-        Mail::send('emails.notifications.admin-account-created', $data, function($message) use ($user, $password)
-        {
-            $message->to($user->email, $user->firstname)->subject("Epro 360 Administrator account created!");
-        });
-
+        $admin->profile()->save($user);
 
         return Redirect::back()->withSuccessMessage("Administrator {$admin->firstname} was created!");
 	}
@@ -132,6 +101,7 @@ class AdministratorsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+
 	}
 
 	/**
@@ -143,7 +113,15 @@ class AdministratorsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
-	}
+        $admin = $this->userRepo->findByAdminId($id);
+
+        if($admin->id == 1 or $admin->profile->id == 1)
+            return Redirect::back()->withDangerMessage('You can\'t delete the master administrator');
+
+        $this->userRepo->delete($admin);
+
+        return Redirect::back()->withSuccessMessage("Administrator was deleted!");
+
+    }
 
 }

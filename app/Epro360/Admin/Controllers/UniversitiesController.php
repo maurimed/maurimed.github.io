@@ -1,8 +1,24 @@
 <?php namespace Epro360\Admin\Controllers;
 
+use Epro360\Repos\Institutions\Universities\UniversitiesRepository;
+use Epro360\Repos\Locations\CountriesRepository;
+use Input;
+use View;
+
 class UniversitiesController extends \BaseController {
 
-	/**
+    protected $universitiesRepo;
+
+    protected $countriesRepo;
+
+    function __construct(UniversitiesRepository  $universitiesRepo, CountriesRepository $countriesRepo)
+    {
+        $this->universitiesRepo = $universitiesRepo;
+
+        $this->countriesRepo = $countriesRepo;
+    }
+
+    /**
 	 * Display a listing of the resource.
 	 * GET /universities
 	 *
@@ -10,7 +26,9 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+        $universities = $this->universitiesRepo->getAll();
+
+		return View::make('admin.institutions.universities.index', compact('universities'));
 	}
 
 	/**
@@ -21,21 +39,27 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
-	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /universities
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+        $countries = $this->countriesRepo->countriesList();
 
-	/**
+        return View::make('admin.institutions.universities.create', compact('countries'));
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     * POST /universities
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        $this->universitiesRepo->save(Input::all());
+
+        return \Redirect::back()->withSuccessMessage('The University has been saved');
+    }
+
+    /**
 	 * Display the specified resource.
 	 * GET /universities/{id}
 	 *
@@ -47,7 +71,7 @@ class UniversitiesController extends \BaseController {
 		//
 	}
 
-	/**
+    /**
 	 * Show the form for editing the specified resource.
 	 * GET /universities/{id}/edit
 	 *

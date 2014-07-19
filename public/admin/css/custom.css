@@ -5,3 +5,12 @@
 
 .login-info img {
   border: none; }
+
+.dropzone .dz-default.dz-message {
+  background-image: none; }
+
+#dropzoneStyle {
+  min-height: 30px !important; }
+
+.popover {
+  max-width: 800px; }

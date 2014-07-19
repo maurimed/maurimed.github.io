@@ -3,7 +3,6 @@
 @section('content')
 
 
-
 @include('site.layouts.partials.components.slider')
 
 <!-- @include('site.layouts.partials.components.description') -->

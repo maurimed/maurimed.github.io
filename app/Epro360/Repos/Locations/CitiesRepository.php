@@ -3,39 +3,36 @@
 
 use City;
 use Epro360\Admin\Datatables\SSP;
-use Illuminate\Support\Facades\Config;
-use State;
+use Config;
+use Epro360\Forms\Locations\CitiesForm;
 
 class CitiesRepository {
+
+    protected $citiesRepo;
+
+    function __construct(CitiesForm $citiesRepo)
+    {
+        $this->citiesRepo = $citiesRepo;
+    }
 
     public function getAll()
     {
         return City::paginate(3);
-//        with([
-//            'state' => function($query){
-//                $query->get(['id', 'name', 'abbreviation' ,'country_id']);
-//            },
-//            'state.country' => function($query){
-//                $query->get(['id', 'name', 'continent_id']);
-//            },
-//            'state.country.continent' => function($query){
-//                $query->get(['id', 'name']);
-//            }
-//        ])->
-//        return City::paginate(3);
+
     }
 
-    public function countriesList()
-    {
-        return State::lists('name', 'id');
-    }
 
     public function create($input)
     {
-        $country = new State;
-        $country->name = $input['name'];
-        $country->country_id = $input['country_id'];
-        $country->save();
+        $this->citiesRepo->validate($input);
+
+        $city = new City;
+        $city->name = $input['name'];
+        $city->zip = $input['zip'];
+        $city->state_ab = $input['state'];
+        $city->lat = $input['lat'];
+        $city->lng = $input['lng'];
+        return $city->save();
 
     }
 
@@ -44,8 +41,18 @@ class CitiesRepository {
 //        return  Administrator::with('profile')->findOrFail($id);
     }
 
+    public function getListByStateAb($state_ab)
+    {
+        return City::groupBy('name')->where('state_ab', $state_ab)->lists('name', 'name');
+
+    }
 
 
+    public function getZipListByCity($city)
+    {
+        return City::where('name', $city)->lists('zip', 'id');
+
+    }
 
 //    $this->citiesRepo->makeDatatable('cities', 'id', ['id', 'name', 'zip']);
 
@@ -55,21 +62,21 @@ class CitiesRepository {
 
         $columns = [
             [ 'db' => 'id', 'dt' => 0 ],
-            [ 'db' => 'name', 'dt' => 1 ],
-            [ 'db' => 'zip',  'dt' => 2 ],
+            [ 'db' => 'state_ab', 'dt' => 1 ],
+            [ 'db' => 'name', 'dt' => 2 ],
+            [ 'db' => 'zip',  'dt' => 3 ],
 
         ];
 
-//        $sql_details= Config::get('database.default');
         $sql_details = [
-            'user' => 'root',
-            'pass' => 'root',
-            'db'   => 'eprotest',
-            'host' => 'localhost'
+            'user' => Config::get('database.connections.mysql.username'),
+            'pass' => Config::get('database.connections.mysql.password'),
+            'db'   => Config::get('database.connections.mysql.database'),
+            'host' => Config::get('database.connections.mysql.host'),
         ];
 
         return json_encode(
-            SSP::simple( $get, $sql_details, $table, $primaryKey, $columns )
+            SSP::simple( $get, (array) $sql_details, $table, $primaryKey, $columns )
         );
 
     }

@@ -41,8 +41,8 @@
                                 <div class="thumb">
                                     <img src="/site/img/network/educational_mentorship/leadership.jpg" class="img-responsive" alt="">
                                 </div>
-                                <h5 class="medium">Leadership</h5>
-                                <p > “He who cannot be a good follower cannot be a good leader.” ― Aristotle </p>
+                                <h5 class="medium">{{ Lang::get('network.mentorship.blockquotes.1.title') }}</h5>
+                                <p >{{ Lang::get('network.mentorship.blockquotes.1.text') }}</p>
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@
                                 <div class="thumb">
                                     <img src="/site/img/network/educational_mentorship/self_discovery.jpg" class="img-responsive" alt="">
                                 </div>
-                                <h5 class="medium">Self-discovery</h5>
-                                <p > “There is nothing like returning to a place that remains unchanged to find the ways in which you yourself have altered.” ― Nelson Mandela </p> 
+                                <h5 class="medium">{{ Lang::get('network.mentorship.blockquotes.2.title') }}</h5>
+                                <p>{{ Lang::get('network.mentorship.blockquotes.2.text') }}</p>
                             </div>
                         </div>
 
@@ -61,8 +61,8 @@
                                 <div class="thumb">
                                     <img src="/site/img/network/educational_mentorship/entrepreneurship.jpg" class="img-responsive" alt="">
                                 </div>
-                                <h5 class="medium">Entrepreneurship</h5>
-                                <p >“The choice isn't between success and failure; it's between choosing risk and striving for greatness, or risking nothing and being certain of mediocrity.” ― Keith farrazzi </p>
+                                <h5 class="medium">{{ Lang::get('network.mentorship.blockquotes.3.title') }}</h5>
+                                <p >{{ Lang::get('network.mentorship.blockquotes.3.text') }}</p>
                             </div>
                         </div>
 
@@ -71,8 +71,8 @@
                                 <div class="thumb">
                                     <img src="/site/img/network/educational_mentorship/women_empowerment.jpg" class="img-responsive" alt="">
                                 </div>
-                                <h5 class="medium">Women Empowerment</h5>
-                                <p >“The thing women have yet to learn is nobody gives you power. You just take it.” ~Roseanne Barr –</p>
+                                <h5 class="medium">{{ Lang::get('network.mentorship.blockquotes.4.title') }}</h5>
+                                <p >{{ Lang::get('network.mentorship.blockquotes.4.text') }}</p>
                             </div>
                         </div>
 

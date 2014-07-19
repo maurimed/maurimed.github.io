@@ -1,6 +1,7 @@
 <?php namespace Epro360\Admin\Controllers;
 
-use Epro360\Repos\UserRepository;
+use Epro360\Repos\Locations\CountriesRepository;
+use Epro360\Repos\Users\UserRepository;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 use View;
@@ -10,10 +11,13 @@ class ProfilesController extends \BaseController {
 
     private $userRepo;
 
+    private $countriesRepo;
 
-    function __construct(UserRepository $userRepo)
+
+    function __construct(UserRepository $userRepo, CountriesRepository $countriesRepo)
     {
         $this->userRepo = $userRepo;
+        $this->countriesRepo = $countriesRepo;
     }
 
 
@@ -61,7 +65,7 @@ class ProfilesController extends \BaseController {
 	{
         $user = $this->userRepo->findByUsername($slug);
 
-        return View::make('admin.profiles.show', compact('user'));
+        return View::make('admin.users.profiles.show', compact('user'));
 	}
 
     /**
@@ -76,7 +80,9 @@ class ProfilesController extends \BaseController {
 	{
         $user = $this->userRepo->findByUsername($slug);
 
-		return View::make('admin.profiles.edit', compact('user'));
+        $countries = $this->countriesRepo->countriesList();
+
+		return View::make('admin.users.profiles.edit', compact('user', 'countries'));
 	}
 
 	/**
@@ -88,7 +94,6 @@ class ProfilesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-
         $user = $this->userRepo->update(Input::all(), $id);
 
 

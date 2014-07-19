@@ -1,9 +1,20 @@
 <?php namespace Epro360\Admin\Controllers;
 
 
+use Epro360\Repos\Users\UserRepository;
+use Input;
+use Redirect;
+
 class StudentsController extends \BaseController {
 
-	/**
+    protected $userRepo;
+
+    function __construct(UserRepository $userRepo)
+    {
+        $this->userRepo = $userRepo;
+    }
+
+    /**
 	 * Display a listing of the resource.
 	 * GET /students
 	 *
@@ -11,9 +22,9 @@ class StudentsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $students = \Student::with('profile')->get();
-        return \View::make('admin.students.index', compact('students'));
+        $students = $this->userRepo->getStudents();
 
+        return \View::make('admin.users.students.index', compact('students'));
     }
 
 	/**
@@ -24,7 +35,7 @@ class StudentsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return \View::make('admin.users.students.create');
 	}
 
 	/**
@@ -35,7 +46,13 @@ class StudentsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+
+        $userInfo = Input::only(['email']);
+        $ambassadorInfo = Input::only(['firstname', 'lastname']);
+
+        $admin = $this->userRepo->create($ambassadorInfo, $userInfo, 'Student');
+
+        return Redirect::back()->withSuccessMessage("Student {$admin->firstname} was created!");
 	}
 
 	/**

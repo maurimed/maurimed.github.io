@@ -25,7 +25,8 @@ class CreateDirectorsTable extends Migration {
             $table->integer('city_id')->nullable();
             $table->integer('country_id')->nullable();
             $table->integer('created_by');
-			$table->timestamps();
+            $table->softDeletes();
+            $table->timestamps();
 		});
 	}
 

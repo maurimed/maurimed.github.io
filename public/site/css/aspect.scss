@@ -845,7 +845,7 @@ header {
     &:hover {
       background-color: #f9f9f9;
     }
-    a:hover! {}
+    a:hover {}
   }
   .navbar-nav .uber-menu a {
     color: #777777;
@@ -1011,12 +1011,26 @@ header {
     border-right: 1px solid #e1e1e1;
   }
   .lang {
+    width: 97px;
     box-shadow: 0px 8px 15px 2px rgba(0, 0, 0, 0.1);
     color: #777777;
     border: 1px solid #e1e1e1;
     background: #f9f9f9;
     &:focus {
       color: initial;
+    }
+    img{
+      display: inline-block;
+      float: left;
+      margin-top: 8px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    a{
+      text-align: left !important;
+      &:hover{
+        background-color: lighten($mainColor, 40%);
+      }
     }
   }
   &.head-2 .menu-bar .utilities-buttons, .top-bar .utilities-buttons {
@@ -2184,7 +2198,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 
 .calendar-widget {
   border: 1px solid #e1e1e1;
-  .date! {}
+  .date {}
   .week {
     border-bottom: 1px solid #e1e1e1;
     .day {
@@ -2525,4 +2539,25 @@ header.custom-5 .navbar-nav li a .over:hover {
 .epro-at-glance{
   font-size: 1.4em; 
   line-height:1.5em;
+}
+
+
+.facebook{
+  background-color: #3b5998 !important;
+  i{color: white; }
+}
+
+.twitter{
+  background-color: #00aced !important;
+  i{color: white; }
+}
+
+.youtube{
+  background-color: #bb0000 !important;
+  i{color: white; }
+}
+
+.google-plus{
+  background-color: #dd4b39 !important;
+  i{color: white; }
 }

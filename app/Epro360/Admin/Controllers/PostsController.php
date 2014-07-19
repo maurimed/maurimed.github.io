@@ -62,7 +62,9 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$post = $this->postsRepo->findById($id);
+
+        return View::make('admin.posts.show', compact('post'));
 	}
 
 	/**
@@ -74,7 +76,9 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$post = $this->postsRepo->findById($id);
+
+        return View::make('admin.posts.edit', compact('post'));
 	}
 
 	/**
@@ -86,7 +90,9 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        $this->postsRepo->update( Input::all(), $id );
+
+        return Redirect::to('dashboard/posts')->withSuccessMessage('Post was modified');
 	}
 
 	/**
@@ -98,7 +104,9 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->postsRepo->destroy( $id );
+
+        return Redirect::to('dashboard/posts')->withSuccessMessage('Post was deleted');
 	}
 
 }

@@ -22,9 +22,9 @@ class CreateAdministratorsTable extends Migration {
             $table->string('personal_email')->nullable();
             $table->string('personal_phone')->nullable();
             $table->text('about_me')->nullable();
-            $table->integer('city_id')->nullable();
-            $table->integer('country_id')->nullable();
-            $table->integer('created_by');
+            $table->integer('city_id')->default(1);
+            $table->integer('created_by')->default(1);
+            $table->softDeletes();
 			$table->timestamps();
 		});
 	}

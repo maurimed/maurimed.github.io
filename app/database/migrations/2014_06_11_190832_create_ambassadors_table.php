@@ -22,10 +22,11 @@ class CreateAmbassadorsTable extends Migration {
             $table->string('personal_email')->nullable();
             $table->string('personal_phone')->nullable();
             $table->text('about_me')->nullable();
-            $table->integer('city_id')->nullable();
-            $table->integer('country_id')->nullable();
+            $table->date('birth');
+            $table->integer('city_id');
             $table->integer('director_id');
             $table->integer('created_by');
+            $table->softDeletes();
             $table->timestamps();
 		});
 	}

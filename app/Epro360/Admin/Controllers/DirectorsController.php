@@ -11,7 +11,7 @@ class DirectorsController extends \BaseController {
 	public function index()
 	{
         $directors = \Director::with('profile')->get();
-        return \View::make('admin.directors.index', compact('directors'));
+        return \View::make('admin.users.directors.index', compact('directors'));
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <?php namespace Epro360\Admin\Controllers;
 
+use Epro360\Repos\Locations\CountriesRepository;
 use Epro360\Repos\Locations\StatesRepository;
 use Input;
 use Redirect;
@@ -9,9 +10,13 @@ class StatesController extends \BaseController {
 
     private $statesRepo;
 
-    function __construct(StatesRepository $statesRepo)
+    private $countriesRepo;
+
+
+    function __construct(StatesRepository $statesRepo, CountriesRepository $countriesRepo)
     {
         $this->statesRepo = $statesRepo;
+        $this->countriesRepo = $countriesRepo;
     }
 
     /**
@@ -35,7 +40,7 @@ class StatesController extends \BaseController {
 	 */
 	public function create()
 	{
-        $countries = $this->statesRepo->countriesList();
+        $countries = $this->countriesRepo->countriesList();
 
         return View::make('admin.locations.states.create', compact('countries'));
 
@@ -98,8 +103,17 @@ class StatesController extends \BaseController {
 	 * @return Response
 	 */
 	public function destroy($id)
+
 	{
 		//
 	}
+
+
+    public function lists()
+    {
+        $states = $this->statesRepo->getListByCountryId(Input::get('country_id'));
+
+        return View::make('admin.locations.states.lists', compact('states'));
+    }
 
 }

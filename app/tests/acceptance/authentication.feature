@@ -4,7 +4,7 @@ Feature: Authentication
   I want to be able to login to manage my account
 
 
-#  @javascript
+#@javascript
   Scenario: Administrator updates his profile information
     Given I am on "/login"
     And I login with Admin credentials
@@ -13,8 +13,45 @@ Feature: Authentication
     Then I update my profile
     Then I should see "New First Name"
 
-#  @javascript
-  Scenario: Student login to dashboard
+#@javascript
+  Scenario: Student updates his profile information
     Given I am on "/login"
     And I login with Student credentials
-    Then I should not see "Users"
+    Then I am on "/dashboard/users/studentemailcom/profile"
+    Then I follow "edit-profile"
+    Then I update my profile
+    Then I should see "New First Name"
+
+#@javascript
+  Scenario: Ambassador updates his profile information
+    Given I am on "/login"
+    And I login with Ambassador credentials
+    Then I am on "/dashboard/users/ochavezepro360com/profile"
+    Then I follow "edit-profile"
+    Then I update my profile
+    Then I should see "New First Name"
+
+#@javascript
+  Scenario: Director updates his profile information
+    Given I am on "/login"
+    And I login with Director credentials
+    Then I am on "/dashboard/users/directoremailcom/profile"
+    Then I follow "edit-profile"
+    Then I update my profile
+    Then I should see "New First Name"
+
+  Scenario: Parent updates his profile information
+    Given I am on "/login"
+    And I login with Parent credentials
+    Then I am on "/dashboard/users/parentemailcom/profile"
+    Then I follow "edit-profile"
+    Then I update my profile
+    Then I should see "New First Name"
+
+  Scenario: Manager updates his profile information
+    Given I am on "/login"
+    And I login with University credentials
+    Then I am on "/dashboard/users/manageremailcom/profile"
+    Then I follow "edit-profile"
+    Then I update my profile
+    Then I should see "New First Name"

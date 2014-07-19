@@ -16,7 +16,7 @@
 
 <!-- NEW WIDGET START -->
 <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+    @include('admin.partials.messages')
 <!-- Widget ID (each widget will need unique ID)-->
 <div class="jarviswidget jarviswidget-color-darken" id="wid-id-10" data-widget-editbutton="false">
 <!-- widget options:
@@ -67,7 +67,10 @@
     <td>{{$country->continent->name}}</td>
     <td>{{$country->name}}</td>
     <td>
-        <a href="javascript:void(0);" class="button-icon    delete-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete"><i class="fa fa-times"></i></a>
+        {{ Form::delete('countries', $country->id) }}
+        {{ Form::editModal('countries', $country->id) }}
+
+
     </td>
 </tr>
 @endforeach
@@ -94,7 +97,7 @@
 <!-- end row -->
 
 </section>
-
+@include('admin.partials.modal')
 @stop
 
 @section('plugins')

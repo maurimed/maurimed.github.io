@@ -12,6 +12,6 @@
     Then I follow "New Post"
     Then I create a public post
     Then I should see "Post was created"
-    Then I am on "blog"
+    Then I am on "es/blog"
     And I should see "My dummy text of my new post"
 

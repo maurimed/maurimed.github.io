@@ -13,7 +13,8 @@ class AcademicSchoolsTableSeeder extends Seeder {
 			["name" => "Engineering", "slug" => "engineering"],
 			["name" => "Humanities & Social Work", "slug" => "humanities-and-social-work"],
 			["name" => "Medicine & Sciences", "slug" => "medicine-and-sciences"],
-			["name" => "Social Sciences", "slug" => "social-sciences"],
+            ["name" => "Social Sciences", "slug" => "social-sciences"],
+            ["name" => "Communication", "slug" => "communication"],
 
 		];
 

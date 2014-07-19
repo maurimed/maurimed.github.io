@@ -1,33 +1,33 @@
 <?php  namespace Epro360\Repos\Locations;
 
-
-use Country;
+use Epro360\Forms\Locations\StatesForm;
 use State;
 
 class StatesRepository {
 
-    public function getAll()
+
+    protected $statesForm;
+
+    function __construct(StatesForm $statesForm)
     {
-        return State::with([
-            'country' => function($query){
-                $query->get(['id', 'name', 'continent_id']);
-            },
-            'country.continent' => function($query){
-                $query->get(['id', 'name']);
-            }
-        ])->get(['id', 'name', 'country_id']);
+        $this->statesForm = $statesForm;
     }
 
-    public function countriesList()
+    public function getAll()
     {
-        return Country::lists('name', 'id');
+        return State::with('country.continent')->get();
     }
+
 
     public function create($input)
     {
+
+        $this->statesForm->validate($input);
+
         $country = new State;
         $country->name = $input['name'];
         $country->country_id = $input['country_id'];
+        $country->abbreviation = $input['abbreviation'];
         $country->save();
 
     }
@@ -37,5 +37,10 @@ class StatesRepository {
 //        return  Administrator::with('profile')->findOrFail($id);
     }
 
+
+    public function getListByCountryId($country_id)
+    {
+        return State::whereCountryId($country_id)->lists('name', 'abbreviation');
+    }
 
 } 
