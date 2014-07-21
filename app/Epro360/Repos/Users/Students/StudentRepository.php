@@ -1,5 +1,6 @@
 <?php  namespace Epro360\Repos\Users\Students;
 
+use Auth;
 use Student;
 
 class StudentRepository {
@@ -15,5 +16,20 @@ class StudentRepository {
         return Student::with('profile', 'creator', 'city.state.country')->findOrFail($id);
     }
 
+    public function create($input)
+    {
+
+        $student = new Student;
+
+        $student->firstname = $input["firstname"];
+
+        $student->lastname = $input["lastname"];
+
+        $student->created_by = Auth::user()->id;
+
+        $student->save();
+
+        return $student;
+    }
 
 } 

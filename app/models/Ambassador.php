@@ -25,5 +25,9 @@ class Ambassador extends \Eloquent {
         return $this->hasMany('Student');
     }
 
+    public function creator()
+    {
+        return $this->belongsTo('User', 'created_by', 'id');
+    }
 
 }

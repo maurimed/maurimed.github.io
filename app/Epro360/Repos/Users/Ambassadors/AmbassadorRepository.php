@@ -2,6 +2,7 @@
 
 
 use Ambassador;
+use Auth;
 
 class AmbassadorRepository {
 
@@ -17,6 +18,20 @@ class AmbassadorRepository {
         return Ambassador::with('profile', 'creator', 'city.state.country')->findOrFail($id);
     }
 
+    public function create($input)
+    {
 
+        $ambassador = new Ambassador;
 
-} 
+        $ambassador->firstname = $input["firstname"];
+
+        $ambassador->lastname = $input["lastname"];
+
+        $ambassador->created_by = Auth::user()->id;
+
+        $ambassador->save();
+
+        return $ambassador;
+    }
+
+}

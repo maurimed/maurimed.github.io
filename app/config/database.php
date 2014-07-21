@@ -54,15 +54,14 @@ return array(
 
         'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'epro360',
-            'username'  => 'uepro360',
-            'password'  => 'b5tT5ZqPn%Hq',
+            'host'      => getenv('DB_HOST'),
+            'database'  => getenv('DB_NAME'),
+            'username'  => getenv('DB_USERNAME'),
+            'password'  => getenv('DB_PASSWORD'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
         ),
-
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',

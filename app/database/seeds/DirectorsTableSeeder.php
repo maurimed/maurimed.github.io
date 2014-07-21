@@ -40,7 +40,7 @@ class DirectorsTableSeeder extends Seeder {
 
             User::create([
                 "email" => $director['email'],
-                "password" => Hash::make('123456'),
+                "password" => '123456',
                 "username" => Str::slug($director['email']),
                 "userable_type" => "Director",
                 "userable_id" => $index + 1

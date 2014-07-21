@@ -4,11 +4,11 @@ _ide_helper.php
 .idea/
 .sass-cache/
 composer.phar
-composer.lock
 .env.*.php
 .env.php
 .DS_Store
 Thumbs.db
-*.psd
+/**/*.psd
+/**/*.zip
 
 tests/_output/*

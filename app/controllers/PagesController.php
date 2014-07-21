@@ -42,12 +42,16 @@ class PagesController extends BaseController {
 
     public function aboutTeam()
     {
-        return View::make('site.pages.about.team');
+        // Extract to the Ambassadors Repo
+        $ambassadors = Ambassador::with(['city.state.country', 'profile'])->get();
+
+        return View::make('site.pages.about.team', compact('ambassadors'));
     }
 
     // Move to ambassadors Controller
     public function ambassadors($countryName)
     {
+        // Extract to the Country Repo
         try
         {
            $country = Country::whereName($countryName)->with(['states.cities.ambassadors.profile'])->firstOrFail();

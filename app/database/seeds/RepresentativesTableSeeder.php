@@ -43,7 +43,7 @@ class RepresentativesTableSeeder extends Seeder {
             User::create([
                 "username" => Str::slug($representative['email']),
                 "email" => $representative['email'],
-                "password" => Hash::make('123456'),
+                "password" => '123456',
                 "image" => $representative['image'],
                 "userable_type" => "Representative",
                 "userable_id" => $index + 1

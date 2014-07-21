@@ -50,7 +50,7 @@ class StudentsTableSeeder extends Seeder {
             User::create([
                 "username" => Str::slug($student['email']),
                 "email" => $student['email'],
-                "password" => Hash::make('123456'),
+                "password" => '123456',
                 "image" => $student['image'],
                 "userable_type" => "Student",
                 "userable_id" => $index + 1

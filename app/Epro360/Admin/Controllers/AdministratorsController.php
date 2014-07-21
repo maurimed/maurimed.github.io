@@ -1,6 +1,6 @@
 <?php namespace Epro360\Admin\Controllers;
 
-use Epro360\Forms\Administrator\AdminCreateForm;
+use Epro360\Forms\User\UserCreateForm;
 use Epro360\Repos\Users\Administrators\AdministratorRepository;
 use Epro360\Repos\Users\UserRepository;
 use Illuminate\Support\Facades\Input;
@@ -12,17 +12,17 @@ class AdministratorsController extends \BaseController {
 
     protected  $userRepo;
 
+    protected  $userForm;
+
     protected  $adminRepo;
 
-    protected  $adminCreateForm;
-
-    function __construct(UserRepository $userRepo, AdministratorRepository $adminRepo, AdminCreateForm $adminCreateForm)
+    function __construct(UserRepository $userRepo, UserCreateForm $userForm, AdministratorRepository $adminRepo)
     {
         $this->userRepo = $userRepo;
 
-        $this->adminRepo = $adminRepo;
+        $this->userForm = $userForm;
 
-        $this->adminCreateForm = $adminCreateForm;
+        $this->adminRepo = $adminRepo;
     }
 
     /**
@@ -57,7 +57,7 @@ class AdministratorsController extends \BaseController {
 	public function store()
 	{
 
-        $this->adminCreateForm->validate(Input::all());
+        $this->userForm->validate(Input::all());
 
         $user = $this->userRepo->create(Input::only(['email']));
 

@@ -31,4 +31,10 @@ class Student extends \Eloquent {
         return $this->belongsTo('City');
     }
 
+
+    public function creator()
+    {
+        return $this->belongsTo('User', 'created_by', 'id');
+    }
+
 }

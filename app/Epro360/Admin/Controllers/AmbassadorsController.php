@@ -1,5 +1,7 @@
 <?php namespace Epro360\Admin\Controllers;
 
+use Epro360\Forms\User\UserCreateForm;
+use Epro360\Repos\Users\Ambassadors\AmbassadorRepository;
 use Epro360\Repos\Users\UserRepository;
 use Input;
 use Redirect;
@@ -9,11 +11,19 @@ class AmbassadorsController extends \BaseController {
 
 
 
-    private $userRepo;
+    protected  $userRepo;
 
-    function __construct(UserRepository $userRepo)
+    protected  $userForm;
+
+    protected  $ambassadorRepo;
+
+    function __construct(UserRepository $userRepo, UserCreateForm $userForm, AmbassadorRepository $ambassadorRepo)
     {
         $this->userRepo = $userRepo;
+
+        $this->userForm = $userForm;
+
+        $this->ambassadorRepo = $ambassadorRepo;
     }
 
     /**
@@ -24,7 +34,7 @@ class AmbassadorsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $ambassadors = $this->userRepo->getAmbassadors();
+        $ambassadors = $this->ambassadorRepo->getAll();
 
         return View::make('admin.users.ambassadors.index', compact('ambassadors'));
 	}
@@ -50,12 +60,15 @@ class AmbassadorsController extends \BaseController {
     public function store()
     {
 
-        $userInfo = Input::only(['email']);
-        $ambassadorInfo = Input::only(['firstname', 'lastname']);
+        $this->userForm->validate(Input::all());
 
-        $admin = $this->userRepo->create($ambassadorInfo, $userInfo, 'Ambassador');
+        $user = $this->userRepo->create(Input::only(['email']));
 
-        return Redirect::back()->withSuccessMessage("Ambassador {$admin->firstname} was created!");
+        $ambassador = $this->ambassadorRepo->create(Input::only(['firstname', 'lastname']));
+
+        $ambassador->profile()->save($user);
+
+        return Redirect::back()->withSuccessMessage("Ambassador {$ambassador->firstname} was created!");
     }
 
 	/**

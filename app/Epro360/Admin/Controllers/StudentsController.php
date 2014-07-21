@@ -1,17 +1,28 @@
 <?php namespace Epro360\Admin\Controllers;
 
 
+use Epro360\Forms\User\UserCreateForm;
+use Epro360\Repos\Users\Students\StudentRepository;
 use Epro360\Repos\Users\UserRepository;
 use Input;
 use Redirect;
 
 class StudentsController extends \BaseController {
 
-    protected $userRepo;
 
-    function __construct(UserRepository $userRepo)
+    protected  $userRepo;
+
+    protected  $userForm;
+
+    protected  $studentRepo;
+
+    function __construct(UserRepository $userRepo, UserCreateForm $userForm, StudentRepository $studentRepo)
     {
         $this->userRepo = $userRepo;
+
+        $this->userForm = $userForm;
+
+        $this->studentRepo = $studentRepo;
     }
 
     /**
@@ -47,12 +58,15 @@ class StudentsController extends \BaseController {
 	public function store()
 	{
 
-        $userInfo = Input::only(['email']);
-        $ambassadorInfo = Input::only(['firstname', 'lastname']);
+        $this->userForm->validate(Input::all());
 
-        $admin = $this->userRepo->create($ambassadorInfo, $userInfo, 'Student');
+        $user = $this->userRepo->create(Input::only(['email']));
 
-        return Redirect::back()->withSuccessMessage("Student {$admin->firstname} was created!");
+        $student = $this->studentRepo->create(Input::only(['firstname', 'lastname']));
+
+        $student->profile()->save($user);
+
+        return Redirect::back()->withSuccessMessage("Student {$student->firstname} was created!");
 	}
 
 	/**

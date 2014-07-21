@@ -14,14 +14,14 @@ Feature: Administrator Creation
     Then I should see "Success Administrator New Admin was created!"
 
 
-##@javascript
-#  Scenario: Administrator creates an Ambassador
-#    Given I am on "/login"
-#    And I login with Admin credentials
-#    Then I am on "/dashboard/ambassadors"
-#    Then I follow "ambassador-create"
-#    Then I create a new Ambassador
-#    Then I should see "Success Ambassador New Ambassador was created!"
+#@javascript
+  Scenario: Administrator creates an Ambassador
+    Given I am on "/login"
+    And I login with Admin credentials
+    Then I am on "/dashboard/ambassadors"
+    Then I follow "ambassador-create"
+    Then I create a new Ambassador
+    Then I should see "Success Ambassador New Ambassador was created!"
 #
 #
 ##@javascript

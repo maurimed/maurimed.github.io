@@ -11,14 +11,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-        if ( Auth::guest() )
-        {
-		    return View::make('sessions.create');
-        }
-        else
-        {
-            return Redirect::intended('dashboard');
-        }
+        return Auth::guest() ? View::make('sessions.create') : Redirect::intended('dashboard');
 	}
 
 	/**
@@ -29,15 +22,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
     {
-		if ( Auth::attempt( Input::only( 'email', 'password' ) ))
-        {
-//            if(Auth::user()->userable_type == 'Administrator')
-//            {
-                return Redirect::intended('dashboard');
-//            }
-        }
+        return Auth::attempt(Input::only('email', 'password')) ? Redirect::intended('dashboard') : Redirect::to('/login')->withInput()->withDangerMessage('Invalid Email/Password combination');
 
-        return Redirect::to('/login')->withInput()->withDangerMessage('Invalid Email/Password combination');
 	}
 
 

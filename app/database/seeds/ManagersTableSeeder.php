@@ -33,7 +33,7 @@ class ManagersTableSeeder extends Seeder {
             User::create([
                 "username" => Str::slug($manager['email']),
                 "email" => $manager['email'],
-                "password" => Hash::make('123456'),
+                "password" => '123456',
                 "image" => $manager['image'],
                 "userable_type" => "Manager",
                 "userable_id" => $index + 1
