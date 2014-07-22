@@ -25,19 +25,11 @@ $app = new Illuminate\Foundation\Application;
 */
 $current_url = parse_url($app['request']->url());
 
-if ($current_url['host'] == 'epro.test')
+$env = $app->detectEnvironment(function()
 {
-    $env = $app->detectEnvironment(function(){
-        return "acceptance";
-    });
-}
-else
-{
-    $env = $app->detectEnvironment(function()
-    {
-        return getenv('APP_ENV')?: 'local';
-    });
-}
+    return getenv('APP_ENV')?: 'local';
+});
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths
