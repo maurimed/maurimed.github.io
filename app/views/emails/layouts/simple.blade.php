@@ -180,12 +180,15 @@
                                     <table width="350" border="0" cellpadding="0" cellspacing="0" align="left" style="text-align: right; font-style: italic; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                                         <tr>
                                             <td valign="middle" class="navTd" height="25">
-                                                {{ link_to_route('faq', Lang::get('faq.title'),[], ['target' => '_blank', 'style' => 'text-decoration: none; color: #6b6b6b;']) }}
+                                                <a href="//www.epro360.com/frequently-asked-questions" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('faq.title') }} </a>
                                             </td>
                                             <td valign="middle" class="navTd" height="25">
-                                                {{ link_to_route('policy', Lang::get('policy.title'),[], ['target' => '_blank', 'style' => 'text-decoration: none; color: #6b6b6b;']) }}
+                                                <a href="//www.epro360.com/privacy-policy" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('policy.title') }} </a>
+
                                             </td>
                                             <td valign="middle" class="navTd" height="25">
+                                                <a href="//www.epro360.com/terms-and-conditions" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('terms.title') }} </a>
+
                                                 <a target="_blank" href=""></a>
                                                 {{ link_to_route('terms', Lang::get('terms.title'),[], ['target' => '_blank', 'style' => 'text-decoration: none; color: #6b6b6b;']) }}
                                             </td>
