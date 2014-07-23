@@ -54,7 +54,7 @@ class PagesController extends BaseController {
         // Extract to the Country Repo
         try
         {
-           $country = Country::whereName($countryName)->with(['states.cities.ambassadors.profile'])->firstOrFail();
+           $country = Country::where('name', 'like',  $countryName . '%')->with(['states.cities.ambassadors.profile'])->firstOrFail();
         }
         catch (ModelNotFoundException $e)
         {
