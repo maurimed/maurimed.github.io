@@ -15,7 +15,7 @@ return [
         "phone"      => "Telefon:",
         "email"      => "Email:",
         "footer"     => "Genieße diesen wundervollen Tag,<br/> Jonas Kehrbaum,<br/> Epro 360 Mitgründer",
-        "ps"         => "wie wir bereits versprochen haben, und als Weg unsere Liebe mit dir zu teilen, haben wir <a target='_blank' style='color: #47784a'  href='//epro360.com/downloads/The_10_Epro_360_Success_Principles'>hier</a>. bereits ein kleines Geschenk für dich. Wir hoffen es wird dir helfen GROß zu denken -- und zu leben!"
+        "ps"         => "wie wir bereits versprochen haben, und als Weg unsere Liebe mit dir zu teilen, haben wir <a target='_blank' style='color: #47784a'  href='http://epro360.com/downloads/The_10_Epro_360_Success_Principles'>hier</a>. bereits ein kleines Geschenk für dich. Wir hoffen es wird dir helfen GROß zu denken -- und zu leben!"
     ]
 ];
 

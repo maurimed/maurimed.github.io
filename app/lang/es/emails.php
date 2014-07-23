@@ -15,7 +15,7 @@ return [
         "phone"      => "Teléfono:",
         "email"      => "Email:",
         "footer"     => "Disfruta de este día maravilloso,<br/> Jonas Kehrbaum,<br/> Co-Fundador de Epro 360",
-        "ps"         => "tal como prometimos y como nuestra primera muestra de agradecimiento, por favor vaya a este enlace para poder descargar <a target='_blank' style='color: #47784a'  href='//epro360.com/downloads/Los_10_Principios_Para_Alcanzar_el_Exito_Segun_Epro_360'>Los 10 Principios Para Alcanzar el Éxito Según Epro 360 </a>. Esperamos que te ayude a comenzar a pensar y actuar como una persona exitosa."
+        "ps"         => "tal como prometimos y como nuestra primera muestra de agradecimiento, por favor vaya a este enlace para poder descargar <a target='_blank' style='color: #47784a'  href='http://epro360.com/downloads/Los_10_Principios_Para_Alcanzar_el_Exito_Segun_Epro_360'>Los 10 Principios Para Alcanzar el Éxito Según Epro 360 </a>. Esperamos que te ayude a comenzar a pensar y actuar como una persona exitosa."
     ]
 ];
 
