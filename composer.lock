@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7d27849f66113e484b06e283a92a20d8",
+    "hash": "fb508210c0c8ca569c1b32c2c02f1574",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -147,21 +147,21 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "012b2aecbda4e38f119c19580898685851015fa7"
+                "reference": "5ae164dae6e65784286a698800190bc094407f7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/012b2aecbda4e38f119c19580898685851015fa7",
-                "reference": "012b2aecbda4e38f119c19580898685851015fa7",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/5ae164dae6e65784286a698800190bc094407f7c",
+                "reference": "5ae164dae6e65784286a698800190bc094407f7c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/streams": "~1.3",
+                "guzzlehttp/streams": "~1.4",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -208,7 +208,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-16 03:01:02"
+            "time": "2014-07-23 00:52:39"
         },
         {
             "name": "guzzlehttp/streams",
@@ -491,16 +491,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2e73cd58ee42919166a51897b965e1135b85048c"
+                "reference": "11c1b47b365be02beab3e5aca2306aaa08203d8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2e73cd58ee42919166a51897b965e1135b85048c",
-                "reference": "2e73cd58ee42919166a51897b965e1135b85048c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/11c1b47b365be02beab3e5aca2306aaa08203d8e",
+                "reference": "11c1b47b365be02beab3e5aca2306aaa08203d8e",
                 "shasum": ""
             },
             "require": {
@@ -594,9 +594,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com",
-                    "homepage": "https://github.com/taylorotwell",
-                    "role": "Creator of Laravel"
+                    "email": "taylorotwell@gmail.com"
                 }
             ],
             "description": "The Laravel Framework.",
@@ -604,20 +602,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2014-06-29 00:16:51"
+            "time": "2014-07-22 20:25:45"
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "0.14.1",
+            "version": "0.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "abbd881f1dd785fcbc7b2cda8ad9eb76b6c5dab1"
+                "reference": "ad1b6d3799cd94c4a54176881d557888b8ea77a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/abbd881f1dd785fcbc7b2cda8ad9eb76b6c5dab1",
-                "reference": "abbd881f1dd785fcbc7b2cda8ad9eb76b6c5dab1",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/ad1b6d3799cd94c4a54176881d557888b8ea77a2",
+                "reference": "ad1b6d3799cd94c4a54176881d557888b8ea77a2",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +650,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2014-07-14 15:30:28"
+            "time": "2014-07-22 13:22:07"
         },
         {
             "name": "monolog/monolog",
@@ -862,6 +860,48 @@
                 "utf8"
             ],
             "time": "2014-06-17 08:23:06"
+        },
+        {
+            "name": "pda/pheanstalk",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pda/pheanstalk.git",
+                "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pda/pheanstalk/zipball/ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
+                "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pheanstalk": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Annesley",
+                    "email": "paul@annesley.cc",
+                    "homepage": "http://paul.annesley.cc/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP client for beanstalkd queue",
+            "homepage": "https://github.com/pda/pheanstalk",
+            "keywords": [
+                "beanstalkd"
+            ],
+            "time": "2013-04-03 09:15:34"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -2351,16 +2391,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "2e51e6ffc037b9cf8b8cc8b93f9805ac2bfbbbaa"
+                "reference": "b231b6a49af17420d786aead8ffa94433e07c36c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/2e51e6ffc037b9cf8b8cc8b93f9805ac2bfbbbaa",
-                "reference": "2e51e6ffc037b9cf8b8cc8b93f9805ac2bfbbbaa",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/b231b6a49af17420d786aead8ffa94433e07c36c",
+                "reference": "b231b6a49af17420d786aead8ffa94433e07c36c",
                 "shasum": ""
             },
             "require": {
@@ -2379,6 +2419,7 @@
                 "symfony/yaml": "~2.4"
             },
             "require-dev": {
+                "codeception/specify": "*",
                 "facebook/php-sdk": "3.*",
                 "monolog/monolog": "*",
                 "phpseclib/phpseclib": "0.3.6",
@@ -2420,7 +2461,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2014-07-08 02:12:19"
+            "time": "2014-07-21 21:07:20"
         },
         {
             "name": "fabpot/goutte",
