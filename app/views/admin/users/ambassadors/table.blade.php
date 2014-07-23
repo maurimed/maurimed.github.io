@@ -35,7 +35,11 @@
         <td>Not Asigned</td>
         @endif
         <td>{{$ambassador->present()->createdAt}}</td>
-        <td>{{ Form::editProfile($ambassador->profile->username) }}</td>
+        <td>
+            {{ Form::editProfile($ambassador->profile->username) }}
+            {{ Form::delete('ambassadors', $ambassador->id) }}
+        </td>
+
     </tr>
     @endforeach
 

@@ -120,7 +120,11 @@ class AmbassadorsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        $ambassador = $this->userRepo->findByAmbassadorId($id);
+
+        $this->userRepo->delete($ambassador);
+
+        return Redirect::back()->withSuccessMessage("Ambassador was deleted!");
 	}
 
 }

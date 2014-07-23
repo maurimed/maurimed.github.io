@@ -46,6 +46,7 @@
 </div>
 
 <div class="widget-body no-padding">
+    @include('admin.partials.messages')
 
     @include('admin.users.ambassadors.table')
 

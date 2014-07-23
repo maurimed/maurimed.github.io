@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 use Laracasts\Presenter\PresentableTrait;
 
 class Ambassador extends \Eloquent {
 
-    use PresentableTrait;
+    use PresentableTrait, SoftDeletingTrait;
 
     protected $presenter = 'Epro360\Presenters\AmbassadorsPresenter';
 
