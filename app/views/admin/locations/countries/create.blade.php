@@ -58,17 +58,28 @@
 
                             <fieldset>
                                 <div class="row">
-                                    <section class="col col-6">
+                                    <section class="col col-4">
+                                            {{ Form::label('continent_id', 'Continent', ['class' => 'label']) }}
                                         <label class="select">
-
                                             {{ Form::select('continent_id', $continents, ['placeholder' => 'Select']) }}
                                             <i></i>
                                         </label>
                                     </section>
-                                    <section class="col col-6">
+                                    <section class="col col-4">
+                                        <!-- Country form input -->
+                                        {{ Form::label('name', 'Country', ['class' => 'label']) }}
                                         <label class="input">
                                             <i class="icon-append fa fa-map-marker"></i>
                                             {{ Form::text('name', null, ['placeholder' => 'Country']) }}
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-4">
+                                        <!-- Phone Code form input -->
+                                        {{ Form::label('phonecode', 'Phone Code', ['class' => 'label']) }}
+                                        <label class="input">
+                                            <i class="icon-append fa fa-phone"></i>
+                                            {{ Form::text('phonecode', null, ['placeholder' => '593']) }}
                                         </label>
                                     </section>
 

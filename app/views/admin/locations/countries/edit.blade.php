@@ -9,14 +9,28 @@
 <div class="modal-body">
 
     <div class="row">
-        <div class="col-md-6">
+
+
+        <div class="col-md-4">
+            <!-- Continent form input -->
+            {{ Form::label('continent_id', 'Continent') }}
             <div class="form-group">
                 {{ Form::select('continent_id', $continents, $country->continent_id, ['placeholder' => 'Select', 'class' => 'form-control']) }}
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <!-- Country form input -->
+            {{ Form::label('name', 'Country') }}
             <div class="form-group">
+
                 <input type="text" name="name" class="form-control" value="{{ $country->name }}"  required />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Phone Code form input -->
+            {{ Form::label('phonecode', 'Phone Code') }}
+            <div class="form-group">
+                <input type="text" name="phonecode" class="form-control" value="{{ $country->phonecode }}"  required />
             </div>
         </div>
     </div>
