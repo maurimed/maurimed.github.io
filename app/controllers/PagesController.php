@@ -52,14 +52,17 @@ class PagesController extends BaseController {
     public function ambassadors($countryName)
     {
         // Extract to the Country Repo
-        try
-        {
-           $country = Country::where('name', 'like',  $countryName . '%')->with(['states.cities.ambassadors.profile'])->firstOrFail();
-        }
-        catch (ModelNotFoundException $e)
-        {
-            return Redirect::to('/')->withDangerMessage('Sorry, the Country you\'ve selected doesn\'t exist, or is not yet in our database');
-        }
+
+        $country = Country::rememberForever()->with(['states' => function($q){
+            $q->rememberForever()->with(['cities' => function($q){
+                $q->rememberForever()->has('ambassadors')->with(['ambassadors' => function($q){
+                    $q->rememberForever()->with(['profile' => function($q){
+                        $q->rememberForever();
+                    }]);
+                }]);
+            }]);
+
+        }])->where('name', 'like',  $countryName . '%')->firstOrFail();
 
 
         return View::make('site.pages.ambassadors', compact('country'));
