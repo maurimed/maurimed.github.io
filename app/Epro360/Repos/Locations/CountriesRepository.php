@@ -9,7 +9,7 @@ class CountriesRepository {
     {
         return Country::with(['continent' => function($query){
             $query->get(['id', 'name']);
-        }])->get(['id', 'name', 'continent_id']);
+        }])->get(['id', 'name', 'phonecode', 'continent_id']);
     }
 
     public function countriesList()
@@ -22,6 +22,7 @@ class CountriesRepository {
         $country = new Country;
         $country->name = $input['name'];
         $country->continent_id = $input['continent_id'];
+        $country->phonecode = $input['phonecode'];
         return $country->save();
 
     }
@@ -32,6 +33,7 @@ class CountriesRepository {
         $country =$this->findById($id);
         $country->name = $input['name'];
         $country->continent_id = $input['continent_id'];
+        $country->phonecode = $input['phonecode'];
         return $country->save();
 
     }

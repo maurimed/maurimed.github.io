@@ -55,8 +55,9 @@
 <thead>
 <tr>
     <th>ID</th>
-    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Continent</th>
-    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Continent</th>
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>
+    <th><i class="fa fa-fw fa-phone text-muted hidden-md hidden-sm hidden-xs"></i> Phone Code</th>
     <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Actions</th>
 </tr>
 </thead>
@@ -66,6 +67,7 @@
     <td>{{$country->id}}</td>
     <td>{{$country->continent->name}}</td>
     <td>{{$country->name}}</td>
+    <td>{{$country->phonecode}}</td>
     <td>
         {{ Form::delete('countries', $country->id) }}
         {{ Form::editModal('countries', $country->id) }}
