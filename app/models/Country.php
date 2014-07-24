@@ -1,7 +1,7 @@
 <?php
 
 class Country extends \Eloquent {
-	protected $fillable = [];
+	protected $fillable = ["name", "country_id", "phonecode"];
 
     public $timestamps = false;
 
