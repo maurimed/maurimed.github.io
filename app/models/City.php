@@ -8,7 +8,7 @@ class City extends \Eloquent {
 
     public function state()
     {
-        return $this->belongsTo('State', 'state_ab', 'abbreviation');
+        return $this->belongsTo('State');
     }
 
     public function ambassadors()
