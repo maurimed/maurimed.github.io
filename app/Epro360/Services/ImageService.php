@@ -14,9 +14,9 @@ class ImageService {
             $image = Image::make($input['image']->getRealPath());
 
 
-             $pathToImage = public_path() . '/admin/images/profiles/'. folder_path($user).'/';
+             $pathToImage = public_path() . 'admin/images/profiles/'. folder_path($user).'/';
 
-             $pathToPublicImage = public_path() . '/site/img/'. folder_path($user).'/';
+             $pathToPublicImage = public_path() . 'site/img/'. folder_path($user).'/';
 
             File::exists($pathToImage) or File::makeDirectory($pathToImage);
             File::exists($pathToPublicImage) or File::makeDirectory($pathToPublicImage);
