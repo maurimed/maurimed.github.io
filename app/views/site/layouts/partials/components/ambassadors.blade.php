@@ -23,7 +23,7 @@
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/united+states">
+            <a href="/ambassadors/united states">
                 <h3 class="text-center">United States</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/united_states.png" alt="United States">
             </a>
