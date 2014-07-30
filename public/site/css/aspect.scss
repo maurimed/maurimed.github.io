@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700|Open+Sans:400italic,400,300,600);
 
-$mainColor: #47784a;
+// $mainColor: #00b3c5; //ef3d4a
+$mainColor: #ef3d4a;
 $mainColorDark: darken($mainColor, 10%);
 $mainColorLight:  lighten($mainColor, 10%);
 
@@ -253,15 +254,15 @@ a.list-group-item:hover {
 }
 
 .liked-posts .element {
-  background: rgba($mainColorLight, 1);
+  background: rgba($mainColor, 1);
   &.op1 {
-    background: rgba($mainColorLight, 0.8);
+    background: rgba($mainColor, 0.8);
   }
   &.op2 {
-    background: rgba($mainColorLight, 0.7);
+    background: rgba($mainColor, 0.7);
   }
   &.op3 {
-    background: rgba($mainColorLight, 0.6);
+    background: rgba($mainColor, 0.6);
   }
   &.op4 {
     background: rgba($mainColorLight, 0.5);
