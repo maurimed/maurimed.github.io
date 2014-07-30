@@ -29,7 +29,7 @@ class CitiesRepository {
         $city = new City;
         $city->name = $input['name'];
         $city->zip = $input['zip'];
-        $city->state_ab = $input['state'];
+        $city->state_id = $input['state'];
         $city->lat = $input['lat'];
         $city->lng = $input['lng'];
         return $city->save();
@@ -41,16 +41,18 @@ class CitiesRepository {
 //        return  Administrator::with('profile')->findOrFail($id);
     }
 
-    public function getListByStateAb($state_ab)
+    public function getListByStateId($state_id)
     {
-        return City::groupBy('name')->where('state_ab', $state_ab)->lists('name', 'name');
+        return City::groupBy('name')->where('state_id', $state_id)->lists('name', 'id');
 
     }
 
 
-    public function getZipListByCity($city)
+    public function getZipListByCity($cityId)
     {
-        return City::where('name', $city)->lists('zip', 'id');
+        $city = City::findOrFail($cityId);
+
+        return City::where('name', 'like', $city->name.'%')->lists('zip', 'id');
 
     }
 

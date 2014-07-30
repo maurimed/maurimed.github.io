@@ -40,7 +40,7 @@ class StatesRepository {
 
     public function getListByCountryId($country_id)
     {
-        return State::whereCountryId($country_id)->lists('name', 'abbreviation');
+        return State::latest()->whereCountryId($country_id)->lists('name', 'id');
     }
 
 } 

@@ -12,7 +12,7 @@
         $.ajax({
             type: "GET",
             url: '/api/cities',
-            data: { 'state_ab' : val }
+            data: { 'state' : val }
         }).done(function($data) {
             $('#citiesLists').html($data);
             $('#zipsLists').html('<div class=note > Please select the city first </div>');

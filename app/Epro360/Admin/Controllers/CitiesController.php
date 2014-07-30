@@ -119,7 +119,7 @@ class CitiesController extends \BaseController {
 
     public function lists()
     {
-        $cities = $this->citiesRepo->getListByStateAb(Input::get('state_ab'));
+        $cities = $this->citiesRepo->getListByStateId(Input::get('state'));
 
         return View::make('admin.locations.cities.lists', compact('cities'));
     }

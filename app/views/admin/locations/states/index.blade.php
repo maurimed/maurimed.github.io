@@ -55,9 +55,10 @@
 <thead>
 <tr>
     <th>ID</th>
-    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Continent</th>
-    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>
-    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> State</th>
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Continent</th>
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>
+    <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> State</th>
+    <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Abbreviation</th>
     <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Actions</th>
 </tr>
 </thead>
@@ -68,6 +69,7 @@
     <td>{{$state->country->continent->name}}</td>
     <td>{{$state->country->name}}</td>
     <td>{{$state->name}}</td>
+    <td>{{$state->abbreviation}}</td>
     <td><div class="btn btn-xs btn-danger"><span class="fa fa-times"></span> Delete</div></td>
 </tr>
 @endforeach
