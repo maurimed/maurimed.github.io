@@ -1,4 +1,4 @@
-<div>
+<div class="hidden-xs">
     <div style="padding-top:0; height:0px" class="row fixed">
         <div class="col-md-2 col-sm-3 col-xs-12 ">
             <div class="sep-heading-container shc4 clearfix">
