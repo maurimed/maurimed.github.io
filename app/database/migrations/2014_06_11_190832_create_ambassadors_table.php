@@ -26,7 +26,6 @@ class CreateAmbassadorsTable extends Migration {
             $table->integer('city_id');
             $table->integer('director_id');
             $table->integer('created_by');
-            $table->softDeletes();
             $table->timestamps();
 		});
 	}
