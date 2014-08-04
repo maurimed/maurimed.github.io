@@ -1,10 +1,16 @@
 <?php
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+
+use Epro360\Repos\Locations\CountriesRepository;
 
 class PagesController extends BaseController {
 
+    protected $countryRepo;
 
+    function __construct(CountriesRepository $countryRepo)
+    {
+        $this->countryRepo = $countryRepo;
+    }
 
     //    Home
     public function home()
@@ -51,28 +57,9 @@ class PagesController extends BaseController {
     // Move to ambassadors Controller
     public function ambassadors($countryCode)
     {
-        // Extract to the Cities Repo
-       $cities =  City::rememberForever()->whereCountryCode($countryCode)->has('ambassadors')->with([
-            'country' => function($q){
-                $q->rememberForever();
-            },
-            'state' => function($q) use ($countryCode){
-                $q->rememberForever()->whereCountryCode($countryCode)->get();
-            },
-            'ambassadors'=> function($q){
-                $q->rememberForever()->with(['profile' => function($q)
-                {
-                    $q->rememberForever();
-                }]);
-            }
+        $country = $this->countryRepo->getCountryByCountryCodeWithAmbassadors($countryCode);
 
-        ])->get();
-
-
-
-
-
-        return View::make('site.pages.ambassadors', compact('cities'));
+        return View::make('site.pages.ambassadors', compact('country'));
     }
 
 

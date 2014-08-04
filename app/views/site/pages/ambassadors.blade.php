@@ -2,15 +2,15 @@
 
 @section('content')
 
-@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' . $cities[0]->country->country_name ])
+@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' . $country->country_name ])
 
     <div  style="padding-top:0" class="container only">
         <div class="row">
 
             <div style="text-align:justify" class="col-md-12 main-el">
                 <div class="row">
-                    @if( $cities->count() )
-                            @foreach($cities as $city)
+                    @if( $country->cities->count() )
+                            @foreach($country->cities as $city)
                                 @foreach($city->ambassadors as $ambassador)
                                 <div class="col-md-3 col-sm-6 main-el">
                                     <div class="person">
