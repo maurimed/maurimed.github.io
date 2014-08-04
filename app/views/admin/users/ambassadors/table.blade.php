@@ -25,10 +25,10 @@
         <td>{{$ambassador->phone}}</td>
         <td>{{$ambassador->profile->phone}}</td>
         <td>{{$ambassador->address}}</td>
-        @if(isset($ambassador->city->name))
-        <td>{{$ambassador->city->name}}</td>
-        <td>{{$ambassador->city->state->name}}</td>
-        <td>{{$ambassador->city->state->country->name}}</td>
+        @if(isset($ambassador->city->city_name))
+        <td>{{$ambassador->city->city_name}}</td>
+        <td>{{$ambassador->city->state->state_name}}</td>
+        <td>{{$ambassador->city->state->country->country_name}}</td>
         @else
         <td>Not Asigned</td>
         <td>Not Asigned</td>

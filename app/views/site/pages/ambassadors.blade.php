@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' ])
+@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' . $cities[0]->country->country_name ])
 
     <div  style="padding-top:0" class="container only">
         <div class="row">
