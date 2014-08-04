@@ -161,8 +161,8 @@ class UserRepository {
 
         $this->validate($input);
 
-        if($input['zip'] != '')
-            $user->userable->city_id = $input['zip'];
+        if($input['city'] != '')
+            $user->userable->city_id = $input['city'];
         $user->userable->firstname = $input['firstname'];
         $user->userable->lastname = $input['lastname'];
 

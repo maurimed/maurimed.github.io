@@ -2,16 +2,15 @@
 
 @section('content')
 
-@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' . $country->name])
+@include('site.layouts.partials.components.breadcums', ['title' => 'Ambassadors from ' ])
 
     <div  style="padding-top:0" class="container only">
         <div class="row">
 
             <div style="text-align:justify" class="col-md-12 main-el">
                 <div class="row">
-                    @if( !empty($country->states[0]) )
-                        @foreach($country->states as $state)
-                            @foreach($state->cities as $city)
+                    @if( $cities->count() )
+                            @foreach($cities as $city)
                                 @foreach($city->ambassadors as $ambassador)
                                 <div class="col-md-3 col-sm-6 main-el">
                                     <div class="person">
@@ -29,14 +28,13 @@
                                         </div>
                                         <div class="details">
                                             <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
-                                            <p class="italic title"> <i class="fa fa-map-marker"></i> {{ $city->name }} - {{ $state->name }}</p>
+                                            <p class="italic title"> <i class="fa fa-map-marker"></i> {{ $city->city_name }} - {{ $city->state->state_name }}</p>
                                             <p class="italic title"> <i class="fa fa-envelope"></i> {{ $ambassador->profile->email }} </p>
                                             <p class="italic title"> <i class="fa fa-phone"></i> {{ $ambassador->phone }}</p>
                                         </div>
                                     </div>
                                 </div>
                                 @endforeach
-                            @endforeach
                         @endforeach
                     @else
                     <div class="col-md-12">

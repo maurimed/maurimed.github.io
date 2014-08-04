@@ -64,9 +64,9 @@
 
                 {{ Form::select('country', $countries, [], ['id'=>'country', 'style' => 'width:100%'] ) }}
             </div>
-            @if(isset($user->userable->city->name))
+            @if(isset($user->userable->city->city_name))
             <div id="countryContainer">
-                {{ $user->userable->city->state->country->name  }}
+                {{ $user->userable->city->state->country->country_name  }}
             </div>
             @endif
         </label>
@@ -74,8 +74,8 @@
     <section class="col col-3" >
         <label class="label">State</label>
         <label id="statesLists" class="select">
-            @if(isset($user->userable->city->name))
-                {{ $user->userable->city->state->name }}
+            @if(isset($user->userable->city->city_name))
+                {{ $user->userable->city->state->state_name }}
             @endif
 
         </label>
@@ -83,18 +83,11 @@
     <section class="col col-3">
         <label class="label">City</label>
         <label id="citiesLists" class="select">
-            @if(isset($user->userable->city->name))
-                {{ $user->userable->city->name  }}
+            @if(isset($user->userable->city->city_name))
+                {{ $user->userable->city->city_name  }}
             @endif
         </label>
     </section>
-    <section class="col col-3">
-        <label class="label">Zip</label>
-        <label id="zipsLists" class="select">
-            @if(isset($user->userable->city->name))
-                {{ $user->userable->city->zip }}
-            @endif
-        </label>
-    </section>
+
 
 </div>

@@ -111,7 +111,7 @@ class StatesController extends \BaseController {
 
     public function lists()
     {
-        $states = $this->statesRepo->getListByCountryId(Input::get('country_id'));
+        $states = $this->statesRepo->getListByCountryCode(Input::get('country_code'));
 
         return View::make('admin.locations.states.lists', compact('states'));
     }

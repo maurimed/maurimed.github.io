@@ -49,23 +49,30 @@ class PagesController extends BaseController {
     }
 
     // Move to ambassadors Controller
-    public function ambassadors($countryName)
+    public function ambassadors($countryCode)
     {
-        // Extract to the Country Repo
-
-        $country = Country::rememberForever()->with(['states' => function($q){
-            $q->rememberForever()->with(['cities' => function($q){
-                $q->rememberForever()->has('ambassadors')->with(['ambassadors' => function($q){
-                    $q->rememberForever()->with(['profile' => function($q){
-                        $q->rememberForever();
-                    }]);
+        // Extract to the Cities Repo
+       $cities =  City::rememberForever()->whereCountryCode($countryCode)->has('ambassadors')->with([
+            'country' => function($q){
+                $q->rememberForever();
+            },
+            'state' => function($q) use ($countryCode){
+                $q->rememberForever()->whereCountryCode($countryCode)->get();
+            },
+            'ambassadors'=> function($q){
+                $q->rememberForever()->with(['profile' => function($q)
+                {
+                    $q->rememberForever();
                 }]);
-            }]);
+            }
 
-        }])->where('name', 'like',  $countryName . '%')->firstOrFail();
+        ])->get();
 
 
-        return View::make('site.pages.ambassadors', compact('country'));
+
+
+
+        return View::make('site.pages.ambassadors', compact('cities'));
     }
 
 

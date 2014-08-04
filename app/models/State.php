@@ -8,7 +8,7 @@ class State extends \Eloquent {
 
     public function country()
     {
-        return $this->belongsTo('Country');
+        return $this->belongsTo('Country', 'country_code', 'country_code');
     }
 
     public function cities()

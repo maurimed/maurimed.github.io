@@ -4,16 +4,9 @@
 use City;
 use Epro360\Admin\Datatables\SSP;
 use Config;
-use Epro360\Forms\Locations\CitiesForm;
 
 class CitiesRepository {
 
-    protected $citiesRepo;
-
-    function __construct(CitiesForm $citiesRepo)
-    {
-        $this->citiesRepo = $citiesRepo;
-    }
 
     public function getAll()
     {
@@ -22,41 +15,13 @@ class CitiesRepository {
     }
 
 
-    public function create($input)
-    {
-        $this->citiesRepo->validate($input);
-
-        $city = new City;
-        $city->name = $input['name'];
-        $city->zip = $input['zip'];
-        $city->state_id = $input['state'];
-        $city->lat = $input['lat'];
-        $city->lng = $input['lng'];
-        return $city->save();
-
-    }
-
-    public function findById($id)
-    {
-//        return  Administrator::with('profile')->findOrFail($id);
-    }
-
     public function getListByStateId($state_id)
     {
-        return City::groupBy('name')->where('state_id', $state_id)->lists('name', 'id');
+        return City::orderBy('city_name','ASC')->where('state_id', $state_id)->lists('city_name', 'id');
 
     }
 
 
-    public function getZipListByCity($cityId)
-    {
-        $city = City::findOrFail($cityId);
-
-        return City::where('name', 'like', $city->name.'%')->lists('zip', 'id');
-
-    }
-
-//    $this->citiesRepo->makeDatatable('cities', 'id', ['id', 'name', 'zip']);
 
     public  function makeDatatable($table, $primaryKey, $get)
     {
@@ -65,8 +30,9 @@ class CitiesRepository {
         $columns = [
             [ 'db' => 'id', 'dt' => 0 ],
             [ 'db' => 'state_ab', 'dt' => 1 ],
-            [ 'db' => 'name', 'dt' => 2 ],
-            [ 'db' => 'zip',  'dt' => 3 ],
+            [ 'db' => 'state_id', 'dt' => 2 ],
+            [ 'db' => 'name', 'dt' => 3 ],
+            [ 'db' => 'zip',  'dt' => 4 ],
 
         ];
 

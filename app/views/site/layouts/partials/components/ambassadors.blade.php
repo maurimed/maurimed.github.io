@@ -11,37 +11,37 @@
     <div class="row">
 
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/ecuador">
+            <a href="/ambassadors/EC">
                 <h3 class="text-center">Ecuador</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/ecuador.png" alt="Ecuador">
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/peru">
+            <a href="/ambassadors/PE">
                 <h3 class="text-center">Perú</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/peru.png" alt="Perú">
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/united states">
+            <a href="/ambassadors/US">
                 <h3 class="text-center">United States</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/united_states.png" alt="United States">
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/mongolia">
+            <a href="/ambassadors/MN">
                 <h3 class="text-center">Mongolia</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/mongolia.png" alt="Mongolia">
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/germany">
+            <a href="/ambassadors/DE">
                 <h3 class="text-center">Germany</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/germany.png" alt="Germany">
             </a>
         </div>
         <div class="col-md-2 col-sm-4 main-el">
-            <a href="/ambassadors/spain">
+            <a href="/ambassadors/ES">
                 <h3 class="text-center">Spain</h3>
                 <img class="img-responsive center-block" src="/site/img/flags/spain.png" alt="Spain">
             </a>

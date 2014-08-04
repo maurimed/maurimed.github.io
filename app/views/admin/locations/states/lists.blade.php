@@ -15,7 +15,6 @@
             data: { 'state' : val }
         }).done(function($data) {
             $('#citiesLists').html($data);
-            $('#zipsLists').html('<div class=note > Please select the city first </div>');
         });
     });
 

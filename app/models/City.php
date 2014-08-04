@@ -11,6 +11,11 @@ class City extends \Eloquent {
         return $this->belongsTo('State');
     }
 
+    public function country()
+    {
+        return $this->belongsTo('Country', 'country_code', 'country_code');
+    }
+
     public function ambassadors()
     {
         return $this->hasMany('Ambassador');

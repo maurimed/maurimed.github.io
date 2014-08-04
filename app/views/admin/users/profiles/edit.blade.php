@@ -72,56 +72,6 @@
 
                         </fieldset>
 
-                        <!--<fieldset>
-                            <div class="row">
-                                <section class="col col-6">
-                                    <label class="select">
-                                        <select name="interested">
-                                            <option value="0" selected="" disabled="">Interested in</option>
-                                            <option value="1">design</option>
-                                            <option value="1">development</option>
-                                            <option value="2">illustration</option>
-                                            <option value="2">branding</option>
-                                            <option value="3">video</option>
-                                        </select> <i></i> </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="select">
-                                        <select name="budget">
-                                            <option value="0" selected="" disabled="">Budget</option>
-                                            <option value="1">less than 5000$</option>
-                                            <option value="2">5000$ - 10000$</option>
-                                            <option value="3">10000$ - 20000$</option>
-                                            <option value="4">more than 20000$</option>
-                                        </select> <i></i> </label>
-                                </section>
-                            </div>
-
-                            <div class="row">
-                                <section class="col col-6">
-                                    <label class="input"> <i class="icon-append fa fa-calendar"></i>
-                                        <input type="text" name="startdate" id="startdate" placeholder="Expected start date">
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="input"> <i class="icon-append fa fa-calendar"></i>
-                                        <input type="text" name="finishdate" id="finishdate" placeholder="Expected finish date">
-                                    </label>
-                                </section>
-                            </div>
-
-                            <section>
-                                <div class="input input-file">
-                                    <span class="button"><input id="file2" type="file" name="file2" onchange="this.parentNode.nextSibling.value = this.value">Browse</span><input type="text" placeholder="Include some files" readonly="">
-                                </div>
-                            </section>
-
-                            <section>
-                                <label class="textarea"> <i class="icon-append fa fa-comment"></i>
-                                    <textarea rows="5" name="comment" placeholder="Tell us about your project"></textarea>
-                                </label>
-                            </section>
-                        </fieldset>-->
                         <footer>
                             <button type="submit" class="btn btn-primary">
                                 Update
@@ -168,7 +118,7 @@
             $.ajax({
                 type: "GET",
                 url: '/api/states',
-                data: { 'country_id' : val }
+                data: { 'country_code' : val }
             }).done(function($data) {
 
                 $('#statesLists').html($data);
