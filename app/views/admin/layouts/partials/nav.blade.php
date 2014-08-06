@@ -58,21 +58,7 @@
     <li  class="{{ setActive('posts') }}" >
         <a href="/dashboard/posts" title="Posts"><i class="fa fa-lg fa-fw fa-pencil"></i> <span  class="menu-item-parent">Posts</span></a>
     </li>
-    <li>
-        <a href="#" title="Locations"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span  class="menu-item-parent">Locations</span></a>
-        <ul>
-            <li class="{{ setActive('countries') }}" >
-                {{ link_to_route('dashboard.countries.index', 'Countries') }}
-            </li>
-            <li class="{{ setActive('states') }}" >
-                {{ link_to_route('dashboard.states.index', 'States') }}
-            </li>
-            <li class="{{ setActive('cities') }}" >
-                {{ link_to_route('dashboard.cities.index', 'Cities') }}
-            </li>
 
-        </ul>
-    </li>
 
 @endif
 @if( is_student() )
