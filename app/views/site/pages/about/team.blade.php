@@ -45,7 +45,7 @@
                             </div>
                             <div class="details">
                                 <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
-                                <p class="italic title"> <i class="fa fa-map-marker"></i>  {{ $ambassador->city->state->country->name }}</p>
+                                <p class="italic title"> <i class="fa fa-map-marker"></i>  {{ $ambassador->city->state->country->country_name }}</p>
                                 <p class="italic title"> <i class="fa fa-envelope"></i> {{ $ambassador->profile->email }} </p>
                                 <p class="italic title"> <i class="fa fa-phone"></i> {{ $ambassador->phone }}</p>
                             </div>
