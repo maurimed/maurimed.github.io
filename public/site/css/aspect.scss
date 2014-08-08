@@ -1233,7 +1233,7 @@ header {
       }
     }
     select {
-      
+
       color: #aaa;
     }
     .input-group > .input-group-addon {
@@ -2357,8 +2357,8 @@ header.custom-5 .navbar-nav li a .over:hover {
   border: none;
   border-radius: 0 !important;
   padding: 0!important;
-  width: 300px !important;
-  box-shadow: 0px 0px 5px rgba(black, .5);
+  width: 240px !important;
+  box-shadow: -1px 1px 2px rgba(black, .3);
   float: right;
   .loading-locations{
     position: absolute;
@@ -2376,43 +2376,39 @@ header.custom-5 .navbar-nav li a .over:hover {
   .head{
     background-color: $mainColor;
     min-width: 100%!important;
-    padding-top: 12px !important;
-    padding-bottom: 5px !important;
-    margin-bottom: 20px !important;
+    padding-top: 10px !important;
+    padding-bottom: 3px !important;
+    margin-bottom: 15px !important;
     p{
       font-family: 'Roboto',sans-serif;
       text-transform:uppercase;
       color: white;
       width: 100%!important;
-      font-size: .9em;
+      font-size: .7em;
       padding: 0;
     }
   }
+  .input-group{
+    margin-bottom: 10px
+  }
   form{
+    select{color: #9a9a9a;  }
     padding: 0 16px!important;
-    .input-group{
-      select{
-        color: #9a9a9a;
-      }
-    }
     .btns{
-      input{ font-size: 1.2em; }
+      input{ font-size: 1.1em; }
       .submit{
         border: none;
         height: 46px !important;
-
       }
     }
   }
 }
 .landing-form .form-control{
-  height: 34px !important;
+  padding-top: 4px;
+  height: 30px !important;
   font-family: 'Arial',sans-serif;
   font-size: 1em;
-}
 
-.landing-form .input-group{
-  margin-bottom: 15px
 }
 
 .landing-form .input-group input{
@@ -2473,7 +2469,7 @@ header.custom-5 .navbar-nav li a .over:hover {
     display: inline-block;
     list-style-type: none;
     padding: 15px 10px !important;
-    border-radius: 0 !important; 
+    border-radius: 0 !important;
     width: auto !important;
     background-color: transparent !important;
     li{
@@ -2484,7 +2480,7 @@ header.custom-5 .navbar-nav li a .over:hover {
       a{
         h6{
           font-size:  1.6em !important
-          
+
         }
       }
     }
@@ -2500,7 +2496,7 @@ header.custom-5 .navbar-nav li a .over:hover {
       padding: 15px 10px !important;
       li{padding: 0px 15px !important;
         a{h6{
-            font-size:  1.2em !important            
+            font-size:  1.2em !important
           }}
       }
     }
@@ -2515,7 +2511,7 @@ header.custom-5 .navbar-nav li a .over:hover {
       padding: 15px 10px !important;
       li{padding: 0px 15px !important;
         a{h6{
-            font-size:  1em !important            
+            font-size:  1em !important
           }}
       }
     }
@@ -2524,16 +2520,16 @@ header.custom-5 .navbar-nav li a .over:hover {
 }
 
 @media screen and (max-width: 530px) {
-  
+
   .home-advantages{
     ul{
       padding: 15px 10px !important;
       li{
         padding: 0px 15px !important;
-        border:none;        
+        border:none;
         width: 100%;
         a{h6{
-            font-size:  1em !important            
+            font-size:  1em !important
           }}
       }
     }
@@ -2553,7 +2549,7 @@ header.custom-5 .navbar-nav li a .over:hover {
         display:block;
         padding: 10px 15px !important;
         a{h6{
-            font-size:  1.3em !important            
+            font-size:  1.3em !important
           }}
       }
     }
@@ -2589,7 +2585,7 @@ header.custom-5 .navbar-nav li a .over:hover {
   }
 }
 .epro-at-glance{
-  font-size: 1.4em; 
+  font-size: 1.4em;
   line-height:1.5em;
 }
 
