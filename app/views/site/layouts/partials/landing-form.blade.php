@@ -32,17 +32,17 @@
             </div>
             {{ Form::open(['route' => 'subscribers.store']) }}
 
-            {{$errors->first('name', '<span style="width:100%" class="alert-danger">:message</span>')}}
+            {{$errors->first('firstname', '<span style="width:50%" class="alert-danger">:message</span>')}}
             <div class="input-group col-md-6 col-sm-6 pull-left">
                 {{ Form::text('firstname', null, [ 'placeholder' =>
                 trans('home.form.placeholders.firstname'), 'class' => 'form-control' ]) }}
             </div>
 
-            {{$errors->first('name', '<span style="width:100%" class="alert-danger">:message</span>')}}
             <div class="input-group col-md-6 col-sm-6 pull-left">
                 {{ Form::text('lastname', null, [ 'placeholder' => trans('home.form.placeholders.lastname'),
                 'class' => 'form-control' ]) }}
             </div>
+            {{$errors->first('lastname', '<span style="width:50%" class="alert-danger">:message</span>')}}
 
             {{$errors->first('email', '<span style="width:100%" class="alert-danger">:message</span>')}}
             <div class="input-group col-md-12 col-sm-12 c-border-top">
@@ -55,22 +55,27 @@
                 {{ Form::text('phone', null, [ 'placeholder' => trans('home.form.placeholders.phone'),
                 'class' => 'form-control' ]) }}
             </div>
+            {{$errors->first('country', '<span style="width:100%" class="alert-danger">:message</span>')}}
 
             <div id="countries">
 
             </div>
 
+            {{$errors->first('state', '<span style="width:100%" class="alert-danger">:message</span>')}}
             <div class="input-group col-md-12 col-sm-12 c-border-top" id="statesLists">
                 <select class="form-control">
                     <option value="">{{ trans('home.form.placeholders.state') }}</option>
                 </select>
             </div>
 
+            {{$errors->first('city', '<span style="width:100%" class="alert-danger">:message</span>')}}
             <div class="input-group col-md-12 col-sm-12 c-border-top" id="citiesLists">
                 <select class="form-control">
                     <option value="">{{ trans('home.form.placeholders.city') }}</option>
                 </select>
             </div>
+            {{$errors->first('interest', '<span style="width:100%" class="alert-danger">:message</span>')}}
+
             <div class="input-group col-md-12 col-sm-12 c-border-top">
                 <select name="interest" class="form-control">
                     <option value="">{{ trans('home.form.placeholders.interest.title') }}</option>
@@ -94,6 +99,8 @@
                     </option>
                 </select>
             </div>
+            {{$errors->first('find_us', '<span style="width:100%" class="alert-danger">:message</span>')}}
+
             <div class="input-group col-md-12 col-sm-12 c-border-top">
                 <select name="find_us" class="form-control">
                     <option value="">{{ trans('home.form.placeholders.find_us.title') }}</option>
@@ -126,6 +133,8 @@
                     </option>
                 </select>
             </div>
+            {{$errors->first('age', '<span style="width:100%" class="alert-danger">:message</span>')}}
+
             <div class="input-group col-md-12 col-sm-12 c-border-top">
                 <select name="age" class="form-control">
                     <option value="">{{ trans('home.form.placeholders.age.title') }}</option>
