@@ -1,23 +1,10 @@
 <?php
 
-
-Event::listen('illuminate.query', function($sql)
-{
-//    Log::error($sql);
-//    var_dump($sql);
-});
-
-Route::get('test',function(){
-
-return View::make('emails.subscribers.thanks')->withName('Jorge');
-
-});
-
 Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-    
+
     //    Home routes
     Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
@@ -119,12 +106,12 @@ Route::group(['prefix' => 'dashboard', 'before' => 'auth', 'namespace' => 'Epro3
 //    Route::get('checkUsername', 'Epro360\Admin\Controllers\ProfilesController@checkUsername');
 
 });
-Route::group(['prefix' => 'api', 'before' => 'auth', 'namespace' => 'Epro360\Admin\Controllers'], function()
+Route::group(['prefix' => 'api', 'namespace' => 'Epro360\Admin\Controllers'], function()
 {
     Route::get('cities/tables', 'CitiesController@ajax');
     Route::get('states', 'StatesController@lists');
     Route::get('cities', 'CitiesController@lists');
-    Route::get('zips', 'CitiesController@zipLists');
+    Route::get('ipinfo', 'SubscribersController@getIp');
 
 });
 

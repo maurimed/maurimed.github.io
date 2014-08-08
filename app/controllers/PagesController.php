@@ -1,6 +1,5 @@
 <?php
 
-
 use Epro360\Repos\Locations\CountriesRepository;
 
 class PagesController extends BaseController {
@@ -17,8 +16,6 @@ class PagesController extends BaseController {
     {
         return View::make('site.pages.home');
     }
-
-
 
     //    About
     public function about()
@@ -54,7 +51,6 @@ class PagesController extends BaseController {
         return View::make('site.pages.about.team', compact('ambassadors'));
     }
 
-    // Move to ambassadors Controller
     public function ambassadors($countryCode)
     {
         $country = $this->countryRepo->getCountryByCountryCodeWithAmbassadors($countryCode);

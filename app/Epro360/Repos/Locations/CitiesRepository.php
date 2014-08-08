@@ -10,14 +10,14 @@ class CitiesRepository {
 
     public function getAll()
     {
-        return City::paginate(3);
+        return City::with(['state', 'country'])->get();
 
     }
 
 
     public function getListByStateId($state_id)
     {
-        return City::orderBy('city_name','ASC')->where('state_id', $state_id)->lists('city_name', 'id');
+        return City::rememberForever()->orderBy('city_name','ASC')->where('state_id', $state_id)->lists('city_name', 'id');
 
     }
 

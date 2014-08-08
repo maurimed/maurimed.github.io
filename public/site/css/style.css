@@ -7281,13 +7281,13 @@ footer .list-group .list-group-item:hover {
     line-height: 13px;
 }
 
-.liked-posts .element {
+.menu-services .element {
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 2px;
 }
 
-.liked-posts .element .likes {
+.menu-services .element .likes {
     width: 20%;
     padding-left: 3px;
     text-align: right;

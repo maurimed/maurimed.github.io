@@ -1,6 +1,20 @@
 <?php namespace Epro360\Admin\Controllers;
 
+use Epro360\Repos\Locations\CountriesRepository;
+use Guzzle\Http\Client;
+use Request;
+use View;
+
+
 class SubscribersController extends \BaseController {
+
+
+    protected $countryRepo;
+
+    function __construct(CountriesRepository $countryRepo)
+    {
+        $this->countryRepo = $countryRepo;
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -14,15 +28,30 @@ class SubscribersController extends \BaseController {
 		return \View::make('admin.subscribers.index', compact('subscribers'));
 	}
 
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function getIp()
 	{
-		//
+        $countries = $this->countryRepo->countriesList();
+
+        $ip = Request::getClientIp();
+
+//        $ip = "190.214.93.130";
+
+        $client = new Client("http://ipinfo.io/");
+
+        $response = $client->get( $ip . '/geo' )->send();
+
+        $location = $response->json();
+
+        if (!isset($location['country']))$location['country'] = '';
+
+        $currentCountry = $location['country'];
+
+        return View::make('site.pages.subscribers.countries-list', compact('countries', 'currentCountry'));
 	}
 
 

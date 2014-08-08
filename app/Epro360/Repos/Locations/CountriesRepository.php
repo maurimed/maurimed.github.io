@@ -7,7 +7,7 @@ class CountriesRepository {
 
     public function countriesList()
     {
-        return Country::orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
+        return Country::has('states')->orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
     }
 
     public function getCountryByCountryCodeWithAmbassadors($countryCode)

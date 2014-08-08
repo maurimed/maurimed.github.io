@@ -3,7 +3,7 @@
 
 <div class="bannercontainer">
     <div class="banner">
-    
+
         <ul>
 
             <li id="slide1" data-transition="fade" data-slotamount="1">

@@ -1,9 +1,9 @@
 <?php
 
 use Epro360\Forms\SubscribeForm;
-use Guzzle\Http\Client;
-use Illuminate\Support\Facades\Input;
 use Epro360\Mailers\SubscriberMailer;
+use Illuminate\Support\Facades\Input;
+
 
 class SubscribersController extends \BaseController {
 
@@ -26,15 +26,6 @@ class SubscribersController extends \BaseController {
 	public function store()
 	{
 
-        $ip = Request::getClientIp();
-
-        $client = new Client("http://ipinfo.io/");
-
-        $response = $client->get( $ip . '/geo' )->send();
-
-        $location = $response->json();
-
-//        dd($location["ip"]);
 
         $input = Input::all();
 
@@ -42,25 +33,23 @@ class SubscribersController extends \BaseController {
         $this->subscriberForm->validate($input);
 
 
-        if($response->getReasonPhrase() == "OK")
-        {
-            $subscriber = new Subscriber;
+        $subscriber = new Subscriber;
 
-            $subscriber->name = $input["name"];
-            $subscriber->email = $input["email"];
-            $subscriber->phone = $input["phone"];
-            $subscriber->ip = $location["ip"];
-            $subscriber->city = isset($location["city"]) ? $location["city"] : 'not found';
-            $subscriber->region = isset($location["region"]) ? $location["region"] : 'not found';
-            $subscriber->country = isset($location["country"]) ? $location["country"] : 'not found';
+        $subscriber->name = $input["firstname"] .' ' .$input["lastname"];
+        $subscriber->email = $input["email"];
+        $subscriber->phone = $input["phone"];
+        $subscriber->city_id = $input["city"];
+        $subscriber->interest = $input["interest"];
+        $subscriber->find_us = $input["find_us"];
+        $subscriber->age = $input["age"];
+        $subscriber->ip = Request::getClientIp();
 
-            $subscriber->save();
+        $subscriber->save();
 
-            $this->subscriberMailer->thanks($subscriber);
-        }
+        $this->subscriberMailer->thanks($subscriber);
 
 
-            return Redirect::back()->withSuccessMessage('We will contact you soon');
+        return Redirect::back()->withSuccessMessage('We will contact you soon');
 
 	}
 

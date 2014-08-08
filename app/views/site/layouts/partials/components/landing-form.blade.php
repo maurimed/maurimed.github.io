@@ -17,7 +17,9 @@
                             <input type="text" placeholder="Email *" class="form-control">
                             <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
                         </div>
+                        <div id="statesLists">
 
+                        </div>
                         <div class="btns">
                             <a class="button solid blue md">
                                 <div class="over">{{ Lang::get('home.text_button') }}</div>
@@ -36,3 +38,6 @@
         </div>
     </div>
 </div>
+<script>
+
+</script>

@@ -12,9 +12,17 @@ class SubscribeForm extends FormValidator {
      * @var array
      */
     protected $rules = [
-        'name' => 'required',
+
+        'firstname'=> 'required',
+        'lastname'=> 'required',
         'email' => 'required|email',
-        'phone' => 'required|numeric'
+        'phone' => 'required|numeric',
+        'country'=> 'required',
+        'state'=> 'required',
+        'city'=> 'required',
+        'interest'=> 'required',
+        'find_us'=> 'required',
+        'age'=> 'required'
     ];
 
 }

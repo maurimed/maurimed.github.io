@@ -9,10 +9,9 @@ class StatesRepository {
         return State::with('country.continent')->get();
     }
 
-
     public function getListByCountryCode($country_code)
     {
-        return State::orderBy('state_name', 'ASC')->whereCountryCode($country_code)->lists('state_name', 'id');
+        return State::rememberForever()->orderBy('state_name', 'ASC')->whereCountryCode($country_code)->lists('state_name', 'id');
     }
 
 } 

@@ -1,5 +1,11 @@
 <?php
 
 class Subscriber extends \Eloquent {
-	protected $fillable = ['name', 'email', 'phone'];
+	protected $fillable = [];
+
+
+    public function city()
+    {
+        return $this->belongsTo('City');
+    }
 }
