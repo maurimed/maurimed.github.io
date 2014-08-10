@@ -3,7 +3,7 @@
         'country',
         array_add($countries, '', trans('home.form.placeholders.country')),
         [$currentCountry],
-        ['id'=>'country', 'class' => 'form-control']
+        ['id'=>'country', 'class' => 'form-control', 'id' => 'country']
     ) }}
 </div>
 

@@ -6,55 +6,74 @@ return [
 //    "landing_title" => "To request more info, please fill out this form and we will get in touch with you",
 
     "form"    => [
-        "title"         => "Request More Info",
-        "text"          => "Text for convince the user to download",
-        "placeholders"  => [
-            "firstname" => "Nombre",
-            "lastname"  => "Apellido",
-            "email"     => "Correo electrónico",
-            "country"   => "País",
-            "state"     => "Región donde reside",
-            "city"      => "Ciudad",
-            "phone"     => "Teléfono",
+        "title"       => "Request More Info",
+        "text"        => "Text for convince the user to download",
+        "inputs"      => [
+            "firstname" => "Name",
+            "lastname"  => "Last Name",
+            "email"     => "E-Mail",
+            "phone"     => "Phone Number",
+            "country"   => "Country of Residence",
+            "state"     => "Region of Residence",
+            "city"      => "City of Residence",
             "interest"  => [
-                "title"  => "Programa de interés",
-                "opt1"   => "Curso de Inglés",
-                "opt2"   => "Nivel Superior (Carrera Universitaria)",
-                "opt3"   => "Maestrías",
-                "opt4"   => "Mentores Educativos",
-                "opt5"   => "Consejeros Educativos",
-                "opt6"   => "Pasantías",
+                "title" => "Program of Interest",
+                "opt1"  => "ESL Program",
+                "opt2"  => "High School Program",
+                "opt3"  => "Undergraduate Program",
+                "opt4"  => "Master's Program",
+                "opt5"  => "Phd Program",
+                "opt6"  => "Internship Program",
+                "opt7"  => "Semester at Sea",
             ],
             "find_us"   => [
-                "title" => "¿Cómo supo de nosotros?",
-                "opt1" => [
+                "title" => "How did you hear about us?",
+                "opt1"  => [
                     "label" => "Internet",
                     "opt1"  => "Google",
                     "opt2"  => "Facebook",
                     "opt3"  => "Youtube",
                     "opt4"  => "Twitter",
                 ],
-                "opt2" => "Amigo",
-                "opt3" => "Periódico",
-                "opt4" => "Charla en Colegio",
+                "opt2"  => "Friends",
+                "opt3"  => "Newspaper",
+                "opt4"  => "School Presentation",
             ],
             "specify"   => "Específicamente",
             "age"       => [
-                "title" => "¿Qué edad tiene?",
-                "opt1" => "7-9 años",
-                "opt2" => "10-13 años",
-                "opt3" => "14-18 años",
-                "opt4" => "19-24 años",
-                "opt5" => "25-34 años",
-                "opt6" => "> 35 años",
+                "title" => "How old are you?",
+                "opt1"  => "7-9 years",
+                "opt2"  => "10-13 years",
+                "opt3"  => "14-18 years",
+                "opt4"  => "19-24 years",
+                "opt5"  => "25-34 years",
+                "opt6"  => "> 35 years",
             ]
         ],
-        "text_button"  => "Request Info",
+        "errors"      => [
+            "firstname" => "Your name is required",
+            "email"     => [
+                "required" => "Please enter your e-mail address",
+                "invalid"  => "Please enter a valid e-mail address"
+            ],
+            "phone"     => [
+                "required" => "Please enter your phone",
+                "number"   => "Please only numbers"
+            ],
+            "country"   => "Choose your residence country",
+            "state"     => "Choose your residence state",
+            "city"      => "Choose your residence city",
+            "interest"  => "Choose your interest program",
+            "find_us"   => "Choose an option",
+            "age"       => "Tell us how old are you",
+
+        ],
+        "text_button" => "Request Info",
 
     ],
 
-    "sliders" =>[
-        "first" => [
+    "sliders" => [
+        "first"  => [
             "text1" => "We make your DREAM",
             "text2" => "to study in the U.S",
             "text3" => "A REALITY!"
