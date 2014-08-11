@@ -55,14 +55,16 @@
 <tr>
     <th>ID</th>
     <th><i class="fa fa-fw fa-user txt-color-blue hidden-md hidden-sm hidden-xs"></i> Name</th>
-    <th><i class="fa fa-fw fa-birthday txt-color-blue hidden-md hidden-sm hidden-xs"></i> Age</th>
     <th><i class="fa fa-fw fa-envelope txt-color-blue hidden-md hidden-sm hidden-xs"></i> Emails</th>
     <th><i class="fa fa-fw fa-phone txt-color-blue hidden-md hidden-sm hidden-xs"></i> Phone</th>
-    <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> IP</th>
+    <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Interest</th>
+    <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Age</th>
+
     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> City</th>
     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> State</th>
     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> Country</th>
     <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Created At</th>
+    <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> About Us </th>
     <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Actions</th>
 </tr>
 </thead>
@@ -71,14 +73,17 @@
 <tr>
     <td>{{$subscriber->id}}</td>
     <td>{{$subscriber->name}}</td>
-    <td>{{$subscriber->age}}</td>
     <td>{{$subscriber->email}}</td>
     <td>{{$subscriber->phone}}</td>
-    <td>{{$subscriber->ip}}</td>
+    <td>{{$subscriber->interest}}</td>
+    <td>{{$subscriber->age}}</td>
+
     <td>{{$subscriber->city->city_name}} </td>
     <td>{{$subscriber->city->state->state_name}} </td>
     <td>{{$subscriber->city->state->country->country_name}} </td>
     <td>{{$subscriber->created_at->diffForHumans()}}</td>
+    <td>{{$subscriber->find_us}}</td>
+
     <td></td>
 
 </tr>
