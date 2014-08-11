@@ -75,12 +75,12 @@ return [
     "sliders" => [
         "first"  => [
             "text1" => "We make your DREAM",
-            "text2" => "to study in the U.S",
+            "text2" => "to study in the U.S.",
             "text3" => "A REALITY!"
         ],
         "second" => [
             "text1" => "Academic and Athletic",
-            "text2" => "Scholarships to study in the US"
+            "text2" => "Scholarships to study in the U.S."
         ],
 
     ]
