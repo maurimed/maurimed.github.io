@@ -1,7 +1,7 @@
 <div class="input-group col-md-12 col-sm-12 c-border-top">
     {{ Form::select(
         'country',
-        array_add($countries, '', trans('home.form.placeholders.country')),
+        array_add($countries, '', trans('home.form.inputs.country')),
         [$currentCountry],
         ['id'=>'country', 'class' => 'form-control', 'id' => 'country']
     ) }}

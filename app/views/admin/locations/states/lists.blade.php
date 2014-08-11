@@ -1,5 +1,5 @@
 @if($states)
-{{ Form::select('state', array_add($states, '', 'Region donde reside' ) , [''], ['id'=>'states', 'class'=> 'form-control' , 'style' => 'width:100%'] ) }}
+{{ Form::select('state', array_add($states, '', trans('home.form.inputs.state') ) , [''], ['id'=>'states', 'class'=> 'form-control' , 'style' => 'width:100%'] ) }}
 <script>
     var $select = $("select#states");
     if((typeof select2 !== 'undefined' && $.isFunction(select2)))
