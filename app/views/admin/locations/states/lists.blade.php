@@ -9,25 +9,27 @@
             allowClear: true
         });
     }
+    if (!$('.loading-locations').length){
 
-    $select.on('change', function() {
-        $('.loading-locations').css('display','block');
+        $select.on('change', function() {
 
-        var val = this.value;
-        if(val !== '' ){
-            $.ajax({
-                type: "GET",
-                url: '/api/cities',
-                data: { 'state' : val }
-            }).done(function($data) {
-                $('#citiesLists').html($data);
-                $('.loading-locations').css('display','none');
+                var val = this.value;
+                if(val !== '' ){
+                    $.ajax({
+                        type: "GET",
+                        url: '/api/cities',
+                        data: { 'state' : val }
+                    }).done(function($data) {
+                        $('#citiesLists').html($data);
 
-            });
-        }
-    });
+                    });
+                }
+            }
 
-    $select.trigger("change");
+        })
+        $select.trigger("change");
+    }
+
 </script>
 @else
 <div class="note">There are no states for this country please contact de Administrator</div>

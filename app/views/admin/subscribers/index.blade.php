@@ -60,7 +60,6 @@
     <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Interest</th>
     <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Age</th>
 
-    <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> City</th>
     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> State</th>
     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> Country</th>
     <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Created At</th>
@@ -78,12 +77,10 @@
     <td>{{$subscriber->interest}}</td>
     <td>{{$subscriber->age}}</td>
 
-    <td>{{$subscriber->city->city_name}} </td>
-    <td>{{$subscriber->city->state->state_name}} </td>
-    <td>{{$subscriber->city->state->country->country_name}} </td>
+    <td>{{$subscriber->state->state_name}} </td>
+    <td>{{$subscriber->state->country->country_name}} </td>
     <td>{{$subscriber->created_at->diffForHumans()}}</td>
     <td>{{$subscriber->find_us}}</td>
-
     <td></td>
 
 </tr>
@@ -93,22 +90,14 @@
 </tbody>
 </table>
 
-
-
-
 </div>
 <!-- end widget content -->
-
-
 </div>
 <!-- end widget div -->
-
 </div>
 <!-- end widget -->
-
 </article>
 <!-- WIDGET END -->
-
 </div>
 
 <!-- end row -->

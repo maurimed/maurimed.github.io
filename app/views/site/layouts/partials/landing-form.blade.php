@@ -69,12 +69,7 @@
                 </select>
             </div>
 
-            {{$errors->first('city', '<em style="margin-top: 40px" class="invalid">:message</em>')}}
-            <div class="input-group col-md-12 col-sm-12 c-border-top" id="citiesLists">
-                <select class="form-control" id="cities"  data-error="{{trans('home.form.errors.city')}}" >
-                    <option value="">{{ trans('home.form.inputs.city') }}</option>
-                </select>
-            </div>
+
             {{$errors->first('interest', '<em class="invalid">:message</em>')}}
 
             <div class="input-group col-md-12 col-sm-12 c-border-top">

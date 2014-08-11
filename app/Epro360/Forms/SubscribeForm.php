@@ -19,7 +19,6 @@ class SubscribeForm extends FormValidator {
         'phone' => 'required|numeric',
         'country'=> 'required',
         'state'=> 'required',
-        'city'=> 'required',
         'interest'=> 'required',
         'find_us'=> 'required',
         'age'=> 'required'

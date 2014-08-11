@@ -38,7 +38,7 @@ class SubscribersController extends \BaseController {
         $subscriber->name = $input["firstname"] .' ' .$input["lastname"];
         $subscriber->email = $input["email"];
         $subscriber->phone = $input["phone"];
-        $subscriber->city_id = $input["city"];
+        $subscriber->state_id = $input["state"];
         $subscriber->interest = $input["interest"];
         $subscriber->find_us = $input["find_us"];
         $subscriber->age = $input["age"];

@@ -4,8 +4,8 @@ class Subscriber extends \Eloquent {
 	protected $fillable = [];
 
 
-    public function city()
+    public function state()
     {
-        return $this->belongsTo('City');
+        return $this->belongsTo('State');
     }
 }
