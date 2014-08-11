@@ -593,8 +593,11 @@ header .navbar-toggle {
 
 */
 #nav-shop, #search, #login, #register {
-  background: #f9f9f9;
-  border-bottom: 1px solid #e1e1e1; }
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: -45px;
+  z-index: 99999999 !important; }
 
 #nav-shop.fixed-top {
   -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.2);
