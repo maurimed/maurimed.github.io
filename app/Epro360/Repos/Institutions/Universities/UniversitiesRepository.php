@@ -1,5 +1,6 @@
 <?php  namespace Epro360\Repos\Institutions\Universities; 
 
+use Bllim\Datatables\Datatables;
 use Epro360\Forms\institutions\UniversityForm;
 use University;
 
@@ -14,7 +15,12 @@ class UniversitiesRepository {
 
     public function getAll()
     {
-        return University::with('city.state.country')->get();
+        return University::take(25)->get();
+    }
+
+    public function findById($id)
+    {
+        return University::findOrFail($id);
     }
 
     public function save($input)
@@ -39,4 +45,40 @@ class UniversitiesRepository {
 
     }
 
-} 
+    public function dataTable()
+    {
+        $universities = University::rememberForever()->select([
+            'id',
+            'name',
+            'city',
+            'state',
+            'country',
+//            'zip',
+            'address',
+            'type',
+            'info',
+//            'web_url',
+//            'phone',
+//            'email',
+//            'tuition_link',
+//            'admissions_link',
+//            'sports_division',
+            'closest_airport',
+//            'far_from_airport',
+            'housing',
+//            'postal',
+            'years',
+            'settings',
+//            'tuition',
+//            'created_at'
+        ]);
+
+        return Datatables::of($universities)
+            ->edit_column('name', '<a href="/dashboard/universities/{{$id}}"  data-toggle="modal" data-target="#myModal" > {{ $name }} </a>')
+            ->add_column('Actions', '<a href="/dashboard/universities/{{$id}}/edit" class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil hidden-md hidden-sm hidden-xs"></i> </a>
+                                     <a href="/dashboard/universities/{{$id}}/delete" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove hidden-md hidden-sm hidden-xs"></i> </a>')
+        ->make();
+    }
+
+}
+

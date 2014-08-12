@@ -3,6 +3,7 @@
 use Epro360\Repos\Institutions\Universities\UniversitiesRepository;
 use Epro360\Repos\Locations\CountriesRepository;
 use Input;
+use Redirect;
 use View;
 
 class UniversitiesController extends \BaseController {
@@ -26,10 +27,16 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function index()
 	{
-        $universities = $this->universitiesRepo->getAll();
 
-		return View::make('admin.institutions.universities.index', compact('universities'));
+		return View::make('admin.institutions.universities.index');
+
 	}
+
+
+    public function table()
+    {
+        return $this->universitiesRepo->dataTable();
+    }
 
 	/**
 	 * Show the form for creating a new resource.
@@ -56,7 +63,7 @@ class UniversitiesController extends \BaseController {
     {
         $this->universitiesRepo->save(Input::all());
 
-        return \Redirect::back()->withSuccessMessage('The University has been saved');
+        return Redirect::back()->withSuccessMessage('The University has been saved');
     }
 
     /**
@@ -68,7 +75,9 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$university = $this->universitiesRepo->findById($id);
+
+        return View::make('admin.institutions.universities.show', compact('university'));
 	}
 
     /**
@@ -80,7 +89,9 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+        $university = $this->universitiesRepo->findById($id);
+
+        return View::make('admin.institutions.universities.edit', compact('university'));
 	}
 
 	/**
@@ -104,7 +115,7 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return 'Deleting the university with the id of ' . $id;
 	}
 
 }
