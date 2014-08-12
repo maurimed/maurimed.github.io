@@ -8,7 +8,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     //    Home routes
     Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
-
     //    About routes
     Route::get('about', ['as' => 'about', 'uses' => 'PagesController@about']);
     Route::get('about/message-from-co-founders', ['as' => 'about.message', 'uses' => 'PagesController@aboutMessage']);
@@ -112,6 +111,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Epro360\Admin\Controllers'], fu
     Route::get('states', 'StatesController@lists');
     Route::get('cities', 'CitiesController@lists');
     Route::get('ipinfo', 'SubscribersController@getIp');
+    Route::get('universities', 'UniversitiesController@table');
 
 });
 
