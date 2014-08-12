@@ -22,7 +22,7 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="/admin/css/smartadmin-rtl.min.css"> -->
 
 
-        <link rel="stylesheet" type="text/css" media="screen" href="/admin/css/custom.css">
+<!--        <link rel="stylesheet" type="text/css" media="screen" href="/admin/css/custom.css">-->
 
         @yield('styles')
 
@@ -53,7 +53,7 @@
 	</head>
 
 
-	<body class="">
+	<body class="minified">
 
 		<!-- HEADER -->
 		@include('admin.layouts.partials.header')
