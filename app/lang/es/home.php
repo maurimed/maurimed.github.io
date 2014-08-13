@@ -41,12 +41,10 @@ return [
             "specify"   => "Específicamente",
             "age"       => [
                 "title" => "¿Qué edad tiene?",
-                "opt1"  => "7-9 años",
-                "opt2"  => "10-13 años",
-                "opt3"  => "14-18 años",
-                "opt4"  => "19-24 años",
-                "opt5"  => "25-34 años",
-                "opt6"  => "> 35 años",
+                "opt1"  => "14-18 años",
+                "opt2"  => "19-24 años",
+                "opt3"  => "25-34 años",
+                "opt4"  => "> 35 años",
             ]
         ],
         "errors"      => [

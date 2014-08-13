@@ -115,9 +115,7 @@
                                     Str::slug(trans('home.form.inputs.age.opt1')) =>  trans('home.form.inputs.age.opt1'),
                                     Str::slug(trans('home.form.inputs.age.opt2')) =>  trans('home.form.inputs.age.opt2'),
                                     Str::slug(trans('home.form.inputs.age.opt3')) =>  trans('home.form.inputs.age.opt3'),
-                                    Str::slug(trans('home.form.inputs.age.opt4')) =>  trans('home.form.inputs.age.opt4'),
-                                    Str::slug(trans('home.form.inputs.age.opt5')) =>  trans('home.form.inputs.age.opt5'),
-                                    Str::slug(trans('home.form.inputs.age.opt6')) =>  trans('home.form.inputs.age.opt6'),
+                                    Str::slug(trans('home.form.inputs.age.opt4')) =>  trans('home.form.inputs.age.opt4')
 
                                 ], null, ['class' => 'form-control', 'id' => 'age', 'data-error' => trans('home.form.errors.age') ] ) }}
 
