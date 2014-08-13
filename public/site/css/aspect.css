@@ -1544,7 +1544,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 .landing-form-container {
   width: 100%;
   position: absolute;
-  z-index: 9999999; }
+  z-index: 999; }
 
 .absolute {
   position: absolute;
@@ -1598,6 +1598,8 @@ header.custom-5 .navbar-nav li a .over:hover {
       border-color: red !important; }
     .landing-form form select {
       color: #9a9a9a; }
+      .landing-form form select option {
+        height: 50px; }
     .landing-form form em.invalid {
       color: #ef3d4a;
       position: absolute;

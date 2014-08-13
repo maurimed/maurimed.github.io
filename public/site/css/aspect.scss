@@ -1236,7 +1236,6 @@ header {
       }
     }
     select {
-
       color: #aaa;
     }
     .input-group > .input-group-addon {
@@ -2336,7 +2335,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 .landing-form-container{
   width: 100%;
   position:absolute;
-  z-index: 9999999;
+  z-index: 999;
 
 
 }
@@ -2396,7 +2395,12 @@ header.custom-5 .navbar-nav li a .over:hover {
   form{
     padding: 0 16px!important;
     input.invalid{border-color:red !important}
-    select{color: #9a9a9a;  }
+    select{
+      color: #9a9a9a;
+      option{
+        height: 50px;
+      }
+    }
     em.invalid{color: $mainColor;
       position: absolute;
       z-index: 999;
