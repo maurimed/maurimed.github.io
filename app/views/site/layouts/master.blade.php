@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/site/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/site/resources/fontello/fontello.css">
-        <link rel="stylesheet" href="/site/css/animation.css">
+        <link href="/site/resources/fontello/fontello.css"rel="stylesheet" >
+        <link href="/site/css/animation.css" rel="stylesheet" >
         <link href="/site/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="/site/vendors/MEplayer/mediaelementplayer.min.css" rel="stylesheet"/>
         <!-- REVOLUTION BANNER CSS SETTINGS -->
@@ -14,10 +14,14 @@
         <link href="/site/vendors/smoothdivscroll/smoothDivScroll.css" rel="stylesheet">
         <link rel="stylesheet" href="/site/vendors/magnific-popup/magnific-popup.css">
 
+        @yield('styles')
+
         <link rel="stylesheet" href="/site/css/aspect.css">
         <link rel="stylesheet" href="/site/css/style.css">
         <link rel="stylesheet" href="/site/css/responsive.css">
-        <link rel="stylesheet" href="/site/css/flags.css">
+        <link rel="stylesheet" href="/site/css/lang-flags.css">
+
+
         <script type="text/javascript" src="/site/includes/modernizr/modernizr.custom.27667.js"></script>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="/site/includes/html5shiv/html5shiv.js"></script>
