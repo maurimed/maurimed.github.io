@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('ribbon')
-@include('admin.layouts.partials.ribbon', ['breadcrumbs' => ['Locations','Universities', 'List']])
+@include('admin.layouts.partials.ribbon', ['breadcrumbs' => ['Institutions','Universities', 'List']])
 @stop
 
 @section('title')

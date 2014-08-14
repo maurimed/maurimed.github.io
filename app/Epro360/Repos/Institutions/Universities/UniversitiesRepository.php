@@ -75,9 +75,8 @@ class UniversitiesRepository {
 
         return Datatables::of($universities)
             ->edit_column('name', '<a href="/dashboard/universities/{{$id}}"  data-toggle="modal" data-target="#myModal" > {{ $name }} </a>')
-            ->add_column('Actions', '<a href="/dashboard/universities/{{$id}}/edit" class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil hidden-md hidden-sm hidden-xs"></i> </a>
-                                     <a href="/dashboard/universities/{{$id}}/delete" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove hidden-md hidden-sm hidden-xs"></i> </a>')
-        ->make();
+            ->add_column('Actions', '<a href="/dashboard/universities/{{$id}}/edit" class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil hidden-md hidden-sm hidden-xs"></i> Edit </a>')
+            ->make();
     }
 
 }

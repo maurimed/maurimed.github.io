@@ -77,7 +77,7 @@ class UniversitiesController extends \BaseController {
 	{
 		$university = $this->universitiesRepo->findById($id);
 
-        return View::make('admin.institutions.universities.show', compact('university'));
+        return View::make('admin.institutions.universities.partials.show', compact('university'));
 	}
 
     /**
@@ -91,7 +91,7 @@ class UniversitiesController extends \BaseController {
 	{
         $university = $this->universitiesRepo->findById($id);
 
-        return View::make('admin.institutions.universities.edit', compact('university'));
+        return View::make('admin.institutions.universities.partials.edit', compact('university'));
 	}
 
 	/**
