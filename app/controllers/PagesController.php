@@ -1,14 +1,15 @@
 <?php
 
-use Epro360\Repos\Locations\CountriesRepository;
+
+use Epro360\Repos\Users\Ambassadors\AmbassadorRepository;
 
 class PagesController extends BaseController {
 
-    protected $countryRepo;
+    protected $ambassadorRepo;
 
-    function __construct(CountriesRepository $countryRepo)
+    function __construct(AmbassadorRepository $ambassadorRepo)
     {
-        $this->countryRepo = $countryRepo;
+        $this->ambassadorRepo = $ambassadorRepo;
     }
 
     //    Home
@@ -45,17 +46,16 @@ class PagesController extends BaseController {
 
     public function aboutTeam()
     {
-        // Extract to the Ambassadors Repo
-        $ambassadors = Ambassador::with(['city.state.country', 'profile'])->get();
+        $ambassadors = $this->ambassadorRepo->getAll();
 
         return View::make('site.pages.about.team', compact('ambassadors'));
     }
 
     public function ambassadors($countryCode)
     {
-        $country = $this->countryRepo->getCountryByCountryCodeWithAmbassadors($countryCode);
+        $ambassadors = $this->ambassadorRepo->getAmbassadorsByCountry($countryCode);
 
-        return View::make('site.pages.ambassadors', compact('country'));
+        return View::make('site.pages.ambassadors', compact('ambassadors'));
     }
 
 
@@ -73,6 +73,7 @@ class PagesController extends BaseController {
 
     public function networkCoaching()
     {
+        // Extract this eloquent things
         $tags = AcademicSchool::orderBy('name')->get(['name', 'slug']);
         $majors = Major::all();
         return View::make('site.pages.network.coaching', compact('tags', 'majors'));
