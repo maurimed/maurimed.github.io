@@ -19,7 +19,7 @@
                     <div class="element"><a>FAQ</a></div>
                     <div class="element"><a>Location</a></div> -->
                     <div class="element">
-                        <img  src="/site/img/blank.gif" class="flag flag-{{ LaravelLocalization::getCurrentLocale()  }}" alt="{{ LaravelLocalization::getCurrentLocaleNativeReading() }}">
+                        <img  src="/site/img/blank.gif" class="lang-flag flag-{{ LaravelLocalization::getCurrentLocale()  }}" alt="{{ LaravelLocalization::getCurrentLocaleNativeReading() }}">
                         <a style="margin-left:5px" href="#" class="dropdown-toggle" data-toggle="dropdown">
                             {{ LaravelLocalization::getCurrentLocaleNativeReading()}}
                             <i class="fa fa-angle-down"></i>
@@ -27,7 +27,7 @@
                         <div class="lang dropdown-menu" role="menu">
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                @if(App::getLocale() != $localeCode)
-                                    <img src="/site/img/blank.gif" class="flag flag-{{ $localeCode  }}" alt="{{ $properties['native'] }}">
+                                    <img src="/site/img/blank.gif" class="lang-flag flag-{{ $localeCode  }}" alt="{{ $properties['native'] }}">
                                     <a rel="alternate" hreflang="{{$localeCode}}"
                                         href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}">
                                         {{{ $properties['native'] }}}

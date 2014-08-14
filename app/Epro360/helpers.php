@@ -33,6 +33,18 @@ function get_profile_image($user, $size = 'thumb')
     }
 }
 
+function get_profile_image_for_background($user, $size = 'sm')
+{
+    if($user->image === "default" )
+    {
+        return '<img width="100" src="/admin/images/profiles/default.jpg" alt="'. $user->username .'" />';
+    }
+    else
+    {
+        return '<img width="100" src="/admin/images/profiles/'. folder_path($user) .'/'. $size . '-' . $user->image .'" alt="'. $user->username .'">';
+    }
+}
+
 /**
  * @param $user
  * @return string
