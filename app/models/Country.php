@@ -24,6 +24,6 @@ class Country extends \Eloquent {
 
     public function ambassadors()
     {
-        return $this->hasMany('Ambassador');
+        return $this->hasMany('Ambassador', 'country_code', 'country_code');
     }
 }

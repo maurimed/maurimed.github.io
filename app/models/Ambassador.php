@@ -21,6 +21,11 @@ class Ambassador extends \Eloquent {
         return $this->belongsTo('City');
     }
 
+    public function country()
+    {
+        return $this->belongsTo('Country', 'country_code', 'country_code');
+    }
+
     public function students()
     {
         return $this->hasMany('Student');

@@ -10,16 +10,10 @@ class CountriesRepository {
         return Country::has('states')->orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
     }
 
-    public function getCountryByCountryCodeWithAmbassadors($countryCode)
+
+    public function getCountriesThatHasAmbassadors()
     {
-        return Country::rememberForever()->with(['cities' => function($q){
-                    $q->rememberForever()->has('ambassadors')
-                        ->with(['ambassadors' => function($q){
-                            $q->rememberForever()->with(['profile' => function($q){$q->rememberForever();}]);
-                        }, 'state'=> function($q){
-                            $q->rememberForever();
-                        }]);
-                }])->whereCountryCode($countryCode)->first();
+        return Country::has('ambassadors')->get();
     }
 
 } 

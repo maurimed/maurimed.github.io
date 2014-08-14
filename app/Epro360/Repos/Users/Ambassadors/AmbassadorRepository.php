@@ -9,6 +9,7 @@ class AmbassadorRepository {
 
     public function getAll()
     {
+
         return Ambassador::with(['profile', 'creator', 'city.state.country'])->get();
     }
 
@@ -16,6 +17,12 @@ class AmbassadorRepository {
     public function findById($id)
     {
         return Ambassador::with('profile', 'creator', 'city.state.country')->findOrFail($id);
+    }
+
+    public function getAmbassadorsByCountry($countryCode)
+    {
+        return Ambassador::with(['profile','city'])->whereCountryCode($countryCode)->get();
+
     }
 
     public function create($input)
