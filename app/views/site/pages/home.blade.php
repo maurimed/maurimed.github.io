@@ -13,6 +13,7 @@
 
     @include('site.layouts.partials.components.testimonials-1')
 
+
     @include('site.ambassadors.landing')
 
 @stop
@@ -22,8 +23,7 @@
 <!-- jQuery REVOLUTION Slider  -->
 <script src="/site/vendors/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script src="/site/vendors/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/site/js/script.js"></script>
-<script src="/site/includes/retina/retina-1.1.0.min.js"></script>
+
 <script src="/admin/js/plugin/jquery-validate/jquery.validate.min.js"></script>
 <script>
     $('document').ready(function(){

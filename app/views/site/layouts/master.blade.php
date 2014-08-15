@@ -69,7 +69,8 @@
             <script type="text/javascript" src="/site/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
             <script type="text/javascript" src="/site/vendors/caroufredsel-6.2.1/jquery.carouFredSel-6.2.1-packed.js"></script>
             @yield('scripts')
-
+            <script src="/site/js/script.js"></script>
+            <script src="/site/includes/retina/retina-1.1.0.min.js"></script>
             <!--[if gte IE 9]>
             <script type="text/javascript" src="/site/js/ie9.js"></script>
             <![endif]-->
