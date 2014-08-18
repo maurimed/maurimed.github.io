@@ -153,6 +153,7 @@ class UserRepository {
     public function update($input, $userId)
     {
 
+
         $user = $this->findById($userId);
 
         $input = $this->makeUsername($input, $user);
@@ -161,7 +162,7 @@ class UserRepository {
 
         $this->validate($input);
 
-        if($input['city'] != '')
+        if(Input::has('city') )
         {
             $user->userable->city_id = $input['city'];
             $user->userable->country_code = $input['country'];
@@ -189,7 +190,7 @@ class UserRepository {
 
         return User::create($user);
     }
-    
+
     public function createOld($modelInfo, $userInfo, $model)
     {
 
