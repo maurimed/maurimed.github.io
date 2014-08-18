@@ -15,7 +15,7 @@ class PagesController extends BaseController {
     //    Home
     public function home()
     {
-        return View::make('site.pages.home');
+        return View::make('site.pages.home.index');
     }
 
     //    About

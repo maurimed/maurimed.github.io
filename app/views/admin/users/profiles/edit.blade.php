@@ -1,10 +1,13 @@
 @extends('admin.layouts.master')
+
 @section('ribbon')
-@include('admin.layouts.partials.ribbon', ['breadcrumbs' => [$user->userable_type, $user->username, 'Profile']])
+    @include('admin.layouts.partials.ribbon', ['breadcrumbs' => [$user->userable_type, $user->username, 'Profile']])
 @stop
+
 @section('title')
-@include('admin.layouts.partials.page-title',['title' => $user->userable_type, 'subtitle' => '> ' . $user->username, 'icon' => 'user'])
+    @include('admin.layouts.partials.page-title',['title' => $user->userable_type, 'subtitle' => '> ' . $user->username, 'icon' => 'user'])
 @stop
+
 @section('content')
 <section id="widget-grid" class="">
 
@@ -125,7 +128,6 @@
                 $('#citiesLists').html('<div class=note > Please select the state first </div>');
                 $('#zipsLists').html('<div class=note > Please select the city first </div>');
 
-                pageSetUp();
 
             });
 

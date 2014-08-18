@@ -10,5 +10,6 @@ composer.phar
 Thumbs.db
 /**/*.psd
 /**/*.zip
+/**/*.dat
 
-tests/_output/*
+tests/*
