@@ -9,12 +9,13 @@
 
 @section('content')
 
-    @include('site.layouts.partials.components.slider')
+    @include('site.pages.home.partials.form')
 
-    @include('site.layouts.partials.components.testimonials-1')
+    @include('site.pages.home.partials.slider')
 
+    @include('site.pages.home.partials.testimonials')
 
-    @include('site.ambassadors.landing')
+    @include('site.pages.home.partials.ambassadors')
 
 @stop
 

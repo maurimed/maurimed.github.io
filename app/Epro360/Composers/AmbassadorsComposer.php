@@ -27,7 +27,7 @@ class AmbassadorsComposer {
         $countries = $this->countriesRepo->getCountriesThatHasAmbassadors();
         $ambassadors = $this->ambassadorsRepo->getAll();
 
-        $view->withAmbassadors($ambassadors)->withCountries($countries);
+        $view->with('ambassadors', $ambassadors)->with('countries', $countries);
     }
 
 

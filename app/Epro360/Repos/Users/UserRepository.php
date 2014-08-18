@@ -162,7 +162,11 @@ class UserRepository {
         $this->validate($input);
 
         if($input['city'] != '')
+        {
             $user->userable->city_id = $input['city'];
+            $user->userable->country_code = $input['country'];
+
+        }
         $user->userable->firstname = $input['firstname'];
         $user->userable->lastname = $input['lastname'];
 

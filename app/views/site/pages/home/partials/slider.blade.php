@@ -1,5 +1,5 @@
 
-@include('site.layouts.partials.landing-form')
+
 
 <div class="bannercontainer">
     <div class="banner">

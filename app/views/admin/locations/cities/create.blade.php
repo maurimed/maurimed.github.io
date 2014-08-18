@@ -124,17 +124,18 @@
 @section('plugins')
 <script src="/admin/js/plugin/select2/select2.min.js"></script>
 <script src="/admin/js/plugin/jquery-form/jquery-form.min.js"></script>
+
 <script>
 $( document ).ready(function() {
 
-        $(".country-select2").select2({
-            placeholder: "Select a Country",
-            allowClear: true
-        });
+    $(".country-select2").select2({
+        placeholder: "Select a Country",
+        allowClear: true
+    });
 
     var $select = $('select#country');
 
-        $select.on('change', function() {
+    $select.on('change', function() {
             var val = this.value;
             console.log(val);
             $.ajax({
@@ -150,8 +151,6 @@ $( document ).ready(function() {
         });
 
     $select.trigger('change');
-
-
 
     var $registerForm = $("#cities-form").validate({
 
