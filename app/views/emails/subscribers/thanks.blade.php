@@ -17,8 +17,8 @@
         <td height="28"></td>
     </tr>
     <tr>
-        <td color="#6b6b6b" align="left"
-            style="font-size: 14px; font-family: Myriad Pro, helvetica, Arial, sans-serif; color: #6b6b6b!important; line-height: 24px; font-weight: 400; clear: both;text-align: justify;">
+        <td color="#222222" align="left"
+            style="font-size: 14px; font-family: Georgia, sans-serif; color: #1f1f1f!important; line-height: 24px; font-weight: 400; clear: both;text-align: justify;">
             {{ trans('emails.subscribers.greeting') }} {{ $name }},
             <br/> <br/>
 
@@ -26,47 +26,50 @@
             <br/> <br/>
 
             {{ trans('emails.subscribers.p2') }}
-            <br/> <br/>
 
-
-            {{ trans('emails.subscribers.p3') }}
+            <a target='_blank' href='http://www.epro360.com/network'>{{ trans('emails.subscribers.link1') }} </a>
             <br/> <br/>
 
             {{ trans('emails.subscribers.list_title') }}
             <br/>
 
             <ol>
-                <li>{{ trans('emails.subscribers.li1') }}</li>
-                <li>{{ trans('emails.subscribers.li2') }}
-                    <ol>
-                        <li><a target="_blank" style="color: #47784a"
-                               href="{{ Lang::get('footer.social_links.facebook') }}">Facebook</a></li>
-                        <li><a target="_blank" style="color: #47784a"
-                               href="{{ Lang::get('footer.social_links.twitter') }}"> Twitter </a></li>
-                        <li><a target="_blank" style="color: #47784a" href="http://www.epro360.com/news">{{
-                                Lang::get('menu.news') }}</a></li>
-                    </ol>
+                <li>
+                    {{ trans('emails.subscribers.li1') }}
+                    <a target='_blank' href='{{trans('emails.subscribers.form-path')}}'>{{trans('emails.subscribers.form-text')}}</a>.
                 </li>
-                <li>{{ trans('emails.subscribers.li3') }}</li>
+                <li>
+                <a href="//epro360.com" target="_blank">{{ trans('emails.subscribers.li2')}}</a>{{ trans('emails.subscribers.li2-2') }}
+                    <ul>
+                        <li><strong> {{ trans('emails.subscribers.email') }} </strong><a target="_blank"  href="mailto:{{ Lang::get('contacts.email') }}">{{ Lang::get('contacts.email') }}</a></li>
+                        <li><strong> {{ trans('emails.subscribers.phone') }} </strong>{{ Lang::get('contacts.phone') }}</li>
+                    </ul>
+                </li>
+                <li>
+                    {{ trans('emails.subscribers.li3') }}
+                    <a target = '_blank' href='{{ trans('emails.subscribers.doc-path') }}' > {{ trans('emails.subscribers.doc-text') }}</a >
+                    {{ trans('emails.subscribers.li3-2') }}
+
+                </li>
             </ol>
             <br/>
-            {{ trans('emails.subscribers.p4') }}
+            {{ trans('emails.subscribers.p3') }}
             <br/>
-            <br/>
-            <strong> {{ trans('emails.subscribers.phone') }} </strong> {{ Lang::get('contacts.phone') }} <br/>
-            <strong> {{ trans('emails.subscribers.email') }} </strong> {{ Lang::get('contacts.email') }} <br/>
 
             <br/>
             <span style="color:#868686;font-style:italic">
 
-            {{ trans('emails.subscribers.footer') }}
-            <br/> <br/>
+            {{ trans('emails.subscribers.sign') }}
+            <br/>
+            <a href="//epro360.com">www.epro360.com</a>
+            <br/>
+            <br/>
             </span>
 
-            P.S. {{ $name }}, {{ trans('emails.subscribers.ps') }}
 
 
         </td>
+
     </tr>
 </table>
 @stop

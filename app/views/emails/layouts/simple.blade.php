@@ -6,7 +6,7 @@
 
     div, p, a, li, td { -webkit-text-size-adjust:none; }
 
-    /* This is the Epro 360 color to change the green content:  #47784a; */
+    /* This is the Epro 360 color to change the green content:  #ef3d4a; */
 
     .ReadMsgBody
     {width: 100%; background-color: #ffffff;}
@@ -17,10 +17,10 @@
     html
     {width: 100%; }
 
-    table { font-size: 14px; font-family: Myriad Pro, helvetica, Arial, sans-serif; color: #6b6b6b; }
-    a{color: #47784a !important;}
-    .ii a[href] {color: #47784a !important;}
-
+    table { font-size: 16px; font-family: Georgia, sans-serif; color: #222222; }
+    a{color: #ef3d4a !important;}
+    .ii a[href] {color: #ef3d4a !important;}
+    small{text-align: center !important;}
     .im{color:#6b6b6b !important;}
     .imageTableFull img { border-radius: 3px!important; }
 
@@ -84,7 +84,7 @@
                                         </tr>
                                         <tr>
                                             <td  valign="middle" width="100%" style="text-align: center;" class="textCenter">
-                                                <a target="_blank" href="http://www.epro360.com/"><img style="margin-top: 10px!important;"  width="130" src="http://www.epro360.com/site/images/logo.png" alt="Epro 360" border="0"></a>
+                                                <a target="_blank" href="http://www.epro360.com/"><img style="margin-top: 10px!important;"  width="220" src="http://www.epro360.com/site/images/logo.png" alt="Epro 360" border="0"></a>
                                             </td>
                                         </tr>
                                     </table>
@@ -151,49 +151,37 @@
                             <tr>
                                 <td width="100%" valign="middle">
 
-                                    <!-- Space -->
-                                    <table width="20" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
-                                        <tr>
-                                            <td width="100%" height="40" class="pad1">
-                                            </td>
-                                        </tr>
-                                    </table>
 
-                                    <!-- Copyright -->
-                                    <table width="150" border="0" cellpadding="0" cellspacing="0" align="left" class="fullCenter" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
-                                        <tr>
-                                            <td valign="middle" width="100%" height="25" style="font-style: italic;">
-                                                &copy;&nbsp; Epro 360
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                    <!-- Space -->
-                                    <table width="30" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
-                                        <tr>
-                                            <td width="100%" height="40">
-                                            </td>
-                                        </tr>
-                                    </table>
 
                                     <!-- Footer Nav -->
-                                    <table width="350" border="0" cellpadding="0" cellspacing="0" align="left" style="text-align: right; font-style: italic; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                                    <table width="500" border="0" cellpadding="0" cellspacing="0" align="center" style="font-size:14px;line-height: 22px; color: #696969; text-align: center  ; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                                         <tr>
-                                            <td valign="middle" class="navTd" height="25">
-                                                <a href="//www.epro360.com/frequently-asked-questions" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('faq.title') }} </a>
-                                            </td>
-                                            <td valign="middle" class="navTd" height="25">
-                                                <a href="//www.epro360.com/privacy-policy" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('policy.title') }} </a>
+                                            <td valign="middle" class="navTd" >
+                                                    <small> P.D. {{ $name }}, {{ trans('emails.subscribers.pd') }} </small>
 
-                                            </td>
-                                            <td valign="middle" class="navTd" height="25">
-                                                <a href="//www.epro360.com/terms-and-conditions" target="_blank" style="text-decoration: none; color: #6b6b6b;" > {{ trans('terms.title') }} </a>
+                                                    <br/> <br/>
+                                                    <a target="_blank" href="{{ trans('footer.social_links.facebook') }}">
+                                                        <img src="/site/email/128-facebook.png" alt="Facebook"/>
+                                                    </a>
+                                                    <a target="_blank" href="{{ trans('footer.social_links.google-plus') }}">
+                                                    <img src="/site/email/128-googleplus.png" alt="Google Plus"/> </a>
 
-                                                <a target="_blank" href=""></a>
-                                                {{ link_to_route('terms', Lang::get('terms.title'),[], ['target' => '_blank', 'style' => 'text-decoration: none; color: #6b6b6b;']) }}
+                                                    <a target="_blank" href="{{ trans('footer.social_links.twitter') }}">
+                                                    <img src="/site/email/128-twitter.png" alt="Twitter"/> </a>
+
+                                                    <br/>
+                                                    <small>
+                                                        {{ trans('emails.subscribers.footer.1') }} <br/>
+                                                        {{ trans('emails.subscribers.footer.2') }} <br/>
+                                                        {{ trans('emails.subscribers.footer.3') }} <br/>
+                                                        {{ trans('emails.subscribers.footer.4') }}
+                                                    </small>
                                             </td>
                                         </tr>
                                     </table>
+
+
+
                                 </td>
                             </tr>
                         </table><!-- End Footer -->
