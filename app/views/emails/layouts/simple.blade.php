@@ -84,7 +84,7 @@
                                         </tr>
                                         <tr>
                                             <td  valign="middle" width="100%" style="text-align: center;" class="textCenter">
-                                                <a target="_blank" href="http://www.epro360.com/"><img style="margin-top: 10px!important;"  width="220" src="http://www.epro360.com/site/images/logo.png" alt="Epro 360" border="0"></a>
+                                                <a target="_blank" href="http://www.epro360.com/"><img style="margin-top: 10px!important;"  width="220" src="//epro360.com/site/images/logo.png" alt="Epro 360" border="0"></a>
                                             </td>
                                         </tr>
                                     </table>
@@ -145,57 +145,46 @@
             <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
                 <tr>
                     <td width="100%">
-
                         <!-- Start Footer -->
                         <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
                             <tr>
                                 <td width="100%" valign="middle">
-
-
-
                                     <!-- Footer Nav -->
                                     <table width="500" border="0" cellpadding="0" cellspacing="0" align="center" style="font-size:14px;line-height: 22px; color: #696969; text-align: center  ; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                                         <tr>
                                             <td valign="middle" class="navTd" >
-                                                    <small> P.D. {{ $name }}, {{ trans('emails.subscribers.pd') }} </small>
+                                                <small> P.D. {{ $name }}, {{ trans('emails.subscribers.pd') }} </small>
 
-                                                    <br/> <br/>
-                                                    <a target="_blank" href="{{ trans('footer.social_links.facebook') }}">
-                                                        <img src="/site/email/128-facebook.png" alt="Facebook"/>
-                                                    </a>
-                                                    <a target="_blank" href="{{ trans('footer.social_links.google-plus') }}">
-                                                    <img src="/site/email/128-googleplus.png" alt="Google Plus"/> </a>
+                                                <br/> <br/>
+                                                <a target="_blank" href="{{ trans('footer.social_links.facebook') }}">
+                                                    <img src="//epro360.com/site/email/128-facebook.png" alt="Facebook"/>
+                                                </a>
+                                                <a target="_blank" href="{{ trans('footer.social_links.google-plus') }}">
+                                                <img src="//epro360.com/site/email/128-googleplus.png" alt="Google Plus"/> </a>
 
-                                                    <a target="_blank" href="{{ trans('footer.social_links.twitter') }}">
-                                                    <img src="/site/email/128-twitter.png" alt="Twitter"/> </a>
+                                                <a target="_blank" href="{{ trans('footer.social_links.twitter') }}">
+                                                <img src="//epro360.com/site/email/128-twitter.png" alt="Twitter"/> </a>
 
-                                                    <br/>
-                                                    <small>
-                                                        {{ trans('emails.subscribers.footer.1') }} <br/>
-                                                        {{ trans('emails.subscribers.footer.2') }} <br/>
-                                                        {{ trans('emails.subscribers.footer.3') }} <br/>
-                                                        {{ trans('emails.subscribers.footer.4') }}
-                                                    </small>
+                                                <br/>
+                                                <small>
+                                                    {{ trans('emails.subscribers.footer.1') }} <br/>
+                                                    {{ trans('emails.subscribers.footer.2') }} <br/>
+                                                    {{ trans('emails.subscribers.footer.3') }} <br/>
+                                                    {{ trans('emails.subscribers.footer.4') }}
+                                                </small>
                                             </td>
                                         </tr>
                                     </table>
-
-
-
                                 </td>
                             </tr>
                         </table><!-- End Footer -->
-
                     </td>
                 </tr>
             </table><!-- End Wrapper -->
 
             <!-- Space -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
-                <tr>
-                    <td width="100%" height="10" class="pad1">
-                    </td>
-                </tr>
+                <tr> <td width="100%" height="10" class="pad1"> </td> </tr>
             </table>
 
         </td>
