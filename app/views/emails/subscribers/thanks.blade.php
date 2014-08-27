@@ -39,7 +39,7 @@
                     <a target='_blank' href='{{trans('emails.subscribers.form-path')}}'>{{trans('emails.subscribers.form-text')}}</a>.
                 </li>
                 <li>
-                <a href="//epro360.com" target="_blank">{{ trans('emails.subscribers.li2')}}</a>{{ trans('emails.subscribers.li2-2') }}
+                <a href="http://www.epro360.com" target="_blank">{{ trans('emails.subscribers.li2')}}</a>{{ trans('emails.subscribers.li2-2') }}
                     <ul>
                         <li><strong> {{ trans('emails.subscribers.email') }} </strong><a target="_blank"  href="mailto:{{ Lang::get('contacts.email') }}">{{ Lang::get('contacts.email') }}</a></li>
                         <li><strong> {{ trans('emails.subscribers.phone') }} </strong>{{ Lang::get('contacts.phone') }}</li>
@@ -61,7 +61,7 @@
 
             {{ trans('emails.subscribers.sign') }}
             <br/>
-            <a href="//epro360.com">www.epro360.com</a>
+            <a href="http://www.epro360.com">www.epro360.com</a>
             <br/>
             <br/>
             </span>

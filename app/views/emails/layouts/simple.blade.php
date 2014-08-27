@@ -61,7 +61,13 @@
         td[class=fontSmall] { font-size: 28px!important; }
         .imageTableFull img { width: 100%!important; height: auto!important; border-radius: 3px!important; }
 
-    }
+    }#220 {
+  margin-top: 10px;
+}#logo {
+  margin-top: 10px;
+  width: 220px;
+  border: none;
+}
 
 
 </style>
@@ -84,7 +90,8 @@
                                         </tr>
                                         <tr>
                                             <td  valign="middle" width="100%" style="text-align: center;" class="textCenter">
-                                                <a target="_blank" href="http://www.epro360.com/"><img style="margin-top: 10px!important;"  width="220" src="//epro360.com/site/images/logo.png" alt="Epro 360" border="0"></a>
+                                                <a target="_blank" href="http://www.epro360.com">
+                                                <img id="logo" src="http://www.epro360.com/site/images/logo.png" alt="Epro 360" ></a>
                                             </td>
                                         </tr>
                                     </table>
@@ -157,13 +164,13 @@
 
                                                 <br/> <br/>
                                                 <a target="_blank" href="{{ trans('footer.social_links.facebook') }}">
-                                                    <img src="//epro360.com/site/email/128-facebook.png" alt="Facebook"/>
+                                                    <img src="http://www.epro360.com/site/email/128-facebook.png" alt="Facebook"/>
                                                 </a>
                                                 <a target="_blank" href="{{ trans('footer.social_links.google-plus') }}">
-                                                <img src="//epro360.com/site/email/128-googleplus.png" alt="Google Plus"/> </a>
+                                                <img src="http://www.epro360.com/site/email/128-googleplus.png" alt="Google Plus"/> </a>
 
                                                 <a target="_blank" href="{{ trans('footer.social_links.twitter') }}">
-                                                <img src="//epro360.com/site/email/128-twitter.png" alt="Twitter"/> </a>
+                                                <img src="http://www.epro360.com/site/email/128-twitter.png" alt="Twitter"/> </a>
 
                                                 <br/>
                                                 <small>
