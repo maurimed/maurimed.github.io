@@ -1,4 +1,5 @@
 <?php  namespace Epro360\Mailers;
+use View;
 
 /**
  * Class UserMailer
@@ -13,7 +14,7 @@ class UserMailer extends Mailer {
      */
     public function accountCreated($user, $model, $password)
     {
-        $view = "emails.users.notifications.{$model}-created";
+        $view = View::make("emails.users.notifications.{$model}-created")->render();
         $data = [
             "name" => $user->username,
             "password" => $password
