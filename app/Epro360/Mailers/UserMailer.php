@@ -15,6 +15,7 @@ class UserMailer extends Mailer {
     public function accountCreated($user, $model, $password)
     {
         $view = View::make("emails.users.notifications.{$model}-created")->render();
+        dd($view);
         $data = [
             "name" => $user->username,
             "password" => $password
