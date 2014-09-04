@@ -24,7 +24,7 @@ return [
     "services" => [
         "index" => "Servicios",
         "academic_scholarships" => "Becas Académicas",
-        "athletic_scholarships" => "Becas de Atletismo",
+        "athletic_scholarships" => "Becas Deportivas",
         "english_courses_esl" => "Cursos de Inglés ESL",
         "educational_mentors" => "Mentores Educativos",
         "career_coaching" => "Consejeros Educativos",
