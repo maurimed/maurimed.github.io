@@ -10,10 +10,20 @@ class University extends \Eloquent {
 
 	protected $fillable = [];
 
-//    public function city()
-//    {
-//        return $this->belongsTo('City');
-//    }
+    public function city()
+    {
+        return $this->belongsTo('City', 'city');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo('State', 'state');
+    }
+
+    public function country()
+    {
+        return $this->belongsTo('Country', 'country', 'country_code');
+    }
 
     public function requirements()
     {
