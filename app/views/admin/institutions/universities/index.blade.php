@@ -46,24 +46,26 @@
                                 <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> City</th>
                                 <th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> State</th>
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Country</th>
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Zip</th>-->
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Zip</th>--}}
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Address</th>
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Type </th>
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Info</th>
-<!--                                <th><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Web Url</th>-->
-<!--                                <th><i class="fa fa-fw fa-phone text-muted hidden-md hidden-sm hidden-xs"></i> Phone</th>-->
-<!--                                <th><i class="fa fa-fw fa-email text-muted hidden-md hidden-sm hidden-xs"></i> Email</th>-->
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Tuition Link</th>-->
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Admissions Link</th>-->
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Sports Division</th>-->
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Closest Airport</th>
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Far From Airport</th>-->
+                                <th><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Web Url</th>
+                                {{--<th><i class="fa fa-fw fa-phone text-muted hidden-md hidden-sm hidden-xs"></i> Phone</th>--}}
+                                {{--<th><i class="fa fa-fw fa-email text-muted hidden-md hidden-sm hidden-xs"></i> Email</th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Tuition Link</th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Admissions Link</th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Sports Division</th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Far From Airport</th>--}}
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Housing </th>
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Postal</th>-->
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Postal</th>--}}
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Years </th>
-                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Settings </th>
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Tuition </th>-->
-<!--                                <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Created At </th>-->
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Settings </th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Tuition </th>--}}
+                                {{--<th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Created At </th>--}}
+                                {{--<th><i class="fa fa-fw fa-map-marker text-muted hidden-md hidden-sm hidden-xs"></i> Cityame </th>--}}
+
                                 <th><i class="fa fa-fw fa-pencil text-muted hidden-md hidden-sm hidden-xs"></i> Actions </th>
                             </tr>
                             </thead>

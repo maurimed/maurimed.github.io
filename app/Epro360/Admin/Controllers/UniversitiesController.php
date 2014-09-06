@@ -103,7 +103,11 @@ class UniversitiesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input =  array_add(Input::get(), 'id', $id);
+
+        $this->universitiesRepo->update($input);
+
+        return Redirect::to('dashboard/universities')->withSuccessMessage('University Updated!');
 	}
 
 	/**

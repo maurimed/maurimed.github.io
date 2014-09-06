@@ -18,27 +18,11 @@
             </div>
         </div>
 
-        <!-- City form input -->
+        <!-- Address form input -->
         <div class="col-md-4">
-            {{ Form::label('city', 'City', ['class' => '']) }}
+            {{ Form::label('address', 'Address', ['class' => '']) }}
             <div class="form-group">
-                {{ Form::text('city', null, ['class'=>'form-control','placeholder' => 'City']) }}
-            </div>
-        </div>
-
-        <!-- State form input -->
-        <div class="col-md-4">
-            {{ Form::label('state', 'State', ['class' => '']) }}
-            <div class="form-group">
-                {{ Form::text('state', null, ['class'=>'form-control','placeholder' => 'State']) }}
-            </div>
-        </div>
-
-        <!-- Country form input -->
-        <div class="col-md-4">
-            {{ Form::label('country', 'Country', ['class' => '']) }}
-            <div class="form-group">
-                {{ Form::text('country', null, ['class'=>'form-control','placeholder' => 'Country']) }}
+                {{ Form::text('address', null, ['class'=>'form-control','placeholder' => 'Address']) }}
             </div>
         </div>
 
@@ -50,12 +34,31 @@
             </div>
         </div>
 
-        <!-- Address form input -->
+        <!-- Country form input -->
         <div class="col-md-4">
-            {{ Form::label('address', 'Address', ['class' => '']) }}
+            {{ Form::label('country', 'Country', ['class' => '']) }}
+            {{ $university->country }}
             <div class="form-group">
-                {{ Form::text('address', null, ['class'=>'form-control','placeholder' => 'Address']) }}
+                @include('admin.locations.countries.list', ['currentCountry' => $university->country])
+
             </div>
+        </div>
+
+        <!-- State form input -->
+        <div class="col-md-4">
+            {{ Form::label('state', 'State', ['class' => '']) }}
+                {{ $university->state }}
+            {{ Form::text('state',null ) }}
+            <div class="form-group" id="statesLists"> </div>
+        </div>
+
+        <!-- City form input -->
+        <div class="col-md-4">
+            {{ Form::label('city', 'City', ['class' => '']) }}
+                {{ $university->city }}
+                {{ Form::text('city',null ) }}
+
+            <div class="form-group"  id="citiesLists"> </div>
         </div>
 
         <!-- Type form input -->
