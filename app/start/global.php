@@ -56,14 +56,17 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::error(function(QueryException $exception)
 {
-//    Log::error($exception);
+    Log::error($exception);
 
-    return Redirect::to('/')->withDangerMessage('Sorry, there was an error, please try again later');
+//    return Redirect::to('/')->withDangerMessage('Sorry, there was an error, please try again later');
 });
 
 App::error(function(NotFoundHttpException $exception)
 {
-    return Redirect::to('/')->withInfoMessage('That page doesn\'t exist');
+//    return Redirect::to('/')->withInfoMessage('That page doesn\'t exist');
+
+    Log::error($exception);
+
 });
 
 //InvalidImageTypeException
@@ -82,20 +85,22 @@ App::error(function(ImageNotWritableException $exception)
 
 App::error(function(FormValidationException $exception)
 {
-    return Redirect::back()->withErrors($exception->getErrors())->withInput()->withDangerMessage('There where some validation errors.');
+    Log::error($exception);
+
+//    return Redirect::back()->withErrors($exception->getErrors())->withInput()->withDangerMessage('There where some validation errors.');
 });
 
 App::error(function(InvalidArgumentException $exception, $code)
 {
-//    Log::error($exception);
-    return Redirect::home()->withInfoMessage('Sorry, that page doesn\'t exist');
+    Log::error($exception);
+//    return Redirect::home()->withInfoMessage('Sorry, that page doesn\'t exist');
 });
 
 
 App::error(function(TokenMismatchException $exception, $code)
 {
-//    Log::error($exception);
-    return Redirect::to('/login')->withWarningMessage('Expired session, please login');
+    Log::error($exception);
+//    return Redirect::to('/login')->withWarningMessage('Expired session, please login');
 });
 
 
