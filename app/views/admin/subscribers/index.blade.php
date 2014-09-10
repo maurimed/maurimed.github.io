@@ -19,19 +19,6 @@
 
 <!-- Widget ID (each widget will need unique ID)-->
 <div class="jarviswidget jarviswidget-color-darken" id="wid-id-58" data-widget-editbutton="false">
-<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-
-								-->
 <header>
     <span class="widget-icon"> <i class="fa fa-table"></i> </span>
     <h2>Subscribers</h2>
@@ -41,15 +28,11 @@
 <div>
 
 <!-- widget edit box -->
-<div class="jarviswidget-editbox">
-    <!-- This area used as dropdown edit box -->
-
-</div>
+<div class="jarviswidget-editbox"> <!-- This area used as dropdown edit box --> </div>
 <!-- end widget edit box -->
 
 <!-- widget content -->
 <div class="widget-body no-padding">
-@include('admin.partials.messages')
 <table id="dt_basic" class="table table-responsive responsive table-striped table-bordered table-hover" width="100%">
 <thead>
 <tr>
@@ -81,7 +64,9 @@
     <td>{{$subscriber->state->country->country_name}} </td>
     <td>{{$subscriber->created_at->diffForHumans()}}</td>
     <td>{{$subscriber->find_us}}</td>
-    <td></td>
+    <td>
+        {{ Form::delete('subscribers', $subscriber->id) }}
+    </td>
 
 </tr>
 @endforeach

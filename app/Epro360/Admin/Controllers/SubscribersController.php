@@ -110,8 +110,11 @@ class SubscribersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
-	}
+        \Subscriber::find($id)->delete();
+
+        return \Redirect::to('dashboard/subscribers')->withSuccessMessage('Subscriber was deleted');
+
+    }
 
 
 }
