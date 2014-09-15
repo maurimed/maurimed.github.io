@@ -12,7 +12,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     use UserTrait, RemindableTrait, SoftDeletingTrait;
 
-    protected $fillable = ['username', 'email', 'password', 'image'];
+    protected $fillable = ['username', 'email', 'password'];
+
+    protected $appends = ['image'];
+
 
     /**
 	 * The database table used by the model.
@@ -33,9 +36,25 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->morphTo('userable');
     }
 
+    public function hasAccess($userTypes)
+    {
+        $userTypes = explode('|', $userTypes);
+
+        foreach ($userTypes as $userType)
+        {
+            if($this->userable_type == $userType) return true;
+        }
+
+        return false;
+    }
+
     public function setPasswordAttribute($password)
     {
         $this->attributes["password"] = Hash::make($password);
     }
 
+    public function getImageAttribute()
+    {
+        return $this->morphTo('userable')->getResults()->image;
+    }
 }
