@@ -68,10 +68,10 @@ function get_profile_image_for_background($user, $size = 'sm')
 {
     if($user->image === "default" )
     {
-        return '<img width="100" src="/admin/images/profiles/default.jpg" alt="'. $user->username .'" />';
+        return '<img width="100" src="/backend/images/profiles/default.jpg" alt="'. $user->username .'" />';
     }
     else
     {
-        return '<img width="100" src="/admin/images/profiles/'. path($user) .'/'. $size . '-' . $user->image .'" alt="'. $user->username .'">';
+        return '<img width="100" src="/backend/images/profiles/'. path($user) .'/'. $size . '-' . $user->image .'" alt="'. $user->username .'">';
     }
 }
