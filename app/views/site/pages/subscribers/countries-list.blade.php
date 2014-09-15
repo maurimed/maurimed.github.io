@@ -16,7 +16,7 @@
         if(val !== '' ){
             $.ajax({
                 type: "GET",
-                url: '/api/states',
+                url: '/api/subscribers/states',
                 data: { 'country_code' : val }
             }).done(function(data) {
                 $('#statesLists').html(data);

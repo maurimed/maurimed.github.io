@@ -121,6 +121,8 @@ Route::group(['prefix' => 'api', 'namespace' => 'Epro360\Dashboard\Controllers']
     Route::get('universities/cities', 'UniversitiesController@citiesList');
     Route::get('universities/universities', 'UniversitiesController@lists');
 
+    Route::get('subscribers/states', 'StatesController@lists');
+
     Route::get('countries', 'CountriesController@lists');
     Route::get('states', 'StatesController@jsonLists');
     Route::get('cities', 'CitiesController@jsonLists');
