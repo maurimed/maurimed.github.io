@@ -14,7 +14,7 @@
         @endforeach
 
         @for ($i = $ambassadors->count(); $i < 45; $i++)
-            <img width="100"  src="/admin/images/profiles/default.jpg" />
+            <img width="100"  src="/backend/images/profiles/default.jpg" />
         @endfor
 
     </div>

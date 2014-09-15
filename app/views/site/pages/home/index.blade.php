@@ -25,7 +25,7 @@
 <script src="/site/vendors/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script src="/site/vendors/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-<script src="/admin/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+<script src="/backend/js/plugin/jquery-validate/jquery.validate.min.js"></script>
 <script>
     $('document').ready(function(){
         $('.loading-locations').css('display','block');

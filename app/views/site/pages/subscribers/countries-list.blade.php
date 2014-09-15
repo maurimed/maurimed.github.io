@@ -3,7 +3,7 @@
         'country',
         array_add($countries, '', trans('home.form.inputs.country')),
         [$currentCountry],
-        ['id'=>'country', 'class' => 'form-control', 'id' => 'country']
+        ['id'=>'country', 'class' => 'form-control']
     ) }}
 </div>
 
