@@ -1,0 +1,71 @@
+<?php
+
+return array(
+    "index"                    => "Über Uns",
+    "message_from_co_founders" => [
+        "title"     => "Eine Nachricht von den Gründern",
+        "subtitle1" => "Hallo Freunde,",
+        "p1"        => "Epro 360 heisst jedes Jahr Studenten willkommen, die Traume fuer eine tolle Zukunft haben und hungrig  auf Erfolg und Wissen sind. Die Studenten werden persoenlich von unseren weltweiten Ambassadors in Empfang genommen, die Sie auf Ihrem Weg zum Erfolg begleiten. Bei Epro 360, Erfolg brütet Erfolg.",
+        "subtitle2" => "Eine persönliche Note",
+        "p2"        => "Unsere Coaches und Mentoren sind nicht nur einfach Berater, sondern auch wichtige Vorbilder mit vorzeigbaren akademischen, beruflichen, sowie persoenlichen Erfolgen. Sie sind der lebende Beweis, dass eine ausgewogene, globale Ausbildung Schüler und Studenten nicht nur auf beruflichen Erfolg, sondern auf das Leben in dieser komplexen Welt allgemein vorbereitet. Epro 360 ist weit mehr als ein Vermittlungs-Service für eine US-College-Ausbildung. Vor allem in einer Welt, in der viele hoch ausgebildete Studenten der akademischen Inflation zum Opfer fallen, ist es wichtig neben dem Studium noch in die persoenliche Weiterentwicklung zu investieren. Akademische Inflation ist ein Begriff, der den abnehmenden Wert von Hochschulabschlüssen über die Zeit beschreibt, weil immer mehr Menschen diesen erhalten.</em> ",
+        "p3"        => "Um wirklich erfolgreich und finanziell unabhängig zu sein, braucht es mehr als eine internationalen Abschluss. Genau das ist auch Epro 360’s Slogan: Mehr als ein Internationaler Abschluss. Im Gegensatz zu vielen anderen Unternehmen hält 360 Epro es persönlich. Unsere Schüer und Studenten werden persönlich von unseren Coaches und Mentoren trainiert, immer mit dem Ziel im Auge, die neue Generation zu stärken. Diese ausergewöhnliche Pädagogik vermittelt neben Wissen und Erfahrungswerten auch die nötige Lebenseinstellung und Energie, die zum Erfolg führt.",
+        "subtitle3" => "Bildung hautnah erfahren",
+        "p4"        => "Innerhalb des Epro 360 Netzwerks gedeihen Ideen und Inspiration, während Menschen in Ihrer Persönlichkeit und Lebensvision wachsen. Um allen Mitgliedern ein möglichste realistisches Bild Ihrer Träume beruflichen Träume zu geben, vermittelt Epro 360 auch Praktikumsstellen an Studenten. nsere Epro 360 Network, und Zusatzleistungen werden die Studierenden auf ihre Praktika Suche zu helfen. Epro 360´s Pre-Berufs-Praktika-Programm öffnet Türen zu gefragten Bereichen wie Recht, Medizin, Wirtschaft, sportliches Training oder Kommunikation.",
+        "subtitle4" => "Das Beste aus zwei Welten",
+        "p5"        => "Epro 360 ist ein Netzwerk, welches für die individuelle Betreuung jedes Studenten und Schüler bekannt ist: Und das alles, während Epro 360 das beste finanzielle Angebot für eine Ausbildung in den USA gewährleistet. Unsere vielen Epro 360 Mitarbeiter (Coaches und Mentoren) bilden ein ein Netz von Unterstützung, welches ein Leben lang positiv prägen kann.",
+        "p6"        => "Wir laden Sie in unsere Erfolgs-Community ein. Wir bieten Ihnen die Vorteile eines großen und exzellenten Netzwerks, vereint mit der Flexibilität eines kleinen persönlichen Umfeldes. Mit dieser Gewinnkombination können Träume von jungen Studenten wahr werden. Mit freundlichen Grüßen,"
+    ],
+    "mission_and_vision"       => [
+        "title"    => "Unsere Mission",
+        "p1"       => "Unsere Aufgabe ist es Studenten dabei zu helfen die erfolgreichste Person, die sie vermögen  zu sein, zu werden, indem:",
+        "li1"      => "wir ihnen helfen ihre Karriereträume durch Anleitung, Coaching und Unterstützung in die Realität umzusetzen.",
+        "li2"      => "wir ihnen durch die persönliche Betreuung (der Mentoren) unschätzbares Wissen anbieten, um in allen Bereichen des Lebens erfolgreich zu sein. Ein Wissen, das in Schulen nicht gelehrt wird.",
+        "li3"      => "Mwir ihre Ausbildung durch akademische/sportliche Stipendien in der ganzen Welt erschwinglich machen.",
+        "subtitle" => "Unsere Vision",
+        "p2"       => "Epro 360 beobachtet die schnellen Veränderungen des Hochschulwesens auf der ganzen Welt. Das Planen deiner erfolgreichen und erfüllenden Karriere in der heutigen Welt beruht auf weit mehr als nur auf einem Hochschulabschluss. ",
+        "p3"       => "Um die glaubwürdige Führungskraft von Morgen zu formen, schickt Epro 360 nicht nur Studenten ins Ausland; Epro 360 unterrichtet und inspiriert sie, indem ihnen persönliches Coaching und eine persönliche Betreuung angeboten wird. Zudem arbeiten wir stets neues Lehrmaterial aus, das nicht in heutigen Universitäten unterrichtet wird. ",
+        "p4"       => "Gleichzeitig ist es das Bestreben von Epro 360 dies schneller zu tun, als irgendein Hochschullehrplan sich entwickeln kann. Mittels der Zusammenarbeit mit einigen der erfolgreichsten Unternehmern, Vordenkern und Pädagogen kann dies erreicht werden. ",
+        "p5"       => "Epro 360 strebt an, der erfolgreichste globale Anbieter für Auslandstudienprogramme und das größte weltweite Netzwerk aus Fachleuten, die sich durch ihre einzigartige internationale Präsenz auszeichnen, zu werden. ",
+    ],
+    "epro_360_at_a_glance"     => [
+        "title"    => "Epro 360 im Überblick",
+        "p1"       => "Diese Eigenschaften sowie unseren Drang das Leben der internationalen Studenten zu verbessern, werden den Epro 360-Zeitstrahl zu einem Zeitstrahl des Erfolges machen. Epro 360 freut sich weitere Stichpunkte in die folgende Liste hinzuzufügen!",
+        "subtitle" => "Epro 360  Meilensteine als Zahlenstrahl",
+        "timeline" => [
+            "1" => ["month" => "Februar", "year" => "2013", "title" => "Gründung", "text" => "IIn Portoviejo, Ecuador von Oswaldo und Christian Chavez."],
+            "2" => ["month" => "Juli", "year" => "2013", "title" => "Erste Vorträge", "text" => "Angeboten an Schülern in der Region Portoviejo, Ecuador."],
+            "3" => ["month" => "November", "year" => "2013", "title" => "Erweiterung", "text" => "Von Dienstleistungen ausschließlich für das Auslandsstudium zu Dienstleistungen für Karriere und persönliche Entwicklung."],
+            "4" => ["month" => "Dezember", "year" => "2013", "title" => "Erste internationale Vorträge", "text" => "PAngeboten an Studenten in Deutschland."],
+            "5" => ["month" => "Januar", "year" => "2014", "title" => "Zintragung der Firma", "text" => "in Deutschland."],
+            "6" => ["month" => "März", "year" => "2014", "title" => "Neues Mitglied", "text" => "Francisco Galvez ist als Investor beigetreten."],
+            "7" => ["month" => "April", "year" => "2014", "title" => "Eintragung der Firma", "text" => "in Spanien."],
+        ]
+    ],
+    "what_set_us_apart"        => [
+        "title"     => "Der Epro 360 Vorteil",
+        "subtitle1" => "Epro 360 bietet das beste Preis-Qualitätsverhältnis",
+        "p1"        => "Wettbewerb ist eine gute Sache. Er lässt uns alle härter arbeiten und überdenken was wir der Welt wirklich bereitstellen wollen. Epro 360 denkt, um die beste Dienstleistung für den studentischen angestrebten Markt zu bieten, muss die Dienstleistung auch preisgünstig sein, weil vielen Studenten ein verfügbares Einkommen fehlt. Epro 360 ist sich der überhöhten Preise des Wirtschaftszweigs für Dienstleistungen mit vergleichbarer Qualität bewusst. Obgleich die  Epro 360-Dienstleistungen für Karriere und privaten Coaching im ersten Jahr kostenlos sind, sind sie in dem Wirtschaftszweig einzigartig und werden ohne Aufpreis angeboten. ",
+        "subtitle2" => "Epro 360 gibt Zugriff auf individuell abgestimmte Stipendien und Praktika",
+        "p2"        => "Die bestehende Konkurrenz zu Epro 360 geht nur soweit, dass den Studenten der Zugriff auf Stipendien an Hochschulen in den Vereinigten Staaten geboten wird. Epro 360 geht darüber hinaus. Wir sind darum bemüht dir erfolgreich zu helfen, nicht nur indem wir dich in einer Universität unterbringen, sondern auch indem wir eine Universität raussuchen, die am besten zu deinen Bedürfnissen und Zielen passt. Wir helfen dir akademisch erfolgreich zu sein und was noch wichtiger ist, wir helfen dir dich dazu bereit zu machen den Beruf zu finden, den du dir erträumt hast. Ebendeshalb haben wir ein Team aus Berufsspeziallisten, das Studenten dabei helfen kann nach dem Abschluss, oder sogar während dem Erwerb des Abschlusses, eine Praktikumsstelle zu bekommen. ",
+        "subtitle3" => "Epro 360 hilft Studenten sich selbst kennenzulernen",
+        "p3"        => "In der heutigen wettbewerbsfähigen, globalen Welt ist es nicht genug „etwas“ zu wissen oder eine gute Bildung auf dem Papier zu haben. Du musst als erstes wissen wer du bist, um der Welt am erfolgreichsten zu begegnen. Sobald du dem Epro 360 Netzwerk beitrittst werden dir Hilfsmittel in Form von Online-Webinare  (Seminare, die über das Web laufen), Vorträgen,  Spielen und Videos bereitgestellt, um dir dabei zu helfen deine Vorlieben zu finden. Du erhältst ein überzeugendes Toolkit an Betreuern und anderen geschäftlichen Verbindungen, das es dir ermöglicht mit der komplexen und schwierigen Welt von heute umzugehen. ",
+        "subtitle4" => "Epro 360 nutzt die Komplexität der heutigen Zeit zu deinem Vorteil",
+        "p4"        => "Epro 360 hört auf die führenden Stimmen in Unternehmen und Bildung, um das Netzwerk zu gestalten und somit den Anforderungen in der heutigen Welt gerecht zu werden. Sir Ken Robinson, ein international anerkannter Experte im Bereich Kreativität und Bildung, sagt: „Niemand weiß wie die Welt in fünf Jahren aussehen wird; und dennoch sollten wir dafür ausgebildet sein. ",
+        "p5"        => "Aufgrund dieser Erwägung möchte Epro 360 seinen Studenten <strong>mehr als nur einen internationalen Abschluss</strong> bieten. Das ist der Slogan von Epro 360! Zu wissen, dass der Beruf in dem man in fünf Jahren arbeiten wird, heute noch gar nicht besteht, stellt für einige eine Last dar; Epro 360 nennt es eine Chance.",
+        "subtitle5" => "Epro 360 bietet ein einzigartiges weltweites Netzwerk mit motivierten Persönlichkeiten, welches dir ermöglicht über das, was eine Hochschule dir bieten kann, zu gehen.",
+        "p6"        => "Jeff Hoffmann, ein erfolgreicher Unternehmer und professioneller Redner, sagt, dass es weder um den Weg noch um das Ziel geht; es geht um die Menschen, mit denen du auf dem Weg zeitverbringst. Epro 360 gibt dir Zugriff auf eine engagierte Community. Wertvolle Kontakte und Persönlichkeiten innerhalb des Epro 360 Systems können kontaktiert werden, ebenso wie andere gleichgesinnte Studenten, die auch über Epro 360 in den Vereinigten Staaten studieren. Kein anderer Konkurrent für ein Studium im Ausland bietet so etwas. "
+    ],
+    "epro_360_team"            => [
+        "title"     => "Was ist die Aufgabe eines Epro 360 Ambassador?",
+        "p1"        => "Ein Epro 360 Ambassador macht das Epro 360 Programm in seiner Gemeinde bekannt, motiviert und ermutigt junge Studenten für ein Auslandsstudium und beschäftigen sich mit denen näher, die Interesse an unserer Dienstleistung zeigen. Die Hauptaufgabe liegt darin, unser Unternehmen und unsere Dienstleistungen, die wir Studenten, die an uns interessiert sind, anbieten, zu präsentieren. Des Weiteren führen wir Marketing und Verkaufstätigkeiten durch, nehmen an regelmäßigen Brainstorming-Treffen mit anderen Botschaftern, die auf der ganzen Welt verteilt sind, teil, etc.",
+        "subtitle1" => "Werde Teil unseres Teams ",
+        "subtitle2" => "Die drei Hauptgründe ein Epro 360 Botschafter zu werden",
+        "p2"        => "<strong>1.</strong> Faire Bezahlung nach Leistung. Was du investierst, bekommst du auch immer zurück. Wie wäre es mit einem höheren „Nebeneinkommen“ als dein Einkommen? Für jede Person, die sich registriert, bekommst du eine Provision. Wie viele Stunden du pro Woche dafür investierst ist deine Entscheidung. ",
+        "p3"        => "Viele Dinge in deinem Leben sind wichtig für dich. Der größte Wunsch von Epro 360 an dich ist es, dass du alle deine persönlichen Ziele erreichst und jede Schwierigkeit, mit der du gegenwärtig ringst, bewältigst. Aus diesem Grund möchten wir dir nicht die Zeit für Dinge wegnehmen, die du am liebsten machst. Wir möchten dich dabei unterstützen sie zu erreichen. Daher kannst du mit wenigen Stunden pro Woche beginnen, lernst Fähigkeiten, die dir dabei helfen mit allen Herausforderungen umzugehen und erhältst dabei finanzielle Unterstützung.",
+        "p4"        => "<strong>2.</strong>Werde ein besserer Sprecher. Die meiste Arbeit, die du machen wirst, wird darin bestehen Epro 360 bekannt zu machen. An örtliche Gymnasien zu gehen und vor einer Gruppe zu stehen, wird dich dazu herausfordern wirksam zu kommunizieren. Das ist eine wichtige Fähigkeit, die du tagtäglich für den Rest deines Lebens nutzen kannst. Keine Sorge, du wirst auch darin unterrichtet werden.",
+        "p5"        => "Ermögliche es jemandem ein besseres Leben zu haben. Wie cool ist das denn? Das ganze Epro 360 Programm ist konzipiert, um Studenten dabei zu helfen einen Schritt in ein besseres Leben zu machen, indem du ihnen eine gute Ausbildung bietest. Es ist alles da. Als Botschafter zeigst du dich, sprichst dich mit der Geschäftsleitung ab, verfolgst Projekte und bist ein Aushängeschild für Epro 360. Epro 360 entwickelt seine Schulungen, um dich bestmöglich zu unterstützen, stets weiter. Die Arbeit für Epro 360 ist als erfüllende Herausforderung gestaltet, die einen bedeutenden Ausgang für das Leben anderer hat. Vielleicht hast du schon davon gehört: „Einer der besten Wege sich selbst glücklich zu machen, ist jemanden anderen glücklich zu machen“. Wir haben alles für dich konzipiert, damit du einen Eindruck in dem Leben eines anderen hinterlassen kannst. Ein Beispiel dafür ist, dass das Haupt-Skript mit dem du arbeiten wirst so gestaltet ist, dass du dich sicher auf der Bühne fühlst. ",
+        "p6"        => "Bitte besuche unseren Karrierebereich für weitere Informationen und Stellen, um ein Teil unseres Epro 360 Teams zu werden. "
+    ]
+
+
+);
