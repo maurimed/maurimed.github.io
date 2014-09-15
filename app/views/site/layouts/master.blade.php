@@ -33,7 +33,7 @@
         <div id="main">
                 <!-- Include advertising -->
             <header class="head-1">
-                @include('admin.partials.messages')
+                @include('......dashboard.partials.messages')
                 @include('site.layouts.partials.header.top-bar')
                 @include('site.layouts.partials.header.nav-bar')
 
