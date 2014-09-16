@@ -24,12 +24,7 @@ class DatabaseSeeder extends Seeder {
 //        $this->call('MajorsTableSeeder');
 //        $this->call('MinorsTableSeeder');
 //        $this->call('PostsTableSeeder');
-        $this->call('ContinentsTableSeeder');
-        $this->call('CountriesTableSeeder');
-        $this->call('StatesTableSeeder');
-        $this->call('CitiesTableSeeder');
-        $this->call('RequirementsTableSeeder');
-        $this->call('UniversitiesTableSeeder');
+//        $this->call('RequirementsTableSeeder');
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 

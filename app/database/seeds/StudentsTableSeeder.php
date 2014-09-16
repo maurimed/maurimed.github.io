@@ -13,7 +13,7 @@ class StudentsTableSeeder extends Seeder {
                 "lastname" => "User",
                 "image" => "default",
                 "email" => "student@email.com",
-                "city_id" => 1,
+//                "city_id" => 1,
                 "phone" => "(+593) 985 176 257",
                 "ambassador_id" => 1,
                 "university_id" => 1
@@ -41,7 +41,7 @@ class StudentsTableSeeder extends Seeder {
             Student::create([
                 "firstname" => $student['firstname'],
                 "lastname" => $student['lastname'],
-                "city_id" => $student['city_id'],
+//                "city_id" => $student['city_id'],
                 "phone" => $student['phone'],
                 "university_id" => $student['university_id'],
                 "ambassador_id" => $student['ambassador_id'],

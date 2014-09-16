@@ -5,6 +5,8 @@ class RequirementsTableSeeder extends Seeder {
 
 	public function run()
 	{
+        Eloquent::unguard();
+
         Requirement::truncate();
 
         $requirements = [

@@ -1,0 +1,1 @@
+{{ Form::select('state', [$state->id => $state->state_name], $selected, ['id'=>'state', 'style' => 'width:100%'] ) }}

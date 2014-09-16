@@ -14,7 +14,7 @@ class RepresentativesTableSeeder extends Seeder {
                 "image" => "default",
                 "email" => "parent@email.com",
 //                "country_id" => 174,
-                "phone" => "(+593) 985 176 257",
+//                "phone" => "(+593) 985 176 257",
 //                "personal_phone" => "(+593) 428 230 24"
             ],
             [
@@ -23,7 +23,7 @@ class RepresentativesTableSeeder extends Seeder {
                 "image" => "default",
                 "email" => "parent2@email.com",
 //                "country_id" => 174,
-                "phone" => "(+593) 994 055 115",
+//                "phone" => "(+593) 994 055 115",
 //                "personal_phone" => "(+593) 428 230 24"
 
             ]
@@ -37,7 +37,7 @@ class RepresentativesTableSeeder extends Seeder {
                 "firstname" => $representative['firstname'],
                 "lastname" => $representative['lastname'],
 //                "country_id" => $representative['country_id'],
-                "phone" => $representative['phone'],
+//                "phone" => $representative['phone'],
             ]);
 
             User::create([

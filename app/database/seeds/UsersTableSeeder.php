@@ -66,7 +66,7 @@ class UsersTableSeeder extends Seeder {
 //		$faker = Faker::create();
 
 //        Administrator::create([
-//            "firstname" => "Admin",
+//            "firstname" => "Dashboard",
 //            "lastname" => "User",
 //            "phone" => "(593) 983221385",
 //            "personal_email" => "personal@email.com",
