@@ -85,9 +85,9 @@ App::error(function(ImageNotWritableException $exception)
 
 App::error(function(FormValidationException $exception)
 {
-    Log::error($exception);
+//    Log::error($exception);
 
-//    return Redirect::back()->withErrors($exception->getErrors())->withInput()->withDangerMessage('There where some validation errors.');
+    return Redirect::back()->withErrors($exception->getErrors())->withInput()->withDangerMessage('There where some validation errors.');
 });
 
 App::error(function(InvalidArgumentException $exception, $code)
@@ -145,3 +145,6 @@ App::down(function()
 require app_path().'/filters.php';
 require app_path().'/macros.php';
 require app_path().'/composers.php';
+require app_path().'/observables.php';
+
+
