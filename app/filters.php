@@ -48,71 +48,42 @@ Route::filter('auth', function()
 	}
 });
 
-Route::filter('administrator', function()
+
+/**
+ * InGroup filter
+ *
+ * Check if the user belongs to a group
+ */
+Route::filter('accessibleBy', function($route, $request, $value)
 {
-    if (Auth::user()->userable_type != 'Administrator')
+
+    if($value == 'Any')
     {
-        if (Request::ajax())
+        $userHasAccess = true;
+    }
+    else
+    {
+
+        $userTypes = explode(';', $value);
+
+        // Administrator always have access
+        $userTypes[] = 'Administrator';
+
+        $userHasAccess = false;
+
+        foreach ($userTypes as $userType)
         {
-            return Response::make('You are not a Administrator', 401);
-        }
-        else
-        {
-            return Redirect::to('dashboard')->withInfoMessage('Sorry, we don\'t find what you are looking for' );
+            if (Auth::user()->userable_type == $userType) $userHasAccess = true;
         }
     }
-});
 
-Route::filter('ambassador', function()
-{
-    if (Auth::user()->userable_type != 'Ambassador')
-    {
-        if (Request::ajax())
-        {
-            return Response::make('You are not a Ambassador', 401);
-        }
-        else
-        {
-            return 'You are not a Ambassador';
-        }
-    }
-});
 
-Route::filter('student', function()
-{
-    if (Auth::user()->userable_type != 'Student')
-    {
-        if (Request::ajax())
-        {
-            return Response::make('You are not a Student', 401);
-        }
-        else
-        {
-            return Redirect::back('/')->withDangerMessage('You are not a Student');
-        }
-    }
-});
+    if (!$userHasAccess) return Redirect::to('dashboard')->withInfoMessage('You don\'t have access');
 
-Route::filter('representative', function()
-{
-    if (Auth::user()->userable_type != 'Representative')
-    {
-        if (Request::ajax())
-        {
-            return Response::make('You are not a Representative', 401);
-        }
-        else
-        {
-            return 'You are not a Representative';
-        }
-    }
+
 });
 
 
-Route::filter('auth.basic', function()
-{
-	return Auth::basic();
-});
 
 /*
 |--------------------------------------------------------------------------
