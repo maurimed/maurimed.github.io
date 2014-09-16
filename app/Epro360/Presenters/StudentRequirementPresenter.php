@@ -7,7 +7,7 @@ class StudentRequirementPresenter extends Presenter {
 
     public function linkToFile()
     {
-        return "<a target=_blank href=/admin/docs/students/{$this->student_id}/requirements/{$this->file} > {$this->file} </a>";
+        return "<a target=_blank href=/dashboard/docs/students/{$this->student_id}/requirements/{$this->file} > {$this->file} </a>";
 
     }
 

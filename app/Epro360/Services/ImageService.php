@@ -1,5 +1,6 @@
 <?php  namespace Epro360\Services; 
 
+use Carbon\Carbon;
 use File;
 use Intervention\Image\Image;
 use Str;
@@ -8,41 +9,38 @@ class ImageService {
 
     public function profileImage($input, $user)
     {
-        if ($input['image'] != '')
-        {
 
-            $image = Image::make($input['image']->getRealPath());
+        $image = Image::make($input['image']->getRealPath());
 
 
-             $pathToImage = public_path() . 'admin/images/profiles/'. folder_path($user).'/';
+         $pathToImage = public_path() . 'backend/images/profiles/'. path($user->profile).'/';
 
-             $pathToPublicImage = public_path() . 'site/img/'. folder_path($user).'/';
+         $pathToPublicImage = public_path() . 'site/img/'. path($user->profile).'/';
 
-            File::exists($pathToImage) or File::makeDirectory($pathToImage);
-            File::exists($pathToPublicImage) or File::makeDirectory($pathToPublicImage);
-
-
-             $this->deleteOldImage($user, $pathToImage);
-
-             $imageName = Str::slug($user->email, '_') . '.' . $input['image']->getClientOriginalExtension();
-             $user->image = $imageName;
+//        File::exists(Carbon::today('Y')) or File::makeDirectory(Carbon::today('Y'));
+        File::exists($pathToImage) or File::makeDirectory($pathToImage);
+        File::exists($pathToPublicImage) or File::makeDirectory($pathToPublicImage);
 
 
-            $image->save($pathToImage . $imageName)
-                ->resize(700, 700)
-                ->save($pathToImage .  'xl-' . $imageName)
-                ->resize(500, 500)
-                ->save($pathToImage .  'lg-' .$imageName)
-                ->resize(300, 300)
-                ->save($pathToImage .  'md-' .$imageName)
-                ->resize(120, 120)
-                ->save($pathToImage .  'sm-' .$imageName)
-                ->resize(50, 50)
-                ->save($pathToImage . 'thumb-' . $imageName);
+         $this->deleteOldImage($user, $pathToImage);
+
+         $imageName = Str::slug($user->email, '_') . '.' . $input['image']->getClientOriginalExtension();
+         $user->image = $imageName;
 
 
+        $image->save($pathToImage . $imageName)
+            ->resize(700, 700)
+            ->save($pathToImage .  'xl-' . $imageName)
+            ->resize(500, 500)
+            ->save($pathToImage .  'lg-' .$imageName)
+            ->resize(300, 300)
+            ->save($pathToImage .  'md-' .$imageName)
+            ->resize(120, 120)
+            ->save($pathToImage .  'sm-' .$imageName)
+            ->resize(50, 50)
+            ->save($pathToImage . 'thumb-' . $imageName);
 
-        }
+        return $imageName;
 
     }
 

@@ -6,6 +6,7 @@ use Epro360\Repos\Users\Ambassadors\AmbassadorRepository;
 use Epro360\Repos\Users\Directors\DirectorRepository;
 use Epro360\Repos\Users\Students\StudentRepository;
 use Epro360\Services\ImageService;
+use Hash;
 use Laracasts\Validation\FormValidationException;
 use Epro360\Forms\ProfileEditForm as ProfileForm;
 use Input, Redirect, Str;
@@ -25,7 +26,7 @@ class UserRepository {
 
     protected $directorRepo;
 
-    protected  $ambassadorRepo;
+    protected $ambassadorRepo;
 
     function __construct(
         ProfileForm $profileForm,
@@ -114,7 +115,7 @@ class UserRepository {
      */
     public function findByStudentId($studentId)
     {
-        return $this->studentRepo->findById($studentId) ;
+        return $this->studentRepo->findById($studentId);
     }
 
     /**
@@ -144,6 +145,29 @@ class UserRepository {
         return $this->directorRepo->getAll();
     }
 
+    /**
+     * @param $id
+     * @param $input
+     * @throws FormValidationException
+     * @return \Epro360\Repos\Users\UserRepository|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
+     */
+    public function updateUser($id, $input)
+    {
+        $user = $this->findById($id);
+
+
+        $changePassword = $this->checkPassword($input, $user->password);
+
+        if($changePassword) $user->password = $input['password'];
+
+        $user->username = $input['username'];
+        $user->email = $input['email'];
+
+        $user->save();
+
+
+        return $user;
+    }
 
     /**
      * @param $input
@@ -162,7 +186,7 @@ class UserRepository {
 
         $this->validate($input);
 
-        if(Input::has('city') )
+        if (Input::has('city'))
         {
             $user->userable->city_id = $input['city'];
             $user->userable->country_code = $input['country'];
@@ -171,7 +195,7 @@ class UserRepository {
         $user->userable->firstname = $input['firstname'];
         $user->userable->lastname = $input['lastname'];
 
-        if(Input::hasFile('image'))
+        if (Input::hasFile('image'))
             $this->imageService->profileImage($input, $user);
 
         $user->userable->update($input);
@@ -181,24 +205,20 @@ class UserRepository {
     }
 
 
-    public function create($user)
-    {
-
-        $user = array_add($user, 'password', str_random(15));
-
-        $user = array_add($user, 'username', Str::slug($user["email"]));
+    public function create($email, $password) {
+        $user = [
+            'password' => $password,
+            'email'    => $email,
+            'username' => Str::slug($email)
+        ];
 
         return User::create($user);
     }
 
-    public function createOld($modelInfo, $userInfo, $model)
-    {
 
-
+    public function createOld($modelInfo, $userInfo, $model) {
         // Create user
         $user = User::create($userInfo);
-
-        dd($user);
 
         // Create model
         $userType = new $model;
@@ -210,14 +230,14 @@ class UserRepository {
         // Link the model to an user profile
         $user->userable_id = $userType->id;
         $user->userable_type = $model;
-        $user->email =  $userInfo['email'];
-        $user->username = Str::slug( $userInfo['email'] );
+        $user->email = $userInfo['email'];
+        $user->username = Str::slug($userInfo['email']);
         $user->password = $password;
 
         // Save the user profile
         $user->save();
 
-        $this->userMailer->accountCreated($user, strtolower($model), $password );
+        $this->userMailer->accountCreated($user, strtolower($model), $password);
 
         return $userType;
 
@@ -247,8 +267,7 @@ class UserRepository {
             $input = array_except($input, ['username']);
 
             return $input;
-        }
-        else
+        } else
         {
             $user->username = $input['username'];
 
@@ -274,7 +293,6 @@ class UserRepository {
     }
 
 
-
     /**
      * @param $input
      */
@@ -290,6 +308,33 @@ class UserRepository {
         }
     }
 
+    /**
+     * @param $input
+     * @param $oldPassword
+     * @throws FormValidationException
+     */
+    private function checkPassword($input, $oldPassword)
+    {
+        if (Hash::check($input['old_password'], $oldPassword) )
+        {
+            return  true;
+        }
+
+        elseif($input['old_password'] == '')
+        {
+            return false;
+        }
+
+        elseif($input['password'] == '')
+        {
+            return false;
+        }
+
+        else
+        {
+            throw new FormValidationException('Validation failed', 'This is not your old password, please try again');
+        }
+    }
 
 
 }

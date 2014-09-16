@@ -87,7 +87,7 @@ class UsersController extends \BaseController {
         $user = $this->userRepo->updateUser($id, Input::all());
 
         return  Redirect::to("dashboard/".path($user)."/$user->username/edit")
-                            ->withSuccessMessage('Account Updated!');
+                            ->withSuccessMessage('Your Account has been updated!');
 
 	}
 

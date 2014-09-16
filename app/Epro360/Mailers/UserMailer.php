@@ -7,6 +7,18 @@ use View;
  */
 class UserMailer extends Mailer {
 
+
+
+    /**
+     * Outline all the events this class will be listening for.
+     * @param  [type] $events
+     * @return void
+     */
+    public function subscribe($events)
+    {
+        $events->listen('user.manager.created', 'Epro360\Mailers\UserMailer@testEvent');
+    }
+    
     /**
      * @param $user
      * @param $model
@@ -14,8 +26,7 @@ class UserMailer extends Mailer {
      */
     public function accountCreated($user, $model, $password)
     {
-        $view = View::make("emails.users.notifications.{$model}-created")->render();
-        dd($view);
+        $view = View::make('emails.users.notifications.{$model}-created')->render();
         $data = [
             "name" => $user->username,
             "password" => $password
@@ -24,6 +35,11 @@ class UserMailer extends Mailer {
 
 
         return $this->sendTo($user, $subject, $view, $data);
+    }
+
+    public function testEvent($user)
+    {
+        var_dump($user->firstname);
     }
 
 } 

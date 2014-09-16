@@ -22,54 +22,10 @@ class CitiesRepository {
     }
 
 
-
-    public  function makeDatatable($table, $primaryKey, $get)
+    public function getListByStateIdHasUniversities($stateId)
     {
 
-
-        $columns = [
-            [ 'db' => 'id', 'dt' => 0 ],
-            [ 'db' => 'state_ab', 'dt' => 1 ],
-            [ 'db' => 'state_id', 'dt' => 2 ],
-            [ 'db' => 'name', 'dt' => 3 ],
-            [ 'db' => 'zip',  'dt' => 4 ],
-
-        ];
-
-        $sql_details = [
-            'user' => Config::get('database.connections.mysql.username'),
-            'pass' => Config::get('database.connections.mysql.password'),
-            'db'   => Config::get('database.connections.mysql.database'),
-            'host' => Config::get('database.connections.mysql.host'),
-        ];
-
-        return json_encode(
-            SSP::simple( $get, (array) $sql_details, $table, $primaryKey, $columns )
-        );
-
+        return City::where('state_id', $stateId)->has('universities')->lists('city_name', 'id');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

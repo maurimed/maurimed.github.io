@@ -103,5 +103,15 @@ class UniversitiesRepository {
         return $university;
     }
 
+    public function lists()
+    {
+        return University::take(10)->lists('name', 'id');
+    }
+
+    public function listsByCity($cityId)
+    {
+        return University::where('city', $cityId)->lists('name', 'id');
+    }
+
 }
 

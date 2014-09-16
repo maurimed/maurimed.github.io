@@ -11,7 +11,13 @@ class StatesRepository {
 
     public function getListByCountryCode($country_code)
     {
-        return State::rememberForever()->orderBy('state_name', 'ASC')->whereCountryCode($country_code)->lists('state_name', 'id');
+        return State::rememberForever()->whereCountryCode($country_code)->orderBy('state_name', 'ASC')->lists('state_name', 'id');
+    }
+
+
+    public function getListByCountryCodeHasUniversities($country_code)
+    {
+        return State::whereCountryCode($country_code)->has('universities')->orderBy('state_name', 'ASC')->lists('state_name', 'id');
     }
 
 } 

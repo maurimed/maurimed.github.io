@@ -4,6 +4,7 @@ use Epro360\Repos\Locations\CountriesRepository;
 use Epro360\Repos\Locations\StatesRepository;
 use Input;
 use Redirect;
+use Request;
 use View;
 
 class StatesController extends \BaseController {
@@ -117,6 +118,10 @@ class StatesController extends \BaseController {
         return View::make('dashboard.locations.states.lists', compact('states'));
     }
 
-
+    public function jsonLists()
+    {
+        if(Request::ajax())
+            return $this->statesRepo->getListByCountryCode(Input::get('id'));
+    }
 
 }

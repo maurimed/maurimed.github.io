@@ -3,6 +3,7 @@
 use Epro360\Repos\Locations\CitiesRepository;
 use Epro360\Repos\Locations\CountriesRepository;
 use Input;
+use Request;
 use View;
 use Redirect;
 
@@ -123,11 +124,16 @@ class CitiesController extends \BaseController {
     }
 
 
-
-    public function zipLists()
+    public function jsonLists()
     {
-        $zips = $this->citiesRepo->getZipListByCity(Input::get('city'));
-
-        return View::make('dashboard.locations.zips.lists', compact('zips'));
+        if(Request::ajax())
+            return $this->citiesRepo->getListByStateId(Input::get('id'));
     }
+
+//    public function zipLists()
+//    {
+//        $zips = $this->citiesRepo->getZipListByCity(Input::get('city'));
+//
+//        return View::make('dashboard.locations.zips.lists', compact('zips'));
+//    }
 }

@@ -1,8 +1,8 @@
-<?php namespace Epro360\Forms\User;
+<?php namespace Epro360\Forms\Ambassador;
 
 use Laracasts\Validation\FormValidator;
 
-class UserCreateForm extends FormValidator {
+class AmbassadorCreateForm extends FormValidator {
 
     /**
      * Validation rules for create an User

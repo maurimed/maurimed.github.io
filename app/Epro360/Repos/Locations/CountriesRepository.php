@@ -7,7 +7,7 @@ class CountriesRepository {
 
     public function countriesList()
     {
-        return Country::has('states')->orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
+        return Country::rememberForever('countries.list')->has('states')->orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
     }
 
 
@@ -16,4 +16,11 @@ class CountriesRepository {
         return Country::has('ambassadors')->get();
     }
 
-} 
+    public function countriesHasUniversitiesList()
+    {
+        return Country::has('universities')->orderBy('country_name', 'ASC')->lists('country_name', 'country_code');
+
+    }
+
+
+}

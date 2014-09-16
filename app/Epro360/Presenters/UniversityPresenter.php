@@ -5,11 +5,11 @@ use Laracasts\Presenter\Presenter;
 class UniversityPresenter extends Presenter {
 
 //
-//    public function location()
-//    {
-//        return $this->address . ', ' . $this->city . ', ' . $this->county . ', ' . $this->country;
-//
-//    }
+    public function test()
+    {
+        return 'test uni';
+
+    }
 //
 //    public function websiteLink()
 //    {

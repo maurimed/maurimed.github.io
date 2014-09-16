@@ -6,7 +6,6 @@ use Epro360\Forms\PostForm;
 use Epro360\Services\ImageService;
 use Input;
 use Lang;
-use Laracasts\Validation\FormValidationException;
 use Post;
 
 /**

@@ -62,7 +62,7 @@ class RequirementsRepository {
 
                 $fileName = $field . '.' . $requirements[$field]->getClientOriginalExtension();
 
-                $pathToImage = public_path() . 'admin/docs/students/' . $studentId . '/requirements/';
+                $pathToImage = public_path() . 'dashboard/docs/students/' . $studentId . '/requirements/';
 
                 $file->move( $pathToImage, $fileName );
 

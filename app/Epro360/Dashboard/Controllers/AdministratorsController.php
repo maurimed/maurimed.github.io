@@ -1,6 +1,7 @@
 <?php namespace Epro360\Dashboard\Controllers;
 
 use Epro360\Forms\Administrator\AdministratorCreateForm;
+use Epro360\Forms\Administrator\AdministratorEditForm;
 use Epro360\Repos\Users\Administrators\AdministratorRepository;
 use Epro360\Repos\Users\UserRepository;
 use Illuminate\Support\Facades\Input;
@@ -10,25 +11,31 @@ use View;
 
 class AdministratorsController extends \BaseController {
 
-
     protected  $userRepo;
-
-    protected  $administratorCreateForm;
 
     protected  $administratorRepo;
 
-    function __construct(UserRepository $userRepo, AdministratorCreateForm $administratorCreateForm, AdministratorRepository $administratorRepo)
+    protected  $createForm;
+
+    protected  $editForm;
+
+    function __construct(UserRepository $userRepo,
+                         AdministratorRepository $administratorRepo,
+                         AdministratorCreateForm $createForm,
+                         AdministratorEditForm $editForm)
     {
         $this->userRepo = $userRepo;
 
-        $this->administratorCreateForm = $administratorCreateForm;
-
         $this->administratorRepo = $administratorRepo;
+
+        $this->createForm = $createForm;
+
+        $this->editForm = $editForm;
     }
 
     /**
 	 * Display a listing of the resource.
-	 * GET /admins
+	 * GET /dashboard/administrators
 	 *
 	 * @return Response
 	 */
@@ -41,7 +48,7 @@ class AdministratorsController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /admins/create
+	 * GET /dashboard/administrators/create
 	 *
 	 * @return Response
 	 */
@@ -52,14 +59,14 @@ class AdministratorsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /admins
+	 * POST /dashboard/administrators
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
 
-        $this->administratorCreateForm->validate(Input::all());
+        $this->createForm->validate(Input::all());
 
         $admin = $this->administratorRepo->create(Input::only(['firstname', 'lastname']));
 
@@ -71,7 +78,7 @@ class AdministratorsController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /admins/{id}
+	 * GET /dashboard/administrators/{id}
 	 *
 	 * @param  int  $username
 	 * @return Response
@@ -85,7 +92,7 @@ class AdministratorsController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /admins/{id}/edit
+	 * GET /dashboard/administrators/{id}/edit
 	 *
 	 * @param  int  $username
 	 * @return Response
@@ -99,7 +106,7 @@ class AdministratorsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /admins/{id}
+	 * PUT /dashboard/administrators/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -107,11 +114,16 @@ class AdministratorsController extends \BaseController {
 	public function update($id)
 	{
 
+        $this->editForm->validate(Input::all());
+
+        $this->administratorRepo->update(Input::all(), $id);
+
+        return Redirect::back()->withSuccessMessage('Personal Info Updated');
 	}
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /admins/{id}
+	 * DELETE /dashboard/administrators/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

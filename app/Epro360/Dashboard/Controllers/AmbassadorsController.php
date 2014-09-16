@@ -1,29 +1,36 @@
 <?php namespace Epro360\Dashboard\Controllers;
 
-use Epro360\Forms\User\AdministratorCreateForm;
+use Epro360\Forms\Ambassador\AmbassadorCreateForm;
+use Epro360\Forms\Ambassador\AmbassadorEditForm;
 use Epro360\Repos\Users\Ambassadors\AmbassadorRepository;
 use Epro360\Repos\Users\UserRepository;
+use Event;
 use Input;
 use Redirect;
 use View;
 
 class AmbassadorsController extends \BaseController {
 
-
-
     protected  $userRepo;
-
-    protected  $userForm;
 
     protected  $ambassadorRepo;
 
-    function __construct(UserRepository $userRepo, AdministratorCreateForm $userForm, AmbassadorRepository $ambassadorRepo)
+    protected  $createForm;
+
+    protected  $editForm;
+
+    function __construct(UserRepository $userRepo,
+                         AmbassadorRepository $ambassadorRepo,
+                         AmbassadorCreateForm $createForm,
+                         AmbassadorEditForm $editForm)
     {
         $this->userRepo = $userRepo;
 
-        $this->userForm = $userForm;
-
         $this->ambassadorRepo = $ambassadorRepo;
+
+        $this->createForm = $createForm;
+
+        $this->editForm = $editForm;
     }
 
     /**
@@ -59,57 +66,62 @@ class AmbassadorsController extends \BaseController {
 	 */
     public function store()
     {
-
-        $this->userForm->validate(Input::all());
-
-        $user = $this->userRepo->create(Input::only(['email']));
+        $this->createForm->validate(Input::all());
 
         $ambassador = $this->ambassadorRepo->create(Input::only(['firstname', 'lastname']));
 
-        $ambassador->profile()->save($user);
+        /** @var Array $ambassador */
+        Event::fire('user.ambassador.created', array_add($ambassador, 'email', Input::get('email') ));
 
         return Redirect::back()->withSuccessMessage("Ambassador {$ambassador->firstname} was created!");
     }
 
-	/**
-	 * Display the specified Ambassador.
-	 * GET /ambassadors/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
 
     /**
-     * Show the form for editing the specified Ambassador.
-     * GET /ambassadors/{id}/edit
+     * Display the specified resource.
+     * GET /dashboard/ambassadors/{id}
      *
-     * @param $ambassador_id
-     * @internal param int $id
+     * @param  int  $username
      * @return Response
      */
-	public function edit($ambassador_id)
-	{
-       $user = $this->userRepo->findByAmbassadorId($ambassador_id);
+    public function show($username)
+    {
+        $ambassador = $this->userRepo->findByUsername($username);
 
-       return View::make('dashboard.users.profiles.edit', compact('user'));
-
+        return View::make('dashboard.users.ambassadors.show', compact('ambassador'));
     }
 
-	/**
-	 * Update the specified Ambassador in storage.
-	 * PUT /ambassadors/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     * GET /dashboard/ambassadors/{id}/edit
+     *
+     * @param  int  $username
+     * @return Response
+     */
+    public function edit($username)
+    {
+        $ambassador = $this->userRepo->findByUsername($username);
+
+        return View::make('dashboard.users.ambassadors.edit', compact('ambassador'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     * PUT /dashboard/ambassadors/{id}
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update($id)
+    {
+
+        $this->editForm->validate(Input::all());
+
+        $this->ambassadorRepo->update(Input::all(), $id);
+
+        return Redirect::back()->withSuccessMessage('Personal Info Updated');
+    }
+
 
 	/**
 	 * Remove the specified Ambassador from storage.

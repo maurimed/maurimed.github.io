@@ -5,6 +5,7 @@ use Epro360\Repos\Locations\ContinentsRepository;
 use Epro360\Repos\Locations\CountriesRepository;
 use Input;
 use Redirect;
+use Request;
 use View;
 
 class CountriesController extends \BaseController {
@@ -114,10 +115,10 @@ class CountriesController extends \BaseController {
 	}
 
 
-
-//    public function ajax($id)
-//    {
-//        return Country::find($id);
-//    }
+    public function lists()
+    {
+        if(Request::ajax())
+            return $this->countriesRepo->countriesList();
+    }
 
 }

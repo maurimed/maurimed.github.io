@@ -37,9 +37,9 @@ class SubscribersController extends \BaseController {
 	{
         $countries = $this->countryRepo->countriesList();
 
-        $ip = Request::getClientIp();
+//        $ip = Request::getClientIp();
 
-//        $ip = "190.214.93.130";
+        $ip = "190.214.93.130";
 
         $client = new Client("http://ipinfo.io/");
 
