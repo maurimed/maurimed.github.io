@@ -11,8 +11,7 @@
         "intervention/image": "1.6.3",
         "guzzlehttp/guzzle": "~4.0",
         "pda/pheanstalk": "v2.1.0",
-        "bllim/datatables": "*",
-        "laracasts/commander": "~1.0"
+        "bllim/datatables": "*"
 	},
     "require-dev": {
         "way/generators": "2.6.*",
