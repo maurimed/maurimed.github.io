@@ -43,20 +43,20 @@
 
                         <fieldset>
 
-                            @include('.......users.profiles.common_fields')
+                            @include('dashboard.users.profiles.common_fields')
 
                             @if( $currentUser->hasAccess('Administrator') )
-                                @include('.......users.administrators.edit')
+                                @include('dashboard.users.administrators.edit')
                             @elseif( $currentUser->hasAccess('Student') )
-                                @include('.......users.students.edit')
+                                @include('dashboard.users.students.edit')
                             @elseif( $currentUser->hasAccess('Director') )
-                                @include('.......users.directors.edit')
+                                @include('dashboard.users.directors.edit')
                             @elseif( $currentUser->hasAccess('Ambassador') )
-                                @include('.......users.ambassadors.edit')
+                                @include('dashboard.users.ambassadors.edit')
                             @elseif( $currentUser->hasAccess('Manager') )
-                                @include('.......users.managers.edit')
+                                @include('dashboard.users.managers.edit')
                             @elseif( $currentUser->hasAccess('Representative') )
-                                @include('.......users.parents.edit')
+                                @include('dashboard.users.parents.edit')
                             @endif
 
                         </fieldset>

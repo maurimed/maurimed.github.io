@@ -1,11 +1,11 @@
-@extends('....layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('....layouts.partials.ribbon', ['breadcrumbs' => ['Posts', 'Create']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Posts', 'Create']])
 @stop
 
 @section('title')
-@include('....layouts.partials.page-title',['title' => 'Posts', 'subtitle' => '> Create', 'icon' => 'pencil'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Posts', 'subtitle' => '> Create', 'icon' => 'pencil'])
 @stop
 
 @section('content')
@@ -16,8 +16,6 @@
 
         <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-            @include('....partials.messages')
-            @include('....partials.form-errors')
 
             <!-- Widget ID (each widget will need unique ID)-->
             <div class="jarviswidget jarviswidget-color-darken" id="wid-id-13" data-widget-editbutton="false">

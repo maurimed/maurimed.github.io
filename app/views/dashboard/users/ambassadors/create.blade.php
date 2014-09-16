@@ -17,7 +17,6 @@
 
         <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-            @include('dashboard.partials.messages')
             @include('dashboard.partials.form-errors')
             <div class="jarviswidget jarviswidget-color-darken" id="wid-id-101" data-widget-editbutton="false">
 
@@ -39,7 +38,7 @@
                     <div class="widget-body no-padding">
                         {{ Form::open(['route' => 'dashboard.ambassadors.store' ,'id' => 'ambassador-form', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
 
-                            @include('.......users.create-form')
+                            @include('dashboard.users.create-form')
 
                             <footer>
                                 <button type="submit" class="btn btn-primary">

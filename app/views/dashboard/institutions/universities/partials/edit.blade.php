@@ -39,7 +39,7 @@
             {{ Form::label('country', 'Country', ['class' => '']) }}
             {{ $university->country }}
             <div class="form-group">
-                @include('..........locations.countries.list', ['currentCountry' => $university->country])
+                @include('dashboard.locations.countries.list', ['currentCountry' => $university->country])
 
             </div>
         </div>

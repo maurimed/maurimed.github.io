@@ -4,6 +4,6 @@
         alt="{{ $user->username }}" />
 @else
     <img class="img-responsive"
-         src="/backend/images/profiles/{{ $userFolder }}/{{ $size }}-{{ $user->image }}"
+         src="/backend/images/profiles/{{ path($user)  }}/{{ $size }}-{{ $user->image }}"
          alt="{{ $user->username }}">
 @endif

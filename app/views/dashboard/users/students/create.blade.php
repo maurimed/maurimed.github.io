@@ -41,7 +41,7 @@
                     <div class="widget-body no-padding">
                         {{ Form::open(['route' => 'dashboard.students.store' ,'id' => 'student-form', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
 
-                            @include('.......users.create-form')
+                            @include('dashboard.users.create-form')
 
                             <footer>
                                 <button type="submit" class="btn btn-primary">

@@ -1,11 +1,11 @@
-@extends('....layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('....layouts.partials.ribbon', ['breadcrumbs' => ['Requirements', 'List']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Requirements', 'List']])
 @stop
 
 @section('title')
-@include('....layouts.partials.page-title',['title' => 'Requirements', 'subtitle' => '> List', 'icon' => 'file-text'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Requirements', 'subtitle' => '> List', 'icon' => 'file-text'])
 @stop
 
 @section('content')

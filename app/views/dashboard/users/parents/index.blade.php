@@ -1,11 +1,11 @@
-@extends('......layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('......layouts.partials.ribbon', ['breadcrumbs' => ['Users','Parents', 'List']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Users','Parents', 'List']])
 @stop
 
 @section('title')
-@include('......layouts.partials.page-title',['title' => 'Parents', 'subtitle' => '> List', 'icon' => 'user'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Parents', 'subtitle' => '> List', 'icon' => 'user'])
 @stop
 
 @section('content')
@@ -19,19 +19,6 @@
 
 <!-- Widget ID (each widget will need unique ID)-->
 <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
-<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-				
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-				
-								-->
 <header>
     <span class="widget-icon"> <i class="fa fa-table"></i> </span>
     <h2>Parents</h2>

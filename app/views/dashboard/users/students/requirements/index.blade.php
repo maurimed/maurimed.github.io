@@ -1,11 +1,11 @@
-@extends('..........layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('..........layouts.partials.ribbon', ['breadcrumbs' => ['Requirements', 'List', $student->university->name]])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Requirements', 'List', $student->university->name]])
 @stop
 
 @section('title')
-@include('..........layouts.partials.page-title',['title' => 'Requirements', 'subtitle' => '> List', 'icon' => 'file-text'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Requirements', 'subtitle' => '> List', 'icon' => 'file-text'])
 @stop
 
 @section('content')
@@ -14,8 +14,8 @@
     <!-- row -->
     <div class="row">
         <article class="col-sm-12 col-md-12 col-lg-12">
-            @include('...dashboard.partials.messages')
-            @include('..........partials.form-errors')
+            @include('dashboard.partials.messages')
+            @include('dashboard.partials.form-errors')
 
             <!-- Widget ID (each widget will need unique ID)-->
             <div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-33" data-widget-editbutton="false">

@@ -105,8 +105,6 @@
 <script>
 $( document ).ready(function() {
 
-//    var countriesLists = {"1" : "string1","2" : "string2"};
-
     var countriesSelect = $('#countriesSelect'),
         statesSelect = $('#statesSelect'),
         citiesSelect = $('#citiesSelect'),
@@ -159,17 +157,10 @@ $( document ).ready(function() {
 
             // Rules for form validation
             rules : {
-                email : {
-                    required : true,
-                    email : true
-                },
+                email : { required : true, email : true },
 
-                firstname : {
-                    required : true
-                },
-                lastname : {
-                    required : true
-                },
+                firstname : { required : true },
+                lastname : { required : true },
 
                 universities : {
                     required: true

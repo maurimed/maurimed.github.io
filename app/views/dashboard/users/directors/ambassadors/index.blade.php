@@ -1,11 +1,11 @@
-@extends('..........layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('..........layouts.partials.ribbon', ['breadcrumbs' => ['Users','Ambassadors', 'List']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Users','Ambassadors', 'List']])
 @stop
 
 @section('title')
-@include('..........layouts.partials.page-title',['title' => 'Ambassadors', 'subtitle' => '> List', 'icon' => 'user'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Ambassadors', 'subtitle' => '> List', 'icon' => 'user'])
 @stop
 
 @section('content')
@@ -51,7 +51,7 @@
                     <!-- widget content -->
                     <div class="widget-body no-padding">
 
-                    @include('..........users.ambassadors.table')->withAmbassadors($director->ambassadors)
+                    @include('dashboard.users.ambassadors.table')->withAmbassadors($director->ambassadors)
 
                     </div>
                     <!-- end widget content -->

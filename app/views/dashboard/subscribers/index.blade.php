@@ -1,11 +1,11 @@
-@extends('....layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('....layouts.partials.ribbon', ['breadcrumbs' => ['Subscribers', 'List']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Subscribers', 'List']])
 @stop
 
 @section('title')
-@include('....layouts.partials.page-title',['title' => 'Subscribers', 'subtitle' => '> List', 'icon' => 'user'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Subscribers', 'subtitle' => '> List', 'icon' => 'user'])
 @stop
 
 @section('content')

@@ -1,11 +1,11 @@
-@extends('....layouts.master')
+@extends('dashboard.layouts.master')
 
 @section('ribbon')
-@include('....layouts.partials.ribbon', ['breadcrumbs' => ['Posts', 'List']])
+@include('dashboard.layouts.partials.ribbon', ['breadcrumbs' => ['Posts', 'List']])
 @stop
 
 @section('title')
-@include('....layouts.partials.page-title',['title' => 'Posts', 'subtitle' => '> List', 'icon' => 'pencil'])
+@include('dashboard.layouts.partials.page-title',['title' => 'Posts', 'subtitle' => '> List', 'icon' => 'pencil'])
 @stop
 
 @section('content')
@@ -16,7 +16,6 @@
 
         <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            @include('....partials.messages')
 
             <!-- Widget ID (each widget will need unique ID)-->
             <div class="jarviswidget jarviswidget-color-darken" id="wid-id-233" data-widget-editbutton="false">
@@ -97,7 +96,7 @@
     <!-- end row -->
 
 </section>
-@include('....partials.modal')
+@include('dashboard.partials.modal')
 
 @stop
 

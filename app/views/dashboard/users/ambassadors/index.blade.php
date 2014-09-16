@@ -19,19 +19,6 @@
 
 <!-- Widget ID (each widget will need unique ID)-->
 <div class="jarviswidget jarviswidget-color-darken" id="wid-id-12" data-widget-editbutton="false">
-<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-				
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-				
-								-->
 <header>
     <span class="widget-icon"> <i class="fa fa-table"></i> </span>
     <h2>Ambassadors</h2>
@@ -48,7 +35,7 @@
 <div class="widget-body no-padding">
     @include('dashboard.partials.messages')
 
-    @include('.......users.ambassadors.table')
+    @include('dashboard.users.ambassadors.table')
 
 
 </div>
