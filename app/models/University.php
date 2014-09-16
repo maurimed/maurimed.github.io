@@ -30,6 +30,10 @@ class University extends \Eloquent {
         return $this->belongsToMany("Requirement");
     }
 
+    public function manager()
+    {
+        return $this->morphOne('Manager', 'institutionable');
+    }
 
     public function students()
     {

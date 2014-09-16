@@ -22,6 +22,11 @@ class Country extends \Eloquent {
         return $this->hasMany('City', 'country_code', 'country_code');
     }
 
+    public function universities()
+    {
+        return $this->hasMany('University', 'country', 'country_code');
+    }
+
     public function ambassadors()
     {
         return $this->hasMany('Ambassador', 'country_code', 'country_code');

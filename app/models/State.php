@@ -15,4 +15,10 @@ class State extends \Eloquent {
     {
         return $this->hasMany('City');
     }
+
+    public function universities()
+    {
+        return $this->hasMany('University', 'state');
+    }
+
 }

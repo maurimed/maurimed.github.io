@@ -21,4 +21,8 @@ class City extends \Eloquent {
         return $this->hasMany('Ambassador');
     }
 
+    public function universities()
+    {
+        return $this->hasMany('University', 'city');
+    }
 }
