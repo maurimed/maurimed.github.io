@@ -2,6 +2,7 @@
     <thead>
     <tr>
         <th>ID</th>
+        <th><i class="fa fa-fw fa-picture text-muted hidden-md hidden-sm hidden-xs"></i> Image</th>
         <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Name</th>
         <th><i class="fa fa-fw fa-envelope text-muted hidden-md hidden-sm hidden-xs"></i> Email</th>
         <th><i class="fa fa-fw fa-envelope text-muted hidden-md hidden-sm hidden-xs"></i> Personal Email</th>
@@ -19,6 +20,7 @@
     @foreach($ambassadors as $ambassador)
     <tr>
         <td>{{$ambassador->id}}</td>
+        <td> @include('dashboard.users.partials.avatar',['user' => $ambassador->profile, 'size' => 'thumb'])  </td>
         <td>{{$ambassador->present()->fullName}}</td>
         <td>{{$ambassador->profile->email}}</td>
         <td>{{$ambassador->email}}</td>

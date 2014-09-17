@@ -60,7 +60,7 @@
 @foreach($administrators as $administrator)
 <tr>
     <td>{{$administrator->id}}</td>
-    <td> @include('dashboard.users.partials.avatar',['user' => $currentUser, 'size' => 'thumb'])  </td>
+    <td> @include('dashboard.users.partials.avatar',['user' => $administrator->profile, 'size' => 'sm'])  </td>
     <td>{{$administrator->profile->username}}</td>
     <td>{{$administrator->firstname}} {{$administrator->lastname}}</td>
     <td>{{$administrator->profile->email}} - {{$administrator->personal_email}}</td>

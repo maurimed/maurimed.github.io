@@ -166,9 +166,7 @@
         getList(this.value, 'cities', citiesSelect, citySelected);
     });
 
-    citiesSelect.on('change', function() {
-           alert(this.value);
-        });
+
 
     $.ajax({
         type: "GET",

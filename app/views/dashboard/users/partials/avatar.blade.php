@@ -1,4 +1,4 @@
-@if($user->image === "default" )
+@if($user->image == "default" )
    <img class="img-responsive"
         src="/backend/images/profiles/default.jpg"
         alt="{{ $user->username }}" />
