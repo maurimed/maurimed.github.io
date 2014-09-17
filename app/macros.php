@@ -25,8 +25,8 @@ Form::macro('edit',function($model, $id){
 
 });
 
-Form::macro('editProfile',function($username){
+Form::macro('editProfile',function($username, $user){
 
-    return '<a href="/dashboard/users/' . $username . '/profile/edit" class="btn btn-xs btn-info">Edit </a>';
+    return '<a href="/dashboard/'.path($user).'/' . $username . '/edit" class="btn btn-xs btn-info">Edit </a>';
 
 });

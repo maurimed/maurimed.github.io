@@ -58,9 +58,9 @@
 
 @section('plugins')
 <script src="/backend/js/plugin/datatables/jquery.dataTables.min.js"></script>
-<script src="/backend/jsjs/plugin/datatables/dataTables.colVis.min.js"></script>
-<script src="/backend/jsn/js/plugin/datatables/dataTables.tableTools.min.js"></script>
-<script src="/backend/jsmin/js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+<script src="/backend/js/plugin/datatables/dataTables.colVis.min.js"></script>
+<script src="/backend/js/plugin/datatables/dataTables.tableTools.min.js"></script>
+<script src="/backend/js/plugin/datatables/dataTables.bootstrap.min.js"></script>
 <script>
     $('#dt_basic').dataTable();
 </script>

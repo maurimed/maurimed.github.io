@@ -36,7 +36,7 @@
         @endif
         <td>{{$ambassador->present()->createdAt}}</td>
         <td>
-            {{ Form::editProfile($ambassador->profile->username) }}
+            {{ Form::editProfile($ambassador->profile->username, $ambassador->profile) }}
             {{ Form::delete('ambassadors', $ambassador->id) }}
         </td>
 
