@@ -24,7 +24,7 @@ class ImageService {
 
          $this->deleteOldImage($user, $pathToImage);
 
-         $imageName = Str::slug($user->email, '_') . '.' . $input['image']->getClientOriginalExtension();
+         $imageName = Str::slug($user->present()->fullName, '_') . '.' . $input['image']->getClientOriginalExtension();
          $user->image = $imageName;
 
 

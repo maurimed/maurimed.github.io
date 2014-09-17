@@ -55,21 +55,19 @@ class AmbassadorRepository {
     {
 
         $ambassador = $this->findById($ambassadorId);
-
         if (!is_null($input['image']))
         {
             $imageName = $this->imageService->profileImage($input, $ambassador);
             $ambassador->image = $imageName;
         }
 
-
-        $ambassador->firstname = $input['firstname'];
-        $ambassador->lastname = $input['lastname'];
-        $ambassador->personal_email = $input['personal_email'];
-        $ambassador->personal_phone = $input['personal_phone'];
-        $ambassador->city_id = $input['cities'];
-        $ambassador->address = $input['address'];
-        $ambassador->about_me = $input['about_me'];
+        $ambassador->firstname =        $input['firstname'];
+        $ambassador->lastname =         $input['lastname'];
+        $ambassador->personal_email =   $input['personal_email'];
+        $ambassador->personal_phone =   $input['personal_phone'];
+        $ambassador->city_id =          $input['cities'];
+        $ambassador->address =          $input['address'];
+        $ambassador->about_me =         $input['about_me'];
         $ambassador->save();
 
         return $ambassador;

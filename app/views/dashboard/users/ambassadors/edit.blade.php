@@ -10,144 +10,118 @@
 
 @section('content')
 <section id="widget-grid" class="">
-
-    <!-- row -->
     <div class="row">
-
-        <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             @include('dashboard.partials.form-errors')
             @include('dashboard.users.edit', ['user' => $ambassador])
         </article>
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                 <!-- Widget ID (each widget will need unique ID)-->
-                            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-201" data-widget-editbutton="false">
-                                <header>
-                                    <span class="widget-icon"> <i class="fa fa-lock"></i> </span>
-                                    <h2>Personal Info</h2>
-                                </header>
-                                <!-- widget div-->
-                                <div>
-                                    <!-- widget edit box -->
-                                    <div class="jarviswidget-editbox"> <!-- This area used as dropdown edit box --> </div>
-                                    <!-- end widget edit box -->
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-201" data-widget-editbutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-lock"></i> </span>
+                    <h2>Personal Info</h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox"> <!-- This area used as dropdown edit box --> </div>
+                    <div class="widget-body no-padding">
+                        {{ Form::open(['route' => ['dashboard.ambassadors.update', $ambassador->userable->id], 'files' => true ,  'method' => 'put', 'id' => 'ambassador-form-edit', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
+                        {{--<header> Order services </header>--}}
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">First Name</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-user"></i>
+                                            {{ Form::text('firstname', $ambassador->userable->firstname) }}
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Last Name</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-user"></i>
+                                            {{ Form::text('lastname', $ambassador->userable->lastname) }}
+                                        </label>
+                                    </section>
 
-                                    <!-- widget content -->
-                                    <div class="widget-body no-padding">
-                                        {{ Form::open(['route' => ['dashboard.ambassadors.update', $ambassador->userable->id],  'method' => 'put', 'files' => true ,'id' => 'ambassador-form-edit', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
-                                        {{--<header> Order services </header>--}}
-                                        <fieldset>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Personal Email</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-envelope"></i>
+                                            {{ Form::text('personal_email', $ambassador->userable->personal_email) }}
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Phone</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-phone"></i>
+                                            {{ Form::text('personal_phone', $ambassador->userable->personal_phone) }}
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-4" >
+                                        <label class="label">Country  </label>
+                                        <label class="input">
+                                            <select name="countries" data-selected="{{$ambassador->userable->city->state->country->country_code}}" data-placeholder="Select the country" id="countriesSelect" style="width:100%" required ><option></option> </select>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4" >
+                                        <label class="label">State</label>
+                                        <label class="input">
+                                            <select name="states" data-selected="{{$ambassador->userable->city->state->id}}" data-placeholder="Select the state" id="statesSelect" style="width:100%" required > <option></option> </select>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4" >
+                                        <label class="label">City</label>
+                                        <label class="input">
+                                            <select name="cities" data-selected="{{$ambassador->userable->city->id}}"
+                                                    data-placeholder="Select the City" id="citiesSelect"
+                                                    style="width:100%" required > <option></option> </select>
+                                        </label>
+                                    </section>
 
 
+                                    <br/><br/>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Address</label>
+                                        <label class="input"> <i class="icon-append fa fa-map-marker"></i>
+                                            {{ Form::text('address', $ambassador->userable->address, ['id'=>'address'] ) }}
+                                        </label>
+                                    </section>
 
-                <div class="row">
+                                    <section class="col col-6">
+                                       <label class="label">Profile Image</label>
+                                       <label class="input-file">
+                                           {{ Form::file('image') }}
+                                       </label>
+                                   </section>
 
-
-                    <section class="col col-6">
-                        <label class="label">First Name</label>
-                        <label class="input">
-                            <i class="icon-prepend fa fa-user"></i>
-                            {{ Form::text('firstname', $ambassador->userable->firstname) }}
-                        </label>
-                    </section>
-                    <section class="col col-6">
-                        <label class="label">Last Name</label>
-                        <label class="input">
-                            <i class="icon-prepend fa fa-user"></i>
-                            {{ Form::text('lastname', $ambassador->userable->lastname) }}
-                        </label>
-                    </section>
-
+                                   </div>
+                                <div class="row">
+                                    <section class="col col-12">
+                                        <label class="label">About me</label>
+                                        <label class="textarea"><i class="icon-append fa fa-pencil"></i>
+                                            {{ Form::textarea('about_me', $ambassador->userable->about_me, ['id'=>'about_me', 'rows'=>4, 'style' => 'width:100%'] ) }}
+                                        </label>
+                                    </section>
+                                </div>
+                                <br/>
+                            </fieldset>
+                            <footer> <button type="submit" class="btn btn-primary"> Update Personal Info </button> </footer>
+                        {{ Form::close() }}
+                    </div>
                 </div>
-                <div class="row">
-                    <section class="col col-6">
-                        <label class="label">Personal Email</label>
-                        <label class="input">
-                            <i class="icon-prepend fa fa-envelope"></i>
-                            {{ Form::text('personal_email', $ambassador->userable->personal_email) }}
-                        </label>
-                    </section>
-                    <section class="col col-6">
-                        <label class="label">Phone</label>
-                        <label class="input">
-                            <i class="icon-prepend fa fa-phone"></i>
-                            {{ Form::text('personal_phone', $ambassador->userable->personal_phone) }}
-                        </label>
-                    </section>
-                </div>
-
-                <div class="row">
-                    <section class="col col-4" >
-                        <label class="label">Country  </label>
-                        <label class="input">
-                            <select name="countries" data-selected="{{$ambassador->userable->city->state->country->country_code}}" data-placeholder="Select the country" id="countriesSelect" style="width:100%" required ><option></option> </select>
-                        </label>
-                    </section>
-                    <section class="col col-4" >
-                        <label class="label">State</label>
-                        <label class="input">
-                            <select name="states" data-selected="{{$ambassador->userable->city->state->id}}" data-placeholder="Select the state" id="statesSelect" style="width:100%" required > <option></option> </select>
-                        </label>
-                    </section>
-                    <section class="col col-4" >
-                        <label class="label">City</label>
-                        <label class="input">
-                            <select name="cities" data-selected="{{$ambassador->userable->city->id}}" data-placeholder="Select the City" id="citiesSelect" style="width:100%" required > <option></option> </select>
-                        </label>
-                    </section>
-
-
-                    <br/><br/>
-                </div>
-
-                <div class="row">
-                    <section class="col col-6">
-                        <label class="label">Address</label>
-                        <label class="input"> <i class="icon-append fa fa-map-marker"></i>
-                            {{ Form::text('address', $ambassador->userable->address, ['id'=>'address'] ) }}
-                        </label>
-                    </section>
-
-                    <section class="col col-6">
-                       <label class="label">Profile Image</label>
-                       <label class="input-file">
-                           {{ Form::file('image') }}
-                       </label>
-                   </section>
-
-                   </div>
-                   <div class="row">
-                    <section class="col col-12">
-                        <label class="label">About me</label>
-                        <label class="textarea"><i class="icon-append fa fa-pencil"></i>
-                            {{ Form::textarea('about_me', $ambassador->userable->about_me, ['id'=>'about_me', 'rows'=>4, 'style' => 'width:100%'] ) }}
-                        </label>
-                    </section>
-                </div>
-                <br/>
-            </fieldset>
-
-            <footer>
-                <button type="submit" class="btn btn-primary">
-                    Update Personal Info
-                </button>
-            </footer>
-            {{ Form::close() }}
-        </div>
-        <!-- end widget content -->
+            </div>
+        </article>
     </div>
-    <!-- end widget div -->
-</div>
-<!-- end widget -->
-</article>
-        <!-- WIDGET END -->
-    </div>
-    <!-- end row -->
 </section>
 @stop
 @section('plugins')
 <script src="/backend/js/plugin/select2/select2.min.js"></script>
-
 <script src="/backend/js/plugin/jquery-form/jquery-form.min.js"></script>
 <script>
     $( document ).ready(function() {
