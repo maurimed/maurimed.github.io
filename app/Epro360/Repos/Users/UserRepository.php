@@ -249,9 +249,9 @@ class UserRepository {
      */
     public function delete($user)
     {
-        $user->profile->delete();
+        $user->profile->forceDelete();
 
-        return $user->delete();
+        return $user->forceDelete();
     }
 
 
