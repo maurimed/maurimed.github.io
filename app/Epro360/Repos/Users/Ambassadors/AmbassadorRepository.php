@@ -66,6 +66,7 @@ class AmbassadorRepository {
         $ambassador->personal_email =   $input['personal_email'];
         $ambassador->personal_phone =   $input['personal_phone'];
         $ambassador->city_id =          $input['cities'];
+        $ambassador->country_code =     $input['countries'];
         $ambassador->address =          $input['address'];
         $ambassador->about_me =         $input['about_me'];
         $ambassador->save();
