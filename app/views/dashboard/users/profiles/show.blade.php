@@ -47,7 +47,8 @@
     <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-3 profile-pic">
-                {{ get_profile_image($user, 'md') }}
+                @include('dashboard.users.partials.avatar',['user' => $user, 'size' => 'md'])
+
 
 <!--                <div class="padding-10">-->
 <!--                    <h4 class="font-md"><strong>1,543</strong>-->

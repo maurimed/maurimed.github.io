@@ -42,7 +42,8 @@
 
     <div class="author-box main-bg-color alt-text-color clearfix">
         <div class="img-wrap">
-            {{ get_profile_image($post->owner) }}
+        @include('dashboard.users.partials.avatar',['user' => $post->owner, 'size' => 'thumb'])
+
         </div>
         <div class="text">
             <div class="author">

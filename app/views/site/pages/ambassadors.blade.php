@@ -22,7 +22,8 @@
     <!--                                        <a data-toggle="tooltip" title="Linkedin" class="linkedin" href="#"> <i class="fa fa-linkedin"></i> </a>-->
     <!--                                    </div>-->
     <!--                                </div>-->
-                                    {{ get_profile_image($ambassador->profile, 'xl') }}
+                                @include('dashboard.users.partials.avatar',['user' => $ambassador->profile, 'size' => 'xl'])
+
                                 </div>
                                 <div class="details">
                                     <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
