@@ -40,11 +40,7 @@ class PostRepository {
      */
     public function findBySlug($slug)
     {
-        return Post::with([
-            'owner' => function($query){
-                $query->get(['id', 'username', 'image', 'userable_type', 'userable_id']);
-            },
-            'owner.userable'
+        return Post::with(['owner.userable'
         ])->whereSlug($slug)->wherePublished(1)->firstOrFail(['id', 'image', 'title', 'body', 'user_id', 'published_at']);
     }
 
