@@ -196,103 +196,103 @@
  */
 (function ($) { "use strict";
 
-    $.fn.Holo_Gallery = function () {
+    //$.fn.Holo_Gallery = function () {
+    //
+    //    var $gallery_container = $(this);
+    //    var $images_container = $('.images', $gallery_container);
+    //
+    //    $gallery_container.prepend('<div class="main frame"><div class="preview-wrapper mgp-gal"></div></div>');
+    //
+    //    var $main_frame = $('.main.frame');
+    //
+    //    var $preview_wrapper = $('.preview-wrapper', $gallery_container);
+    //
+    //    var navigation = '<a class="control left"><i class="fa fa-fw fa-chevron-right"></i></a><a class="control right"><i class="fa fa-fw fa-chevron-left"></i></a>';
+    //
+    //    $('.thumb', $gallery_container).prepend(navigation);
+    //
+    //    var preview_image = $('>:first-child', $images_container).data('preview');
+    //
+    //    $preview_wrapper.append(
+    //        '<div style="position: relative; "><a href="' + preview_image + ' " class="overlay" rel="prettyPhoto">'
+    //            + '<i class="fa fa-search md"></i>'
+    //            + '</a>'
+    //            + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
+    //    );
+    //
+    //    $preview_wrapper.imagesLoaded(function () {
+    //        var preview_height = $preview_wrapper.height();
+    //
+    //        $preview_wrapper.css({
+    //            height: preview_height + 'px',
+    //            width: '100%'
+    //        });
+    //
+    //        $preview_wrapper.children('div').remove();
+    //
+    //        $images_container.children('.frame').each(function (index, value) {
+    //
+    //            $(this).attr('data-gallery_id', index);
+    //
+    //            var preview_image = $(this).data('preview');
+    //
+    //            if (index == 0) {
+    //                $preview_wrapper.append(
+    //                    '<div style="position: relative;" data-gallery_id="' + index + '" class="preview-image active"><a href="' + preview_image + ' " class="overlay">'
+    //                        + '<i class="fa fa-search md"></i>'
+    //                        + '</a>'
+    //                        + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
+    //                );
+    //            } else {
+    //                $preview_wrapper.append(
+    //                    '<div style="position: absolute; top: 0;" data-gallery_id="' + index + '" class="preview-image"><a href="' + preview_image + ' " class="overlay">'
+    //                        + '<i class="fa fa-search md"></i>'
+    //                        + '</a>'
+    //                        + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
+    //                );
+    //            }
+    //
+    //        });
+    //
+    //        if ( jQuery().magnificPopup ) {
+    //            $('.mgp-img').magnificPopup({
+    //                type: 'image',
+    //                removalDelay: 150,
+    //                mainClass: 'mgp-fade'
+    //            });
+    //        }
+    //
+    //    });
+    //
+    //    $('.frame', $images_container).hoverIntent({
+    //        over: function() {
+    //            var gallery_id = $(this).data('gallery_id');
+    //
+    //            $('div.active', $preview_wrapper).stop().removeClass('active');
+    //
+    //            $('div[data-gallery_id="' + gallery_id + '"]', $preview_wrapper).delay(3000).addClass('active');
+    //        },
+    //        out: function() {},
+    //        interval: 100
+    //    });
+    //
+    //    $(window).smartresize(function() {
+    //
+    //        var preview_height = $preview_wrapper.find('.preview-image').height();
+    //
+    //        $preview_wrapper.css({
+    //            height: preview_height + 'px',
+    //            width: '100%'
+    //        });
+    //
+    //        var thumb_height = $('.gallery.preview').find('.navigation .frame').height();
+    //
+    //        $('.gallery.preview .caroufredsel_wrapper').css('height', thumb_height + 10 + 'px');
+    //    });
+    //
+    //};
 
-        var $gallery_container = $(this);
-        var $images_container = $('.images', $gallery_container);
-
-        $gallery_container.prepend('<div class="main frame"><div class="preview-wrapper mgp-gal"></div></div>');
-
-        var $main_frame = $('.main.frame');
-
-        var $preview_wrapper = $('.preview-wrapper', $gallery_container);
-
-        var navigation = '<a class="control left"><i class="fa fa-fw fa-chevron-right"></i></a><a class="control right"><i class="fa fa-fw fa-chevron-left"></i></a>';
-
-        $('.thumb', $gallery_container).prepend(navigation);
-
-        var preview_image = $('>:first-child', $images_container).data('preview');
-
-        $preview_wrapper.append(
-            '<div style="position: relative; "><a href="' + preview_image + ' " class="overlay" rel="prettyPhoto">'
-                + '<i class="fa fa-search md"></i>'
-                + '</a>'
-                + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
-        );
-
-        $preview_wrapper.imagesLoaded(function () {
-            var preview_height = $preview_wrapper.height();
-
-            $preview_wrapper.css({
-                height: preview_height + 'px',
-                width: '100%'
-            });
-
-            $preview_wrapper.children('div').remove();
-
-            $images_container.children('.frame').each(function (index, value) {
-
-                $(this).attr('data-gallery_id', index);
-
-                var preview_image = $(this).data('preview');
-
-                if (index == 0) {
-                    $preview_wrapper.append(
-                        '<div style="position: relative;" data-gallery_id="' + index + '" class="preview-image active"><a href="' + preview_image + ' " class="overlay">'
-                            + '<i class="fa fa-search md"></i>'
-                            + '</a>'
-                            + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
-                    );
-                } else {
-                    $preview_wrapper.append(
-                        '<div style="position: absolute; top: 0;" data-gallery_id="' + index + '" class="preview-image"><a href="' + preview_image + ' " class="overlay">'
-                            + '<i class="fa fa-search md"></i>'
-                            + '</a>'
-                            + '<img src="' + preview_image + '" class="img-responsive" alt=""></div>'
-                    );
-                }
-
-            });
-
-            if ( jQuery().magnificPopup ) {
-                $('.mgp-img').magnificPopup({
-                    type: 'image',
-                    removalDelay: 150,
-                    mainClass: 'mgp-fade'
-                });
-            }
-
-        });
-
-        $('.frame', $images_container).hoverIntent({
-            over: function() {
-                var gallery_id = $(this).data('gallery_id');
-
-                $('div.active', $preview_wrapper).stop().removeClass('active');
-
-                $('div[data-gallery_id="' + gallery_id + '"]', $preview_wrapper).delay(3000).addClass('active');
-            },
-            out: function() {},
-            interval: 100
-        });
-
-        $(window).smartresize(function() {
-
-            var preview_height = $preview_wrapper.find('.preview-image').height();
-
-            $preview_wrapper.css({
-                height: preview_height + 'px',
-                width: '100%'
-            });
-
-            var thumb_height = $('.gallery.preview').find('.navigation .frame').height();
-
-            $('.gallery.preview .caroufredsel_wrapper').css('height', thumb_height + 10 + 'px');
-        });
-
-    };
-
-    $('.gallery.preview').Holo_Gallery();
+    //$('.gallery.preview').Holo_Gallery();
 
 })(jQuery);
 
@@ -320,43 +320,43 @@
 /**
  * CarouFredSel initialization
  */
-(function ($) { "use strict";
-
-    if (jQuery().imagesLoaded && jQuery().carouFredSel) {
-
-        var $gallery = $('.gallery.preview .img-container .images');
-
-        $(".images").imagesLoaded(function () {
-
-            $gallery.carouFredSel({
-                responsive: true,
-                circular: false,
-                infinite: false,
-                items: {
-                    visible: {
-                        min: 4,
-                        max: 7
-                    }
-                },
-                scroll: {
-                    items: 'page',
-                    duration: 300
-                },
-                prev: {
-                    button: ".right",
-                    key: "left"
-                },
-                next: {
-                    button: ".left",
-                    key: "right"
-                },
-                align: 'center',
-                auto: false
-            });
-        });
-    }
-
-})(jQuery);
+//(function ($) { "use strict";
+//
+//    if (jQuery().imagesLoaded && jQuery().carouFredSel) {
+//
+//        var $gallery = $('.gallery.preview .img-container .images');
+//
+//        $(".images").imagesLoaded(function () {
+//
+//            $gallery.carouFredSel({
+//                responsive: true,
+//                circular: false,
+//                infinite: false,
+//                items: {
+//                    visible: {
+//                        min: 4,
+//                        max: 7
+//                    }
+//                },
+//                scroll: {
+//                    items: 'page',
+//                    duration: 300
+//                },
+//                prev: {
+//                    button: ".right",
+//                    key: "left"
+//                },
+//                next: {
+//                    button: ".left",
+//                    key: "right"
+//                },
+//                align: 'center',
+//                auto: false
+//            });
+//        });
+//    }
+//
+//})(jQuery);
 
 /**
  * Revolution Slider intialization

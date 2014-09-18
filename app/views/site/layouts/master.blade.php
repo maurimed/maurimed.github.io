@@ -10,9 +10,7 @@
         <link href="/site/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="/site/vendors/MEplayer/mediaelementplayer.min.css" rel="stylesheet"/>
         <!-- REVOLUTION BANNER CSS SETTINGS -->
-        <link rel="stylesheet" type="text/css" href="/site/vendors/rs-plugin/css/settings.css" media="screen"/>
-        <link href="/site/vendors/smoothdivscroll/smoothDivScroll.css" rel="stylesheet">
-        <link rel="stylesheet" href="/site/vendors/magnific-popup/magnific-popup.css">
+
 
         @yield('styles')
 
@@ -27,6 +25,7 @@
         <script type="text/javascript" src="/site/includes/html5shiv/html5shiv.js"></script>
         <script type="text/javascript" src="/site/includes/respond/respond.min.js"></script>
         <![endif]-->
+        @yield('top-scripts')
         <link rel="icon" type="image/png" href="/site/favicon.ico">
     </head>
     <body data-spy="scroll" data-target="#section-nav">
@@ -36,13 +35,11 @@
                 @include('dashboard.partials.messages')
                 @include('site.layouts.partials.header.top-bar')
                 @include('site.layouts.partials.header.nav-bar')
-
             </header>
             @if( ! Request::is('login') or Auth::guest() )
                 @include('site.layouts.partials.components.login')
             @endif
             @yield('content')
-
             <footer>
                 @include('site.layouts.partials.footer.content')    
                 @include('site.layouts.partials.footer.bottom')    

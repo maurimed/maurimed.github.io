@@ -1,6 +1,9 @@
 @extends('site.layouts.master')
 
 @section('styles')
+        <link rel="stylesheet" type="text/css" href="/site/vendors/rs-plugin/css/settings.css" media="screen"/>
+        <link href="/site/vendors/smoothdivscroll/smoothDivScroll.css" rel="stylesheet">
+        <link rel="stylesheet" href="/site/vendors/magnific-popup/magnific-popup.css">
 <link href="/site/ambassadors/style2.css" rel="stylesheet">
 <link href="/site/ambassadors/flags/assets/docs.css" rel="stylesheet">
 <link href="/site/ambassadors/flags/css/flag-icon.css" rel="stylesheet">
