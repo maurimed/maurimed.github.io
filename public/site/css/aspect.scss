@@ -2,6 +2,7 @@
 
 // $mainColor: #00b3c5; //ef3d4a
 $mainColor: #ef3d4a;
+$secondaryColor: #00b3c5;
 $mainColorDark: darken($mainColor, 10%);
 $mainColorLight:  lighten($mainColor, 10%);
 
@@ -2632,4 +2633,66 @@ header.custom-5 .navbar-nav li a .over:hover {
 .logo-box{
   max-width: 200px !important;
 
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba($mainColor, 0.075), 0 0 5px rgba($mainColor, 0.6);
+}
+
+.application-form{
+  fieldset{
+    margin-bottom: 35px;
+  }
+  .bootstrap-select.btn-group .btn .filter-option{
+    font-size: .95em;
+    color: #979797;
+  }
+  .note{
+//    margin-left: 25px;
+    margin-bottom: 20px;
+    display: block;
+//    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 7px;
+  }
+  .form-group{
+    height: 35px;
+    label{
+      min-width: 110px;
+      line-height: 34px;
+      padding: 0;
+      float: left;
+//      margin: 0 0 0 26px;
+    }
+      .form-link{
+        font-size: .9em;
+        color: #979797;
+        font-weight: 600;
+        padding: 4px 0 12px 0;
+      }
+    select{
+      float: left;
+      width: 33% !important;
+      padding: 0 0 0 9px;
+    }
+    .btn-group{
+//      display: none;
+    }
+  }
+
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{
+  background-color: $mainColor;
+}
+
+.btn-custom{
+  color: #949494;
+  font-size: 1.05em !important;
+  background-color: white;
+  border-color: darken(#cccccc, 10%);
+}
+
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open .dropdown-toggle.btn-custom{
+  color: #fff;
+  background-color: $mainColor;
+  border-color: darken($mainColor, 10%);
 }

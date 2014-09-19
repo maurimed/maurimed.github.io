@@ -4,26 +4,24 @@ Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
 {
-//    //    Home routes
+    //    Home routes
     Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
-//
-//    //    About routes
+
+    //    About routes
     Route::get('about', ['as' => 'about', 'uses' => 'PagesController@about']);
     Route::get('about/message-from-co-founders', ['as' => 'about.message', 'uses' => 'PagesController@aboutMessage']);
     Route::get('about/mission-and-vision', ['as' => 'about.mission', 'uses' => 'PagesController@aboutMission']);
     Route::get('about/epro-360-at-a-glance', ['as' => 'about.glance', 'uses' => 'PagesController@aboutGlance']);
     Route::get('about/what-set-us-apart', ['as' => 'about.apart', 'uses' => 'PagesController@aboutApart']);
     Route::get('about/epro-360-team', ['as' => 'about.team', 'uses' => 'PagesController@aboutTeam']);
-//
-//
-//    //    Epro 360 Network routes
+
+    //    Epro 360 Network routes
     Route::get('network', ['as' => 'network', 'uses' => 'PagesController@network']);
     Route::get('network/educational-mentorship', ['as' => 'network.mentorship', 'uses' => 'PagesController@networkMentorship']);
     Route::get('network/career-coaching', ['as' => 'network.coaching', 'uses' => 'PagesController@networkCoaching']);
     Route::get('network/academic-schools', ['as' => 'network.academic-schools', 'uses' => 'PagesController@networkAcademicSchools']);
-//
-//
-//    //    Services
+
+    //    Services
     Route::get('services', ['as' => 'services', 'uses' => 'PagesController@services']);
     Route::get('services/academic-scholarships', ['as' => 'services.academic', 'uses' => 'PagesController@servicesAcademic']);
     Route::get('services/athletic-scholarships', ['as' => 'services.athletic', 'uses' => 'PagesController@servicesAthletic']);
@@ -32,34 +30,36 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
     Route::get('services/career-coaching', ['as' => 'services.coaching', 'uses' => 'PagesController@servicesCoaching']);
     Route::get('services/internships', ['as' => 'services.internships', 'uses' => 'PagesController@servicesInternships']);
     Route::get('services/bonus-semester-at-sea', ['as' => 'services.bonus', 'uses' => 'PagesController@servicesBonus']);
-//
-//    //News
+
+    //News
     Route::get('news', ['as' => 'news', 'uses' => 'PagesController@news']);
-//
-//    //Social Responsibility
+
+    //Social Responsibility
     Route::get('social-responsibility', ['as' => 'social-responsibility', 'uses' => 'PagesController@socialResponsibility']);
-//
-//    // FAQ
+
+    // FAQ
     Route::get('frequently-asked-questions', ['as' => 'faq', 'uses' => 'PagesController@faq']);
-//
-//    // Privacy Policy
+
+    // Privacy Policy
     Route::get('privacy-policy', ['as' => 'policy', 'uses' => 'PagesController@policy']);
-//
-//    // Terms and Contitions
+
+    // Terms and Contitions
     Route::get('terms-and-conditions', ['as' => 'terms', 'uses' => 'PagesController@terms']);
-//
-//    // Backgrounder
+
+    // Backgrounder
     Route::get('backgrounder', ['as' => 'backgrounder', 'uses' => 'PagesController@backgrounder']);
-//
-//    // Ambassadors
+
+    // Ambassadors
     Route::get('ambassadors/{country}', ['as' => 'ambassadors', 'uses' => 'PagesController@ambassadors']);
-//
-//
-//    // Blog
+
+    // Blog
     Route::get('blog', ['as' => 'posts.index', 'uses' => 'PostsController@index']);
     Route::get('blog/{slug}', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
-//
-//    // Files
+
+    // underground-application
+    Route::get('underground-application', 'ApplyController@undergroundApplication');
+
+    // Files
     Route::get('downloads/{file}', function ($file)
     {
         $path = public_path() . 'site/docs/';
