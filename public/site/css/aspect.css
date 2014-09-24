@@ -1759,6 +1759,9 @@ header.custom-5 .navbar-nav li a .over:hover {
 .application-form .bootstrap-select.btn-group .btn .filter-option {
   font-size: .95em;
   color: #979797; }
+.application-form hr {
+  padding-top: 0px;
+  margin-top: 0px; }
 .application-form .note {
   margin-bottom: 20px;
   display: block;
@@ -1766,10 +1769,12 @@ header.custom-5 .navbar-nav li a .over:hover {
 .application-form .form-group {
   height: 35px; }
   .application-form .form-group label {
-    min-width: 110px;
+    min-width: 130px;
+    width: auto;
     line-height: 34px;
     padding: 0;
-    float: left; }
+    float: left;
+    display: block; }
   .application-form .form-group .form-link {
     font-size: .9em;
     color: #979797;

@@ -7,17 +7,17 @@
 <fieldset>
     <div class="row">
        <div class="col-md-6">
-           <span class="text-muted note">{{trans('applications.underground.steps.2.note')}} </span>
+           <span class="text-muted note">{{trans('applications.underground.steps.profile.note')}} </span>
            <div class="form-group">
-               <label for="given_name" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.given_name')}}*</label>
+               <label for="given_name" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.given_name')}}*</label>
                <div class="col-md-8">
-                   <input name="given_name" type="text" class="form-control" id="given_name" placeholder="{{trans('applications.underground.steps.2.given_name')}}">
+                   <input name="given_name" type="text" class="form-control" id="given_name" placeholder="{{trans('applications.underground.steps.profile.given_name')}}">
                </div>
            </div>
            <div class="form-group">
-               <label for="family_name" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.family_name')}}*</label>
+               <label for="family_name" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.family_name')}}*</label>
                <div class="col-md-8">
-                   <input name="family_name" type="text" class="form-control" id="family_name" placeholder="{{trans('applications.underground.steps.2.family_name')}}">
+                   <input name="family_name" type="text" class="form-control" id="family_name" placeholder="{{trans('applications.underground.steps.profile.family_name')}}">
                </div>
            </div>
            <div class="form-group">
@@ -25,10 +25,10 @@
                <div class="col-md-8">
                    <div class="btn-group btn-group-xs" data-toggle="buttons">
                        <label class="btn btn-custom">
-                           <input name="gender" type="radio"> Male
+                           <input name="male" type="radio"> {{ trans('applications.underground.steps.profile.gender.male') }}
                        </label>
                        <label class="btn btn-custom">
-                           <input name="gender" type="radio"> Female
+                           <input name="female" type="radio"> {{ trans('applications.underground.steps.profile.gender.female') }}
                        </label>
                    </div>
                </div>
@@ -36,14 +36,14 @@
        </div>
        <div class="col-md-6">
            <div class="form-group">
-               <label for="passport" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.passport')}}*</label>
+               <label for="passport" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.passport')}}*</label>
                <div class="col-md-8">
-                   <input name="passport" type="text" class="form-control" id="passport" placeholder="{{trans('applications.underground.steps.2.passport')}}">
-                   <a class="form-link pull-right" href="#">{{ trans('applications.underground.steps.2.do_not_have_passport') }}</a>
+                   <input name="passport" type="text" class="form-control" id="passport" placeholder="{{trans('applications.underground.steps.profile.passport')}}">
+                   <a class="form-link pull-right" href="#">{{ trans('applications.underground.steps.profile.do_not_have_passport') }}</a>
                </div>
            </div>
            <div class="form-group">
-               <label for="birth" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.birth')}}*</label>
+               <label for="birth" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.birth')}}*</label>
                <div class="col-md-8">
                    <select name="day" id="day" class="form-control selectpicker" data-width="32.333%">
                        <option select="selected">day</option>
@@ -106,9 +106,9 @@
            </div>
            <br/>
             <div class="form-group">
-               <label for="birth_place" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.birth_place')}}*</label>
+               <label for="birth_place" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.birth_place')}}*</label>
                <div class="col-md-8">
-                   <input name="birth_place" type="text" class="form-control" id="birth_place" placeholder="{{trans('applications.underground.steps.2.birth_place')}}">
+                   <input name="birth_place" type="text" class="form-control" id="birth_place" placeholder="{{trans('applications.underground.steps.profile.birth_place')}}">
                </div>
            </div>
        </div>
@@ -124,8 +124,8 @@
 <fieldset>
     <div class="row">
        <div class="col-md-6">
-            <h5> {{ trans('applications.underground.steps.2.photo_required_title') }}</h5>
-            <p>{{ trans('applications.underground.steps.2.photo_required_text') }}</p>
+            <h5> {{ trans('applications.underground.steps.profile.photo_required_title') }}</h5>
+            <p>{{ trans('applications.underground.steps.profile.photo_required_text') }}</p>
        </div>
        <div class="col-md-6">
             <div class="fileinput fileinput-new" data-provides="fileinput">
@@ -152,13 +152,13 @@
     <div class="row">
        <div class="col-md-6">
            <div class="form-group">
-               <label for="email" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.email')}}*</label>
+               <label for="email" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.email')}}*</label>
                <div class="col-md-8">
-                   <input name="email" type="email" class="form-control" id="email" placeholder="{{trans('applications.underground.steps.2.email')}}">
+                   <input name="email" type="email" class="form-control" id="email" placeholder="{{trans('applications.underground.steps.profile.email')}}">
                </div>
            </div>
            <div class="form-group">
-               <label for="street_address" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.street_address')}}*</label>
+               <label for="street_address" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.street_address')}}*</label>
                <div class="col-md-8">
                     <textarea name="street_address" id="street_address" class="form-control" rows="2">
 
@@ -167,24 +167,24 @@
            </div>
            <br/>
            <div class="form-group">
-              <label for="city_province_region" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.city_province_region')}}*</label>
+              <label for="city_province_region" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.city_province_region')}}*</label>
               <div class="col-md-8">
-                  <input name="city_province_region" type="text" class="form-control" id="city_province_region" placeholder="{{trans('applications.underground.steps.2.city_province_region')}}">
+                  <input name="city_province_region" type="text" class="form-control" id="city_province_region" placeholder="{{trans('applications.underground.steps.profile.city_province_region')}}">
               </div>
           </div>
           <br/>
           <br/>
            <div class="form-group">
-               <label for="postal_code" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.postal_code')}}*</label>
+               <label for="postal_code" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.postal_code')}}*</label>
                <div class="col-md-8">
-                   <input name="postal_code" type="text" class="form-control" id="postal_code" placeholder="{{trans('applications.underground.steps.2.postal_code')}}">
+                   <input name="postal_code" type="text" class="form-control" id="postal_code" placeholder="{{trans('applications.underground.steps.profile.postal_code')}}">
                </div>
            </div>
            <div class="form-group">
-               <label for="country" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.country')}}*</label>
+               <label for="country" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.country')}}*</label>
                <div class="col-md-8">
                    <select name="country" id="day" class="form-control selectpicker" >
-                       <option select="selected">{{trans('applications.underground.steps.2.country')}}</option>
+                       <option select="selected">{{trans('applications.underground.steps.profile.country')}}</option>
                    </select>
                </select>
                </div>
@@ -193,43 +193,43 @@
 
        </div>
        <div class="col-md-6">
-         <span class="note"><strong>{{trans('applications.underground.steps.2.telephones')}}</strong> </span>
+         <span class="note"><strong>{{trans('applications.underground.steps.profile.telephones')}}</strong> </span>
           <div class="form-group">
-              <label for="evening_home" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.evening_home')}}*</label>
+              <label for="evening_home" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.evening_home')}}*</label>
               <div class="col-md-8">
-                  <input name="evening_home" type="text" class="form-control" id="evening_home" placeholder="{{trans('applications.underground.steps.2.evening_home')}}">
+                  <input name="evening_home" type="text" class="form-control" id="evening_home" placeholder="{{trans('applications.underground.steps.profile.evening_home')}}">
               </div>
           </div>
           <div class="form-group">
-              <label for="day_work" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.day_work')}}*</label>
+              <label for="day_work" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.day_work')}}*</label>
               <div class="col-md-8">
-                  <input name="day_work" type="text" class="form-control" id="day_work" placeholder="{{trans('applications.underground.steps.2.day_work')}}">
+                  <input name="day_work" type="text" class="form-control" id="day_work" placeholder="{{trans('applications.underground.steps.profile.day_work')}}">
               </div>
           </div>
           <div class="form-group">
-              <label for="mobile" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.mobile')}}*</label>
+              <label for="mobile" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.mobile')}}*</label>
               <div class="col-md-8">
-                  <input name="mobile" type="text" class="form-control" id="mobile" placeholder="{{trans('applications.underground.steps.2.mobile')}}">
+                  <input name="mobile" type="text" class="form-control" id="mobile" placeholder="{{trans('applications.underground.steps.profile.mobile')}}">
               </div>
           </div>
-          <span class="note"><strong>{{trans('applications.underground.steps.2.emergency_contacts')}}</strong> </span>
+          <span class="note"><strong>{{trans('applications.underground.steps.profile.emergency_contacts')}}</strong> </span>
           <div class="form-group">
-              <label for="name" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.name')}}*</label>
+              <label for="name" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.name')}}*</label>
               <div class="col-md-8">
-                  <input name="name" type="text" class="form-control" id="name" placeholder="{{trans('applications.underground.steps.2.name')}}">
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="phone" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.phone')}}*</label>
-              <div class="col-md-8">
-                  <input name="phone" type="text" class="form-control" id="phone" placeholder="{{trans('applications.underground.steps.2.phone')}}">
+                  <input name="name" type="text" class="form-control" id="name" placeholder="{{trans('applications.underground.steps.profile.name')}}">
               </div>
           </div>
           <div class="form-group">
-              <label for="relation_to_you" class="col-md-2 control-label" >{{trans('applications.underground.steps.2.relation_to_you')}}*</label>
+              <label for="phone" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.phone')}}*</label>
               <div class="col-md-8">
-                  <input name="relation_to_you" type="text" class="form-control" id="relation_to_you" placeholder="{{trans('applications.underground.steps.2.relation_to_you')}}">
-                  <span class="note text-muted small">{{trans('applications.underground.steps.2.note_relation')}}</span>
+                  <input name="phone" type="text" class="form-control" id="phone" placeholder="{{trans('applications.underground.steps.profile.phone')}}">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="relation_to_you" class="col-md-2 control-label" >{{trans('applications.underground.steps.profile.relation_to_you')}}*</label>
+              <div class="col-md-8">
+                  <input name="relation_to_you" type="text" class="form-control" id="relation_to_you" placeholder="{{trans('applications.underground.steps.profile.relation_to_you')}}">
+                  <span class="note text-muted small">{{trans('applications.underground.steps.profile.note_relation')}}</span>
               </div>
           </div>
           <br/>

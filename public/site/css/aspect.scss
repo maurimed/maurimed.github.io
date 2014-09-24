@@ -2647,21 +2647,24 @@ header.custom-5 .navbar-nav li a .over:hover {
     font-size: .95em;
     color: #979797;
   }
+  hr{
+    padding-top: 0px;
+    margin-top: 0px;
+  }
   .note{
-//    margin-left: 25px;
     margin-bottom: 20px;
     display: block;
-//    border-bottom: 1px solid #ECECEC;
     padding-bottom: 7px;
   }
   .form-group{
     height: 35px;
     label{
-      min-width: 110px;
+      min-width: 130px;
+      width: auto;
       line-height: 34px;
       padding: 0;
       float: left;
-//      margin: 0 0 0 26px;
+      display: block
     }
       .form-link{
         font-size: .9em;
@@ -2678,6 +2681,10 @@ header.custom-5 .navbar-nav li a .over:hover {
 //      display: none;
     }
   }
+
+}
+
+.step-profile {
 
 }
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{
