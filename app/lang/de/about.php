@@ -32,12 +32,12 @@ return array(
         "p1"       => "Diese Eigenschaften sowie unseren Drang das Leben der internationalen Studenten zu verbessern, werden den Epro 360-Zeitstrahl zu einem Zeitstrahl des Erfolges machen. Epro 360 freut sich weitere Stichpunkte in die folgende Liste hinzuzufügen!",
         "subtitle" => "Epro 360  Meilensteine als Zahlenstrahl",
         "timeline" => [
-            "1" => ["month" => "Februar", "year" => "2013", "title" => "Gründung", "text" => "IIn Portoviejo, Ecuador von Oswaldo und Christian Chavez."],
+            "1" => ["month" => "Feb", "year" => "2013", "title" => "Gründung", "text" => "IIn Portoviejo, Ecuador von Oswaldo und Christian Chavez."],
             "2" => ["month" => "Juli", "year" => "2013", "title" => "Erste Vorträge", "text" => "Angeboten an Schülern in der Region Portoviejo, Ecuador."],
-            "3" => ["month" => "November", "year" => "2013", "title" => "Erweiterung", "text" => "Von Dienstleistungen ausschließlich für das Auslandsstudium zu Dienstleistungen für Karriere und persönliche Entwicklung."],
-            "4" => ["month" => "Dezember", "year" => "2013", "title" => "Erste internationale Vorträge", "text" => "PAngeboten an Studenten in Deutschland."],
-            "5" => ["month" => "Januar", "year" => "2014", "title" => "Zintragung der Firma", "text" => "in Deutschland."],
-            "6" => ["month" => "März", "year" => "2014", "title" => "Neues Mitglied", "text" => "Francisco Galvez ist als Investor beigetreten."],
+            "3" => ["month" => "Nov", "year" => "2013", "title" => "Erweiterung", "text" => "Von Dienstleistungen ausschließlich für das Auslandsstudium zu Dienstleistungen für Karriere und persönliche Entwicklung."],
+            "4" => ["month" => "Dez", "year" => "2013", "title" => "Erste internationale Vorträge", "text" => "PAngeboten an Studenten in Deutschland."],
+            "5" => ["month" => "Jan", "year" => "2014", "title" => "Zintragung der Firma", "text" => "in Deutschland."],
+            "6" => ["month" => "Mrz", "year" => "2014", "title" => "Neues Mitglied", "text" => "Francisco Galvez ist als Investor beigetreten."],
             "7" => ["month" => "April", "year" => "2014", "title" => "Eintragung der Firma", "text" => "in Spanien."],
         ]
     ],
