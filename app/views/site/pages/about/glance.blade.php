@@ -60,6 +60,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <div class="row">
+
                     <h4 class="text-center" style="font-size: 1.5em;">{{ Lang::get('about.epro_360_at_a_glance.subtitle') }}</h4>
                     <div class="event">
                         <div class="details">
