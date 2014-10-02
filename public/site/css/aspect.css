@@ -1785,6 +1785,9 @@ header.custom-5 .navbar-nav li a .over:hover {
     width: 33% !important;
     padding: 0 0 0 9px; }
 
+.top-box {
+  background: #ef3d4a; }
+
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
   background-color: #ef3d4a; }
 
