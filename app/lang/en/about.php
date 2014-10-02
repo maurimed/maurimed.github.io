@@ -35,7 +35,7 @@ return array(
             "1" => ["month" => "Feb", "year" => "2013", "title" => "Foundation", "text" => "In Portoviejo, Ecuador by Oswaldo and Christian Chavez."  ],
             "2" => ["month" => "Jul", "year" => "2013", "title" => "First presentations", "text" => "Provided to high schools students in the Portoviejo area, Ecuador."  ],
             "3" => ["month" => "Nov", "year" => "2013", "title" => "Expanded ", "text" => "Expanded from sheer study abroad services to career and personal development services."  ],
-            "4" => ["month" => "Dic", "year" => "2013", "title" => "First international presentations", "text" => "Proporcionadas a estudiantes de instituto en Alemania."  ],
+            "4" => ["month" => "Dec", "year" => "2013", "title" => "First international presentations", "text" => "Proporcionadas a estudiantes de instituto en Alemania."  ],
             "5" => ["month" => "Jan", "year" => "2014", "title" => "Incorporation", "text" => "In Germany."  ],
             "6" => ["month" => "Mar", "year" => "2014", "title" => "New member", "text" => "Francisco Galvez joined as an angel investor."  ],
             "7" => ["month" => "Apr", "year" => "2014", "title" => "Incorporation", "text" => "In Spain."  ],
