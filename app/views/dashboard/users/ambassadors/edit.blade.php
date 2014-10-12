@@ -56,7 +56,7 @@
                                         <label class="label">Phone</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-phone"></i>
-                                            {{ Form::text('personal_phone', $ambassador->userable->personal_phone) }}
+                                            {{ Form::text('personal_phone', $ambassador->userable->phone) }}
                                         </label>
                                     </section>
                                 </div>
