@@ -8,34 +8,25 @@
         <div class="row">
 
             <div style="text-align:justify" class="col-md-12 main-el">
+                @foreach(array_chunk($ambassadors->all(), 4) as $chunks )
                 <div class="row">
-                        @foreach($ambassadors as $ambassador)
-                        <div class="col-md-3 col-sm-6 main-el">
-                            <div class="person">
-                                <div class="photo">
-    <!--                                <div class="overlay">-->
-    <!--                                    <div class="socials">-->
-    <!--                                        <a data-toggle="tooltip" title="Facebook" class="facebook" href="#"> <i class="fa fa-facebook"></i> </a>-->
-    <!--                                        <a data-toggle="tooltip" title="Twitter" class="twitter" href="#"> <i class="fa fa-twitter"></i> </a>-->
-    <!--                                        <a data-toggle="tooltip" title="Google Plus" class="gplus" href="#"> <i class="fa fa-google-plus"></i> </a>-->
-    <!--                                        <a data-toggle="tooltip" title="Dribble" class="dribbble" href="#"> <i class="fa fa-dribbble"></i> </a>-->
-    <!--                                        <a data-toggle="tooltip" title="Linkedin" class="linkedin" href="#"> <i class="fa fa-linkedin"></i> </a>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
+                    @foreach($chunks as $ambassador)
+                    <div class="col-md-3 col-sm-6 main-el">
+                        <div class="person">
+                            <div class="photo">
                                 @include('dashboard.users.partials.avatar',['user' => $ambassador->profile, 'size' => 'xl'])
-
-                                </div>
-                                <div class="details">
-                                    <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
-                                    <p class="italic title"> <i class="fa fa-map-marker"></i> {{ $ambassador->city->city_name }} </p>
-                                    <p class="italic title"> <i class="fa fa-envelope"></i> {{ $ambassador->profile->email }} </p>
-                                    <p class="italic title"> <i class="fa fa-phone"></i> {{ $ambassador->phone }}</p>
-                                </div>
+                            </div>
+                            <div class="details">
+                                <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
+                                <p class="italic title"> <i class="fa fa-map-marker"></i> {{ $ambassador->city->city_name }} </p>
+                                <p class="italic title"> <i class="fa fa-envelope"></i> {{ $ambassador->profile->email }} </p>
+                                <p class="italic title"> <i class="fa fa-phone"></i> {{ $ambassador->phone }}</p>
                             </div>
                         </div>
-                        @endforeach
+                    </div>
+                    @endforeach
                 </div>
-
+                @endforeach
             </div>
         </div>
     </div>

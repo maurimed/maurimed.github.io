@@ -27,22 +27,13 @@
                 <h3> {{ Lang::get('about.epro_360_team.title') }} </h3>
                 <div class="dividing sep-line"></div>
                 <p>{{ Lang::get('about.epro_360_team.p1') }}</p>
+                @foreach(array_chunk($ambassadors->all(), 4) as $chunks )
                 <div class="row">
-                    @foreach($ambassadors as $ambassador)
+                    @foreach($chunks as $ambassador)
                     <div class="col-md-3 col-sm-6 main-el">
                         <div class="person">
                             <div class="photo">
-<!--                                <div class="overlay">-->
-<!--                                    <div class="socials">-->
-<!--                                        <a data-toggle="tooltip" title="Facebook" class="facebook" href="#"> <i class="fa fa-facebook"></i> </a>-->
-<!--                                        <a data-toggle="tooltip" title="Twitter" class="twitter" href="#"> <i class="fa fa-twitter"></i> </a>-->
-<!--                                        <a data-toggle="tooltip" title="Google Plus" class="gplus" href="#"> <i class="fa fa-google-plus"></i> </a>-->
-<!--                                        <a data-toggle="tooltip" title="Dribble" class="dribbble" href="#"> <i class="fa fa-dribbble"></i> </a>-->
-<!--                                        <a data-toggle="tooltip" title="Linkedin" class="linkedin" href="#"> <i class="fa fa-linkedin"></i> </a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                                 @include('dashboard.users.partials.avatar',['user' => $ambassador->profile, 'size' => 'xl'])
-
                             </div>
                             <div class="details">
                                 <h5 class="medium name">{{ $ambassador->present()->fullName }}</h5>
@@ -53,9 +44,8 @@
                         </div>
                     </div>
                     @endforeach
-
-
                 </div>
+                @endforeach
 
                 <div class="dividing sep-line"></div>
                 
