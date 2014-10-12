@@ -74,10 +74,10 @@ return [
         "first"  => [
             "text1" => "Wir machen DEINEN TRAUM",
             "text2" => "In den USA zu studieren",
-            "text3" => "WAR!"
+            "text3" => "WAHR!"
         ],
         "second" => [
-            "text1" => "Akadeimsche- und Sportstipendien",
+            "text1" => "Akademische- und Sportstipendien",
             "text2" => "Für dein Studium in den USA"
         ],
 
