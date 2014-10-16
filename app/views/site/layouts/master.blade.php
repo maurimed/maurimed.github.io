@@ -6,11 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/site/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="/site/resources/fontello/fontello.css"rel="stylesheet" >
-        <link href="/site/css/animation.css" rel="stylesheet" >
         <link href="/site/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="/site/vendors/MEplayer/mediaelementplayer.min.css" rel="stylesheet"/>
-        <!-- REVOLUTION BANNER CSS SETTINGS -->
-
+        <link rel="stylesheet" href="/site/vendors/animate/animate.min.css">
 
         @yield('styles')
 
@@ -65,6 +63,8 @@
             <script type="text/javascript" src="/site/vendors/MEplayer/mediaelement-and-player.min.js"></script>
             <script type="text/javascript" src="/site/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
             <script type="text/javascript" src="/site/vendors/caroufredsel-6.2.1/jquery.carouFredSel-6.2.1-packed.js"></script>
+            <script src="/site/vendors/wow/wow.min.js"></script>
+            <script> $(document).ready(function(){ new WOW().init(); }); </script>
             @yield('scripts')
             <script src="/site/js/script.js"></script>
             <script src="/site/includes/retina/retina-1.1.0.min.js"></script>
@@ -81,7 +81,6 @@
                 ga('send', 'pageview');
 
             </script>
-
         </div>
     </body>
 </html>

@@ -1,7 +1,4 @@
-
-
-
-<div class="bannercontainer">
+<div class="bannercontainer wow">
     <div class="banner">
 
         <ul>

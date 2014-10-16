@@ -5,7 +5,7 @@ return [
 
 //    "landing_title" => "To request more info, please fill out this form and we will get in touch with you",
 
-    "form"    => [
+    "form"              => [
         "title"       => "Request More Info",
         "text"        => "Text for convince the user to download",
         "inputs"      => [
@@ -70,7 +70,7 @@ return [
 
     ],
 
-    "sliders" => [
+    "sliders"           => [
         "first"  => [
             "text1" => "We make your DREAM",
             "text2" => "to study in the U.S.",
@@ -81,6 +81,24 @@ return [
             "text2" => "Scholarships to study in the U.S."
         ],
 
-    ]
+    ],
 
+    "scholarship_boxes" => [
+        "1" => [
+            "title"       => "Want to see if you are eligible for an Academic Scholarship",
+            "gpa"         => "GPA",
+            "up_to"       => "Or up to",
+            "scholarship" => "SCHOLARSHIP*",
+            "contact"     => "Contact Our",
+            "btn"         => "Online Ambassador",
+        ],
+        "2" => [
+            "title"       => "Want to see if you are eligible for an Athletic Scholarship",
+            "select"      => "Select Sport",
+            "up_to"       => "Or up to",
+            "scholarship" => "SCHOLARSHIP*",
+            "contact"     => "Contact Our",
+            "btn"         => "Online Ambassador",
+        ],
+    ]
 ];
