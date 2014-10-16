@@ -124,7 +124,19 @@
 
         app.controller("CalculatorController", function($scope){
             function calculateGpa(values){
-                return (values.grade * 4 / values.outOf).toFixed(1);
+                return (values.grade * 4 )/ values.outOf;
+            }
+            function updateMessages(amount, percent, values){
+                $scope.scholarship = { "amount": amount, "percent": percent };
+                $scope.message = false;
+                $scope.calcGpa = calculateGpa(values);
+            }
+            function showContactMessage(values){
+                $scope.scholarship = undefined;
+                $scope.message = true;
+                $scope.calcGpa = undefined;
+                $scope.calcGpa = calculateGpa(values);
+
             }
             $scope.$watch(
                 function(scope){
@@ -133,59 +145,40 @@
                 function(values){
                     if(values.outOf == 100){
                         if(values.grade == 100){
-                            $scope.scholarship = { "amount": 100000, "percent": 100 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(100000, 100, values);
                         } else if (values.grade >= 89 && values.grade < 100 ){
-                            $scope.scholarship = { "amount": 80000, "percent": 90 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(80000, 90, values);
                         } else if (values.grade >= 80 && values.grade < 90 ){
-                            $scope.scholarship = { "amount": 60000, "percent": 80 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(60000, 80, values);
                         } else if (values.grade >= 0 && values.grade < 80 ){
-                            $scope.scholarship = undefined;
-                            $scope.calcGpa = undefined;
-                            $scope.message = true;
+                            showContactMessage(values);
                         }
                     } else if (values.outOf == 20){
                         if(values.grade == 20){
-                            $scope.scholarship = { "amount": 100000, "percent": 100 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(100000, 100, values);
                         } else if (values.grade >= 17.8 && values.grade < 20 ){
-                            $scope.scholarship = { "amount": 80000, "percent": 90 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(80000, 90, values);
                         } else if (values.grade >= 16 && values.grade < 17.80 ){
-                            $scope.scholarship = { "amount": 60000, "percent": 80 };
-                            $scope.message = false;
+                            updateMessages(60000, 80, values);
                         } else if (values.grade >= 0 && values.grade < 16 ){
-                            $scope.scholarship = undefined;
-                            $scope.calcGpa = undefined;
-                            $scope.message = true;
+                            showContactMessage(values);
                         }
                     } else if (values.outOf == 10){
                         if(values.grade == 10){
-                            $scope.scholarship = { "amount": 100000, "percent": 100 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(100000, 100, values);
                         } else if (values.grade >= 8.9 && values.grade < 10 ){
-                            $scope.scholarship = { "amount": 80000, "percent": 90 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(80000, 90, values);
                         } else if (values.grade >= 8 && values.grade < 8.89 ){
-                            $scope.scholarship = { "amount": 60000, "percent": 80 };
-                            $scope.message = false;
-                            $scope.calcGpa = calculateGpa(values);
+                            updateMessages(60000, 80, values);
                         } else if (values.grade >= 0 && values.grade < 8 ){
-                            $scope.scholarship = undefined;
-                            $scope.message = true;
-                            $scope.calcGpa = undefined;
+                            showContactMessage(values);
                         }
                     }
-
+                    if(values.grade > values.outOf){
+                        $scope.scholarship = undefined;
+                        $scope.message = false;
+                        $scope.calcGpa = undefined;
+                    }
 
                 },
                 true

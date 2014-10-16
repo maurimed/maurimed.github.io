@@ -10,7 +10,7 @@
                                 <span class="input-group-addon ">{{trans('home.scholarship_boxes.1.gpa')}}</span>
                                 <input ng-model="gpa" name="gpa" type="number" class="form-control btn-sm" placeholder="100.00" step="any" min="0" max="100.00">
                             </div>
-                            <div ng-show="calcGpa" class="text-center text-muted small">AMERICAN GPA @{{ calcGpa }} </div>
+                            <div ng-show="calcGpa" class="text-center text-muted small">AMERICAN GPA @{{ calcGpa | number : 2 }} </div>
                         </div>
                         <div class="col-md-7 col-sm-7">
                             <span class="amount">
