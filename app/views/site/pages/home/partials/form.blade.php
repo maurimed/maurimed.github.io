@@ -129,7 +129,7 @@
                 <div class="text-center">- {{trans('home.or')}} -</div>
                 <br/>
 
-           <a href="#" title="Apply Now !" class="btn btn-custom btn-md apply-link">{{trans('home.apply_now')}} !</a>
+           <a href="http://www.epro360.dreamapply.com/" target="_blank" title="{{trans('home.apply_now')}}  !" class="btn btn-custom btn-md apply-link">{{trans('home.apply_now')}} !</a>
             <div class="shadow"></div>
             {{ Form::close() }}
         </div>
