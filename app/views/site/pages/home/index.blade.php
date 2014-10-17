@@ -15,17 +15,17 @@
 
 @section('content')
 
+    {{--@if($currentUser)--}}
     @include('site.pages.home.partials.form')
 
     @include('site.pages.home.partials.slider')
 
-    @if(!$currentUser)
 
         @include('site.pages.home.partials.testimonials')
 
         @include('site.pages.home.partials.ambassadors')
 
-    @endif
+    {{--@endif--}}
 
     @if($currentUser)
 
@@ -106,7 +106,7 @@
                 error.insertAfter(element.parent());
             }
         });
-      $('.select-picker').selectpicker({ size: 1 });
+      $('.select-picker').selectpicker();
 
 
 //      $('.checkbox').checkbox({
@@ -123,6 +123,7 @@
         var app = angular.module('calculator',[]);
 
         app.controller("CalculatorController", function($scope){
+
             function calculateGpa(values){
                 return (values.grade * 4 )/ values.outOf;
             }
@@ -175,6 +176,7 @@
                         }
                     }
                     if(values.grade > values.outOf){
+                        $scope.gpa = values.outOf;
                         $scope.scholarship = undefined;
                         $scope.message = false;
                         $scope.calcGpa = undefined;
@@ -183,6 +185,7 @@
                 },
                 true
             );
+
 
         }).filter('percentage', ['$filter', function ($filter) {
             return function (input) {

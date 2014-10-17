@@ -4,6 +4,8 @@
 return [
 
 //    "landing_title" => "To request more info, please fill out this form and we will get in touch with you",
+    "apply_now" => "Apply Now",
+    "or" => "OR",
 
     "form"              => [
         "title"       => "Request More Info",

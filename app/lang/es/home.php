@@ -4,6 +4,9 @@
 return [
 
 //    "landing_title" => "Si desease recibir más información, por favor complete el siguiente formulario y le contactaremos pronto",
+    "apply_now" => "Aplicar Ahora",
+    "or" => "O",
+
     "form"    => [
         "title"       => "Solicitar Mas Información",
         "text"        => "Text for convince the user to download",

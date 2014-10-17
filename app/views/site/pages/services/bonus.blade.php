@@ -19,7 +19,8 @@
 
                 </div>
             </div>
-
+                 <br/><br/>
+                @include('site.pages.home.partials.apply-link')
             <div style="text-align: justify"  class="col-md-9 main-el">
                 <h3>{{ Lang::get('services.bonus_semester_at_sea.title') }}</h3>
                 <div class="image">

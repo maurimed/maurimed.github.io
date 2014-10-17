@@ -1551,8 +1551,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 
 .landing-form-container {
   width: 100%;
-  position: absolute;
-  z-index: 999; }
+  position: absolute; }
 
 .absolute {
   position: absolute;
@@ -1564,16 +1563,21 @@ header.custom-5 .navbar-nav li a .over:hover {
 
 .menu-services {
   float: left;
-  width: 300px !important; }
+  width: 300px !important;
+  z-index: 1000;
+  position: relative; }
 
 .landing-form {
+  height: 536px;
   background-color: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 0 !important;
   padding: 0 !important;
   width: 243px !important;
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
-  float: right; }
+  float: right;
+  z-index: 1000;
+  position: relative; }
   .landing-form .loading-locations {
     position: absolute;
     float: right;
@@ -1632,7 +1636,7 @@ header.custom-5 .navbar-nav li a .over:hover {
   padding-left: 13px; }
 
 .form-2 .btns {
-  padding-bottom: 25px !important; }
+  padding-bottom: 5px !important; }
 
 .left-menu div {
   width: auto !important;
@@ -1857,12 +1861,18 @@ header.custom-5 .navbar-nav li a .over:hover {
       text-align: center;
       color: #818181;
       line-height: 1.8em; }
-    .scholarship-box .body .text {
+    .scholarship-box .body .messages {
       background-color: #fff;
       padding: 15px 0;
       color: #00b3c5;
       margin: 15px 0;
       font-size: 1.5em; }
+  .scholarship-box .btn-default {
+    background-color: #ef3d4a;
+    color: white; }
+    .scholarship-box .btn-default:hover, .scholarship-box .btn-default:focus, .scholarship-box .btn-default:visited {
+      background-color: #ef3d4a;
+      color: white; }
   .scholarship-box .footer {
     font-weight: bold;
     text-transform: uppercase;
@@ -1894,5 +1904,17 @@ header.custom-5 .navbar-nav li a .over:hover {
       text-transform: uppercase;
       margin-top: 5px;
       font-size: .9em; }
+
+.network-link {
+  margin-top: 25px;
+  border-radius: 0 !important;
+  width: 100%; }
+
+.apply-link {
+  border-radius: 0 !important;
+  width: 100%;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: bold; }
 
 /*# sourceMappingURL=aspect.css.map */

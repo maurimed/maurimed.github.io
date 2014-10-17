@@ -8,7 +8,7 @@
                         <div class="col-md-5 col-sm-5">
                             <div class="input-group">
                                 <span class="input-group-addon ">{{trans('home.scholarship_boxes.1.gpa')}}</span>
-                                <input ng-model="gpa" name="gpa" type="number" class="form-control btn-sm" placeholder="100.00" step="any" min="0" max="100.00">
+                                <input ng-model="gpa" name="gpa" type="number" class="form-control btn-sm" placeholder="#" step="any" min="0" max="100.00">
                             </div>
                             <div ng-show="calcGpa" class="text-center text-muted small">AMERICAN GPA @{{ calcGpa | number : 2 }} </div>
                         </div>
@@ -22,12 +22,12 @@
                         </div>
 
                     </div>
-                    <div class="text text-center" ng-show="message">
+                    <div class="messages text-center" ng-show="message">
                         Please contact Online Ambassador
                     </div>
                     <div class="row" ng-show="scholarship">
                         <div class="col-md-12 col-sm-12">
-                            <div class="text-center text">
+                            <div class="text-center messages">
                                 <strong>~@{{ scholarship.amount | currency }}</strong>
                                 {{trans('home.scholarship_boxes.1.up_to')}}
                                 <strong>@{{ scholarship.percent | percentage }} </strong>
@@ -43,24 +43,36 @@
             </div>
             <div class="scholarship-box">
                 <div class="header">{{trans('home.scholarship_boxes.2.title')}}</div>
-                <div class="body row">
-                    <div class="col-md-5 col-sm-5">
-                        <div class="input-group">
-                        <select class="form-control select-picker" name="sports" id="sports">
-                            <option> {{trans('home.scholarship_boxes.2.select')}} </option>
+                <div class="body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <select class="form-control select-picker" ng-model="sports" name="sports" id="sports">
+                            <option value="" selected disabled > {{trans('home.scholarship_boxes.2.select')}} </option>
+                            <option value="Baseball">Baseball </option>
+                            <option value="Basketball">Basketball </option>
+                            <option value="Cross Country">Cross Country </option>
+                            <option value="Football">Football </option>
+                            <option value="Golf">Golf </option>
+                            <option value="Larcrosse">Larcrosse </option>
+                            <option value="Soccer">Soccer </option>
+                            <option value="Swimming and Diving">Swimming and Diving </option>
+                            <option value="Tennis">Tennis </option>
+                            <option value="Track and Field">Track and Field </option>
+                            <option value="Volleyball">Volleyball </option>
+                            <option value="Wrestling">Wrestling </option>
                         </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div ng-show="sports" class="text-center messages">
+                            <strong>~$100,000.00</strong>
+                            {{trans('home.scholarship_boxes.2.up_to')}}
+                            <strong> 100% </strong>
+                            {{trans('home.scholarship_boxes.2.scholarship')}}
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3">
-                        <span class="amount"> {{trans('home.scholarship_boxes.2.amount')}} </span>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                    <span class="text">
-
-                        {{trans('home.scholarship_boxes.2.up_to')}}<br/>
-                        {{trans('home.scholarship_boxes.2.scholarship')}}
-                    </span>
-                    </div>
+                </div>
                 </div>
                 <div class="footer text-center">
                     {{trans('home.scholarship_boxes.2.contact')}} &nbsp;

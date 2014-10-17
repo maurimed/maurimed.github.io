@@ -20,6 +20,8 @@
 
 
                 </div>
+                 <br/><br/>
+                @include('site.pages.home.partials.apply-link')
             </div>
 
             <div style="text-align: justify"  class="col-md-9 main-el">

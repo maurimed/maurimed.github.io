@@ -8,12 +8,13 @@
     <div class="row">
         <div class="col-md-3 main-el">
             <div class="side-menu" id="side-menu-1">
-
                 {{ link_to_route('network', Lang::get('menu.epro_360_network.what_is'),[], ['class' => 'element active']) }}
                 {{ link_to_route('network.mentorship', Lang::get('menu.epro_360_network.mentorship'),[], ['class' => 'element ']) }}
                 {{ link_to_route('network.coaching', Lang::get('menu.epro_360_network.coaching'),[], ['class' => 'element']) }}
 
             </div>
+                    @include('site.pages.network.network-link')
+
         </div>
 
         <div style="text-align: justify" class="col-md-9 main-el">

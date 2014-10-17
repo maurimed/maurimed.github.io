@@ -8,13 +8,6 @@
         <div class="container">
             <div class="row">
 
-                <!-- <div class="col-md-12">
-                    <ol class="breadcrumb portfolio-isotope-filters main-el">
-                        <li class="filter active" data-filter="*"><a>All</a></li>
-                        <li class="filter" data-filter=".leadership"><a>Leadership</a></li>
-
-                    </ol>
-                </div> -->
                 <div class="col-lg-3 col-md-4 main-el">
                     <div class="side-menu" id="side-menu-1">
 
@@ -23,6 +16,10 @@
                         {{ link_to_route('network.coaching', Lang::get('menu.epro_360_network.coaching'),[], ['class' => 'element ']) }}
 
                     </div>
+
+                    @include('site.pages.network.network-link')
+
+
                 </div>
                 <div class="col-lg-9 col-md-8 md">
                     <div class="row">

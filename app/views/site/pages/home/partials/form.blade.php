@@ -123,7 +123,13 @@
             <div class="btns">
 
                 {{ Form::submit(trans('home.form.text_button'), [ 'class' => 'button solid blue submit md form-control' ]) }}
+                <br/>
             </div>
+                <br/>
+                <div class="text-center">- {{trans('home.or')}} -</div>
+                <br/>
+
+           <a href="#" title="Apply Now !" class="btn btn-custom btn-md apply-link">{{trans('home.apply_now')}} !</a>
             <div class="shadow"></div>
             {{ Form::close() }}
         </div>
