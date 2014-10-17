@@ -15,23 +15,20 @@
 
 @section('content')
 
-    {{--@if($currentUser)--}}
-    @include('site.pages.home.partials.form')
+        @include('site.pages.home.partials.form')
+        @include('site.pages.home.partials.slider')
 
-    @include('site.pages.home.partials.slider')
+        <div style="padding-top:0; padding-bottom: 25px" class="container">
+            <div class="row">
+                @include('site.pages.home.partials.services')
 
-
+                @include('site.pages.home.partials.calculators')
+            </div>
+        </div>
         @include('site.pages.home.partials.testimonials')
 
         @include('site.pages.home.partials.ambassadors')
 
-    {{--@endif--}}
-
-    @if($currentUser)
-
-        @include('site.pages.home.partials.services')
-
-    @endif
 @stop
 
 @section('scripts')

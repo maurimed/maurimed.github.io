@@ -2728,6 +2728,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 }
 
 .scholarship-box{
+  border: 1px solid #E5E5E5;
   padding: 15px ;
   color: #686868;
   background-color: #f2f2f2;
@@ -2735,6 +2736,7 @@ header.custom-5 .navbar-nav li a .over:hover {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 171px;
 
   .header{
     color: #818181;
@@ -2801,6 +2803,13 @@ header.custom-5 .navbar-nav li a .over:hover {
   }
 }
 
+.home-apply-now{
+  margin-top: auto;
+  width: 100%;
+//  padding: 15%;
+//  background-color: #f2f2f2;
+}
+
 .services{
   .services-box{
     figure{
@@ -2809,14 +2818,12 @@ header.custom-5 .navbar-nav li a .over:hover {
       img{}
       figcaption{
         background-color: #1d1d1d;
-        height: 60px;
+        padding: 15px;
         span{
-          height: 35px;
+          font-size: 1.3em;
           font-weight: bold;
-          padding-top: 8px;
           display: block;
           line-height: 1.2em;
-//          width: 100%;
           color: white;
           text-align: center;
           text-transform: uppercase;
@@ -2827,7 +2834,7 @@ header.custom-5 .navbar-nav li a .over:hover {
           color: $mainColor;
           text-transform: uppercase;
           margin-top: 5px;
-          font-size: .9em;
+          font-size: 1.2em;
         }
       }
     }
@@ -2841,6 +2848,7 @@ header.custom-5 .navbar-nav li a .over:hover {
 }
 
 .apply-link{
+  margin-top: 6px;
   border-radius: 0 !important;
   width: 100%;
   font-size: 1.1em;

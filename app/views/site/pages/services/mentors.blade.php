@@ -18,9 +18,9 @@
                     {{ link_to_route('services.bonus', Lang::get('menu.services.bonus_semester_at_sea'),[], ['class' => 'element']) }}
 
                 </div>
-            </div>
                  <br/><br/>
                 @include('site.pages.home.partials.apply-link')
+            </div>
             <div style="text-align: justify"  class="col-md-9 main-el">
                 <h3>{{ Lang::get('services.educational_mentors.title') }}</h3>
 

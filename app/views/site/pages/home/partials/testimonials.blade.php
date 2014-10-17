@@ -1,5 +1,5 @@
 <div style="padding-top:0" class="container">
-<div class="row">
+<div class="row" style="padding-top:0" >
     <div class="col-md-12 text-center preview-banner main-el">
         <div class="text">
             <h2 class="main-text-color">What other customers say about us?  </h2>
@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-3 col-sm-6 main-el">
+    <div class="col-md-3 col-sm-6 ">
         <div id="testimonials-1-1" class="carousel slide carousel-fade testimonials-1" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner">

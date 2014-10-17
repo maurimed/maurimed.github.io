@@ -1,164 +1,89 @@
-<div style="padding-top:0" class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-6 wow slideInLeft" ng-app="calculator">
-            <div class="scholarship-box" ng-controller="CalculatorController">
-                <div class="header">{{trans('home.scholarship_boxes.1.title')}}</div>
-                <div class="body">
-                    <div class="row">
-                        <div class="col-md-5 col-sm-5">
-                            <div class="input-group">
-                                <span class="input-group-addon ">{{trans('home.scholarship_boxes.1.gpa')}}</span>
-                                <input ng-model="gpa" name="gpa" type="number" class="form-control btn-sm" placeholder="#" step="any" min="0" max="100.00">
-                            </div>
-                            <div ng-show="calcGpa" class="text-center text-muted small">AMERICAN GPA @{{ calcGpa | number : 2 }} </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7">
-                            <span class="amount">
-                                <span class="small text-center">Out of</span>
-                                  <label> <input name="outOf" type="radio" ng-model="outOf" value="100" >100 </label>
-                                  <label> <input name="outOf" type="radio" ng-model="outOf" value="20" >20 </label>
-                                  <label> <input name="outOf" type="radio" ng-model="outOf" value="10" >10 </label>
-                            </span>
-                        </div>
-
-                    </div>
-                    <div class="messages text-center" ng-show="message">
-                        Please contact Online Ambassador
-                    </div>
-                    <div class="row" ng-show="scholarship">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="text-center messages">
-                                <strong>~@{{ scholarship.amount | currency }}</strong>
-                                {{trans('home.scholarship_boxes.1.up_to')}}
-                                <strong>@{{ scholarship.percent | percentage }} </strong>
-                                {{trans('home.scholarship_boxes.1.scholarship')}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer text-center">
-                    {{trans('home.scholarship_boxes.1.contact')}} &nbsp;
-                    <button class="btn btn-md btn-custom-blue"> {{trans('home.scholarship_boxes.1.btn')}} </button>
-                </div>
-            </div>
-            <div class="scholarship-box">
-                <div class="header">{{trans('home.scholarship_boxes.2.title')}}</div>
-                <div class="body">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <select class="form-control select-picker" ng-model="sports" name="sports" id="sports">
-                            <option value="" selected disabled > {{trans('home.scholarship_boxes.2.select')}} </option>
-                            <option value="Baseball">Baseball </option>
-                            <option value="Basketball">Basketball </option>
-                            <option value="Cross Country">Cross Country </option>
-                            <option value="Football">Football </option>
-                            <option value="Golf">Golf </option>
-                            <option value="Larcrosse">Larcrosse </option>
-                            <option value="Soccer">Soccer </option>
-                            <option value="Swimming and Diving">Swimming and Diving </option>
-                            <option value="Tennis">Tennis </option>
-                            <option value="Track and Field">Track and Field </option>
-                            <option value="Volleyball">Volleyball </option>
-                            <option value="Wrestling">Wrestling </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div ng-show="sports" class="text-center messages">
-                            <strong>~$100,000.00</strong>
-                            {{trans('home.scholarship_boxes.2.up_to')}}
-                            <strong> 100% </strong>
-                            {{trans('home.scholarship_boxes.2.scholarship')}}
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="footer text-center">
-                    {{trans('home.scholarship_boxes.2.contact')}} &nbsp;
-                    <button class="btn btn-md btn-custom-blue"> {{trans('home.scholarship_boxes.2.btn')}} </button>
-                </div>
+<div class="row">
+<div class="col-md-12">
+    <div class="col-md-12 text-center preview-banner main-el">
+        <div class="text">
+            <h2 class="main-text-color">Our Services</h2>
+            <div class="divider divider-3"></div>
+        </div>
+    </div>
+    <div class="services row">
+        <div class="col-md-3 col-sm-3 wow slideInLeft">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Academic-Scholarships.jpg" alt="Academic Scholarships">
+                    <figcaption>
+                        <span>{{ trans('menu.services.academic_scholarships') }}</span>
+                        <a href="/services/academic-scholarships">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6 wow slideInRight">
-            <div  class="col-md-12 text-center">
-                <div class="text">
-                    <h3 class="main-text-color">Our Services</h3>
-                </div>
+        <div class="col-md-3 col-sm-3 wow slideInUp">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Athletic-Scholarships.jpg" alt="Athletic Scholarships">
+                    <figcaption>
+                        <span>{{ trans('menu.services.athletic_scholarships') }}</span>
+                        <a href="/services/athletic-scholarships">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="services row">
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/1" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program Scholarship</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/2" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/3" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/4" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/5" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <div class="services-box">
-                        <figure>
-                            <img class="img-responsive" src="http://lorempixel.com/165/120/people/6" alt="Macaque in the trees">
-                            <figcaption>
-                                <span>Esl Program</span>
-                                <a href="#">Read More</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-
+        </div>
+        <div class="col-md-3 col-sm-3 wow slideInUp">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/English-Courses-ESL.jpg" alt="English Courses ESL">
+                    <figcaption>
+                        <span>{{ trans('menu.services.english_courses_esl') }}</span>
+                        <a href="/services/english-courses-esl">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 wow slideInRight">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Educational-Mentors.jpg" alt="Educational Mentors">
+                    <figcaption>
+                        <span>{{ trans('menu.services.educational_mentors') }}</span>
+                        <a href="/services/academic-scholarships">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 wow slideInLeft">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Carrer-Coaching.jpg" alt="Career Coaching">
+                    <figcaption>
+                        <span>{{ trans('menu.services.career_coaching') }}</span>
+                        <a href="/services/academic-scholarships">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 wow slideInUp">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Internships.jpg" alt="Internships">
+                    <figcaption>
+                        <span>{{ trans('menu.services.internships') }}</span>
+                        <a href="/services/academic-scholarships">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 wow slideInRight">
+            <div class="services-box">
+                <figure>
+                    <img class="img-responsive" src="/site/img/home/services/Bonus-Semester-at-Sea.jpg" alt="Bonus: Semester at Sea">
+                    <figcaption>
+                        <span>{{ trans('menu.services.bonus_semester_at_sea') }}</span>
+                        <a href="/services/bonus-semester-at-sea">{{ trans('blog.read_more') }}</a>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </div>
-    <div class="col-md-12 main-el">
-        <div class="sep-line"></div>
-    </div>
-
+</div>
 </div>
