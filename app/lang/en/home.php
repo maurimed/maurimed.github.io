@@ -107,5 +107,10 @@ return [
             "btn"         => "Online Ambassador",
             "out_of"      => "out of"
         ],
+    ],
+
+    "testimonials" => [
+        "title" => "What other customers say about us?"
+
     ]
 ];
