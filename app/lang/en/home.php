@@ -4,8 +4,9 @@
 return [
 
 //    "landing_title" => "To request more info, please fill out this form and we will get in touch with you",
-    "apply_now" => "Apply Now",
-    "or" => "OR",
+    "apply_now"         => "Apply Now",
+    "apply_now_text"    => "Are you ready to succeed in the U.S?",
+    "or"                => "OR",
 
     "form"              => [
         "title"       => "Request More Info",
@@ -93,6 +94,9 @@ return [
             "scholarship" => "SCHOLARSHIP*",
             "contact"     => "Contact Our",
             "btn"         => "Online Ambassador",
+            "out_of"      => "out of",
+            "message"   => "Please contact Online Ambassador",
+
         ],
         "2" => [
             "title"       => "Want to see if you are eligible for an Athletic Scholarship",
@@ -101,6 +105,7 @@ return [
             "scholarship" => "SCHOLARSHIP*",
             "contact"     => "Contact Our",
             "btn"         => "Online Ambassador",
+            "out_of"      => "out of"
         ],
     ]
 ];

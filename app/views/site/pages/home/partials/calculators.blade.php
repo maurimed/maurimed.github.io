@@ -1,4 +1,4 @@
-<div class="col-md-12" ng-app="calculator">
+<div class="col-md-12" ng-app="calculator" style="z-index: 1">
     <div class="col-md-12 text-center preview-banner main-el">
         <div class="text">
             <div class="divider divider-3"></div>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-md-7 col-sm-7">
                             <span class="amount">
-                                <span class="small text-center">Out of</span>
+                                <span class="small text-center">{{ trans('home.scholarship_boxes.1.out_of') }}</span>
                                   <label> <input name="outOf" type="radio" ng-model="outOf" value="100" >100 </label>
                                   <label> <input name="outOf" type="radio" ng-model="outOf" value="20" >20 </label>
                                   <label> <input name="outOf" type="radio" ng-model="outOf" value="10" >10 </label>
@@ -29,7 +29,7 @@
 
                     </div>
                     <div class="messages text-center" ng-show="message">
-                        Please contact Online Ambassador
+                        {{ trans('home.scholarship_boxes.1.message') }}
                     </div>
                     <div class="row" ng-show="scholarship">
                         <div class="col-md-12 col-sm-12">
@@ -88,18 +88,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 wow slideInRight">
-            <div class="scholarship-box">
-                <br/>
-                <br/>
-                <div class="body">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 text-center">
-                            <a target="_blank" href="http://www.epro360.dreamapply.com/" class="btn btn-lg btn-custom"> {{trans('home.apply_now')}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-6 wow slideInRight text-center">
+            <br/>
+            <h3 class="text-blue">{{ trans('home.apply_now_text') }}</h3>
+            <a target="_blank" href="http://www.epro360.dreamapply.com/" class="btn btn-lg btn-custom"> {{trans('home.apply_now')}}</a>
         </div>
     </div>
 

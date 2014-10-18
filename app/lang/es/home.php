@@ -4,10 +4,10 @@
 return [
 
 //    "landing_title" => "Si desease recibir más información, por favor complete el siguiente formulario y le contactaremos pronto",
-    "apply_now" => "Aplicar Ahora",
-    "or" => "O",
+    "apply_now"         => "Aplicar Ahora",
+    "or"                => "O",
 
-    "form"    => [
+    "form"              => [
         "title"       => "Solicitar Mas Información",
         "text"        => "Text for convince the user to download",
         "inputs"      => [
@@ -73,7 +73,7 @@ return [
     ],
 
 
-    "sliders" => [
+    "sliders"           => [
         "first"  => [
             "text1" => "Hacemos que tu SUEÑO",
             "text2" => "de estudiar en los Estados Unidos",
@@ -84,6 +84,32 @@ return [
             "text2" => "para estudiar en los Estados Unidos"
         ],
 
+    ],
+
+
+    "scholarship_boxes" => [
+        "1" => [
+            "title"       => "¿Quieres saber si calificas para una Beca Académica?",
+            "gpa"         => "Promedio",
+            "up_to"       => "O hasta el",
+            "scholarship" => "de la Beca*",
+            "contact"     => "Contacta Nuestro",
+            "btn"         => "Embajador en línea",
+            "out_of"      => "sobre",
+            "message"   => "Por favor contacta a un Embajador en línea",
+
+
+        ],
+        "2" => [
+            "title"       => "¿Quieres saber si calificas para una Beca Deportiva?",
+            "select"      => "Selecciona un Deporte",
+            "up_to"       => "O hasta el",
+            "scholarship" => "de la Beca*",
+            "contact"     => "Contacta Nuestro",
+            "btn"         => "Embajador en línea",
+            "out_of"      => "sobre"
+
+        ],
     ]
 
 ];

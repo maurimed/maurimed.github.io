@@ -1,6 +1,6 @@
 <div class="hidden-xs hidden-sm">
     <div class="landing-form-container">
-        <div class="menu-services left-menu">
+        <div class="menu-services left-menu wow slideInLeft">
             <div class="element alt-text-color op1"> {{ link_to_route('services.academic',
                 trans('menu.services.academic_scholarships') ) }}
             </div>
@@ -23,7 +23,7 @@
                 trans('menu.services.bonus_semester_at_sea')) }}
             </div>
         </div>
-        <div class="form form-2 landing-form">
+        <div class="form form-2 landing-form  wow slideInRight">
             <div class="loading-locations">
                 <img src="/site/img/loader.gif">
             </div>
