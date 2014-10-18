@@ -10,10 +10,10 @@
 </div>
 <div class="row">
 
-    <div class="col-md-4 col-sm-6 main-el">
+    <div class="col-md-4 col-sm-6 main-el wow flipInY">
 
         <div class="testimonial-wrapper background-blue">
-            <div class="testimonial-avatar">
+            <div class="testimonial-avatar ">
                 <img src="/site/img/home/testimonials/Yoshikazu-Ysa.jpg" alt="Yoshikazu Ysa">
             </div>
             <div class="testimonial-title">Digital Cinema Major</div>
@@ -21,9 +21,10 @@
             <div class="testimonial-footer">Yoshikazu Ysa from Perú</div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-6 main-el">
+
+    <div class="col-md-4 col-sm-6 main-el wow flipInY">
         <div class="testimonial-wrapper background-red">
-            <div class="testimonial-avatar">
+            <div class="testimonial-avatar ">
                 <img src="/site/img/home/testimonials/Andrea-Ruano.jpg" alt="Andrea Ruano">
             </div>
             <div class="testimonial-title">Communication Major</div>
@@ -31,9 +32,10 @@
             <div class="testimonial-footer">Andrea Ruano from Ecuador</div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-6 main-el">
+
+    <div class="col-md-4 col-sm-6 main-el wow flipInY">
         <div class="testimonial-wrapper background-blue">
-            <div class="testimonial-avatar">
+            <div class="testimonial-avatar ">
                 <img src="/site/img/home/testimonials/Emanuel-Molinar.jpg" alt="Emanuel Molinar">
             </div>
             <div class="testimonial-title">Engineering Major</div>
