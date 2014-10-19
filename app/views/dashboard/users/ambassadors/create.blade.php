@@ -1,4 +1,3 @@
-
 @extends('dashboard.layouts.master')
 
 @section('ribbon')
@@ -11,11 +10,7 @@
 
 @section('content')
 <section id="widget-grid" class="">
-
-    <!-- row -->
     <div class="row">
-
-        <!-- NEW WIDGET START -->
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             @include('dashboard.partials.form-errors')
             <div class="jarviswidget jarviswidget-color-darken" id="wid-id-101" data-widget-editbutton="false">
@@ -26,15 +21,8 @@
 
                 </header>
 
-                <!-- widget div-->
                 <div>
-
-                    <!-- widget edit box -->
-                    <div class="jarviswidget-editbox">
-                    </div>
-                    <!-- end widget edit box -->
-
-                    <!-- widget content -->
+                    <div class="jarviswidget-editbox"> </div>
                     <div class="widget-body no-padding">
                         {{ Form::open(['route' => 'dashboard.ambassadors.store' ,'id' => 'ambassador-form', 'class' => 'smart-form', 'novalidate' => 'novalidate' ] ) }}
 
@@ -46,25 +34,11 @@
                                 </button>
                             </footer>
                         {{ Form::close() }}
-
                     </div>
-                    <!-- end widget content -->
-
                 </div>
-                <!-- end widget div -->
-
             </div>
-            <!-- end widget -->
-
         </article>
-        <!-- WIDGET END -->
-
     </div>
-
-    <!-- end row -->
-
-    <!-- end row -->
-
 </section>
 
 @stop

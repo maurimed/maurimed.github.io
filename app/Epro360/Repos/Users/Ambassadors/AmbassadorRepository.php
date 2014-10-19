@@ -48,7 +48,10 @@ class AmbassadorRepository {
 
         $ambassador->save();
 
-        return $ambassador;
+        /** @var $ambassador */
+
+        return array_add($ambassador, 'password', str_random(15));
+
     }
 
     public function update($input, $ambassadorId)
