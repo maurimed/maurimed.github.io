@@ -5,6 +5,8 @@ return [
 
 //    "landing_title" => "Si desease recibir más información, por favor complete el siguiente formulario y le contactaremos pronto",
     "apply_now"         => "Aplicar Ahora",
+    "apply_now_text"    => "¿Estás listo para tener éxito en la U.S?",
+
     "or"                => "O",
 
     "form"              => [
@@ -110,6 +112,32 @@ return [
             "out_of"      => "sobre"
 
         ],
+    ],
+
+    "testimonials"      => [
+        "title" => "What other customers say about us?"
+    ],
+
+    "promo"             => [
+        "form" => [
+            "inputs"=>[
+                "name"  => "Nombre completo",
+                "email" => "Correo electrónico",
+                "phone" => "Teléfono",
+                "participate" => "Participar",
+            ],
+            "errors" => [
+                "name" => "Para participar necesitas ingresar tu nombre",
+                "email"     => [
+                    "required" => "Para participar necesitas ingresar tu correo electrónico",
+                    "invalid"  => "Por favor escribe un correo electrónico válido"
+                ],
+                "phone"     => [
+                    "required" => "Para participar necesitas ingresar tu número de teléfono",
+                    "number"   => "Por favor solo tu números"
+                ],
+            ]
+        ]
     ]
 
 ];

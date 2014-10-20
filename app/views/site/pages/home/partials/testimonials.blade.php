@@ -1,10 +1,9 @@
 <div style="padding-top:0" class="container">
-<div class="row" style="padding-top:0" >
+<div class="row" >
     <div class="col-md-12 text-center preview-banner main-el">
         <div class="text">
             <h2 class="main-text-color">{{ trans('home.testimonials.title') }}</h2>
             <div class="divider divider-3"></div>
-
         </div>
     </div>
 </div>

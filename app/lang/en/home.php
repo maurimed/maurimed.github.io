@@ -95,7 +95,7 @@ return [
             "contact"     => "Contact Our",
             "btn"         => "Online Ambassador",
             "out_of"      => "out of",
-            "message"   => "Please contact Online Ambassador",
+            "message"     => "Please contact Online Ambassador",
 
         ],
         "2" => [
@@ -109,8 +109,29 @@ return [
         ],
     ],
 
-    "testimonials" => [
+    "testimonials"      => [
         "title" => "What other customers say about us?"
+    ],
 
+    "promo"             => [
+        "form" => [
+            "inputs"=>[
+                "name"  => "Full name",
+                "email" => "Email",
+                "phone" => "Phone",
+                "participate" => "Participate",
+            ],
+            "errors" => [
+                "name" => "Please enter your name",
+                "email"     => [
+                    "required" => "Please enter your email",
+                    "invalid"  => "Enter a valid email"
+                ],
+                "phone"     => [
+                    "required" => "Enter your phone",
+                    "number"   => "Only numbers"
+                ],
+            ]
+        ]
     ]
 ];

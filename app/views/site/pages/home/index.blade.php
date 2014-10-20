@@ -1,9 +1,9 @@
 @extends('site.layouts.master')
 
 @section('styles')
-        <link rel="stylesheet" type="text/css" href="/site/vendors/rs-plugin/css/settings.css" media="screen"/>
+        <link href="/site/vendors/rs-plugin/css/settings.css" media="screen" rel="stylesheet"  >
         <link href="/site/vendors/smoothdivscroll/smoothDivScroll.css" rel="stylesheet">
-        <link rel="stylesheet" href="/site/vendors/magnific-popup/magnific-popup.css">
+        <link href="/site/vendors/magnific-popup/magnific-popup.css"rel="stylesheet"  >
         <link href="/site/ambassadors/style2.css" rel="stylesheet">
         <link href="/site/ambassadors/flags/assets/docs.css" rel="stylesheet">
         <link href="/site/ambassadors/flags/css/flag-icon.css" rel="stylesheet">
@@ -16,15 +16,15 @@
 @section('content')
 
         @include('site.pages.home.partials.form')
+
         @include('site.pages.home.partials.slider')
 
-        <div style="padding-top:0; padding-bottom: 25px" class="container">
-            <div class="row">
-                @include('site.pages.home.partials.services')
+        @include('site.pages.home.partials.services')
 
-                @include('site.pages.home.partials.calculators')
-            </div>
-        </div>
+        @include('site.pages.home.partials.calculators')
+
+        @include('site.pages.home.partials.promos')
+
         @include('site.pages.home.partials.testimonials')
 
         @include('site.pages.home.partials.ambassadors')
@@ -39,10 +39,12 @@
 
 <script src="/backend/js/plugin/jquery-validate/jquery.validate.min.js"></script>
 <script src="/site/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/site/vendors/fitvids/jquery.fitvids.js"></script>
 {{--<script src="/site/vendors/bootstrap-checkbox/bootstrap-checkbox.js"></script>--}}
 <script src="/backend/js/libs/angular.min.js"></script>
 <script>
     $('document').ready(function(){
+
         $('.loading-locations').css('display','block');
         $.ajax({
             type: "GET",
@@ -103,14 +105,43 @@
                 error.insertAfter(element.parent());
             }
         });
-      $('.select-picker').selectpicker();
+        $('.select-picker').selectpicker();
+        $(".promo-video-wrapper").fitVids();
 
+        $("#promo-form").validate({
 
-//      $('.checkbox').checkbox({
-//          checkedClass: 'fa-check',
-//          uncheckedClass: 'fa-check-empty'
-//      });
+                    rules : {
 
+                        promo_name : { required: true},
+                        promo_email : {
+                            required : true,
+                            email : true
+                        },
+                        promo_phone: {
+                            required: true,
+                            number: true
+                        }
+
+                    },
+
+                    // Messages for form validation
+                    messages : {
+                        promo_name : { required: $('#promo_name').data('error')},
+                        promo_email : {
+                            required : $('#promo_email').data('error'),
+                            email : $('#promo_email').data('invalid')
+                        },
+                        promo_phone : {
+                            required : $('#promo_phone').data('error'),
+                            number: $('#promo_phone').data('number')
+                        }
+                    },
+
+                    // Do not change code below
+                    errorPlacement : function(error, element) {
+                        error.insertAfter(element.parent());
+                    }
+                });
 
     });
 

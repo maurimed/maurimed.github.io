@@ -76,4 +76,31 @@ class ImageService {
         File::delete($pathToImage . 'thumb-' . $user->image);
     }
 
+    public function promoImage($input, $promo)
+    {
+
+        $image = Image::make($input['image']->getRealPath());
+
+
+        $pathToImage = public_path(). 'site/img/promos/';
+
+        File::exists($pathToImage) or File::makeDirectory($pathToImage);
+
+        File::delete($pathToImage . $promo->image);
+        File::delete($pathToImage . 'thumb-' . $promo->image);
+
+
+        $imageName = Str::slug($input['image']->getClientOriginalName(), '_') . '.' . $input['image']->getClientOriginalExtension();
+
+        $image->save($pathToImage . $imageName)
+            ->crop(600, 300)
+            ->fill([255,255,255,255],0 ,255)
+            ->save($pathToImage . $imageName)
+            ->resize(50, 50)
+            ->save($pathToImage . 'thumb-' . $imageName);
+
+        return $imageName;
+
+    }
+
 } 

@@ -92,6 +92,7 @@ Route::group(['prefix' => 'dashboard', 'before' => 'auth|accessibleBy:Administra
     Route::resource('cities', 'CitiesController');
     Route::resource('universities', 'UniversitiesController');
     Route::resource('subscribers', 'SubscribersController', ['only' => ['index', 'update', 'destroy']]);
+    Route::resource('promos', 'PromosController');
 //
 //    Route::group(['before' => 'accessibleBy:Manager'], function ()
 //    {
@@ -133,3 +134,4 @@ Route::get('logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy'])
 Route::resource('sessions', 'SessionsController', ['only' => ['create', 'store', 'destroy']]);
 //
 Route::post('subscribers', ['as' => 'subscribers.store', 'uses' => 'SubscribersController@store']);
+Route::post('promos/subscribe' , ['as' => 'promos.subscribe', 'uses' => 'SubscribersController@promo'] );

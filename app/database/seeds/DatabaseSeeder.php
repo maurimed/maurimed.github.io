@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder {
        $this->call('AmbassadorsTableSeeder');
        $this->call('StudentsTableSeeder');
        $this->call('RepresentativesTableSeeder') ;
-       $this->call('ManagersTableSeeder') ;
+        $this->call('ManagersTableSeeder') ;
+        $this->call('PromosTableSeeder') ;
 //        $this->call('AcademicSchoolsTableSeeder');
 //        $this->call('MajorsTableSeeder');
 //        $this->call('MinorsTableSeeder');

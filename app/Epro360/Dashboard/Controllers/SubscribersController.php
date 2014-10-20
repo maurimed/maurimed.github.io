@@ -23,7 +23,7 @@ class SubscribersController extends \BaseController {
 	 */
 	public function index()
 	{
-        $subscribers = \Subscriber::all();
+        $subscribers = \Subscriber::latest()->get();
 
 		return \View::make('dashboard.subscribers.index', compact('subscribers'));
 	}

@@ -1,27 +1,13 @@
 <div class="hidden-xs hidden-sm">
     <div class="landing-form-container">
         <div class="menu-services left-menu wow slideInLeft">
-            <div class="element alt-text-color op1"> {{ link_to_route('services.academic',
-                trans('menu.services.academic_scholarships') ) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.athletic',
-                trans('menu.services.athletic_scholarships')) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.english',
-                trans('menu.services.english_courses_esl')) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.mentors',
-                trans('menu.services.educational_mentors')) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.coaching',
-                trans('menu.services.career_coaching')) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.internships',
-                trans('menu.services.internships')) }}
-            </div>
-            <div class="element alt-text-color op1">{{ link_to_route('services.bonus',
-                trans('menu.services.bonus_semester_at_sea')) }}
-            </div>
+            <div class="element alt-text-color op1"> {{ link_to_route('services.academic', trans('menu.services.academic_scholarships') ) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.athletic', trans('menu.services.athletic_scholarships')) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.english', trans('menu.services.english_courses_esl')) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.mentors', trans('menu.services.educational_mentors')) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.coaching', trans('menu.services.career_coaching')) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.internships', trans('menu.services.internships')) }} </div>
+            <div class="element alt-text-color op1">{{ link_to_route('services.bonus', trans('menu.services.bonus_semester_at_sea')) }} </div>
         </div>
         <div class="form form-2 landing-form  wow slideInRight">
             <div class="loading-locations">

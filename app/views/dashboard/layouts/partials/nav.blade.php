@@ -59,6 +59,9 @@
     <li  class="{{ setActive('posts') }}" >
         <a href="/dashboard/posts" title="Posts"><i class="fa fa-lg fa-fw fa-pencil"></i> <span  class="menu-item-parent">Posts</span></a>
     </li>
+    <li  class="{{ setActive('promos') }}" >
+        <a href="/dashboard/promos" title="Promos"><i class="fa fa-lg fa-fw fa-bullhorn"></i> <span  class="menu-item-parent">Promos</span></a>
+    </li>
 
 
 @endif
