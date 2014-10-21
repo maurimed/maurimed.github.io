@@ -2817,9 +2817,12 @@ header.custom-5 .navbar-nav li a .over:hover {
 .services{
   .services-box{
     figure{
+      width: 100%;
       margin-bottom: 15px;
       font-size: .9em;
-      img{}
+      img{
+        width: 100%;
+      }
       figcaption{
         background-color: $secondaryColor;
         padding: 15px;
@@ -2884,15 +2887,18 @@ header.custom-5 .navbar-nav li a .over:hover {
   padding: 0 25px 25px;
   position: relative;
   text-shadow: 1px 1px 2px rgba(0,0,0, .1);
+  margin-top: 58px;
   .testimonial-avatar{
     width: 100%;
+    position: absolute;
+    left: 50%;
     img{
       border: 5px solid white;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: relative;
       top: -77px;
       border-radius: 50%;
-      right: 101px;
+      left: -50%;
     }
   }
   .testimonial-title{
@@ -2990,4 +2996,24 @@ header.custom-5 .navbar-nav li a .over:hover {
 .container > .row {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#testimonials-slider{
+  .carousel-inner{
+  }
+  .carousel-indicators{
+    bottom: -30px;
+    .active{
+      background-color: $secondaryColor;
+    }
+    li{
+      border-color: $secondaryColor;
+    }
+
+  }
+}
+
+.cstm-img-ab{
+  height: 330px;
+  overflow: hidden;
 }

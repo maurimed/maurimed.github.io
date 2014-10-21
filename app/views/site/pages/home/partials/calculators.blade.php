@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 wow slideInRight text-center">
+                <div class="col-md-4 col-sm-12 wow slideInRight text-center">
                     <br/>
                     <h3 class="text-blue">{{ trans('home.apply_now_text') }}</h3>
                     <a target="_blank" href="http://www.epro360.dreamapply.com/" class="btn btn-lg btn-custom"> {{trans('home.apply_now')}}</a>

@@ -24,7 +24,7 @@
                    <div class="container text-center" >
                        <div class="bold ">
 
-                           <a target="_blank" href="http://epro360.dreamapply.com/" title="{{trans('home.apply_now')}} !" class="button md solid blue"><div class="over" style="font-size:1.8em" >{{trans('home.apply_now')}} !</div></a>
+                           <a target="_blank" href="http://epro360.dreamapply.com/" title="{{trans('home.apply_now')}} !" class="btn btn-custom"><div class="over" style="font-size:1.8em" >{{trans('home.apply_now')}} !</div></a>
                        </div>
                    </div>
                </div>
@@ -57,7 +57,7 @@
                 <div class="tp-caption caption1 title lfb" data-x="center" data-voffset="90" data-y="240" data-speed="800" data-start="3200" >
                    <div class="container text-center" >
                        <div class="bold ">
-                           <a target="_blank" href="http://epro360.dreamapply.com/" title="{{ trans('home.apply_now') }} !" class="button md solid blue"><div class="over" style="font-size:1.8em" >{{ trans('home.apply_now') }}!</div></a>
+                           <a target="_blank" href="http://epro360.dreamapply.com/" title="{{ trans('home.apply_now') }} !" class="btn btn-custom"><div class="over" style="font-size:1.8em" >{{ trans('home.apply_now') }}!</div></a>
                        </div>
                    </div>
                 </div>

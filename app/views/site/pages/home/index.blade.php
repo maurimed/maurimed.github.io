@@ -14,7 +14,6 @@
 @stop
 
 @section('content')
-
         @include('site.pages.home.partials.form')
 
         @include('site.pages.home.partials.slider')

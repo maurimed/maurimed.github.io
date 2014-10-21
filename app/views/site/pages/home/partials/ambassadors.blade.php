@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="col-sm-12">
+<div class="row" style="margin-left: 0;margin-right: 0">
+    <div class="col-sm-12 no-padding">
         <div class="top-box text-center">
             <label>Ambassador Team</label>
         </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="clearfix"></div>
-    <div class="contact-btn col-sm-12">
+    <div class="contact-btn col-sm-12 no-padding">
         <div class="col-sm-6 text-right">
             <label class="p-list">Is your country not on this list?</label><br>
             <label class="p-list">Contact our</label>

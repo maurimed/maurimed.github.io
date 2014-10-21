@@ -1893,8 +1893,11 @@ header.custom-5 .navbar-nav li a .over:hover {
   width: 100%; }
 
 .services .services-box figure {
+  width: 100%;
   margin-bottom: 15px;
   font-size: .9em; }
+  .services .services-box figure img {
+    width: 100%; }
   .services .services-box figure figcaption {
     background-color: #00b3c5;
     padding: 15px; }
@@ -1949,16 +1952,19 @@ header.custom-5 .navbar-nav li a .over:hover {
   color: white;
   padding: 0 25px 25px;
   position: relative;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 58px; }
   .testimonial-wrapper .testimonial-avatar {
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    left: 50%; }
     .testimonial-wrapper .testimonial-avatar img {
       border: 5px solid white;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: relative;
       top: -77px;
       border-radius: 50%;
-      right: 101px; }
+      left: -50%; }
   .testimonial-wrapper .testimonial-title {
     padding-top: 92px;
     font-size: 1.7em;
@@ -2034,5 +2040,16 @@ header.custom-5 .navbar-nav li a .over:hover {
 .container > .row {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+#testimonials-slider .carousel-indicators {
+  bottom: -30px; }
+  #testimonials-slider .carousel-indicators .active {
+    background-color: #00b3c5; }
+  #testimonials-slider .carousel-indicators li {
+    border-color: #00b3c5; }
+
+.cstm-img-ab {
+  height: 330px;
+  overflow: hidden; }
 
 /*# sourceMappingURL=aspect.css.map */
