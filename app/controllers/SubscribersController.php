@@ -78,6 +78,8 @@ class SubscribersController extends \BaseController {
 
         $subscriber->save();
 
+        Event::fire('promo.subscriber.created', $subscriber);
+
 //        $this->subscriberMailer->thanks($subscriber);
 
         return Redirect::back()->withSuccessMessage('Thanks for participating');

@@ -18,7 +18,6 @@ class UserEditForm extends FormValidator {
 
     public function validateUpdate($id, $input)
     {
-
         $userWantsToChangePassword = $this->verifyIfUserWantsToChangeYourPassword($input);
 
         if ($userWantsToChangePassword)
@@ -43,7 +42,8 @@ class UserEditForm extends FormValidator {
         if (Hash::check($input['old_password'], User::find($id)->password))
         {
             $changePassword = true;
-        } else
+        }
+        else
         {
             throw new FormValidationException('There where validation errors', 'You need to know your old password in order to change to a new one');
         }
@@ -81,7 +81,8 @@ class UserEditForm extends FormValidator {
         if ($input['password'] != '')
         {
             $this->checkIfOldPasswordMatch($id, $input);
-        } else
+        }
+        else
         {
             $this->rules['password'] = "required|confirmed";
         }
@@ -96,7 +97,8 @@ class UserEditForm extends FormValidator {
         if ($input['old_password'] != '')
         {
             $this->checkIfNewPasswordWasProvided($id, $input);
-        } else
+        }
+        else
         {
             $this->rules['old_password'] = "required";
         }

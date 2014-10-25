@@ -29,7 +29,33 @@ return [
             "4" => "Todos los Derechos Reservados",
         ]
 
-    ]
+    ],
+
+    "promo"         => [
+        "subject"          => "¡Enhorabuena!",
+        "greetings"        => "Hola ",
+        "p1"               => "¡Enhorabuena! Estamos muy emocionados de que hayas participado en nuestro sorteo semestral. Si resultas ganador de nuestro sorteo, los servicios prestados por Epro 360 te saldrán gratis.",
+        "p2"               => "Por favor revisa todos nuestros programas y servicios haciendo click",
+        "here"             => "aquí",
+        "p3"               => "Si ya sabes el programa al que desea aplicar, recuerda que puedes ya mismo comenzar tu solicitud haciendo click",
+        "p4"               => "Contacta a tu ",
+        "ambassador"       => "embajador",
+        "p5"               => "mas cercano o envíanos un correo electrónico a",
+        "p6"               => "para cualquier duda o sugerencia.",
+        "p7"               => "¡Gracias y buena suerte en el sorteo!",
+        "p8"               => "El Equipo Epro 360",
+        "additional_notes" => "Notas Adicionales:",
+        "li1"              => "El sorteo se llevará a cabo al final de cada semestre a partir de 2015 (30 de junio y 31 de diciembre).",
+        "li2"              => "Los participantes del sorteo serán aquellos candidatos que hayan completado su solicitud para cualquiera de nuestros programas durante el semestre y a través de nuestra",
+        "platform"         => "plataforma de solicitudes online",
+        "li3"              => "Cada participante tendrá una oportunidad cada semestre.",
+        "li4"              => "Haremos el anuncio del ganador en nuestras redes sociales y nos comunicaremos directamente con el ganador a través de correo electrónico o teléfono.",
+        "li5"              => "En caso de que el ganador ya haya pagado por nuestros servicios, Epro 360 reembolsará el 100% de los pagos que el ganador haya realizado con anterioridad.",
+        "visit"            => "Por favor visite nuestro sitio web",
+        "for_info"         => "para obtener más información."
+
+
+    ],
 ];
 
 

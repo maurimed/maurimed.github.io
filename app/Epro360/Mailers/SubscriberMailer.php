@@ -7,6 +7,11 @@
  */
 class SubscriberMailer extends Mailer {
 
+    public function subscribe($events)
+    {
+        $events->listen('promo.subscriber.created', 'Epro360\Mailers\SubscriberMailer@subscribedToPromo');
+    }
+
     /**
      * @param $subscriber
      */
@@ -17,6 +22,18 @@ class SubscriberMailer extends Mailer {
             "name" => $subscriber->name
         ];
         $subject = trans('emails.subscribers.subject');
+
+
+        return $this->sendTo($subscriber, $subject, $view, $data);
+    }
+
+    public function subscribedToPromo($subscriber)
+    {
+        $view = 'emails.subscribers.promo';
+        $data = [
+            "name" => $subscriber->name
+        ];
+        $subject = trans('emails.subscribers.promo.subject');
 
 
         return $this->sendTo($subscriber, $subject, $view, $data);

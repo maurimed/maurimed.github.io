@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "subscribers" => [
+    "subscribers"   => [
         "subject"    => "Epro 360 Would Love to See You Succeed!",
         "greeting"   => "Hello ",
         "p1"         => "Thanks for enquiring about Epro 360 and completing the first step towards becoming a part of the Epro 360 Network. We are very pleased to hear about your interest in studying in the U.S. and making the most out of your college/university experience, which will be one of the most exciting times of your life.",
@@ -30,21 +30,46 @@ return [
         ]
 
     ],
+    "promo"         => [
+        "subject"          => "Congratulations!",
+        "greetings"        => "Dear",
+        "p1"               => "Congratulations! We are really excited to have you participate in our semiannual raffle. If you become the winner, you will have to pay Epro 360 zero for the services provided.",
+        "p2"               => "Please check out all the programs and services that we currently offer by doing click",
+        "here"             => "here",
+        "p3"               => "If you already know the program you would like to apply, please start applying now by doing click",
+        "p4"               => "Contact your closest ",
+        "ambassador"       => "ambassador",
+        "p5"               => "or send us an email at",
+        "p6"               => "if you have any questions.",
+        "p7"               => "Thank you and good luck on the raffle!",
+        "p8"               => "Epro 360 Management",
+        "additional_notes" => "Additional Notes:",
+        "li1"              => "The raffle will take place at the end of each semester starting in 2015 (June 30 and December 31).",
+        "li2"              => "A participant for the raffle will be that person that has entered in the raffle and has applied to one of our programs during the semester in our application",
+        "platform"         => "platform",
+        "li3"              => "There is one chance per user.",
+        "li4"              => "We will make the announcement of the winner in our social media and communicate directly with the winner by email or phone.",
+        "li5"              => "In case you have become the winner and have already paid for our services, Epro 360 will reimburse you 100% of any prior payment.",
+        "visit"            => "Please visit our website",
+        "for_info"         => "for further information."
+
+
+    ],
 
     "administrator" => [
         "subject" => "Administrator created!"
     ],
 
-    "ambassador" => [
+    "ambassador"    => [
         "subject" => "Ambassador created!"
 
     ],
 
-    "student" => [
+    "student"       => [
         "subject" => "Student created!"
     ],
 
-    "director" => [
+    "director"      => [
         "subject" => "Director created!"
     ],
 
