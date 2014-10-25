@@ -164,13 +164,13 @@
 
                                                 <br/> <br/>
                                                 <a target="_blank" href="{{ trans('footer.social_links.facebook') }}">
-                                                    <img src="http://www.epro360.com/site/email/128-facebook.png" alt="Facebook"/>
-                                                </a>
-                                                <a target="_blank" href="{{ trans('footer.social_links.google-plus') }}">
-                                                <img src="http://www.epro360.com/site/email/128-googleplus.png" alt="Google Plus"/> </a>
+                                                    <img src="http://www.epro360.com/site/email/128-facebook.png" alt="Facebook"/> </a>
 
                                                 <a target="_blank" href="{{ trans('footer.social_links.twitter') }}">
                                                 <img src="http://www.epro360.com/site/email/128-twitter.png" alt="Twitter"/> </a>
+
+                                                <a target="_blank" href="{{ trans('footer.social_links.instagram') }}">
+                                                <img src="http://www.epro360.com/site/email/128-instagram.png" alt="Instragram"/> </a>
 
                                                 <br/>
                                                 <small>
