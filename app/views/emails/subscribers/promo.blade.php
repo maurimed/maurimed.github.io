@@ -39,7 +39,7 @@
             <span style="font-size: .9em;">{{ trans('emails.promo.additional_notes') }}</span> <br/>
             <ol style="font-size: .9em;">
                 <li>{{ trans('emails.promo.li1') }}</li>
-                <li>{{ trans('emails.promo.li2') }}<a href="http://www.epro360.dreamapply.com/">{{ trans('emails.promo.platform') }}</a>.</li>
+                <li>{{ trans('emails.promo.li2') }} <a href="http://www.epro360.dreamapply.com/">{{ trans('emails.promo.platform') }}</a>.</li>
                 <li>{{ trans('emails.promo.li3') }}</li>
                 <li>{{ trans('emails.promo.li4') }}</li>
                 <li>{{ trans('emails.promo.li5') }}</li>
@@ -47,7 +47,7 @@
             </div>
             <br/>
             
-            {{ trans('emails.promo.visit') }}<a href="http://www.epro360.com/">www.epro360.com</a>{{ trans('emails.promo.for_info') }}
+            {{ trans('emails.promo.visit') }} <a href="http://www.epro360.com/">www.epro360.com</a> {{ trans('emails.promo.for_info') }}
 
         </td>
 

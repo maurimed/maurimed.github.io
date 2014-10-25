@@ -33,7 +33,7 @@ class SubscriberMailer extends Mailer {
         $data = [
             "name" => $subscriber->name
         ];
-        $subject = trans('emails.subscribers.promo.subject');
+        $subject = trans('emails.promo.subject');
 
 
         return $this->sendTo($subscriber, $subject, $view, $data);
