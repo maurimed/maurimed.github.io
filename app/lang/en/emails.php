@@ -21,7 +21,7 @@ return [
         "li3-2"      => ", which serve as guidelines to the Epro 360 Team. We hope that by applying them you will start thinking -- and living -- BIG.",
         "p3"         => "One of our Ambassadors will contact you soon to know more about you and how we can help you.  Enjoy this wonderful day,",
         "sign"       => "Jonas Kehrbaum,<br/> Epro 360 Co-Founder",
-        "pd"         => "Don’t forget to follow us on Facebook,  Twitter, and Google+",
+        "pd"         => "Don’t forget to follow us on Facebook,  Twitter, and Instagram",
         "footer"     => [
             "1" => "Epro 360 Global Education S.L. | Holding Company Registered in Spain",
             "2" => "Avenida de la Buhaira, 18, 3, 2B, Seville, 41018, Spain",

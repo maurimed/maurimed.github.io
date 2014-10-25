@@ -21,7 +21,7 @@ return [
         "li3-2"      => "los cuáles sirven como principios a todo nuestro equipo Epro 360. Esperamos que aplicando estos principios empieces a pensar y vivir en GRANDE.",
         "p3"         => "Un Embajador Epro 360 se pondrá en contacto contigo para conocerte mejor y explicarte cómo podemos ayudarte. Disfruta de este día maravilloso,",
         "sign"       => "Jonas Kehrbaum,<br/> Co-Fundador de Epro 360",
-        "pd"         => "No te olvides de seguirnos en Facebook, Twitter y Google+",
+        "pd"         => "No te olvides de seguirnos en Facebook, Twitter e Instagram",
         "footer"     => [
             "1" => "Epro 360 Global Education S.L. | Sociedad Matriz Registrada en España",
             "2" => "Avenida de la Buhaira, 18, 3, 2B, Sevilla, 41018, España",
