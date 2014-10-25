@@ -1760,6 +1760,12 @@ header.custom-5 .navbar-nav li a .over:hover {
   .google-plus i {
     color: white; }
 
+.instagram {
+  background-color: #517fa4 !important;
+  padding: 4px; }
+  .instagram i {
+    color: white; }
+
 .logo-box {
   max-width: 200px !important; }
 

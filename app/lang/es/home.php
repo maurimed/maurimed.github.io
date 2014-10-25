@@ -4,8 +4,8 @@
 return [
 
 //    "landing_title" => "Si desease recibir más información, por favor complete el siguiente formulario y le contactaremos pronto",
-    "apply_now"         => "Aplicar Ahora",
-    "apply_now_text"    => "¿Estás listo para tener éxito en la U.S?",
+    "apply_now"         => "¡Aplica Ahora!",
+    "apply_now_text"    => "¿Estás listo para triunfar en los  EE.UU.?",
 
     "or"                => "O",
 
@@ -70,7 +70,7 @@ return [
             "age"       => "Por favor dinos que edad tienes",
 
         ],
-        "text_button" => "Solicitar Información",
+        "text_button" => "Solicita Información",
 
     ],
 
@@ -115,7 +115,7 @@ return [
     ],
 
     "testimonials"      => [
-        "title" => "What other customers say about us?"
+        "title" => "Otros estudiantes ya lo han conseguido"
     ],
 
     "promo"             => [

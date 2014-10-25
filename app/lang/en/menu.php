@@ -21,6 +21,7 @@ return [
         "coaching" => "Career Coaching",
 	],
 	"services" => [
+		"our_services" => "Our Services",
 		"index" => "Epro 360 Services",
 		"academic_scholarships" => "Academic Scholarships",
 		"athletic_scholarships" => "Athletic Scholarships",

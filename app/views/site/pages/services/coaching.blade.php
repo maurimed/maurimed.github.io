@@ -45,8 +45,10 @@
 				<p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.career_coaching.li7') }} </p>
 				<p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.career_coaching.li8') }} </p>
 				<p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.career_coaching.li9') }} </p>
+				@if(Lang::get('services.career_coaching.li10') !== "")
 				<p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.career_coaching.li10') }} </p>
 				<p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.career_coaching.li11') }} </p>
+				@endif
 
 
                 <div class="dividing sep-line"></div>

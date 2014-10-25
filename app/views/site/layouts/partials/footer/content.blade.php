@@ -29,28 +29,7 @@
                 </div>
             </div>
           
-            <!-- <div class="col-sm-6 col-md-4 main-el">
-                <div class="sep-heading-container shc4 clearfix dark">
-                    <h4>Latest Tweets</h4>
-                    <div class="sep-container">
-                        <div class="the-sep"></div>
-                    </div>
-                </div>
-                <div class="tweet-box">
-                    <p>
-                    @<a class="author" href="#">WordPress Tut's</a> Consectetur laboriosam
-                    dipisci. Belit, sed quia non numquam set
-                    t dolore. <a href="#"> Jan 20 (2 days ago)</a>
-                    </p>
-                </div>
-                <div class="tweet-box">
-                    <p>
-                    @<a class="author" href="#">WordPress Tut's</a> Consectetur laboriosam
-                    dipisci. Belit, sed quia non numquam set
-                    t dolore. <a href="#"> Jan 20 (2 days ago)</a>
-                    </p>
-                </div>
-            </div> -->
+
         </div>
     </div>
 </div>

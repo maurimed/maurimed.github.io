@@ -48,7 +48,7 @@
             <label class="p-list">Contact our</label>
         </div>
         <div class="col-sm-6">
-            <a class="button solid lg blue"><div class="over">Online Ambassador</div></a>
+            <a class="btn btn-lg btn-custom">Online Ambassador</a>
         </div>
         <div class="clearfix"></div><br>
         <div class="line"></div>

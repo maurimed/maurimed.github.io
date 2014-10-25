@@ -23,14 +23,15 @@ return [
         "education" => "Educación",
     ],
     "services" => [
+        "our_services" => "Nuestros Servicios",
         "index" => "Servicios",
         "academic_scholarships" => "Becas Académicas",
         "athletic_scholarships" => "Becas Deportivas",
-        "english_courses_esl" => "Cursos de Inglés ESL",
+        "english_courses_esl" => "Cursos de Inglés (ESL)",
         "educational_mentors" => "Mentores Educativos",
-        "career_coaching" => "Consejeros Educativos",
-        "internships" => "Pasantías",
-        "bonus_semester_at_sea" => "Bonus: Semester en el mar"
+        "career_coaching" => "Asesores de Carrera",
+        "internships" => "Pasantías / Prácticas Laborales",
+        "bonus_semester_at_sea" => "Bonus: Semestre en el mar"
     ],
     'testimonials' => 'Testimonios',
     'news' => 'Noticias',

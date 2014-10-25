@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="col-md-12 text-center preview-banner main-el">
                     <div class="text">
-                        <h2 class="main-text-color">Our Services</h2>
+                        <h2 class="main-text-color">{{ trans('menu.services.our_services') }}</h2>
                         <div class="divider divider-3"></div>
                     </div>
                 </div>
@@ -61,6 +61,9 @@
                             </a>
                         </div>
                     </div>
+
+                </div>
+                <div class="services row">
                     <div class="col-md-4 col-sm-4 wow slideInLeft">
                         <div class="services-box">
                             <a href="/services/career-coaching">
