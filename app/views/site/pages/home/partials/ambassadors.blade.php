@@ -1,7 +1,7 @@
 <div class="row" style="margin-left: 0;margin-right: 0">
     <div class="col-sm-12 no-padding">
         <div class="top-box text-center">
-            <label>Ambassador Team</label>
+            <label>{{trans('home.ambassadors_section.title')}}</label>
         </div>
     </div>
 
@@ -44,11 +44,11 @@
     <div class="clearfix"></div>
     <div class="contact-btn col-sm-12 no-padding">
         <div class="col-sm-6 text-right">
-            <label class="p-list">Is your country not on this list?</label><br>
-            <label class="p-list">Contact our</label>
+            <label class="p-list">{{trans('home.ambassadors_section.country')}}</label><br>
+            <label class="p-list">{{trans('home.ambassadors_section.contact')}}</label>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-lg btn-custom">Online Ambassador</a>
+            <a class="btn btn-lg btn-custom">{{trans('home.ambassadors_section.ambassador_online')}}</a>
         </div>
         <div class="clearfix"></div><br>
         <div class="line"></div>

@@ -13,6 +13,9 @@ return [
         "instagram" => "https://www.instagram.com/epro360",
         "youtube" => "https://www.youtube.com/user/Epro360StudyAbroad/videos",
         "google-plus" => "https://plus.google.com/102535792167664134278"
-    ]
+    ],
+
+    "copyright" => "&#169; Copyright 2014 - Epro 360 Global Education S.L. - All Rights reserved"
+
 
 ];

@@ -138,6 +138,13 @@ return [
                 ],
             ]
         ]
+    ],
+
+    "ambassadors_section" => [
+        "title" => "Ambassador team",
+        "country" => "¿Tu país no está en nuestra lista?",
+        "contact" => "Contáctanos",
+        "ambassador_online" => "Embajador Online"
     ]
 
 ];

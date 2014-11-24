@@ -133,5 +133,12 @@ return [
                 ],
             ]
         ]
+    ],
+
+    "ambassadors_section" => [
+        "title" => "Ambassador team",
+        "country" => "Is your country not on this list?",
+        "contact" => "Contact our",
+        "ambassador_online" => "Ambassador Online"
     ]
 ];
