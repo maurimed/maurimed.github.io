@@ -59,6 +59,50 @@
                             <p class="text"> {{ Lang::get('terms.p28') }} </p>
                             <p class="text"> {{ Lang::get('terms.p29') }} </p>
                             <p class="text"> {{ Lang::get('terms.p30') }} </p>
+
+
+                            <h4 >{{ Lang::get('terms.s10') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p31') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s11') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p32') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p33') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s12') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p34') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s13') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p35') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p36') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p37') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p38') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p39') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s14') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p40') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s15') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p41') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s16') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p42') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p43') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p44') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s17') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p45') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p46') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p47') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s18') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p48') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s19') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p49') }} </p>
+                            <p class="text"> {{ Lang::get('terms.p50') }} </p>
+
+                            <h4 >{{ Lang::get('terms.s20') }}</h4>
+                            <p class="text"> {{ Lang::get('terms.p51') }} </p>
                         </div>
                     </div>
                     <div class="col-md-11 col-md-offset-1">
