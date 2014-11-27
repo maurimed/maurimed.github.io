@@ -10,23 +10,20 @@
 
                 <div class="col-md-12">
                     <ol class="breadcrumb portfolio-isotope-filters main-el">
-                        <li class="filter active" data-filter="*"><a>All</a></li>
+                        <li class="filter active" data-filter="*"><a>{{ trans('network.coaching.academic_scholarship.all') }}</a></li>
                         @foreach($tags as $tag)
-                            <li class="filter" data-filter=".{{ $tag->slug }}"><a>{{ $tag->name }}</a></li>
+                            <li class="filter" data-filter=".{{ $tag->slug }}"><a>{{ $tag->present()->name }}</a></li>
                         @endforeach
                     </ol>
                 </div>
 
                 <div class="col-lg-3 col-md-4 main-el">
                     <div class="side-menu" id="side-menu-1">
-
                         {{ link_to_route('network', Lang::get('menu.epro_360_network.what_is'),[], ['class' => 'element']) }}
                         {{ link_to_route('network.mentorship', Lang::get('menu.epro_360_network.mentorship'),[], ['class' => 'element ']) }}
                         {{ link_to_route('network.coaching', Lang::get('menu.epro_360_network.coaching'),[], ['class' => 'element active']) }}
-
                     </div>
                     @include('site.pages.network.network-link')
-
                 </div>
                 <div class="col-lg-9 col-md-8 md">
                     <div class="ajax-page-preloader" style="position: relative;">
@@ -46,10 +43,10 @@
                             <div class="col-lg-4 col-sm-6 main-el isotope-element {{ $major->present()->schools }}">
                                 <div class="portfolio item">
                                     <div class="top">
-                                        <img class="img-responsive" src="/site/img/network/career_coaching/{{ $major->image }}" alt="{{ $major->name }}">
+                                        <img class="img-responsive" src="/site/img/network/career_coaching/{{ $major->image }}" alt="{{ $major->present()->name }}">
                                     </div>
                                     <div class="bot">
-                                        <h5><a href="#">{{ $major->name }}</a> </h5>
+                                        <h5><a href="#">{{ $major->present()->name }}</a> </h5>
                                     </div>
                                 </div>
                             </div>

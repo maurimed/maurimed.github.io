@@ -25,4 +25,13 @@ class MajorsPresenter extends Presenter {
         return "Don't have Academic Schools associated ";
     }
 
+    public function name()
+    {
+        $slug = $this->entity->slug;
+
+        $trans = trans('network.coaching.majors.'.$slug);
+
+        return $trans;
+    }
+
 }

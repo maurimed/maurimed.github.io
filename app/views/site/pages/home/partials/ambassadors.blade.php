@@ -19,6 +19,7 @@
 
     </div>
 
+
     <div class="country-box col-xs-10 col-xs-offset-1">
 
         @foreach(array_chunk($countries->all(), 4) as $countriesRow )

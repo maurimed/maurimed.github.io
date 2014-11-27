@@ -1,5 +1,11 @@
 <?php
 
+Route::get('test', function(){
+
+    return AcademicSchool::lists('name');
+
+});
+
 Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
