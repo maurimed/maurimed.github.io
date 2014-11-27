@@ -13,7 +13,7 @@
 
     <div class="row">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-123" data-widget-editbutton="false">
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-123" data-widget-editbutton="false"  data-widget-deletebutton="false">
                 <header>
                     <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
                     <h2>Promos</h2>

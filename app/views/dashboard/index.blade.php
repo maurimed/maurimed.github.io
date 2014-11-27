@@ -18,12 +18,12 @@
         <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget" id="wid-id-0">
+            <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false"  data-widget-deletebutton="false" >
                 <!-- widget options:
-                    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                    usage: <div class="jarviswidget" id="wid-id-0" >
 
                     data-widget-colorbutton="false"
-                    data-widget-editbutton="false"
+                    data-widget-editbutton="false"  data-widget-deletebutton="false"
                     data-widget-togglebutton="false"
                     data-widget-deletebutton="false"
                     data-widget-fullscreenbutton="false"

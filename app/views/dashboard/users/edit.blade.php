@@ -1,5 +1,5 @@
 <!-- Widget ID (each widget will need unique ID)-->
-<div class="jarviswidget jarviswidget-color-darken" id="wid-id-200" data-widget-editbutton="false">
+<div class="jarviswidget jarviswidget-color-darken" id="wid-id-200" data-widget-editbutton="false"  data-widget-deletebutton="false">
     <header>
         <span class="widget-icon"> <i class="fa fa-lock"></i> </span>
         <h2>Account Settings</h2>

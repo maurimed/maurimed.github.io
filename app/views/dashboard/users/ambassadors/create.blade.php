@@ -13,7 +13,7 @@
     <div class="row">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             @include('dashboard.partials.form-errors')
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-101" data-widget-editbutton="false">
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-101" data-widget-editbutton="false"  data-widget-deletebutton="false">
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-edit"></i> </span>

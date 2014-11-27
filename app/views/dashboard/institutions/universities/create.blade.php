@@ -19,7 +19,7 @@
             @include('dashboard.partials.messages')
             @include('dashboard.partials.form-errors')
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-81" data-widget-editbutton="false">
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-81" data-widget-editbutton="false"  data-widget-deletebutton="false">
 
                 <header>
                     <span class="widget-icon"> <i class="fa fa-edit"></i> </span>

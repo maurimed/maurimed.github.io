@@ -18,12 +18,12 @@
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             @include('dashboard.partials.messages')
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-11" data-widget-editbutton="false">
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-11" data-widget-editbutton="false"  data-widget-deletebutton="false">
                 <!-- widget options:
-                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false"  data-widget-deletebutton="false">
 
                 data-widget-colorbutton="false"
-                data-widget-editbutton="false"
+                data-widget-editbutton="false"  data-widget-deletebutton="false"
                 data-widget-togglebutton="false"
                 data-widget-deletebutton="false"
                 data-widget-fullscreenbutton="false"

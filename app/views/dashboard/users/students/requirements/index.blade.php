@@ -18,12 +18,12 @@
             @include('dashboard.partials.form-errors')
 
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-33" data-widget-editbutton="false">
+            <div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-33" data-widget-editbutton="false"  data-widget-deletebutton="false">
                 <!-- widget options:
-                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false"  data-widget-deletebutton="false">
 
                 data-widget-colorbutton="false"
-                data-widget-editbutton="false"
+                data-widget-editbutton="false"  data-widget-deletebutton="false"
                 data-widget-togglebutton="false"
                 data-widget-deletebutton="false"
                 data-widget-fullscreenbutton="false"
