@@ -115,7 +115,51 @@ return [
     ],
 
     "testimonials"      => [
-        "title" => "Otros estudiantes ya lo han conseguido"
+        "title" => "Otros estudiantes ya lo han conseguido",
+        "data"  => [
+            [
+                "bg-color" => "blue",
+                "name"     => "Yoshikazu Ysa de Perú",
+                "image"    => "Yoshikazu-Ysa.jpg",
+                "title"    => "Estudiante de Cine",
+                "content"  => '“Epro 360 estuvo siempre ahí para ayudarme a completar todos los requisitos de admisión en mi nueva universidad (p.ej. obtención de la visa, traducción oficial de documentos, documentos bancarios, médicos, etc.). Lo que más me gustó de Epro 360 es que realmente se preocuparon en conseguirme una amplia alternativa de becas académicas adaptadas a mi perfil y necesidades”. ',
+            ],
+            [
+                "bg-color" => "red",
+                "name"     => "Andrea Ruano de Ecuador",
+                "image"    => "Andrea-Ruano.jpg",
+                "title"    => "Estudiante de Comunicación",
+                "content"  => '"Estudiar en EE.UU. me ha ayudado a visualizar el mundo con una perspectiva muy distinta a la que visualizaba cuando vivía y estudiaba en mi ciudad natal. Asimismo, me ha ayudado a expandir mi conocimiento sobre diferentes culturas, idiomas, y por supuesto, en el área profesional donde me gustaría desarrollar mi carrera. No cabe duda que estudiar en EE.UU. me está creando innumerables oportunidades para un futuro mejor."',
+            ],
+            [
+                "image"    => "Emanuel-Molinar.jpg",
+                "name"     => "Emanuel Molinar de Panamá",
+                "bg-color" => "blue",
+                "title"    => "Estudiante de Ingeniería",
+                "content"  => '"Estudiar ingeniería en EE.UU. me ha dado la oportunidad de evolucionar en mi campo de especialización a pasos agigantados. Me ha permitido estar a la última en avances científicos y tecnológicos que no habría sido posible en ningún otro destino en el mundo."',
+            ],
+            [
+                "image"    => "Ben.jpg",
+                "bg-color" => "red",
+                "name"     => "Benjamin Bathke de Alemania",
+                "title"    => "Semestre en el Mar, Primer Semestre 2013",
+                "content"  => '“Mi experiencia en los EE.UU., con la ayuda de Epro 360, me ayudó tremendamente a crecer personal y profesionalmente. Programas extra como el de prácticas laborales y el de semestre en el mar me ayudaron a complementar mis estudios académicos con experiencia laboral e internacional”.',
+            ],
+            [
+                "image"    => "Sthefany-Chavez.jpg",
+                "bg-color" => "blue",
+                "name"     => "Sthefany Chávez de Ecuador",
+                "title"    => "Estudiante de Química",
+                "content"  => '“La Red Epro 360 fue sin duda un gran apoyo después de llegar a los EE.UU. Su Red de Mentores y Asesores, en su mayoría antiguos estudiantes internacionales, me asesoró en innumerables campos de desarrollo personal y profesional”.',
+            ],
+            [
+                "image"    => "David-Sjogren.jpg",
+                "bg-color" => "red",
+                "name"     => "David Sjogren from Sweden",
+                "title"    => "Semester at Sea Spring 2014 Voyage",
+                "content"  => '"Epro 360 has tremendously helped me fill out different bureaucratic forms and processes (e.g. medical, visa application, etc.). In addition, Epro 360 has given me inside tips about classes and field trips. They have always been there to answer my questions."',
+            ],
+    ]
     ],
 
     "promo"             => [
