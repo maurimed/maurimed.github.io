@@ -115,7 +115,17 @@
 <script src="/backend/js/plugin/datatables/dataTables.bootstrap.min.js"></script>
 <script>
     $( document ).ready(function() {
-        $('#dt_basic').dataTable();
+        $('#dt_basic').dataTable({
+                "sDom": "<'dt-toolbar'<'col-xs-6'f><'col-xs-6'T>r>"+ "t" + "<'dt-toolbar-footer'<'col-xs-6'i><'col-xs-6'p>>" ,
+                "oTableTools": {
+                    "aButtons": [ "copy", "csv", "xls",
+                        { "sExtends": "pdf", "sTitle": "Subscribers", "sPdfMessage": "PDF Export", "sPdfSize": "letter" },
+                        { "sExtends": "print",
+                        "sMessage" : "File Generated <i>press Esc to close</i>"
+                    }
+                  ],
+                  "sSwfPath": "/backend/js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+            }});
     });
 </script>
 @stop
