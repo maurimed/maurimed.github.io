@@ -28,6 +28,7 @@ class AmbassadorMailer extends Mailer {
         $view = 'emails.users.notifications.ambassador-created';
         $data = [
             "name" => $ambassador->firstname,
+            "email" => $ambassador->email,
             "password" => $ambassador->password
         ];
         $subject = 'Ambassador created!';

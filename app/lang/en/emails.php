@@ -61,8 +61,18 @@ return [
     ],
 
     "ambassador"    => [
-        "subject" => "Ambassador created!"
-
+        "subject"   => "Epro 360 Would Love to See You Succeed!",
+        "greeting"  => "Hello ",
+        "p1"        => "Welcome to our Epro 360 team. We are very glad that you are on board with us. Together we will build a great story of success.",
+        "p2"        => "Your Ambassador account has been created, please see below you username and password:",
+        "username"  => "Username",
+        "password"  => "Password",
+        "p3"        => "Click on this link to enter to your profile: ",
+        "p4"        => "Your profile should also be visible now in our website",
+        "p5"        => "Please change your username and password as soon as you log in for security reasons.",
+        "p6"        => "If you have any trouble logging in into your account, please contact us at",
+        "thanks"    => "Thanks,",
+        "epro_team" => "Epro 360 Management Team"
     ],
 
     "student"       => [
