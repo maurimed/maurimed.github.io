@@ -68,7 +68,7 @@
                                 <div class="row">
                                     <section class="col col-4">
                                         <label class="select">
-                                        {{ Form::select('lang', [ "es" => "Español", "en" => "English" ]) }}
+                                        {{ Form::select('lang', select_lang_options()) }}
                                             <i></i>
                                         </label>
 

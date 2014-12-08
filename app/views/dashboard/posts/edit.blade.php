@@ -41,7 +41,7 @@
         </section>
         <section class="col col-4">
             <label  class="select pull-right">
-                {{ Form::select('lang', [ "es" => "Español", "en" => "English" ], $post->lang ) }}
+                {{ Form::select('lang', select_lang_options()) }}
                 <i></i>
             </label>
 

@@ -75,3 +75,15 @@ function get_profile_image_for_background($user, $size = 'sm')
         return '<img width="100" src="/backend/images/profiles/'. path($user) .'/'. $size . '-' . $user->image .'" alt="'. $user->username .'">';
     }
 }
+
+function select_lang_options()
+{
+    $opts = [];
+
+    foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+    {
+        $opts[$localeCode] = $properties['name'];
+    }
+
+    return $opts;
+}
