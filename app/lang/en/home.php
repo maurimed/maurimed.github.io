@@ -124,7 +124,7 @@ return [
                 "name"     => "Andrea Ruano from Ecuador",
                 "image"    => "Andrea-Ruano.jpg",
                 "title"    => "Communication Major",
-                "content"  => '"Studying abroad has helped me help me visualize the world with a different broader perspective. It has also helped me expand my knowledge about different cultures, languages, and of course, on my field study. Furthermore, it has helped me build opportunities for my future."',
+                "content"  => '"Studying abroad has helped me visualize the world with a different broader perspective. It has also helped me expand my knowledge about different cultures, languages, and of course, on my field study. Furthermore, it has helped me build opportunities for my future."',
             ],
             [
                 "image"    => "Emanuel-Molinar.jpg",
