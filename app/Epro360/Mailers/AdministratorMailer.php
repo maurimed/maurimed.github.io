@@ -7,7 +7,6 @@
 class AdministratorMailer extends Mailer {
 
 
-
     /**
      * Outline all the events this class will be listening for.
      * @param  [type] $events
@@ -27,7 +26,8 @@ class AdministratorMailer extends Mailer {
 
         $view = 'emails.users.notifications.administrator-created';
         $data = [
-            "name" => $administrator->firstname,
+            "name"     => $administrator->firstname,
+            "email"    => $administrator->email,
             "password" => $administrator->password
         ];
         $subject = 'Administrator created!';
