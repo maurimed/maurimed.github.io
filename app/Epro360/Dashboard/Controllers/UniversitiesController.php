@@ -123,7 +123,7 @@ class UniversitiesController extends \BaseController {
 
         $university = $this->universitiesRepo->update($input);
 
-        Event::fire('user.university.created', array_add($university, 'email', Input::get('email') ));
+//        Event::fire('user.university.created', array_add($university, 'email', Input::get('email') ));
 
         return Redirect::to('dashboard/universities')->withSuccessMessage('University Updated!');
 	}

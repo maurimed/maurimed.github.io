@@ -110,7 +110,7 @@ class UniversitiesRepository {
         $university->city = $input['city'];
         $university->type = $input['type'];
         $university->info = $input['info'];
-        $university->web_url = $input['website'];
+        $university->web_url = $input['web_url'];
         $university->phone = $input['phone'];
         $university->email = $input['email'];
         $university->tuition_link = $input['tuition_link'];
