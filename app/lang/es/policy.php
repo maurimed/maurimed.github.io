@@ -1,7 +1,7 @@
 <?php
 
 return [
-	"title" => "Privacy Policy",
+	"title" => "Política de Privacidad",
 	"modified" => "Fecha de última modificación: 1 de Mayo de 2014.",
 	"p1"  => "La presente política de privacidad es aplicable a los siguientes sitios web pertenecientes y operados por Epro 360 Global Education S.L. y a todos los demás productos y servicios ofertados por la anterior, tales como el programa de Estudios Internacional Epro 360, la Red Epro 360, el programa de Donación Epro 360 Da, etc. (denominados colectivamente como \"Epro 360\").",
 	"p2"  => "Mediante el uso de Epro 360, usted declara que tiene al menos la mayoría de edad en su estado o provincia de residencia, o que usted es mayor de edad en su estado o provincia de residencia y ha otorgado su consentimiento para permitir a cualquiera de sus dependientes, menores de edad, a utilizar este sitio.",

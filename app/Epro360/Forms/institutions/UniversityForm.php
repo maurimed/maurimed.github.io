@@ -19,7 +19,6 @@ class UniversityForm extends FormValidator {
         "admissions_link"  => "required|url",
         "address"          => "required",
         "phone"            => "required|numeric",
-        "zip"              => "required",
         "sports_division"  => "required",
         "closest_airport"  => "required",
         "far_from_airport" => "required",

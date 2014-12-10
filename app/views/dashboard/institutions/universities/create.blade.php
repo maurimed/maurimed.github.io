@@ -149,14 +149,6 @@
                                             @endif
                                         </label>
                                     </section>
-                                    <section class="col col-3">
-                                        <label class="label">Zip</label>
-                                        <label id="zipsLists" class="select">
-                                            @if(isset($user->userable->city->name))
-                                            {{ $user->userable->city->zip }}
-                                            @endif
-                                        </label>
-                                    </section>
 
                                 </div>
 

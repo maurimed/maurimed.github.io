@@ -30,9 +30,14 @@ class UniversitiesRepository {
         $university = new University;
 
         $university->name = $input['name'];
-        $university->city_id = $input['zip'];
         $university->address = $input['address'];
-        $university->website = $input['website'];
+        $university->zip = $input['zip'];
+        $university->country = $input['country'];
+        $university->state = $input['state'];
+        $university->city = $input['city'];
+        $university->type = $input['type'];
+        $university->info = $input['info'];
+        $university->web_url = $input['website'];
         $university->phone = $input['phone'];
         $university->email = $input['email'];
         $university->tuition_link = $input['tuition_link'];
@@ -40,6 +45,11 @@ class UniversitiesRepository {
         $university->sports_division = $input['sports_division'];
         $university->closest_airport = $input['closest_airport'];
         $university->far_from_airport = $input['far_from_airport'];
+        $university->housing = $input['housing'];
+        $university->postal = $input['postal'];
+        $university->years = $input['years'];
+        $university->settings = $input['settings'];
+        $university->tuition = $input['tuition'];
 
         return $university->save();
 
@@ -91,12 +101,28 @@ class UniversitiesRepository {
     {
         $university = $this->findById($input['id']);
 
+
         $university->name = $input['name'];
         $university->address = $input['address'];
         $university->zip = $input['zip'];
-        $university->city = $input['city'];
-        $university->state = $input['state'];
         $university->country = $input['country'];
+        $university->state = $input['state'];
+        $university->city = $input['city'];
+        $university->type = $input['type'];
+        $university->info = $input['info'];
+        $university->web_url = $input['website'];
+        $university->phone = $input['phone'];
+        $university->email = $input['email'];
+        $university->tuition_link = $input['tuition_link'];
+        $university->admissions_link = $input['admissions_link'];
+        $university->sports_division = $input['sports_division'];
+        $university->closest_airport = $input['closest_airport'];
+        $university->far_from_airport = $input['far_from_airport'];
+        $university->housing = $input['housing'];
+        $university->postal = $input['postal'];
+        $university->years = $input['years'];
+        $university->settings = $input['settings'];
+        $university->tuition = $input['tuition'];
 
         $university->save();
 

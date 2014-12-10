@@ -4,6 +4,7 @@ use Epro360\Repos\Institutions\Universities\UniversitiesRepository;
 use Epro360\Repos\Locations\CitiesRepository;
 use Epro360\Repos\Locations\CountriesRepository;
 use Epro360\Repos\Locations\StatesRepository;
+use Event;
 use Input;
 use Redirect;
 use View;
@@ -120,7 +121,9 @@ class UniversitiesController extends \BaseController {
 	{
 		$input =  array_add(Input::get(), 'id', $id);
 
-        $this->universitiesRepo->update($input);
+        $university = $this->universitiesRepo->update($input);
+
+        Event::fire('user.university.created', array_add($university, 'email', Input::get('email') ));
 
         return Redirect::to('dashboard/universities')->withSuccessMessage('University Updated!');
 	}
