@@ -13,7 +13,7 @@ class CountriesRepository {
 
     public function getCountriesThatHasAmbassadors()
     {
-        return Country::has('ambassadors')->get();
+        return Country::has('ambassadors')->orderBy('country_name')->get();
     }
 
     public function countriesHasUniversitiesList()
