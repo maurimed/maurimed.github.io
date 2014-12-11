@@ -52,6 +52,7 @@
                                     <td>{{$subscriber->created_at->diffForHumans()}}</td>
                                     <td>{{$subscriber->find_us}}</td>
                                     <td>
+                                        {{ Form::editModal('subscribers', $subscriber->id) }}
                                         {{ Form::delete('subscribers', $subscriber->id) }}
                                     </td>
                                 </tr>
@@ -64,7 +65,7 @@
         </article>
     </div>
 </section>
-
+@include('dashboard.partials.modal')
 @stop
 
 @section('plugins')

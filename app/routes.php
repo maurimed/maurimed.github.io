@@ -1,11 +1,5 @@
 <?php
 
-Route::get('test', function(){
-
-    return AcademicSchool::lists('name');
-
-});
-
 Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
@@ -97,7 +91,7 @@ Route::group(['prefix' => 'dashboard', 'before' => 'auth|accessibleBy:Administra
     Route::resource('states', 'StatesController');
     Route::resource('cities', 'CitiesController');
     Route::resource('universities', 'UniversitiesController');
-    Route::resource('subscribers', 'SubscribersController', ['only' => ['index', 'update', 'destroy']]);
+    Route::resource('subscribers', 'SubscribersController', ['only' => ['index', 'edit', 'update', 'destroy']]);
     Route::resource('promos', 'PromosController');
 //
 //    Route::group(['before' => 'accessibleBy:Manager'], function ()

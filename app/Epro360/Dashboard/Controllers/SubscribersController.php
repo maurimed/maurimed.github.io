@@ -2,7 +2,10 @@
 
 use Epro360\Repos\Locations\CountriesRepository;
 use Guzzle\Http\Client;
+use Input;
+use Redirect;
 use Request;
+use Subscriber;
 use View;
 
 
@@ -23,7 +26,7 @@ class SubscribersController extends \BaseController {
 	 */
 	public function index()
 	{
-        $subscribers = \Subscriber::latest()->get();
+        $subscribers = Subscriber::latest()->get();
 
 		return \View::make('dashboard.subscribers.index', compact('subscribers'));
 	}
@@ -86,7 +89,9 @@ class SubscribersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$subscriber = Subscriber::find($id);
+
+		return View::make('dashboard.subscribers..edit', compact('subscriber'));
 	}
 
 
@@ -98,7 +103,17 @@ class SubscribersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$subscriber = Subscriber::find($id);
+
+		$subscriber->name = Input::get('name');
+		$subscriber->email = Input::get('email');
+		$subscriber->phone = Input::get('phone');
+		$subscriber->interest = Input::get('interest');
+		$subscriber->age = Input::get('age');
+		$subscriber->find_us = Input::get('about');
+		$subscriber->save();
+
+		return Redirect::back()->withSuccessMessage('Subscriber was updated!');
 	}
 
 
@@ -110,9 +125,9 @@ class SubscribersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-        \Subscriber::find($id)->delete();
+        Subscriber::find($id)->delete();
 
-        return \Redirect::to('dashboard/subscribers')->withSuccessMessage('Subscriber was deleted');
+        return Redirect::to('dashboard/subscribers')->withSuccessMessage('Subscriber was deleted');
 
     }
 
