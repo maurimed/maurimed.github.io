@@ -50,7 +50,7 @@
             <li class="{{ setActive( 'news' ) }}"> {{ link_to_route('news', trans('menu.news') ) }} </a> </li>
             <li class="{{ setActive( 'blog' ) }}"> {{ link_to_route('posts.index', 'Blog' ) }} </a> </li>
             <li class="{{ setActive( 'social-responsibility' ) }}"> {{ link_to_route('social-responsibility', trans('menu.social_responsibility') ) }} </a> </li>
-            <li class="{{ setActive( 'contact' ) }}"> {{ link_to_route('social-responsibility', trans('menu.contact') ) }} </a> </li>
+            <li class="{{ setActive( 'contact' ) }}"> {{ link_to_route('contact', trans('menu.contact') ) }} </a> </li>
             @if(Auth::check())
             <li><a  href="/dashboard">Dashboard </a> </li>
             @endif
