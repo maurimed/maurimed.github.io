@@ -38,6 +38,6 @@ return [
     'store' => 'Tienda',
     'social_responsibility' => 'Responsabilidad Social',
     'sign_in' => 'Ingresar',
-
+    'contact' => 'Contacto'
 
 ];

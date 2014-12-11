@@ -36,6 +36,6 @@ return [
 	"store" => "Store",
 	"social_responsibility" => "Social Responsibility",
 	"sign_in" => "Sign In",
-
+	"contact" => "Contact"
 
 ];
