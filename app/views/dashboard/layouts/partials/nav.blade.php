@@ -62,6 +62,9 @@
     <li  class="{{ setActive('promos') }}" >
         <a href="/dashboard/promos" title="Promos"><i class="fa fa-lg fa-fw fa-bullhorn"></i> <span  class="menu-item-parent">Promos</span></a>
     </li>
+    <li  class="{{ setActive('messages') }}" >
+        <a href="/dashboard/messages" title="Messages"><i class="fa fa-lg fa-fw fa-envelope"></i> <span  class="menu-item-parent">Messages</span></a>
+    </li>
 
 
 @endif

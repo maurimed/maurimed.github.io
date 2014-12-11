@@ -57,7 +57,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
     Route::get('blog/{slug}', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
 
     // underground-application
-    Route::get('underground-application', 'ApplyController@undergroundApplication');
+//    Route::get('underground-application', 'ApplyController@undergroundApplication');
+
+    Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@contact']);
+    Route::post('contact', ['as' => 'contact.store', 'uses' => 'PagesController@contactStore']);
 
     // Files
     Route::get('downloads/{file}', function ($file)
@@ -93,6 +96,8 @@ Route::group(['prefix' => 'dashboard', 'before' => 'auth|accessibleBy:Administra
     Route::resource('universities', 'UniversitiesController');
     Route::resource('subscribers', 'SubscribersController', ['only' => ['index', 'edit', 'update', 'destroy']]);
     Route::resource('promos', 'PromosController');
+
+    Route::resource('messages', 'MessagesController', ['only'=>['index', 'destroy']]);
 //
 //    Route::group(['before' => 'accessibleBy:Manager'], function ()
 //    {

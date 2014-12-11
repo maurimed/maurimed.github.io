@@ -80,10 +80,6 @@ class PagesController extends BaseController {
     }
 
 
-
-
-
-
     //    Services
     public function services()
     {
@@ -165,6 +161,22 @@ class PagesController extends BaseController {
     }
 
 
+    // Contact
+    public function contact()
+    {
+        return View::make('site.pages.contact');
+    }
+
+
+    // Contact
+    public function contactStore()
+    {
+
+        ContactMessage::create(Input::all());
+
+        return Redirect::back()->withSuccessMessage('Your message was sent');
+
+    }
 
 
 

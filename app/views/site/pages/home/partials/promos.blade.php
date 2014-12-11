@@ -11,7 +11,7 @@
 
             <div class="col-md-5 col-xs-12 wow flipInY">
                 <div class="promo-image">
-                    <img src="/site/img/promos/{{$promo->image}}" alt="">
+                    <img src="/site/img/promos/{{$promo->image}}" alt="{{ $promo->title }}">
                 </div>
             </div>
 

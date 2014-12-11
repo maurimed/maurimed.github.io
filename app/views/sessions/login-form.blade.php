@@ -7,7 +7,7 @@
     <fieldset>
         <div class="form-group">
             {{ Form::label('email', 'Email') }}
-            {{ Form::email('email', null ,[ 'class' => 'form-control', 'required' => 'required', 'id' => 'email' ]) }}
+            {{ Form::email('email', null ,[ 'class' => 'form-control', 'required' => 'required', 'id' => 'email', 'autofocus' ]) }}
         </div>
         <div class="form-group">
             {{ Form::label('password', 'Password') }}
