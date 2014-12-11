@@ -5,7 +5,7 @@ Form::macro('delete',function($model, $id){
 
     return  Form::open([ 'url' => 'dashboard/'.$model.'/'. $id, 'method' => 'DELETE']) .
 
-    Form::submit('Delete', ['class' => 'btn btn-xs btn-danger', 'style' => 'float:left;margin-right:5px']) .
+    Form::submit('Delete', ['data-confirm' => 'Are you sure? This action can\'t be undone','class' => 'btn btn-xs btn-danger', 'style' => 'float:left;margin-right:5px']) .
 
     Form::close();
 

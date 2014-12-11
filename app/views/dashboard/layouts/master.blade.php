@@ -179,7 +179,22 @@
 		<script type="text/javascript">
 
 			$(document).ready(function() {
-			 	
+
+				var confirmAction = function(e) {
+					var input = $(this);
+
+					input.prop('disabled', 'disabled');
+
+					// Or, much better, use a dedicated modal.
+					if ( ! confirm(input.data('confirm'))) {
+						e.preventDefault();
+					}
+
+					input.removeAttr('disabled');
+				};
+
+			 	$('input[data-confirm], button[data-confirm]').on('click', confirmAction);
+
 				/* DO NOT REMOVE : GLOBAL FUNCTIONS!
 				 *
 				 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
