@@ -8,7 +8,7 @@ return [
 	],
 	"interest_links" => "Interessante Links",
     "social_links" => [
-        "facebook" => "https://www.facebook.com/Epro360GlobalEducation",
+        "facebook" => "https://www.facebook.com/Epro360EducacionGlobal",
         "twitter" => "https://www.twitter.com/epro360",
         "instagram" => "https://www.instagram.com/epro360",
         "youtube" => "https://www.youtube.com/user/Epro360StudyAbroad/videos",
