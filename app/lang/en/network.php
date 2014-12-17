@@ -2,7 +2,7 @@
 
 return [
 
-
+    "access"           => "Access Network",
     "what_is"          => [
         "title"      => "Epro 360 Network",
         "p1"         => "Jeff Hoffman, a successful entrepreneur and professional speaker, says that it is neither about the way, nor the goal; it is about the people you hang with along the way. The Epro 360 network will give our students access to a driven community. Valuable contacts and personalities within the Epro 360 system can be contacted, as well as to other like-minded students who currently study or studied in the US through Epro 360. No other study abroad competitor offers anything like it.",

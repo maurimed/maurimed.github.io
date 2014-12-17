@@ -1929,13 +1929,11 @@ header.custom-5 .navbar-nav li a .over:hover {
 
 .network-link {
   margin-top: 25px;
-  border-radius: 0 !important;
-  width: 100%; }
+  border-radius: 0 !important; }
 
 .apply-link {
   margin-top: 6px;
   border-radius: 0 !important;
-  width: 100%;
   font-size: 1.1em;
   text-transform: uppercase;
   font-weight: bold; }

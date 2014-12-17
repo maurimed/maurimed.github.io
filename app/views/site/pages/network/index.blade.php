@@ -13,7 +13,7 @@
                 {{ link_to_route('network.coaching', Lang::get('menu.epro_360_network.coaching'),[], ['class' => 'element']) }}
 
             </div>
-                    @include('site.pages.network.network-link')
+            @include('site.pages.network.network-link')
 
         </div>
 

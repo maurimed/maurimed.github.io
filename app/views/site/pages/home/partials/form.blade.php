@@ -92,20 +92,6 @@
                             ], null, ['class' => 'form-control', 'id' => 'find_us', 'data-error' => trans('home.form.errors.find_us')] ) }}
 
             </div>
-            {{$errors->first('age', '<em class="invalid">:message</em>')}}
-
-            <div class="input-group col-md-12 col-sm-12 c-border-top">
-
-                {{ Form::select('age', [
-                                    '' => trans('home.form.inputs.age.title'),
-                                    Str::slug(trans('home.form.inputs.age.opt1')) =>  trans('home.form.inputs.age.opt1'),
-                                    Str::slug(trans('home.form.inputs.age.opt2')) =>  trans('home.form.inputs.age.opt2'),
-                                    Str::slug(trans('home.form.inputs.age.opt3')) =>  trans('home.form.inputs.age.opt3'),
-                                    Str::slug(trans('home.form.inputs.age.opt4')) =>  trans('home.form.inputs.age.opt4')
-
-                                ], null, ['class' => 'form-control', 'id' => 'age', 'data-error' => trans('home.form.errors.age') ] ) }}
-
-            </div>
             <div class="btns">
 
                 {{ Form::submit(trans('home.form.text_button'), [ 'class' => 'button solid blue submit md form-control' ]) }}
@@ -113,7 +99,7 @@
             </div>
                 <div class="text-center">- {{trans('home.or')}} -</div>
 
-           <a href="http://www.epro360.dreamapply.com/" target="_blank" title="{{trans('home.apply_now')}}" class="btn btn-custom btn-md apply-link">{{trans('home.apply_now')}} </a>
+                @include('site.pages.home.partials.apply-link')
             <div class="shadow"></div>
             {{ Form::close() }}
         </div>

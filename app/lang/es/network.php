@@ -2,6 +2,7 @@
 
 return [
 
+    "access"           => "Acceso a la Red",
 
     "what_is"          => [
         "title"      => "La Red Epro 360",

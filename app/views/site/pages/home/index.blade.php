@@ -75,7 +75,6 @@
                 cities : { required: true},
                 interest : { required: true},
                 find_us : { required: true},
-                age : { required: true}
 
             },
 
@@ -95,7 +94,6 @@
                 cities : { required: $('#cities').data('error')},
                 interest : { required: $('#interest').data('error')},
                 find_us : { required: $('#find_us').data('error')},
-                age : { required: $('#age').data('error')}
 
 
             },

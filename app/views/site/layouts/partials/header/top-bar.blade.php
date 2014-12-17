@@ -13,13 +13,8 @@
             </div>
             <div class="col-sm-8">
                 <div class="buttons pull-right text-right txt-min clearfix">
-                    <!-- <div class="element"><a>My Account</a></div>
-                    <div class="element"><a>Featured Products</a></div>
-                    <div class="element"><a>Terms</a></div>
-                    <div class="element"><a>FAQ</a></div>
-                    <div class="element"><a>Location</a></div> -->
                     <div class="element">
-                        <img  src="/site/img/blank.gif" class="lang-flag flag-{{ LaravelLocalization::getCurrentLocale()  }}" alt="{{ LaravelLocalization::getCurrentLocaleNativeReading() }}">
+                        <img  src="/site/img/blank.gif" class="lang-flag flag-{{ LaravelLocalization::getCurrentLocale() }}" alt="{{ LaravelLocalization::getCurrentLocaleNativeReading() }}">
                         <a style="margin-left:5px" href="#" class="dropdown-toggle" data-toggle="dropdown">
                             {{ LaravelLocalization::getCurrentLocaleNativeReading()}}
                             <i class="fa fa-angle-down"></i>

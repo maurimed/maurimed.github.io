@@ -28,7 +28,6 @@
                                     <th><i class="fa fa-fw fa-envelope txt-color-blue hidden-md hidden-sm hidden-xs"></i> Emails</th>
                                     <th><i class="fa fa-fw fa-phone txt-color-blue hidden-md hidden-sm hidden-xs"></i> Phone</th>
                                     <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Interest</th>
-                                    <th><i class="fa fa-fw fa-pencil txt-color-blue hidden-md hidden-sm hidden-xs"></i> Age</th>
 
                                     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> State</th>
                                     <th><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> Country</th>
@@ -45,7 +44,6 @@
                                     <td>{{$subscriber->email}}</td>
                                     <td>{{$subscriber->phone}}</td>
                                     <td>{{$subscriber->interest}}</td>
-                                    <td>{{$subscriber->age}}</td>
 
                                     <td>{{$subscriber->state->state_name}} </td>
                                     <td>{{$subscriber->state->country->country_name}} </td>
