@@ -49,7 +49,7 @@
             <label class="p-list">{{trans('home.ambassadors_section.contact')}}</label>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-lg btn-custom">{{trans('home.ambassadors_section.ambassador_online')}}</a>
+            <a href="/contact" class="btn btn-lg btn-custom">{{trans('home.ambassadors_section.ambassador_online')}}</a>
         </div>
         <div class="clearfix"></div><br>
         <div class="line"></div>

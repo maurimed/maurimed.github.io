@@ -14,19 +14,20 @@
 @stop
 
 @section('content')
-        @include('site.pages.home.partials.form')
 
-        @include('site.pages.home.partials.slider')
+    @include('site.pages.home.partials.form')
 
-        @include('site.pages.home.partials.services')
+    @include('site.pages.home.partials.slider')
 
-        @include('site.pages.home.partials.calculators')
+    @include('site.pages.home.partials.services')
 
-        @include('site.pages.home.partials.promos')
+    @include('site.pages.home.partials.calculators')
 
-        @include('site.pages.home.partials.testimonials')
+    @include('site.pages.home.partials.promos')
 
-        @include('site.pages.home.partials.ambassadors')
+    @include('site.pages.home.partials.testimonials')
+
+    @include('site.pages.home.partials.ambassadors')
 
 @stop
 
@@ -109,38 +110,37 @@
 
         $("#promo-form").validate({
 
-                    rules : {
+            rules : {
 
-                        promo_name : { required: true},
-                        promo_email : {
-                            required : true,
-                            email : true
-                        },
-                        promo_phone: {
-                            required: true,
-                            number: true
-                        }
+                promo_name : { required: true},
+                promo_email : {
+                    required : true,
+                    email : true
+                },
+                promo_phone: {
+                    required: true,
+                    number: true
+                }
+            },
 
-                    },
+            // Messages for form validation
+            messages : {
+                promo_name : { required: $('#promo_name').data('error')},
+                promo_email : {
+                    required : $('#promo_email').data('error'),
+                    email : $('#promo_email').data('invalid')
+                },
+                promo_phone : {
+                    required : $('#promo_phone').data('error'),
+                    number: $('#promo_phone').data('number')
+                }
+            },
 
-                    // Messages for form validation
-                    messages : {
-                        promo_name : { required: $('#promo_name').data('error')},
-                        promo_email : {
-                            required : $('#promo_email').data('error'),
-                            email : $('#promo_email').data('invalid')
-                        },
-                        promo_phone : {
-                            required : $('#promo_phone').data('error'),
-                            number: $('#promo_phone').data('number')
-                        }
-                    },
-
-                    // Do not change code below
-                    errorPlacement : function(error, element) {
-                        error.insertAfter(element.parent());
-                    }
-                });
+            // Do not change code below
+            errorPlacement : function(error, element) {
+                error.insertAfter(element.parent());
+            }
+        });
 
     });
 

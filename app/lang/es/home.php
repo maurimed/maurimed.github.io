@@ -4,12 +4,12 @@
 return [
 
 //    "landing_title" => "Si desease recibir más información, por favor complete el siguiente formulario y le contactaremos pronto",
-    "apply_now"         => "¡Aplica Ahora!",
-    "apply_now_text"    => "¿Estás listo para triunfar en los  EE.UU.?",
+    "apply_now"           => "¡Aplica Ahora!",
+    "apply_now_text"      => "¿Estás listo para triunfar en los  EE.UU.?",
 
-    "or"                => "O",
+    "or"                  => "O",
 
-    "form"              => [
+    "form"                => [
         "title"       => "Solicitar Mas Información",
         "text"        => "Text for convince the user to download",
         "inputs"      => [
@@ -75,7 +75,7 @@ return [
     ],
 
 
-    "sliders"           => [
+    "sliders"             => [
         "first"  => [
             "text1" => "Hacemos que tu SUEÑO",
             "text2" => "de estudiar en los Estados Unidos",
@@ -89,7 +89,7 @@ return [
     ],
 
 
-    "scholarship_boxes" => [
+    "scholarship_boxes"   => [
         "1" => [
             "title"       => "¿Quieres saber si calificas para una Beca Académica?",
             "gpa"         => "Promedio",
@@ -98,7 +98,7 @@ return [
             "contact"     => "Contacta Nuestro",
             "btn"         => "Embajador en línea",
             "out_of"      => "sobre",
-            "message"   => "Por favor contacta a un Embajador en línea",
+            "message"     => "Por favor contacta a un Embajador en línea",
 
 
         ],
@@ -114,7 +114,7 @@ return [
         ],
     ],
 
-    "testimonials"      => [
+    "testimonials"        => [
         "title" => "Otros estudiantes ya lo han conseguido",
         "data"  => [
             [
@@ -155,28 +155,28 @@ return [
             [
                 "image"    => "David-Sjogren.jpg",
                 "bg-color" => "red",
-                "name"     => "David Sjogren from Sweden",
+                "name"     => "David Sjogren desde Sweden",
                 "title"    => "Semester at Sea Spring 2014 Voyage",
                 "content"  => '"Epro 360 has tremendously helped me fill out different bureaucratic forms and processes (e.g. medical, visa application, etc.). In addition, Epro 360 has given me inside tips about classes and field trips. They have always been there to answer my questions."',
             ],
-    ]
+        ]
     ],
 
-    "promo"             => [
+    "promo"               => [
         "form" => [
-            "inputs"=>[
-                "name"  => "Nombre completo",
-                "email" => "Correo electrónico",
-                "phone" => "Teléfono",
+            "inputs" => [
+                "name"        => "Nombre completo",
+                "email"       => "Correo electrónico",
+                "phone"       => "Teléfono",
                 "participate" => "Participar",
             ],
             "errors" => [
-                "name" => "Para participar necesitas ingresar tu nombre",
-                "email"     => [
+                "name"  => "Para participar necesitas ingresar tu nombre",
+                "email" => [
                     "required" => "Para participar necesitas ingresar tu correo electrónico",
                     "invalid"  => "Por favor escribe un correo electrónico válido"
                 ],
-                "phone"     => [
+                "phone" => [
                     "required" => "Para participar necesitas ingresar tu número de teléfono",
                     "number"   => "Por favor solo tu números"
                 ],
@@ -185,9 +185,9 @@ return [
     ],
 
     "ambassadors_section" => [
-        "title" => "Equipo de Embajadores",
-        "country" => "¿Tu país no está en nuestra lista?",
-        "contact" => "Contáctanos",
+        "title"             => "Equipo de Embajadores",
+        "country"           => "¿Tu país no está en nuestra lista?",
+        "contact"           => "Contáctanos",
         "ambassador_online" => "Embajador Online"
     ]
 
