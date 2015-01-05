@@ -47,7 +47,6 @@ class SubscribersController extends \BaseController {
         $subscriber->state_id = $input["state"];
         $subscriber->interest = $input["interest"];
         $subscriber->find_us = $input["find_us"];
-        $subscriber->age = $input["age"];
         $subscriber->ip = Request::getClientIp();
 
         $subscriber->save();
