@@ -20,8 +20,7 @@ class SubscribeForm extends FormValidator {
         'country'=> 'required',
         'state'=> 'required',
         'interest'=> 'required',
-        'find_us'=> 'required',
-        'age'=> 'required'
+        'find_us'=> 'required'
     ];
 
 }
