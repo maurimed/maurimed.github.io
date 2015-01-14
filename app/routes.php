@@ -1,5 +1,15 @@
 <?php
 
+
+Event::listen('illuminate.query', function($q){
+//    var_dump($q);
+});
+
+Route::get('cache-flush', function(){
+    Cache::flush();
+    return Redirect::to('/')->withSuccessMessage('Cache was cleared!');
+});
+
 Route::when('dashboard*', 'csrf', ['post', 'put', 'patch', 'delete']);
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
