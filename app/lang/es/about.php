@@ -22,9 +22,9 @@ return [
         "li2" => "proporcionándoles un conocimiento que va más allá de lo enseñado en las instituciones académicas a través del servicio prestado por nuestros Mentores,",
         "li3" => "hacer su educación en el exterior lo más asequible posible, a través del ofrecimiento de becas académicas/atléticas.",
         "subtitle" => "Nuestra Visión",
-        "p2" => "La planificación de una carrera exitosa y gratificante en el mundo actual se basa en mucho más que en la obtención de un diploma universitario internacional. Es por eso que Epro 360 monitorea constantemente los rápidos cambios en la educación superior a nivel global. Para dar forma al auténtico líder global del mañana, Epro 360 no se limita a enviar estudiantes al extranjero; Epro 360 los educa e inspira a través de Mentores, Asesores y contenidos educativos de alta calidad y actualizados que no proporciona ningún competidor o entidad educativa.",
+        "p2" => "Tesssst La planificación de una carrera exitosa y gratificante en el mundo actual se basa en mucho más que en la obtención de un diploma universitario internacional. Es por eso que Epro 360 monitorea constantemente los rápidos cambios en la educación superior a nivel global. Para dar forma al auténtico líder global del mañana, Epro 360 no se limita a enviar estudiantes al extranjero; Epro 360 los educa e inspira a través de Mentores, Asesores y contenidos educativos de alta calidad y actualizados que no proporciona ningún competidor o entidad educativa.",
         "p3" => "Epro 360 aspira a convertirse en el mayor proveedor global de servicios para la formación académica en el exterior. No solo aspiramos a lo anterior sino que además nos marcamos como objetivo construir la mayor red mundial de profesionales caracterizados por su formación única internacional.",
-        "p4" => "",
+        "p4" => "Test",
         "p5" => "",
     ],
     "epro_360_at_a_glance"     => [
