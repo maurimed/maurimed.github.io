@@ -4,7 +4,7 @@ return array(
     "index" => "About Us",
     "message_from_co_founders" => [
         "title" => "A Message from Co-Founders",
-        "subtitle1" => "Dear Friends,",        
+        "subtitle1" => "Dear Friend,",        
         "p1" => "Each year, Epro 360 welcomes students hungry for knowledge and success with dreams of a great future. They are personally approached by our worldwide Ambassadors, who guide them onto paths of success that they themselves have experienced. At Epro 360, success breeds success. ",
         "subtitle2" => "A Personal Touch ",
         "p2" => "Our Coaches and Mentors are not just simple advisors, they are important role models with track records of academic and professional excellence. They are living proof that a well-balanced, global education prepares students for life not to mention success. Epro 360 is far more than a placement service for a U.S. college education. This is needed, especially in this world of academic inflation, which many university students experience nowadays. <em>Academic inflation is a term that describes the decreasing value of a college degree over time, because more people receive one.</em> ",
