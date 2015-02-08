@@ -1565,7 +1565,8 @@ header.custom-5 .navbar-nav li a .over:hover {
   float: left;
   width: 300px !important;
   z-index: 1000;
-  position: relative; }
+  position: relative;
+  display:none;  }
 
 .landing-form {
   height: 536px;
