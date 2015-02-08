@@ -29,7 +29,8 @@ return [
 		"educational_mentors" => "Educational Mentors",
 		"career_coaching" => "Career Coaching",
 		"internships" => "Internships",
-		"bonus_semester_at_sea" => "Bonus: Semester at Sea"
+		"bonus_semester_at_sea" => "Bonus: Semester at Sea",
+		"undergrad_programs" => "Undergraduate Programs",
 	],
 	"testimonials" => "Testimonials",
 	"news" => "News",
