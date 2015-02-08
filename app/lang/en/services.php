@@ -227,5 +227,41 @@ return [
         "li15" => "Students must demonstrate their writing skills in a 300-500 word essay as indicated on the application - See more at:",
 
  ],
+ 
+     "undergrad_programs" => [
+        "title" => "Undergraduate Programs",
+
+        "subtitle1" => "Lalalalala",
+        "p1" => "Semester at Sea is a worldwide unique education program. For one semester, students have the possibility to study on board a \"swimming university,\" traveling to another country every week.",
+
+        "subtitle2" => "Scholarship Application Assistance:",
+        "p2" => "The Semester at Sea financial aid packages are competitive. Epro 360’s Semester at Sea application service helps you receive financial aid for your Semester at Sea voyage. Every applicant has to submit several written essays to receive scholarship money. To enhance the quality and content of your essay, Epro 360 charges a one time fee per scholarship application, plus a percentage of the scholarship received. For example, if Epro charged you a $250 application fee plus a 10% of the scholarship received and the Epro 360 essay gets you a Semester at Sea scholarship of $10,000, you can use $8,750 for your voyage.",
+
+        "subtitle3" => "Why Semester at Sea?",
+        "li1" => "<strong> Cognitive knowledge: </strong> Participants reported an increased understanding and awareness of various cultures, their impact on our global society and an increased proficiency in languages. This was significant for all three voyages yielding the highest gains of all assessed dimensions. ",
+        "li2" => "<strong> Intrapersonal identity:  </strong> Participants reported an increased awareness regarding their unique identity, purpose in life, and meaningful philosophy of life. This was significant for two of the three voyages, with the last voyage coming very close to significance.",
+        "li3" => "Participants reported an  <strong> increase in viewing themselves as global citizens</strong>. This was significant for two of the three voyages. Participants reported an <strong>increase in overall wellbeing</strong>. This was significant for two of the three voyages.",
+        "li4" => "<strong> Intrapersonal affect: </strong> Participants reported increased respect and acceptance of cultural perspectives that were different from their own as well as a higher degree of emotional confidence when processing encounters with other cultures. This was significant for two of the three voyages.",
+
+        "p3" => "Source: AIEA Annual Conference 2011, Larry Braskamp",
+
+        "subtitle4" => "What Alumini Say:",
+        "li5" => "55% report the program had a “huge” impact on their lives, 36% say the program had a great deal of impact. Total yield results 90% very substantially influenced.",
+        "li6" => "85% report the program had a great deal more impact on their lives than any semester on their home campus; add 12% who report “somewhat more” impact at sea than at home, and a total 97% report Semester at Sea as their most important college semester.",
+        "li7" => "73% report the Semester at Sea influence on their lives has not diminished with time; 38% report that the impact has continued to grow over time since their voyage. Thus, nearly 40% of alumni experienced a program \"sleeper effect.\" ",
+        "li8" => "42% report they have been sojourners overseas—spending extended time living and studying in other countries.",
+        "li9" => "22% report they work or have worked outside the United States.",
+        "li10" => "39 % report they have traveled to revisit and learn more about countries they visited on their SAS voyage.",
+
+        "p4" => "This independent research project was conducted by social scientist Robert C. Weigl, Ph.D., director of the Franklin Center in Alexandria, Va. with Carol Baker, Ph.D., former director of the Office of Measurement and Evaluation at the University of Pittsburgh. The 2009 report summarizes findings from an online survey of 342 Semester at Sea alumni who sailed between 1980 and 2008. ",
+
+        "subtitle5" => "Requirements:",
+        "li11" => "Students must be enrolled full-time in a degree-granting program at an accredited college/university (domestic or international)",
+        "li12" => "Students must have completed at least one full term at the post-secondary level",
+        "li13" => "Students must demonstrate at least a 2.75 cumulative GPA ",
+        "li14" => "Students must be in good academic and judicial standing at time of application",
+        "li15" => "Students must demonstrate their writing skills in a 300-500 word essay as indicated on the application - See more at:",
+
+ ],
 
 ];
