@@ -245,9 +245,19 @@ return [
 				"li7" => "Housing",
 				"li8" => "Meal plan",			
 		
-
         "subtitle2" => "Requirements",
-        "p2" => "The Semester at Sea financial aid packages are competitive. Epro 360’s Semester at Sea application service helps you receive financial aid for your Semester at Sea voyage. Every applicant has to submit several written essays to receive scholarship money. To enhance the quality and content of your essay, Epro 360 charges a one time fee per scholarship application, plus a percentage of the scholarship received. For example, if Epro charged you a $250 application fee plus a 10% of the scholarship received and the Epro 360 essay gets you a Semester at Sea scholarship of $10,000, you can use $8,750 for your voyage.",
+			"ul5" => "Academic",
+				"li9" => "GPA > 2.8",
+				"li10" => "TOEFL score > 61",
+				"li11" => "Transcripts from High School",
+				"li12" => "2 Letters of Recommendation",
+				"li13" => "SAT/ACT (Optional)",
+
+			"ul6" => "Legal",
+				"li14" => "Valid Passport",
+				"li15" => "+16 Years Old",
+			"p2" => "If applying for an athletic scholarship, the student must have an outstanding athletic performance."
+				
 
         "subtitle3" => "Universities",
         "li1" => "<strong> Cognitive knowledge: </strong> Participants reported an increased understanding and awareness of various cultures, their impact on our global society and an increased proficiency in languages. This was significant for all three voyages yielding the highest gains of all assessed dimensions. ",

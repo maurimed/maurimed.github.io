@@ -111,10 +111,20 @@
 						</div>
 						<div id="collapseTwo" class="panel-collapse collapse">
 							<div class="panel-body">
-								<p>
-									{{ Lang::get('services.undergrad_programs.p2') }}
-									Chau
-								</p>
+								<ul>
+									{{ Lang::get('services.undergrad_programs.ul5') }}
+										<li>{{ Lang::get('services.undergrad_programs.li9') }}</li>
+										<li>{{ Lang::get('services.undergrad_programs.li10') }}</li>
+										<li>{{ Lang::get('services.undergrad_programs.li11') }}</li>
+										<li>{{ Lang::get('services.undergrad_programs.li12') }}</li>
+										<li>{{ Lang::get('services.undergrad_programs.li13') }}</li>
+								</ul>
+								<ul>
+									{{ Lang::get('services.undergrad_programs.ul6') }}
+										<li>{{ Lang::get('services.undergrad_programs.li14') }}</li>
+										<li>{{ Lang::get('services.undergrad_programs.li15') }}</li>									
+								</ul>
+								<p>	{{ Lang::get('services.undergrad_programs.p2') }}</p>
 							</div>
 						</div>						
 					</div>
