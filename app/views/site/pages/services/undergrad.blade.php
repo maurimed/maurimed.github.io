@@ -41,33 +41,64 @@
 									{{ Lang::get('services.undergrad_programs.subtitle1') }}
 								</a>
 							</h6>
-							<h4 class="panel-title">
-								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo">
 									<i class="fa "></i>
 									{{ Lang::get('services.undergrad_programs.subtitle2') }}
 								</a>
-							</h4>
-							<h3 class="panel-title">
+							</h6>
+							<h6 class="panel-title">
 								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
 									<i class="fa "></i>
 									{{ Lang::get('services.undergrad_programs.subtitle3') }}
 								</a>
-							</h3>
+							</h6>
 							<h6 class="panel-title">
 								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
 									<i class="fa "></i>
 									{{ Lang::get('services.undergrad_programs.subtitle4') }}
 								</a>
-							</h6>							
+							</h6>
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle5') }}
+								</a>
+							</h6>	
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle6') }}
+								</a>
+							</h6>	
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle7') }}
+								</a>
+							</h6>	
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle8') }}
+								</a>
+							</h6>								
 						</div>
 						
 						<div id="collapseOne" class="panel-collapse collapse">
 							<div class="panel-body">
 								<p>
-									Panel Body
+									{{ Lang::get('services.undergrad_programs.p1') }}
 								</p>
 							</div>
 						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>
+									{{ Lang::get('services.undergrad_programs.p2') }}
+								</p>
+							</div>
+						</div>						
 					</div>
 				</div>
 							
