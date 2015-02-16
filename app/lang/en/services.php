@@ -298,7 +298,7 @@ return [
         "li14" => "Students must be in good academic and judicial standing at time of application",
         "li15" => "Students must demonstrate their writing skills in a 300-500 word essay as indicated on the application - See more at:",
 
-        "subtitle8" => "FAQS",
+        "subtitle9" => "FAQS",
         "li11" => "Students must be enrolled full-time in a degree-granting program at an accredited college/university (domestic or international)",
         "li12" => "Students must have completed at least one full term at the post-secondary level",
         "li13" => "Students must demonstrate at least a 2.75 cumulative GPA ",
