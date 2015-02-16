@@ -43,7 +43,7 @@
                     <li>{{ link_to_route('services.coaching', trans('menu.services.career_coaching')) }}</li>
                     <li>{{ link_to_route('services.internships', trans('menu.services.internships')) }}</li>
                     <li>{{ link_to_route('services.bonus', trans('menu.services.bonus_semester_at_sea')) }}</li>
-                    <li>{{ link_to_route('services.undergrad', trans('menu.services.undergrad_programs')) }}</li>
+             <!--        <li>{{ link_to_route('services.undergrad', trans('menu.services.undergrad_programs')) }}</li> -->
 					
 
 
@@ -95,7 +95,7 @@
                     <li>{{ link_to_route('services.coaching', trans('menu.services.career_coaching')) }}</li>
                     <li>{{ link_to_route('services.internships', trans('menu.services.internships')) }}</li>
                     <li>{{ link_to_route('services.bonus', trans('menu.services.bonus_semester_at_sea')) }}</li>
-                    <li>{{ link_to_route('services.undergrad', trans('menu.services.undergrad_programs')) }}</li>					
+             <!--        <li>{{ link_to_route('services.undergrad', trans('menu.services.undergrad_programs')) }}</li>	-->				
                 </ul>
             </li>
             <li class="{{ setActive( 'news' ) }}"> {{ link_to_route('news', trans('menu.news')) }}</li>
