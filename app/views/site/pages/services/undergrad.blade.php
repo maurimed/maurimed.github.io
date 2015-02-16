@@ -1,8 +1,8 @@
 @extends('site.layouts.master')
 
-@section('content')
 
-	@include('site.layouts.partials.components.breadcums', ['title' => Lang::get('menu.services.academic_scholarships')])
+@section('content')
+	@include('site.layouts.partials.components.breadcums', ['title' => Lang::get('menu.services.undergrad_programs')])
 	
 	<div style="padding-top:0"  class="container only">
         <div class="row">

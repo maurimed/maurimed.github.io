@@ -1,5 +1,6 @@
 @extends('site.layouts.master')
 
+
 @section('content')
 	@include('site.layouts.partials.components.breadcums', ['title' => Lang::get('menu.services.bonus_semester_at_sea')])
 
@@ -16,6 +17,7 @@
                     {{ link_to_route('services.coaching', Lang::get('menu.services.career_coaching'),[], ['class' => 'element']) }}
                     {{ link_to_route('services.internships', Lang::get('menu.services.internships'),[], ['class' => 'element']) }}
                     {{ link_to_route('services.bonus', Lang::get('menu.services.bonus_semester_at_sea'),[], ['class' => 'element active']) }}
+					{{ link_to_route('services.undergrad', Lang::get('menu.services.undergrad_programs'),[], ['class' => 'element']) }}
 
                 </div>
                  <br/><br/>
