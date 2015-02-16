@@ -31,7 +31,8 @@ return [
         "educational_mentors" => "Mentores Educativos",
         "career_coaching" => "Asesores de Carrera",
         "internships" => "Pasantías / Prácticas Laborales",
-        "bonus_semester_at_sea" => "Bonus: Semestre en el mar"
+        "bonus_semester_at_sea" => "Bonus: Semestre en el mar",
+		"undergrad_programs" => "Carreras Universitarias y Licenciaturas",
     ],
     'testimonials' => 'Testimonios',
     'news' => 'Noticias',

@@ -28,7 +28,8 @@ return [
 		"educational_mentors" => "Bildungsmentoren",
 		"career_coaching" => "Karrierecoaching",
 		"internships" => "Praktikaprogramm",
-		"bonus_semester_at_sea" => "Bonus: Semester at Sea"
+		"bonus_semester_at_sea" => "Bonus: Semester at Sea",
+		"undergrad_programs" => "Undergraduate Programs",
 	],
 	"testimonials" => "Was Kunden sagen",
 	"news" => "News",
