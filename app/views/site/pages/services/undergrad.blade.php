@@ -89,6 +89,7 @@
 							<div class="panel-body">
 								<p>
 									{{ Lang::get('services.undergrad_programs.p1') }}
+									Hola
 								</p>
 							</div>
 						</div>
@@ -96,6 +97,7 @@
 							<div class="panel-body">
 								<p>
 									{{ Lang::get('services.undergrad_programs.p2') }}
+									Chau
 								</p>
 							</div>
 						</div>						
@@ -105,7 +107,7 @@
 			
 			
 			
-
+                <div class="dividing sep-line"></div>
 
                 <h4>{{ Lang::get('services.academic_scholarships.subtitle1') }}</h4>
                 <p>{{ Lang::get('services.academic_scholarships.p1') }} </p>
