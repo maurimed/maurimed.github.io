@@ -27,16 +27,40 @@
 
             <div style="text-align: justify"  class="col-md-9 main-el">
 			
+			    <h3>{{ Lang::get('services.undergrad_programs.title') }}</h3>
+			
+			
+			
+			
 				<div class="panel-group accordion" id="accordion-1">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h6 class="panel-title">
 								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
 									<i class="fa "></i>
-									Panel Title
+									{{ Lang::get('services.undergrad_programs.subtitle1') }}
 								</a>
 							</h6>
+							<h4 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle2') }}
+								</a>
+							</h4>
+							<h3 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle3') }}
+								</a>
+							</h3>
+							<h6 class="panel-title">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne">
+									<i class="fa "></i>
+									{{ Lang::get('services.undergrad_programs.subtitle4') }}
+								</a>
+							</h6>							
 						</div>
+						
 						<div id="collapseOne" class="panel-collapse collapse">
 							<div class="panel-body">
 								<p>
@@ -45,13 +69,12 @@
 							</div>
 						</div>
 					</div>
-					...
 				</div>
 							
 			
 			
 			
-                <h3>{{ Lang::get('services.academic_scholarships.title') }}</h3>
+
 
                 <h4>{{ Lang::get('services.academic_scholarships.subtitle1') }}</h4>
                 <p>{{ Lang::get('services.academic_scholarships.p1') }} </p>
