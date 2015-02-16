@@ -22,7 +22,7 @@ return [
 	],
 	"services" => [
 		"our_services" => "Our Services",
-		"index" => "Epro 360 Services",
+		"index" => "Epro 360 Programs",
 		"academic_scholarships" => "Academic Scholarships",
 		"athletic_scholarships" => "Athletic Scholarships",
 		"english_courses_esl" => "English Courses ESL",
