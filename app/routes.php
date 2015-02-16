@@ -40,6 +40,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function ()
     Route::get('services/career-coaching', ['as' => 'services.coaching', 'uses' => 'PagesController@servicesCoaching']);
     Route::get('services/internships', ['as' => 'services.internships', 'uses' => 'PagesController@servicesInternships']);
     Route::get('services/bonus-semester-at-sea', ['as' => 'services.bonus', 'uses' => 'PagesController@servicesBonus']);
+	Route::get('services/undergrad-programs', ['as' => 'services.undergrad', 'uses' => 'PagesController@servicesUndergrad']);
 
     //News
     Route::get('news', ['as' => 'news', 'uses' => 'PagesController@news']);
