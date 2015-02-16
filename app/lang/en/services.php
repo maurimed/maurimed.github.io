@@ -232,7 +232,19 @@ return [
         "title" => "Undergraduate Programs",
 
         "subtitle1" => "Summary",
-        "p1" => "Semester at Sea is a worldwide unique education program. For one semester, students have the possibility to study on board a \"swimming university,\" traveling to another country every week.",
+			"ul1" => "Majors",
+				"li1" => "Click here for lists of majors",
+				"li2" => "Take up to 3 majors at the same time",
+			"ul2" => "Length",
+				"li3" => "2.5 years (contact us for further info)",
+				"li4" => "4 years",
+			"ul3" => "Cost",
+				"li5" => "From $6.000 a semester (with academic scholarship)",
+				"li6" => "From $0 a semester (with athletic scholarship)",			
+			"ul4" => "Included",
+				"li7" => "Housing",
+				"li8" => "Meal plan",			
+		
 
         "subtitle2" => "Requirements",
         "p2" => "The Semester at Sea financial aid packages are competitive. Epro 360’s Semester at Sea application service helps you receive financial aid for your Semester at Sea voyage. Every applicant has to submit several written essays to receive scholarship money. To enhance the quality and content of your essay, Epro 360 charges a one time fee per scholarship application, plus a percentage of the scholarship received. For example, if Epro charged you a $250 application fee plus a 10% of the scholarship received and the Epro 360 essay gets you a Semester at Sea scholarship of $10,000, you can use $8,750 for your voyage.",
