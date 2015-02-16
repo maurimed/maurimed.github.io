@@ -31,7 +31,35 @@
 			
 			
 			
+
+ 
+			<!--Pricing tables-->
+			<div class="col-md-3 col-sm-6 col-xs-12 main-el">
+				<div class="pricing table">
+					<div class="head"><h4>Single License</h4></div>
+					<div class="price">
+		 
+						<div class="amount">59
+							<div class="unit">$</div>
+						</div>
+						<h5>One Time Free</h5>
+					</div>
+					<div class="field">5 Websites Cap</div>
+					<div class="field">1TB Bandwidth Cap</div>
+					<div class="field">60GB Space Storage</div>
+					<div class="field">Domain Name Included</div>
+					<div class="field">---</div>
+					<div class="field">---</div>
+					<a class="button solid grey sm"><div class="over">buy</div></a>
+				</div>
+			</div>
+ 
+
 			
+			
+			
+			
+			<!--Accordion -->
 				<div class="panel-group accordion" id="accordion-1">
 					<div class="panel panel-default">
 						<div class="panel-heading">
