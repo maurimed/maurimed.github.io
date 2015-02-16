@@ -135,16 +135,6 @@
 			
                 <div class="dividing sep-line"></div>
 
-                <h4>{{ Lang::get('services.academic_scholarships.subtitle1') }}</h4>
-                <p>{{ Lang::get('services.academic_scholarships.p1') }} </p>
-                <div class="dividing sep-line"></div>
-
-
-                <h4>{{ Lang::get('services.academic_scholarships.subtitle2') }}</h4>
-                <p>{{ Lang::get('services.academic_scholarships.p2') }} </p>
-
-                <div class="dividing sep-line"></div>
-
                 <h4>{{ Lang::get('services.academic_scholarships.subtitle3') }}</h4>
                 <p>{{ Lang::get('services.academic_scholarships.p3') }} </p>
                 <p class="bold"> <i class="fa fa-check-square-o"></i>{{ Lang::get('services.academic_scholarships.li1') }} </p>
