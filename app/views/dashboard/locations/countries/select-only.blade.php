@@ -1,1 +1,0 @@
-{{ Form::select('country', $countries, $selected, ['id'=>'country', 'style' => 'width:100%'] ) }}
