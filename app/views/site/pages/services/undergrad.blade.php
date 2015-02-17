@@ -7,7 +7,7 @@
 	<div style="padding-top:0"  class="container only">
         <div class="row">
             <div class="col-md-3 main-el">
-                <div class="side-menu" id="side-menu-1">
+            <!--    <div class="side-menu" id="side-menu-1">
 
                     {{ link_to_route('services', Lang::get('menu.services.index'),[], ['class' => 'element']) }}
                     {{ link_to_route('services.academic', Lang::get('menu.services.academic_scholarships'),[], ['class' => 'element']) }}
@@ -20,7 +20,7 @@
 					{{ link_to_route('services.undergrad', Lang::get('menu.services.undergrad_programs'),[], ['class' => 'element active']) }}
 
 
-                </div>
+                </div>-->
                  <br/><br/>
                 @include('site.pages.home.partials.apply-link')
             </div>
